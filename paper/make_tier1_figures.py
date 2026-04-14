@@ -333,22 +333,22 @@ def fig_pareto_revised():
             ys.append(rate)
         ax.scatter(xs, ys, label=LABELS[mc], alpha=0.55, s=22, color=COLORS[mc], edgecolors="none")
 
-    # Single baselines: original (with /no_think)
+    # Single baselines: original (with /no_think) — smaller markers
     for model, b in cache["baselines"].items():
         cost = b["cost"] / b["n_total"]
-        ax.scatter(cost, b["correct_rate"], marker="*", s=240,
-                   color="lightgray", edgecolors="black", linewidths=1.0,
-                   label=f"{model} (no_think)" if model == "qwen-17b" else None, zorder=5)
+        ax.scatter(cost, b["correct_rate"], marker="D", s=60,
+                   color="lightgray", edgecolors="black", linewidths=0.8,
+                   label=f"{model} (no\_think)" if model == "qwen-17b" else None, zorder=5)
 
-    # FAIR frontier baseline (Tier 1.4)
+    # FAIR frontier baseline (Tier 1.4) — diamond, not star
     fair_phase_a_rate = frontier_data["phase_a"]["rate"]
     fair_phase_a_cost = frontier_data["phase_a"]["cost_per"]
     ax.scatter(fair_phase_a_cost, fair_phase_a_rate,
-               marker="*", s=320, color="#bb8fce",
-               edgecolors="black", linewidths=1.5,
-               label=f"qwen-17b (with thinking, FAIR)", zorder=6)
+               marker="D", s=90, color="#9b59b6",
+               edgecolors="black", linewidths=1.2,
+               label="qwen-17b (thinking, FAIR)", zorder=6)
 
-    # Pareto frontier
+    # Pareto frontier — solid, thicker, more visible
     all_pts = []
     for (mc, tp, g), eps in by_cond.items():
         cost = sum(e["total_cost_usd"] for e in eps) / len(eps)
@@ -363,8 +363,8 @@ def fig_pareto_revised():
             best = r
     if pareto:
         px, py = zip(*pareto)
-        ax.step(px, py, where="post", color="black", linestyle="--", linewidth=1.2,
-                alpha=0.6, label="Pareto frontier", zorder=3)
+        ax.step(px, py, where="post", color="black", linestyle="-", linewidth=1.8,
+                alpha=0.85, label="Pareto frontier", zorder=4)
 
     ax.set_xscale("log")
     ax.set_xlabel("Cost per problem (USD, log scale)")
@@ -372,7 +372,8 @@ def fig_pareto_revised():
     ax.set_ylim(0.5, 1.02)
     ax.set_title("Pareto frontier: fair frontier comparison (Phase A)", pad=8)
     ax.grid(True, alpha=0.3, which="both")
-    ax.legend(loc="lower right", ncol=2, framealpha=0.9, fontsize=7)
+    ax.legend(loc="lower right", ncol=2, framealpha=0.95, fontsize=6.5,
+              markerscale=0.7, handletextpad=0.3, columnspacing=0.8)
 
     fig.tight_layout()
     fig.savefig(FIG_DIR / "fig9_pareto_revised.pdf")
