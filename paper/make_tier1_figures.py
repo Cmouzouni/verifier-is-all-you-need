@@ -183,11 +183,14 @@ def fig_synthesis_ablation():
             ha="center", va="center", fontsize=7, fontweight="bold")
 
     # Bar value labels
-    for b, r, c in zip(bars, rs, cs):
+    for i, (b, r, c) in enumerate(zip(bars, rs, cs)):
         ax.text(b.get_x() + b.get_width() / 2, r + 0.005,
                 f"{r:.1%}", ha="center", va="bottom", fontsize=8, fontweight="bold")
-        ax.text(b.get_x() + b.get_width() / 2, 0.55,
-                f"${c:.5f}/ep", ha="center", va="bottom", fontsize=6, color="gray")
+        # Cost label: white on dark bars, gray on light bars
+        txt_color = "white" if i == 2 else "gray"
+        ax.text(b.get_x() + b.get_width() / 2, 0.57,
+                f"${c:.5f}/ep", ha="center", va="bottom", fontsize=6.5,
+                color=txt_color, fontweight="bold" if i == 2 else "normal")
 
     ax.set_xticks(x)
     ax.set_xticklabels(labels, fontsize=8)
