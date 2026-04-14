@@ -726,18 +726,6 @@ The capability-ceiling corollary makes this decision rule formal: the game lift 
 
 \subsection{Cost--performance Pareto frontier}\label{sec:pareto}
 
-\begin{figure}[h]
-\centering
-\includegraphics[width=0.85\linewidth]{figures/fig9_pareto_revised.pdf}
-\caption{Cost--performance Pareto frontier on Phase~A with the corrected (Tier 1.4) frontier baseline.
-Each dot is one of the $180$ main-sweep conditions; the dashed line is the Pareto frontier.
-The gray stars are the original main-sweep baselines (note the deliberately-handicapped \texttt{qwen-17b} (no\_think) at $70\%$).
-The purple star is the corrected \texttt{qwen-17b} baseline with thinking enabled and $4096$ max-tokens, which jumps to $86.7\%$.
-Even against the corrected frontier baseline, the cheapest synthesis-completed collective configurations strictly dominate on both axes.}
-\label{fig:pareto}
-\end{figure}
-
-Figure~\ref{fig:pareto} shows the cost--performance Pareto frontier of the main sweep, with the corrected frontier baseline overlaid.
 The cheapest $100\%$-correct collective configuration is \texttt{all-7b} $\times$ \textsc{Insight+Synth} at $\g=1$, costing \$$0.00025$ per problem.
 Compared to the fairly-baselined \texttt{qwen-17b} (with thinking, $86.7\%$ correctness, \$$0.00461$ per problem), this is an $18.4\times$ cost reduction at strictly higher correctness ($+13.3$pp).
 The original $23\times$ cost ratio in the main sweep was inflated by the no-think handicap; the corrected ratio is still substantial and is the fair number to report.
