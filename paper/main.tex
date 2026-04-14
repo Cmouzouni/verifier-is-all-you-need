@@ -125,6 +125,7 @@ What matters: proposer quality and verification grounding.
 What does not: allocation strategy, critic feedback, sampling budget beyond $K\!\approx\!8$, model diversity, or inter-agent communication.
 The results suggest that the field's investment in elaborate multi-agent wiring is misallocated when symbolic verification is available---the engineering effort belongs in the verifier, not the architecture.
 Total cost: $\sim\!\$40$.
+Code, data, and all cached results are available at \url{https://github.com/Cmouzouni/verifier-is-all-you-need}.
 \end{abstract}
 
 \keywords{multi-agent LLMs, falsification, verifiability boundary, symbolic verification, inference-time compute, ARC-AGI, AIME, HumanEval.}
@@ -470,7 +471,7 @@ Total compute: $10{,}781$ API calls, $7.58$M tokens, \$$12.20$ in API cost, $235
 The Tier-1 experiments produced an additional $1{,}340$ episodes ($650$ on GSM8K including baselines, $250$ on the synthesis ablation, $360$ on family replication including baselines, $80$ on the frontier re-run) at \$$1.62$ in additional API cost.
 The Tier-2 falsification experiments contributed $1{,}350$ episodes ($900$ in the $N\!=\!4$ regime and $450$ in the $N\!=\!32$ regime) at \$$1.16$ in additional API cost.
 The Tier-3 verifiability-boundary experiment on ARC contributed approximately $1{,}350$ further model invocations: $\sim\!180$ multi-agent deliberation episodes across the six tested architectures, $720$ oracle and majority-vote samples (best-of-$8$, best-of-$16$, and consensus on the same proposal pool), and $450$ baseline re-measurement samples ($30$ tasks $\times$ $5$ samples $\times$ $3$ models) at \$$3.30$ in additional API cost.
-The combined dataset comprises approximately $5{,}650$ deliberation episodes and model invocations, totaling \$$18.28$ in API cost, and is released alongside this paper.
+The combined dataset comprises approximately $5{,}650$ deliberation episodes and model invocations, totaling \$$18.28$ in API cost, and is publicly available at \url{https://github.com/Cmouzouni/verifier-is-all-you-need}.
 
 \subsection{Baselines}\label{sec:results-baselines}
 
@@ -1340,6 +1341,7 @@ The broader implication for the field: when a symbolic verifier exists, the mult
 The open scientific question is what happens when no symbolic verifier exists.
 Learned verifiers (process reward models) are the natural next step; whether they can play the role of the symbolic executor on tasks without natural verification would determine whether cheap-collective architectures are a niche cost-optimization trick or a general alternative to scaling.
 Total experimental cost: $\sim\!\$40$ in API fees.
+The complete codebase, all experiment runners, and all cached results ($\sim\!7{,}000$ episodes in JSON) are publicly available at \url{https://github.com/Cmouzouni/verifier-is-all-you-need}.
 
 %% ====================================================================
 % BIBLIOGRAPHY
