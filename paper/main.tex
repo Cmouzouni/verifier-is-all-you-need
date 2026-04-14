@@ -454,19 +454,19 @@ Table~\ref{tab:baselines} reports the single-model baselines on Phase~A and GSM8
 
 \begin{table}[h]
 \centering\small
-\caption{Single-model baselines on Phase~A and GSM8K-50. The original Phase~A \texttt{qwen-17b} baseline used the Together AI \texttt{/no\_think} mode with $1024$ max-tokens; the corrected (Tier 1.4) baseline uses thinking enabled and $4096$ max-tokens. The corrected number is what subsequent comparisons use.}
+\caption{Single-model baselines on Phase~A ($30$ tasks) and GSM8K-50. The original \texttt{qwen-17b} baseline used the Together AI \texttt{/no\_think} mode with $1024$ max-tokens; the corrected (Tier~1.4) baseline uses thinking enabled and $4096$ max-tokens.}
 \label{tab:baselines}
-\begin{tabular}{lcccc}
+\begin{tabular}{@{}lcrrc@{}}
 \toprule
-Model & Active params & Phase A correctness & GSM8K-50 correctness & Cost/problem \\
+Model & Params & Phase~A & GSM8K-50 & \$/prob \\
 \midrule
-\texttt{qwen-7b}  & $7$B  & $73.3\%$ ($22/30$) & $58.0\%$ ($29/50$) & \$$0.00010$ \\
-\texttt{qwen-22b} & $22$B & $86.7\%$ ($26/30$) & $92.0\%$ ($46/50$) & \$$0.00020$ \\
-\texttt{qwen-17b} (no\_think) & $17$B & $70.0\%$ ($21/30$) & $80.0\%$ ($40/50$) & \$$0.00578$ \\
-\texttt{qwen-17b} (thinking, Tier 1.4) & $17$B & $\mathbf{86.7\%}$ ($26/30$) & $\mathbf{90.0\%}$ ($45/50$) & \$$0.00461$ \\
+\texttt{qwen-7b}  & $7$B  & $73.3\%$ \scriptsize($22/30$) & $58.0\%$ \scriptsize($29/50$) & $0.00010$ \\
+\texttt{qwen-22b} & $22$B & $86.7\%$ \scriptsize($26/30$) & $92.0\%$ \scriptsize($46/50$) & $0.00020$ \\
+\texttt{qwen-17b} (no\_think) & $17$B & $70.0\%$ \scriptsize($21/30$) & $80.0\%$ \scriptsize($40/50$) & $0.00578$ \\
+\texttt{qwen-17b} (thinking) & $17$B & $\mathbf{86.7\%}$ \scriptsize($26/30$) & $\mathbf{90.0\%}$ \scriptsize($45/50$) & $0.00461$ \\
 \midrule
-\texttt{llama-70b} (Tier 1.3)  & $70$B & $90.0\%$ ($27/30$) & ---  & \$$0.00027$ \\
-\texttt{deepseek-v3.1} (Tier 1.3) & frontier & $90.0\%$ ($27/30$) & --- & \$$0.00045$ \\
+\texttt{llama-70b}  & $70$B & $90.0\%$ \scriptsize($27/30$) & ---  & $0.00027$ \\
+\texttt{deepseek-v3.1} & frontier & $90.0\%$ \scriptsize($27/30$) & --- & $0.00045$ \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -633,6 +633,7 @@ Wilson $95\%$ CIs shown.}
 \centering\small
 \caption{GSM8K-50 results: top-5 Phase~A game configurations against single-model baselines. Cost is per episode for game configurations and per problem for single-model baselines.}
 \label{tab:gsm8k}
+\resizebox{\linewidth}{!}{%
 \begin{tabular}{lccc}
 \toprule
 Configuration & GSM8K correctness & Wilson 95\% CI & Cost \\
@@ -646,11 +647,12 @@ Configuration & GSM8K correctness & Wilson 95\% CI & Cost \\
 \multicolumn{4}{l}{\emph{Synthesis-completed game configurations}} \\
 \texttt{all-7b} $\times$ \textsc{Insight+Synth} ($\g\!=\!1$) & $\mathbf{87.0\%}$ ($87/100$) & $[79.0\%, 92.3\%]$ & \$$0.00040$/ep \\
 \texttt{all-7b} $\times$ \textsc{Full Debate} ($\g\!=\!0.5$) & $81.0\%$ ($81/100$) & $[72.4\%, 87.4\%]$ & \$$0.00054$/ep \\
-\texttt{propose7b-synth22b} $\times$ \textsc{Full Debate} ($\g\!=\!0.5$) & $\mathbf{91.0\%}$ ($91/100$) & $[83.8\%, 95.2\%]$ & \$$0.00054$/ep \\
+\texttt{propose7b-synth22b} $\times$ \textsc{Full Debate} & $\mathbf{91.0\%}$ ($91/100$) & $[83.8\%, 95.2\%]$ & \$$0.00054$/ep \\
 \texttt{all-22b} $\times$ \textsc{Full Debate} ($\g\!=\!0.5$) & $\mathbf{94.0\%}$ ($94/100$) & $[87.5\%, 97.2\%]$ & \$$0.00083$/ep \\
-\texttt{propose22b-crit7b} $\times$ \textsc{Insight+Synth} ($\g\!=\!1$) & $\mathbf{95.0\%}$ ($95/100$) & $[88.8\%, 97.8\%]$ & \$$0.00060$/ep \\
+\texttt{propose22b-crit7b} $\times$ \textsc{Insight+Synth} & $\mathbf{95.0\%}$ ($95/100$) & $[88.8\%, 97.8\%]$ & \$$0.00060$/ep \\
 \bottomrule
-\end{tabular}
+\end{tabular}%
+}
 \end{table}
 
 Tier 1.1 tests whether the topology effect generalizes from our hand-crafted Phase~A tasks to a standard public benchmark.
@@ -745,25 +747,27 @@ Table~\ref{tab:pareto} lists the cheapest collective configurations that achieve
 \centering\small
 \caption{Cheapest collective configurations achieving $100\%$ correctness on Phase~A ($n = 15$ episodes per condition), compared to single-model baselines including the corrected frontier baseline. Cost-ratio column is relative to the corrected frontier.}
 \label{tab:pareto}
+\resizebox{\linewidth}{!}{%
 \begin{tabular}{llcrr}
 \toprule
-Configuration & Correctness & Cost/problem & Cost ratio (vs.\ frontier) \\
+Configuration & Correctness & Cost/prob & Ratio \\
 \midrule
 \multicolumn{4}{l}{\emph{Single-model references}} \\
 \texttt{qwen-7b} (single) & $73.3\%$ & \$$0.00010$ & $1/46$ \\
 \texttt{qwen-22b} (single) & $86.7\%$ & \$$0.00020$ & $1/23$ \\
 \texttt{llama-3.3-70b} (single) & $90.0\%$ & \$$0.00027$ & $1/17$ \\
-\texttt{qwen-17b} (single, with thinking) & $86.7\%$ & \$$0.00461$ & $1\times$ (reference) \\
+\texttt{qwen-17b} (thinking) & $86.7\%$ & \$$0.00461$ & $1\times$ (ref.) \\
 \midrule
-\multicolumn{4}{l}{\emph{Synthesis-completed collective configurations achieving $100\%$ on Phase~A}} \\
-\texttt{all-7b} $\times$ \textsc{Insight+Synth} ($\g\!=\!1$) & $100\%$ & \$$0.00025$ & $\mathbf{1/18.4}$ \\
-\texttt{all-7b} $\times$ \textsc{Insight+Synth} ($\g\!=\!4$) & $100\%$ & \$$0.00031$ & $1/14.9$ \\
-\texttt{propose22b-crit7b} $\times$ \textsc{Insight+Synth} ($\g\!=\!1$) & $100\%$ & \$$0.00044$ & $1/10.5$ \\
-\texttt{propose7b-synth22b} $\times$ \textsc{Full Debate} ($\g\!=\!0.5$) & $100\%$ & \$$0.00044$ & $1/10.5$ \\
-\texttt{all-22b} $\times$ \textsc{Insight+Synth} ($\g\!=\!4$) & $100\%$ & \$$0.00047$ & $1/9.8$ \\
-\texttt{all-22b} $\times$ \textsc{Full Debate} ($\g\!=\!0.5$) & $100\%$ & \$$0.00066$ & $1/7.0$ \\
+\multicolumn{4}{l}{\emph{Collectives achieving $100\%$ on Phase~A}} \\
+\texttt{all-7b} $\times$ \textsc{Ins+Synth} ($\g\!=\!1$) & $100\%$ & \$$0.00025$ & $\mathbf{1/18}$ \\
+\texttt{all-7b} $\times$ \textsc{Ins+Synth} ($\g\!=\!4$) & $100\%$ & \$$0.00031$ & $1/15$ \\
+\texttt{p22b-c7b} $\times$ \textsc{Ins+Synth} ($\g\!=\!1$) & $100\%$ & \$$0.00044$ & $1/10$ \\
+\texttt{p7b-s22b} $\times$ \textsc{Full Deb.} ($\g\!=\!0.5$) & $100\%$ & \$$0.00044$ & $1/10$ \\
+\texttt{all-22b} $\times$ \textsc{Ins+Synth} ($\g\!=\!4$) & $100\%$ & \$$0.00047$ & $1/10$ \\
+\texttt{all-22b} $\times$ \textsc{Full Deb.} ($\g\!=\!0.5$) & $100\%$ & \$$0.00066$ & $1/7$ \\
 \bottomrule
-\end{tabular}
+\end{tabular}%
+}
 \end{table}
 
 \subsection{The verifiability boundary: ARC-AGI reverses the synthesis effect}\label{sec:results-arc}
@@ -795,21 +799,23 @@ Wilson $95\%$ CIs shown.}
 \centering\small
 \caption{Seven ARC-AGI architectures ranked by correctness ($30$ problems, $\texttt{qwen-22b}$ proposers throughout). The single-model baseline is the reference. \emph{Oracle} rows count any-correct over $N$ samples (theoretical ceiling); \emph{majority-vote} aggregates by canonical grid match; \emph{LLM-synth} rows pass proposals to a \texttt{qwen-22b} synthesizer.}
 \label{tab:arc}
-\begin{tabular}{lcccc}
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{@{}lcccc@{}}
 \toprule
-Configuration & Correctness & Wilson 95\% CI & Cost/problem & $\Delta$ vs single \\
+Configuration & Rate & Wilson 95\% CI & \$/prob & $\Delta$ \\
 \midrule
-\texttt{qwen-22b} best-of-$16$ (oracle ceiling) & $\mathbf{43.3\%}$ ($13/30$) & $[27.4$, $60.8\%]$ & \$$0.0169$ & $+20.7$pp \\
-\texttt{qwen-22b} best-of-$8$ (oracle ceiling) & $\mathbf{40.0\%}$ ($12/30$) & $[24.6$, $57.7\%]$ & \$$0.0084$ & $+17.3$pp \\
-\textbf{\texttt{qwen-22b} best-of-$8$ majority vote} & $\mathbf{33.3\%}$ ($10/30$) & $[19.2$, $51.2\%]$ & \$$0.0079$ & $\mathbf{+10.7}$pp \\
+best-of-$16$ (oracle) & $\mathbf{43.3\%}$ \scriptsize($13/30$) & $[27.4, 60.8]$ & $0.017$ & $+20.7$ \\
+best-of-$8$ (oracle) & $40.0\%$ \scriptsize($12/30$) & $[24.6, 57.7]$ & $0.008$ & $+17.3$ \\
+\textbf{best-of-$8$ maj.\ vote} & $\mathbf{33.3\%}$ \scriptsize($10/30$) & $[19.2, 51.2]$ & $0.008$ & $\mathbf{+10.7}$ \\
 \midrule
-\texttt{qwen-22b} single-shot (baseline, $n\!=\!150$) & $22.7\%$ ($34/150$) & $[16.7$, $30.0\%]$ & \$$0.0014$ & --- \\
+single-shot ($n\!=\!150$) & $22.7\%$ \scriptsize($34/150$) & $[16.7, 30.0]$ & $0.001$ & --- \\
 \midrule
-$8\!\times\!\texttt{qwen-22b}$ + LLM synth & $20.0\%$ ($6/30$) & $[9.5$, $37.3\%]$ & \$$0.0095$ & $-2.7$pp \\
-$4\!\times\!\texttt{qwen-22b}$ + LLM synth & $13.3\%$ ($4/30$) & $[5.3$, $29.7\%]$ & \$$0.0056$ & $-9.4$pp \\
-$4\!\times\!\texttt{qwen-22b} + 4\!\times\!\texttt{llama-70b}$ + LLM synth & $10.0\%$ ($3/30$) & $[3.5$, $25.6\%]$ & \$$0.0152$ & $-12.7$pp \\
+$8\!\times$ + LLM synth & $20.0\%$ \scriptsize($6/30$) & $[9.5, 37.3]$ & $0.010$ & $-2.7$ \\
+$4\!\times$ + LLM synth & $13.3\%$ \scriptsize($4/30$) & $[5.3, 29.7]$ & $0.006$ & $-9.4$ \\
+$4\!\times$\texttt{22b}+$4\!\times$\texttt{llama} + synth & $10.0\%$ \scriptsize($3/30$) & $[3.5, 25.6]$ & $0.015$ & $-12.7$ \\
 \bottomrule
-\end{tabular}
+\end{tabular}%
+}
 \end{table}
 
 \paragraph{The reversal.}
@@ -1090,20 +1096,22 @@ The two mechanisms explore the same solution space; the evolutionary overhead ad
 \centering\small
 \caption{Six architectural interventions tested against the simple verifier-loop baseline, all at matched or higher compute budgets. \textbf{None improves over the baseline.} Rows 1--2 and 5--6 have dedicated sections above; rows 3--4 are supplementary findings reported here for completeness.}
 \label{tab:six-nulls}
-\begin{tabular}{llcc}
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{@{}clcc@{}}
 \toprule
-\# & Mechanism tested & Result & Baseline \\
+\# & Mechanism & Result & Baseline \\
 \midrule
-1 & MFG game-theoretic allocation (\S\ref{sec:results-falsification}) & ties random ($p>0.4$) & random \\
-2 & Critic-driven failure feedback (\S\ref{sec:act2-critic}) & $40\%$ vs $43\%$ cold & cold $K\!=\!32$ \\
-3 & Sampling budget ($K$ sweep)$^\dagger$ & $43\%$ at $K\!=\!8$, $47\%$ at $K\!=\!64$ & $K\!=\!8$ \\
-4 & Code-specialist proposer$^\ddagger$ & $14\%$ (7/30 partial) & \texttt{qwen-22b} ($43\%$) \\
-5 & $3$-model heterogeneous union (\S\ref{sec:act2-heterogeneous}) & $16.5\%$ vs $17.4\%$ single & single $K\!=\!16$ \\
-6 & Evolutionary inter-round info flow (\S\ref{sec:act2-evolutionary}) & $43.3\%$ = $43.3\%$ cold & cold $K\!=\!8$ \\
+1 & MFG allocation (\S\ref{sec:results-falsification}) & ties random ($p>0.4$) & random \\
+2 & Critic feedback (\S\ref{sec:act2-critic}) & $40\%$ vs $43\%$ cold & cold $K\!=\!32$ \\
+3 & $K$ sweep$^\dagger$ & $43\%$ at $K\!=\!8$, $47\%$ at $K\!=\!64$ & $K\!=\!8$ \\
+4 & Code-specialist$^\ddagger$ & $14\%$ (7/30 partial) & \texttt{qwen-22b} ($43\%$) \\
+5 & 3-model union (\S\ref{sec:act2-heterogeneous}) & $16.5\%$ vs $17.4\%$ single & single $K\!=\!16$ \\
+6 & Evolutionary (\S\ref{sec:act2-evolutionary}) & $43.3\%$ = $43.3\%$ cold & cold $K\!=\!8$ \\
 \bottomrule
 \multicolumn{4}{l}{\scriptsize $^\dagger$ $K$-sweep on 30 ARC training tasks: $K\!=\!8$ (13/30), $K\!=\!16$ (11/30), $K\!=\!32$ (13/30), $K\!=\!64$ (14/30). The +1 task from $K\!=\!8$ to $K\!=\!64$ costs $8\times$.} \\
 \multicolumn{4}{l}{\scriptsize $^\ddagger$ Qwen3-Coder-480B-A35B on same 30 tasks: 14\% at 7/30 (terminated early), 13.8\% parse-error rate vs 1.1\% for \texttt{qwen-22b}.}
-\end{tabular}
+\end{tabular}%
+}
 \end{table}
 
 The pattern is definitive.
