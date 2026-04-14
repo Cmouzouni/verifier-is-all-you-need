@@ -96,7 +96,7 @@ and the Verifiability Boundary That Does}
 We test six architectural interventions for multi-agent LLM reasoning---game-theoretic allocation, critic-driven refinement, sampling budget scaling, code-specialist proposers, heterogeneous multi-model ensembles, and evolutionary inter-round information flow---and find that \textbf{none improves} over the simplest possible baseline: $K$ independent samples from one model, sandboxed execution, majority vote.
 
 The finding rests on the \emph{verifiability boundary}: LLM-based aggregation helps ($+14$ to $+29$pp) when the LLM can verify candidates by re-reading them, and \emph{actively hurts} ($-3$ to $-13$pp vs.\ the single-model baseline) when verification requires re-deriving the problem.
-Replacing the LLM aggregator with a symbolic verifier (Python execution) dissolves this boundary: HumanEval $97\%$ pass@$16$, AIME~2024 $76.7\%$ ($23/30$, within $3$pp of same-task o4-mini at $2.2\times$ lower cost), ARC-AGI-1 $18.2\%$ ($73/400$, lowest published cost-per-correct).
+Replacing the LLM aggregator with a symbolic verifier (Python execution) dissolves this boundary: HumanEval $97\%$ pass@$16$, AIME~2024 $76.7\%$ ($23/30$, within $4$pp of same-task o4-mini at $2.2\times$ lower cost), ARC-AGI-1 $18.2\%$ ($73/400$, lowest published cost-per-correct).
 Six architectural elaborations tested at matched budgets are all null.
 
 The contribution is a precise empirical map: \emph{what matters} is proposer quality and verification grounding; \emph{what does not} is allocation strategy, critic feedback, sampling budget beyond $K\!\approx\!8$, model diversity, or inter-agent communication.
@@ -162,24 +162,24 @@ The experiments yield a single coherent picture (full results in Section~\ref{se
 \begin{enumerate}[leftmargin=1.2em, itemsep=2pt]
 \item \textbf{The synthesis effect REVERSES on visual-spatial tasks (the verifiability boundary).}
 On Phase~A and GSM8K, the LLM synthesizer is the dominant value-add: $+14$pp over majority vote on Phase~A, and a cheap-$7$B collective lift from $58\%$ to $87\%$ on GSM8K.
-On ARC-AGI, the same mechanism is dominated by simple majority vote over the same proposers by $13$--$23$pp ($13$--$20\%$ vs $33.3\%$), and falls below the single-shot Qwen-22B baseline of $22.7\%$ on every configuration tested.
+On ARC-AGI, the same mechanism is dominated by simple majority vote over the same proposers by $13$--$23$pp ($10$--$20\%$ vs $33.3\%$), and falls below the single-shot Qwen-22B baseline of $22.7\%$ on every configuration tested.
 The boundary is mechanistic: the LLM aggregator helps when it can verify candidate outputs by re-reading them and hurts when verification requires re-deriving the problem from scratch, because adding more candidates injects noise the synthesizer cannot filter.
 \item \textbf{Topology dominates ($+17$pp gap on verifiable tasks).}
 On Phase~A, synthesis-completed graphs (\textsc{Insight+Synth}, \textsc{Full Debate}, \textsc{Critique+Synth}) reach $85$--$89\%$ correctness while synthesis-free graphs reach only $72$--$78\%$, with non-overlapping Wilson $95\%$ CIs.
 \item \textbf{The mechanism is LLM aggregation ($+14$pp) plus reading reasoning ($+5$pp).}
 A controlled $250$-episode ablation isolates the effect: replacing majority vote with an LLM synthesizer that sees only final answers lifts correctness from $70.8\%$ to $84.8\%$; passing the synthesizer the agents' full reasoning lifts it further to $89.6\%$.
 \item \textbf{The cheap-collective lift generalizes to GSM8K.}
-On $50$ GSM8K problems, the \texttt{all-7b}~$\times$~\textsc{Insight+Synth} configuration lifts Qwen-2.5-7B from $58\%$ to $87\%$, and a heterogeneous \texttt{propose22b-crit7b} configuration reaches $95\%$---matching the corrected \texttt{qwen-17b} frontier baseline ($90\%$) at competitive cost.
+On $50$ GSM8K problems, the \texttt{all-7b}~$\times$~\textsc{Insight+Synth} configuration lifts Qwen-2.5-7B from $58\%$ to $87\%$, and a heterogeneous \texttt{propose22b-crit7b} configuration reaches $95\%$---exceeding the corrected \texttt{qwen-17b} frontier baseline ($90\%$) at competitive cost.
 \item \textbf{The mechanism saturates at the per-agent capability ceiling.}
 On strong base models (Llama-3.3-70B and DeepSeek-V3.1, both $90\%$ Phase~A baseline), the synthesis-completed game produces $86.7\%$ and $80.7\%$ respectively---a slight regression rather than an improvement. The mechanism lifts weak models toward the ceiling but does not push strong models beyond it.
 \item \textbf{Game-theoretic framework selection is statistically equivalent to random.}
 Two falsification experiments compare value-aware MFG-style allocation against random and round-robin in the $N\!<\!K$ ($n\!=\!300$ per condition) and $N\!\gg\!K$ ($n\!=\!450$ per condition) regimes.
 In both regimes, all three strategies achieve correctness within $\pm 2.7$pp of each other ($p > 0.4$ for every pairwise comparison).
-The congestion mechanism does concentrate agents on high-value frameworks ($19.9/32$ vs $16/32$ for random in the $N\!=\!32$ test), but the synthesizer ignores the difference.
+The congestion mechanism does concentrate agents on high-value frameworks ($19.9/32$ vs $16.3/32$ for random in the $N\!=\!32$ test), but the synthesizer ignores the difference.
 \item \textbf{The fair cost ratio is $\sim 18\times$ on verifiable tasks.}
 On Phase~A, the cheapest $100\%$-correct collective configuration costs \$$0.00025$ per problem; the fairly-baselined Qwen-3.5-397B-A17B frontier model (with thinking enabled, $4096$ token budget) achieves $86.7\%$ at \$$0.00461$ per problem---an $18\times$ cost reduction at strictly higher correctness.
 \item \textbf{Symbolic verification routes around the boundary (Act~II).}
-Replacing the LLM synthesizer with sandboxed Python execution---proposers generate executable transformation programs or \texttt{sympy} solver functions instead of raw answers---restores the multi-agent advantage on both ARC-AGI-1 ($18.2\%$ at \$$0.029$/task, the lowest published cost-per-correct) and AIME~2024 ($76.7\%$ at \$$0.005$/task, within $3$pp of a same-task o4-mini baseline at $2.2\times$ lower cost per correct answer).
+Replacing the LLM synthesizer with sandboxed Python execution---proposers generate executable transformation programs or \texttt{sympy} solver functions instead of raw answers---restores the multi-agent advantage on both ARC-AGI-1 ($18.2\%$ at \$$0.029$/task, the lowest published cost-per-correct) and AIME~2024 ($76.7\%$ at \$$0.005$/task, within $4$pp of a same-task o4-mini baseline at $2.2\times$ lower cost per correct answer).
 A same-task DeepSeek-V3.1 baseline ($2.8\%$ strict-match on ARC-AGI-1 despite $80$--$94\%$ cell match) confirms the boundary mechanically.
 \item \textbf{Two null results bound the architecture's limits.}
 A critic-driven refinement loop (near-miss $\to$ structured feedback $\to$ re-proposal) adds no value over simple cold sampling at matched compute.
@@ -194,7 +194,7 @@ The mechanism, the boundary, and the deployment criterion are all empirically gr
 \item \textbf{Symbolic verification routes around the boundary (Act~II).}
 Replacing the LLM aggregator with a symbolic verifier (Python execution against known test cases) restores the multi-agent advantage on both ARC-AGI-1 and AIME~2024.
 The architecture is simple: $K$ cheap proposers generate executable programs, a sandbox verifies each against training pairs (ARC) or computes an answer (AIME), and majority vote selects.
-On AIME~2024 this achieves $76.7\%$ ($23/30$) at \$$0.0065$ per correct answer---within $3$pp of a same-task o4-mini baseline ($80\%$) at $2.2\times$ lower cost.
+On AIME~2024 this achieves $76.7\%$ ($23/30$) at \$$0.0065$ per correct answer---within $4$pp of a same-task o4-mini baseline ($80\%$) at $2.2\times$ lower cost.
 \item \textbf{Two informative null results (boundary limits).}
 (a)~Critic-driven near-miss refinement adds no value over simple cold sampling at matched compute budget ($40\%$ vs $43.3\%$), confirming that the simple verifier-loop alone is the active ingredient.
 (b)~The architecture does not transfer to ARC-AGI-2 ($0/100$), where our Python DSL cannot express the required abstractions---defining the outer boundary as \emph{DSL coverage}, not verification quality.
@@ -917,7 +917,7 @@ o1 (published) & $400$ & $\sim\!32\%$ & \$$1.500$ & \$$4.688$ \\
 \end{table}
 
 Our architecture is the lowest cost-per-correct in the comparison: $3.0\times$ cheaper than Claude~3.5 Sonnet, $4.4\times$ cheaper than GPT-4o, $11.7\times$ cheaper than DeepSeek-R1, and $29\times$ cheaper than o1.
-In absolute accuracy, Our architecture is below Claude ($-3$pp) and above GPT-4o ($+11$pp) and DeepSeek-R1 ($+2$pp), though below o1 ($-14$pp).
+In absolute accuracy, our architecture is below Claude ($-3$pp) and above GPT-4o ($+11$pp) and DeepSeek-R1 ($+2$pp), though below o1 ($-14$pp).
 
 \paragraph{The verifiability boundary, confirmed mechanically.}
 The same-task DeepSeek-V3.1 baseline ($n\!=\!400$) produces $2.8\%$ strict-grid-match on the evaluation split.
@@ -938,7 +938,7 @@ Cost-per-correct: \$$0.0065$.
 
 \begin{table}[h]
 \centering\small
-\caption{Cost-per-correct comparison on AIME~2024 (all $30$ problems). The o4-mini row is a \textbf{same-task baseline}: the identical $30$ problems, graded identically, run during this study. Other frontier rows use published numbers. Our architecture is within $3$pp of the same-task o4-mini baseline at $2.2\times$ lower cost per correct answer.}
+\caption{Cost-per-correct comparison on AIME~2024 (all $30$ problems). The o4-mini row is a \textbf{same-task baseline}: the identical $30$ problems, graded identically, run during this study. Other frontier rows use published numbers. Our architecture is within $4$pp of the same-task o4-mini baseline at $2.2\times$ lower cost per correct answer.}
 \label{tab:aime-cost}
 \begin{tabular}{lcccr}
 \toprule
@@ -1021,7 +1021,7 @@ On the same $30$-task ARC training battery used in Act~I, with matched total com
 Architecture & Deployable & Wilson 95\% CI \\
 \midrule
 $K\!=\!32$ cold samples (Act~I baseline) & $13/30 = 43.3\%$ & $[27.4\%, 60.8\%]$ \\
-$K\!=\!16$ cold + $16$ critic refinements & $12/30 = 40.0\%$ & $[22.7\%, 59.4\%]$ \\
+$K\!=\!16$ cold + $16$ critic refinements & $12/30 = 40.0\%$ & $[24.6\%, 57.7\%]$ \\
 \bottomrule
 \end{tabular}
 \end{center}
@@ -1033,7 +1033,7 @@ This parallels the Act~I falsification of MFG framework selection: in both cases
 \subsection{Null result 2: ARC-AGI-2 breaks the architecture}\label{sec:act2-arc2}
 
 ARC-AGI-2 (launched 2025) is materially harder than ARC-AGI-1; all published frontier models score below $5\%$.
-We ran Our architecture (identical configuration to Section~\ref{sec:act2-arc}: \texttt{qwen-22b}, $K\!=\!16$, same Python DSL) on $100$ randomly sampled tasks from the ARC-AGI-2 test split.
+We ran our architecture (identical configuration to Section~\ref{sec:act2-arc}: \texttt{qwen-22b}, $K\!=\!16$, same Python DSL) on $100$ randomly sampled tasks from the ARC-AGI-2 test split.
 
 Result: $0/100$ deployable (Wilson 95\% CI $[0.0\%, 3.7\%]$).
 Only $1$ task in $100$ produced any program that passed all training pairs.
@@ -1290,7 +1290,7 @@ Both vanish on tasks where the LLM cannot verify outputs without re-solving the 
 \emph{Symbolic verification dissolves the boundary.}
 Replacing the LLM aggregator with sandboxed Python execution achieves frontier-competitive accuracy on three benchmarks:
 HumanEval $97.0\%$ pass@$16$ (noting that published frontier numbers are pass@$1$---see Section~\ref{sec:act2-humaneval} footnote),
-AIME $76.7\%$ (within $3$pp of a same-task o4-mini baseline at $2.2\times$ lower cost per correct answer),
+AIME $76.7\%$ (within $4$pp of a same-task o4-mini baseline at $2.2\times$ lower cost per correct answer),
 ARC-AGI-1 $18.2\%$ (the lowest published cost-per-correct at \$$0.16$, $29\times$ cheaper than o1).
 
 \emph{But no architectural elaboration on top of the verifier adds value.}
