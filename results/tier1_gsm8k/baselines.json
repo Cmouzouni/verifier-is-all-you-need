@@ -1,0 +1,1060 @@
+{
+  "baselines": {
+    "qwen-7b": [
+      {
+        "task_id": "gsm8k_006",
+        "answer": "21",
+        "correct": true,
+        "cost": 5.7900000000000005e-05,
+        "tokens": 193
+      },
+      {
+        "task_id": "gsm8k_008",
+        "answer": "60",
+        "correct": true,
+        "cost": 9.24e-05,
+        "tokens": 308
+      },
+      {
+        "task_id": "gsm8k_003",
+        "answer": "12",
+        "correct": true,
+        "cost": 8.039999999999999e-05,
+        "tokens": 268
+      },
+      {
+        "task_id": "gsm8k_002",
+        "answer": "5",
+        "correct": true,
+        "cost": 0.0001191,
+        "tokens": 397
+      },
+      {
+        "task_id": "gsm8k_000",
+        "answer": "2180",
+        "correct": false,
+        "cost": 0.0001269,
+        "tokens": 423
+      },
+      {
+        "task_id": "gsm8k_012",
+        "answer": "1 ) hour",
+        "correct": false,
+        "cost": 9.63e-05,
+        "tokens": 321
+      },
+      {
+        "task_id": "gsm8k_013",
+        "answer": "1430",
+        "correct": true,
+        "cost": 9.779999999999999e-05,
+        "tokens": 326
+      },
+      {
+        "task_id": "gsm8k_009",
+        "answer": "122",
+        "correct": true,
+        "cost": 8.28e-05,
+        "tokens": 276
+      },
+      {
+        "task_id": "gsm8k_015",
+        "answer": "5",
+        "correct": true,
+        "cost": 9.12e-05,
+        "tokens": 304
+      },
+      {
+        "task_id": "gsm8k_016",
+        "answer": "300 / 15 = 20 books",
+        "correct": true,
+        "cost": 7.89e-05,
+        "tokens": 263
+      },
+      {
+        "task_id": "gsm8k_004",
+        "answer": "273",
+        "correct": true,
+        "cost": 0.00010680000000000001,
+        "tokens": 356
+      },
+      {
+        "task_id": "gsm8k_007",
+        "answer": "6000",
+        "correct": false,
+        "cost": 0.0001026,
+        "tokens": 342
+      },
+      {
+        "task_id": "gsm8k_014",
+        "answer": "5",
+        "correct": true,
+        "cost": 8.07e-05,
+        "tokens": 269
+      },
+      {
+        "task_id": "gsm8k_021",
+        "answer": "2000",
+        "correct": true,
+        "cost": 0.000132,
+        "tokens": 440
+      },
+      {
+        "task_id": "gsm8k_017",
+        "answer": "3 books  16/book = 48",
+        "correct": false,
+        "cost": 7.11e-05,
+        "tokens": 237
+      },
+      {
+        "task_id": "gsm8k_020",
+        "answer": "3)",
+        "correct": false,
+        "cost": 7.2e-05,
+        "tokens": 240
+      },
+      {
+        "task_id": "gsm8k_022",
+        "answer": "1520",
+        "correct": true,
+        "cost": 9.779999999999999e-05,
+        "tokens": 326
+      },
+      {
+        "task_id": "gsm8k_023",
+        "answer": "11050",
+        "correct": true,
+        "cost": 0.00011609999999999999,
+        "tokens": 387
+      },
+      {
+        "task_id": "gsm8k_005",
+        "answer": "25",
+        "correct": false,
+        "cost": 0.0001041,
+        "tokens": 347
+      },
+      {
+        "task_id": "gsm8k_026",
+        "answer": "21 lemonades  4/lemonade = 84",
+        "correct": true,
+        "cost": 7.56e-05,
+        "tokens": 252
+      },
+      {
+        "task_id": "gsm8k_025",
+        "answer": "40000",
+        "correct": true,
+        "cost": 0.000111,
+        "tokens": 370
+      },
+      {
+        "task_id": "gsm8k_011",
+        "answer": "500 text{ burritos}",
+        "correct": false,
+        "cost": 0.0001089,
+        "tokens": 363
+      },
+      {
+        "task_id": "gsm8k_018",
+        "answer": "15",
+        "correct": true,
+        "cost": 8.639999999999999e-05,
+        "tokens": 288
+      },
+      {
+        "task_id": "gsm8k_024",
+        "answer": "90",
+        "correct": true,
+        "cost": 0.0001176,
+        "tokens": 392
+      },
+      {
+        "task_id": "gsm8k_010",
+        "answer": "3 , text{liters})",
+        "correct": false,
+        "cost": 0.0001665,
+        "tokens": 555
+      },
+      {
+        "task_id": "gsm8k_001",
+        "answer": "1",
+        "correct": true,
+        "cost": 0.0001257,
+        "tokens": 419
+      },
+      {
+        "task_id": "gsm8k_034",
+        "answer": "15.75",
+        "correct": false,
+        "cost": 0.00011190000000000001,
+        "tokens": 373
+      },
+      {
+        "task_id": "gsm8k_019",
+        "answer": "40",
+        "correct": true,
+        "cost": 0.00011009999999999999,
+        "tokens": 367
+      },
+      {
+        "task_id": "gsm8k_031",
+        "answer": "123",
+        "correct": true,
+        "cost": 0.00011339999999999999,
+        "tokens": 378
+      },
+      {
+        "task_id": "gsm8k_033",
+        "answer": "12",
+        "correct": false,
+        "cost": 0.0001035,
+        "tokens": 345
+      },
+      {
+        "task_id": "gsm8k_035",
+        "answer": "2.00 \u00d7 6 = 12.00",
+        "correct": false,
+        "cost": 0.0001134,
+        "tokens": 378
+      },
+      {
+        "task_id": "gsm8k_038",
+        "answer": "50",
+        "correct": true,
+        "cost": 8.88e-05,
+        "tokens": 296
+      },
+      {
+        "task_id": "gsm8k_028",
+        "answer": "14",
+        "correct": true,
+        "cost": 0.00010290000000000001,
+        "tokens": 343
+      },
+      {
+        "task_id": "gsm8k_037",
+        "answer": "20 text{ votes}",
+        "correct": false,
+        "cost": 0.0001122,
+        "tokens": 374
+      },
+      {
+        "task_id": "gsm8k_039",
+        "answer": "30) grapes",
+        "correct": false,
+        "cost": 9.75e-05,
+        "tokens": 325
+      },
+      {
+        "task_id": "gsm8k_040",
+        "answer": "30x)",
+        "correct": false,
+        "cost": 0.0001209,
+        "tokens": 403
+      },
+      {
+        "task_id": "gsm8k_042",
+        "answer": "8",
+        "correct": false,
+        "cost": 0.0001065,
+        "tokens": 355
+      },
+      {
+        "task_id": "gsm8k_043",
+        "answer": "30",
+        "correct": true,
+        "cost": 8.639999999999999e-05,
+        "tokens": 288
+      },
+      {
+        "task_id": "gsm8k_029",
+        "answer": "12",
+        "correct": false,
+        "cost": 0.00012059999999999999,
+        "tokens": 402
+      },
+      {
+        "task_id": "gsm8k_044",
+        "answer": "176",
+        "correct": false,
+        "cost": 0.0001263,
+        "tokens": 421
+      },
+      {
+        "task_id": "gsm8k_045",
+        "answer": "276",
+        "correct": true,
+        "cost": 0.0001266,
+        "tokens": 422
+      },
+      {
+        "task_id": "gsm8k_046",
+        "answer": "5) starfish",
+        "correct": false,
+        "cost": 0.00013169999999999998,
+        "tokens": 439
+      },
+      {
+        "task_id": "gsm8k_049",
+        "answer": "84",
+        "correct": true,
+        "cost": 8.58e-05,
+        "tokens": 286
+      },
+      {
+        "task_id": "gsm8k_041",
+        "answer": "8000",
+        "correct": true,
+        "cost": 7.8e-05,
+        "tokens": 260
+      },
+      {
+        "task_id": "gsm8k_030",
+        "answer": "100",
+        "correct": false,
+        "cost": 0.00016769999999999998,
+        "tokens": 559
+      },
+      {
+        "task_id": "gsm8k_027",
+        "answer": "18",
+        "correct": true,
+        "cost": 0.000177,
+        "tokens": 590
+      },
+      {
+        "task_id": "gsm8k_036",
+        "answer": "320",
+        "correct": true,
+        "cost": 0.0001305,
+        "tokens": 435
+      },
+      {
+        "task_id": "gsm8k_048",
+        "answer": "0.5 times 8 = 4 text{ pounds}",
+        "correct": false,
+        "cost": 9.839999999999999e-05,
+        "tokens": 328
+      },
+      {
+        "task_id": "gsm8k_032",
+        "answer": "9 , text{feet} ]",
+        "correct": false,
+        "cost": 0.0001467,
+        "tokens": 489
+      },
+      {
+        "task_id": "gsm8k_047",
+        "answer": "25",
+        "correct": true,
+        "cost": 0.0001308,
+        "tokens": 436
+      }
+    ],
+    "qwen-22b": [
+      {
+        "task_id": "gsm8k_006",
+        "answer": "21",
+        "correct": true,
+        "cost": 6.48e-05,
+        "tokens": 158
+      },
+      {
+        "task_id": "gsm8k_008",
+        "answer": "60",
+        "correct": true,
+        "cost": 8.659999999999999e-05,
+        "tokens": 205
+      },
+      {
+        "task_id": "gsm8k_005",
+        "answer": "45",
+        "correct": true,
+        "cost": 0.0001104,
+        "tokens": 268
+      },
+      {
+        "task_id": "gsm8k_004",
+        "answer": "273",
+        "correct": true,
+        "cost": 0.00011640000000000001,
+        "tokens": 268
+      },
+      {
+        "task_id": "gsm8k_001",
+        "answer": "1",
+        "correct": true,
+        "cost": 0.000115,
+        "tokens": 261
+      },
+      {
+        "task_id": "gsm8k_002",
+        "answer": "It takes him 5 hours to get back",
+        "correct": true,
+        "cost": 0.0001144,
+        "tokens": 256
+      },
+      {
+        "task_id": "gsm8k_009",
+        "answer": "122",
+        "correct": true,
+        "cost": 0.0001268,
+        "tokens": 272
+      },
+      {
+        "task_id": "gsm8k_000",
+        "answer": "2180",
+        "correct": false,
+        "cost": 0.00013539999999999998,
+        "tokens": 299
+      },
+      {
+        "task_id": "gsm8k_003",
+        "answer": "12",
+        "correct": true,
+        "cost": 0.0001396,
+        "tokens": 298
+      },
+      {
+        "task_id": "gsm8k_014",
+        "answer": "5",
+        "correct": true,
+        "cost": 8.3e-05,
+        "tokens": 195
+      },
+      {
+        "task_id": "gsm8k_017",
+        "answer": "66",
+        "correct": true,
+        "cost": 8.56e-05,
+        "tokens": 200
+      },
+      {
+        "task_id": "gsm8k_007",
+        "answer": "145",
+        "correct": true,
+        "cost": 0.00020979999999999998,
+        "tokens": 407
+      },
+      {
+        "task_id": "gsm8k_013",
+        "answer": "1430",
+        "correct": true,
+        "cost": 0.000118,
+        "tokens": 270
+      },
+      {
+        "task_id": "gsm8k_015",
+        "answer": "5",
+        "correct": true,
+        "cost": 0.00011660000000000002,
+        "tokens": 259
+      },
+      {
+        "task_id": "gsm8k_012",
+        "answer": "36",
+        "correct": true,
+        "cost": 0.0001224,
+        "tokens": 268
+      },
+      {
+        "task_id": "gsm8k_016",
+        "answer": "5",
+        "correct": true,
+        "cost": 8.88e-05,
+        "tokens": 212
+      },
+      {
+        "task_id": "gsm8k_011",
+        "answer": "80",
+        "correct": true,
+        "cost": 0.0001282,
+        "tokens": 289
+      },
+      {
+        "task_id": "gsm8k_010",
+        "answer": "29",
+        "correct": true,
+        "cost": 0.0001484,
+        "tokens": 388
+      },
+      {
+        "task_id": "gsm8k_018",
+        "answer": "15",
+        "correct": true,
+        "cost": 9.48e-05,
+        "tokens": 222
+      },
+      {
+        "task_id": "gsm8k_026",
+        "answer": "Mitchell made 21 more than Liam",
+        "correct": true,
+        "cost": 8.18e-05,
+        "tokens": 213
+      },
+      {
+        "task_id": "gsm8k_019",
+        "answer": "40",
+        "correct": true,
+        "cost": 0.0001486,
+        "tokens": 335
+      },
+      {
+        "task_id": "gsm8k_020",
+        "answer": "93",
+        "correct": true,
+        "cost": 8.94e-05,
+        "tokens": 203
+      },
+      {
+        "task_id": "gsm8k_022",
+        "answer": "1520",
+        "correct": true,
+        "cost": 0.00012680000000000002,
+        "tokens": 280
+      },
+      {
+        "task_id": "gsm8k_024",
+        "answer": "90",
+        "correct": true,
+        "cost": 0.00014739999999999998,
+        "tokens": 333
+      },
+      {
+        "task_id": "gsm8k_025",
+        "answer": "40000",
+        "correct": true,
+        "cost": 0.00015519999999999998,
+        "tokens": 336
+      },
+      {
+        "task_id": "gsm8k_028",
+        "answer": "14",
+        "correct": true,
+        "cost": 0.0001634,
+        "tokens": 351
+      },
+      {
+        "task_id": "gsm8k_029",
+        "answer": "23",
+        "correct": true,
+        "cost": 0.0001394,
+        "tokens": 311
+      },
+      {
+        "task_id": "gsm8k_027",
+        "answer": "18",
+        "correct": true,
+        "cost": 0.0002072,
+        "tokens": 416
+      },
+      {
+        "task_id": "gsm8k_023",
+        "answer": "11050",
+        "correct": true,
+        "cost": 0.0001956,
+        "tokens": 400
+      },
+      {
+        "task_id": "gsm8k_031",
+        "answer": "123",
+        "correct": true,
+        "cost": 0.00013580000000000002,
+        "tokens": 293
+      },
+      {
+        "task_id": "gsm8k_021",
+        "answer": "2000",
+        "correct": true,
+        "cost": 0.000243,
+        "tokens": 499
+      },
+      {
+        "task_id": "gsm8k_032",
+        "answer": "98",
+        "correct": true,
+        "cost": 0.0001672,
+        "tokens": 336
+      },
+      {
+        "task_id": "gsm8k_033",
+        "answer": "7.00",
+        "correct": true,
+        "cost": 0.0001754,
+        "tokens": 357
+      },
+      {
+        "task_id": "gsm8k_039",
+        "answer": "74",
+        "correct": false,
+        "cost": 0.0001244,
+        "tokens": 284
+      },
+      {
+        "task_id": "gsm8k_034",
+        "answer": "34",
+        "correct": true,
+        "cost": 0.0001884,
+        "tokens": 392
+      },
+      {
+        "task_id": "gsm8k_037",
+        "answer": "50",
+        "correct": true,
+        "cost": 0.0001686,
+        "tokens": 353
+      },
+      {
+        "task_id": "gsm8k_035",
+        "answer": "38",
+        "correct": true,
+        "cost": 0.0001506,
+        "tokens": 339
+      },
+      {
+        "task_id": "gsm8k_038",
+        "answer": "50",
+        "correct": true,
+        "cost": 0.00011619999999999999,
+        "tokens": 249
+      },
+      {
+        "task_id": "gsm8k_036",
+        "answer": "320",
+        "correct": true,
+        "cost": 0.000185,
+        "tokens": 391
+      },
+      {
+        "task_id": "gsm8k_040",
+        "answer": "50",
+        "correct": true,
+        "cost": 0.0002066,
+        "tokens": 417
+      },
+      {
+        "task_id": "gsm8k_042",
+        "answer": "280",
+        "correct": true,
+        "cost": 0.00011279999999999999,
+        "tokens": 256
+      },
+      {
+        "task_id": "gsm8k_041",
+        "answer": "8000",
+        "correct": true,
+        "cost": 0.0001212,
+        "tokens": 260
+      },
+      {
+        "task_id": "gsm8k_043",
+        "answer": "30",
+        "correct": true,
+        "cost": 9.52e-05,
+        "tokens": 222
+      },
+      {
+        "task_id": "gsm8k_048",
+        "answer": "He now uses a 10-pound weight",
+        "correct": true,
+        "cost": 9.82e-05,
+        "tokens": 237
+      },
+      {
+        "task_id": "gsm8k_045",
+        "answer": "276",
+        "correct": true,
+        "cost": 0.000143,
+        "tokens": 313
+      },
+      {
+        "task_id": "gsm8k_047",
+        "answer": "25",
+        "correct": true,
+        "cost": 0.000171,
+        "tokens": 371
+      },
+      {
+        "task_id": "gsm8k_049",
+        "answer": "84",
+        "correct": true,
+        "cost": 0.0001486,
+        "tokens": 319
+      },
+      {
+        "task_id": "gsm8k_046",
+        "answer": "17",
+        "correct": false,
+        "cost": 0.00022939999999999997,
+        "tokens": 463
+      },
+      {
+        "task_id": "gsm8k_030",
+        "answer": "145",
+        "correct": true,
+        "cost": 0.0003492,
+        "tokens": 688
+      },
+      {
+        "task_id": "gsm8k_044",
+        "answer": "10 \u00d7 20 = 200 cows",
+        "correct": false,
+        "cost": 0.0012485999999999999,
+        "tokens": 2147
+      }
+    ],
+    "qwen-17b": [
+      {
+        "task_id": "gsm8k_006",
+        "answer": "21",
+        "correct": true,
+        "cost": 0.0028902,
+        "tokens": 867
+      },
+      {
+        "task_id": "gsm8k_005",
+        "answer": "45",
+        "correct": true,
+        "cost": 0.0043356,
+        "tokens": 1311
+      },
+      {
+        "task_id": "gsm8k_000",
+        "answer": "2180",
+        "correct": false,
+        "cost": 0.0057552,
+        "tokens": 1692
+      },
+      {
+        "task_id": "gsm8k_003",
+        "answer": "12",
+        "correct": true,
+        "cost": 0.005298,
+        "tokens": 1555
+      },
+      {
+        "task_id": "gsm8k_002",
+        "answer": "5",
+        "correct": true,
+        "cost": 0.0044196,
+        "tokens": 1311
+      },
+      {
+        "task_id": "gsm8k_004",
+        "answer": "273",
+        "correct": true,
+        "cost": 0.0053994,
+        "tokens": 1594
+      },
+      {
+        "task_id": "gsm8k_008",
+        "answer": "60",
+        "correct": true,
+        "cost": 0.0040734000000000005,
+        "tokens": 1209
+      },
+      {
+        "task_id": "gsm8k_001",
+        "answer": "1",
+        "correct": true,
+        "cost": 0.004160400000000001,
+        "tokens": 1244
+      },
+      {
+        "task_id": "gsm8k_009",
+        "answer": "122",
+        "correct": true,
+        "cost": 0.0044226000000000005,
+        "tokens": 1306
+      },
+      {
+        "task_id": "gsm8k_007",
+        "answer": "6 plates",
+        "correct": false,
+        "cost": 0.0074256,
+        "tokens": 2136
+      },
+      {
+        "task_id": "gsm8k_010",
+        "answer": "29",
+        "correct": true,
+        "cost": 0.005441400000000001,
+        "tokens": 1689
+      },
+      {
+        "task_id": "gsm8k_011",
+        "answer": "80",
+        "correct": true,
+        "cost": 0.003759,
+        "tokens": 1140
+      },
+      {
+        "task_id": "gsm8k_012",
+        "answer": "36",
+        "correct": true,
+        "cost": 0.0034536000000000002,
+        "tokens": 1041
+      },
+      {
+        "task_id": "gsm8k_014",
+        "answer": "5",
+        "correct": true,
+        "cost": 0.0045054,
+        "tokens": 1324
+      },
+      {
+        "task_id": "gsm8k_013",
+        "answer": "1430",
+        "correct": true,
+        "cost": 0.0048372,
+        "tokens": 1437
+      },
+      {
+        "task_id": "gsm8k_019",
+        "answer": "40",
+        "correct": true,
+        "cost": 0.0045576,
+        "tokens": 1376
+      },
+      {
+        "task_id": "gsm8k_017",
+        "answer": "66",
+        "correct": true,
+        "cost": 0.005042400000000001,
+        "tokens": 1474
+      },
+      {
+        "task_id": "gsm8k_016",
+        "answer": "5",
+        "correct": true,
+        "cost": 0.0034428,
+        "tokens": 1038
+      },
+      {
+        "task_id": "gsm8k_018",
+        "answer": "15",
+        "correct": true,
+        "cost": 0.0043332,
+        "tokens": 1282
+      },
+      {
+        "task_id": "gsm8k_015",
+        "answer": "5",
+        "correct": true,
+        "cost": 0.0044621999999999995,
+        "tokens": 1322
+      },
+      {
+        "task_id": "gsm8k_022",
+        "answer": "1520",
+        "correct": true,
+        "cost": 0.004649400000000001,
+        "tokens": 1379
+      },
+      {
+        "task_id": "gsm8k_026",
+        "answer": "21",
+        "correct": true,
+        "cost": 0.0040482,
+        "tokens": 1222
+      },
+      {
+        "task_id": "gsm8k_024",
+        "answer": "90",
+        "correct": true,
+        "cost": 0.0049074,
+        "tokens": 1474
+      },
+      {
+        "task_id": "gsm8k_027",
+        "answer": "18",
+        "correct": true,
+        "cost": 0.0058752000000000006,
+        "tokens": 1722
+      },
+      {
+        "task_id": "gsm8k_025",
+        "answer": "40,000",
+        "correct": true,
+        "cost": 0.005989200000000001,
+        "tokens": 1762
+      },
+      {
+        "task_id": "gsm8k_020",
+        "answer": "93",
+        "correct": true,
+        "cost": 0.0030018,
+        "tokens": 903
+      },
+      {
+        "task_id": "gsm8k_031",
+        "answer": "123",
+        "correct": true,
+        "cost": 0.0040788,
+        "tokens": 1218
+      },
+      {
+        "task_id": "gsm8k_023",
+        "answer": "11050",
+        "correct": true,
+        "cost": 0.004326600000000001,
+        "tokens": 1296
+      },
+      {
+        "task_id": "gsm8k_029",
+        "answer": "23",
+        "correct": true,
+        "cost": 0.004548600000000001,
+        "tokens": 1361
+      },
+      {
+        "task_id": "gsm8k_021",
+        "answer": "2000",
+        "correct": true,
+        "cost": 0.005795400000000001,
+        "tokens": 1729
+      },
+      {
+        "task_id": "gsm8k_028",
+        "answer": "",
+        "correct": false,
+        "cost": 0.0074448000000000005,
+        "tokens": 2168
+      },
+      {
+        "task_id": "gsm8k_032",
+        "answer": "98",
+        "correct": true,
+        "cost": 0.0056256000000000006,
+        "tokens": 1636
+      },
+      {
+        "task_id": "gsm8k_037",
+        "answer": "50",
+        "correct": true,
+        "cost": 0.00435,
+        "tokens": 1300
+      },
+      {
+        "task_id": "gsm8k_033",
+        "answer": "",
+        "correct": false,
+        "cost": 0.0074322,
+        "tokens": 2147
+      },
+      {
+        "task_id": "gsm8k_030",
+        "answer": "",
+        "correct": false,
+        "cost": 0.0074688,
+        "tokens": 2208
+      },
+      {
+        "task_id": "gsm8k_038",
+        "answer": "50",
+        "correct": true,
+        "cost": 0.0040758,
+        "tokens": 1203
+      },
+      {
+        "task_id": "gsm8k_035",
+        "answer": "38",
+        "correct": true,
+        "cost": 0.0054012,
+        "tokens": 1612
+      },
+      {
+        "task_id": "gsm8k_039",
+        "answer": "84",
+        "correct": true,
+        "cost": 0.0051066,
+        "tokens": 1516
+      },
+      {
+        "task_id": "gsm8k_041",
+        "answer": "8000",
+        "correct": true,
+        "cost": 0.0039077999999999995,
+        "tokens": 1158
+      },
+      {
+        "task_id": "gsm8k_036",
+        "answer": "20",
+        "correct": false,
+        "cost": 0.007448400000000001,
+        "tokens": 2174
+      },
+      {
+        "task_id": "gsm8k_042",
+        "answer": "280",
+        "correct": true,
+        "cost": 0.0044544,
+        "tokens": 1324
+      },
+      {
+        "task_id": "gsm8k_040",
+        "answer": "2",
+        "correct": false,
+        "cost": 0.0074394000000000005,
+        "tokens": 2159
+      },
+      {
+        "task_id": "gsm8k_034",
+        "answer": "",
+        "correct": false,
+        "cost": 0.0074442,
+        "tokens": 2167
+      },
+      {
+        "task_id": "gsm8k_045",
+        "answer": "276",
+        "correct": true,
+        "cost": 0.0062748000000000005,
+        "tokens": 1838
+      },
+      {
+        "task_id": "gsm8k_043",
+        "answer": "30",
+        "correct": true,
+        "cost": 0.0037446,
+        "tokens": 1121
+      },
+      {
+        "task_id": "gsm8k_048",
+        "answer": "10",
+        "correct": true,
+        "cost": 0.0036528,
+        "tokens": 1108
+      },
+      {
+        "task_id": "gsm8k_046",
+        "answer": "",
+        "correct": false,
+        "cost": 0.0074466,
+        "tokens": 2171
+      },
+      {
+        "task_id": "gsm8k_047",
+        "answer": "25",
+        "correct": true,
+        "cost": 0.005817000000000001,
+        "tokens": 1725
+      },
+      {
+        "task_id": "gsm8k_049",
+        "answer": "84",
+        "correct": true,
+        "cost": 0.004659,
+        "tokens": 1385
+      },
+      {
+        "task_id": "gsm8k_044",
+        "answer": "",
+        "correct": false,
+        "cost": 0.0074328,
+        "tokens": 2148
+      }
+    ]
+  }
+}

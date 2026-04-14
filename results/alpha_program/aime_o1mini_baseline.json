@@ -1,0 +1,312 @@
+{
+  "experiment": "aime_same_task_baseline",
+  "model": "o1-mini",
+  "n": 30,
+  "n_correct": 0,
+  "rate": 0.0,
+  "total_cost_usd": 0,
+  "cost_per_task": 0.0,
+  "elapsed_s": 2.672071933746338,
+  "per_task": [
+    {
+      "task_id": "2024-I-8",
+      "ground_truth": 197,
+      "model_answer": null,
+      "correct": false,
+      "cost_usd": 0,
+      "tokens_in": 0,
+      "tokens_out": 0,
+      "error": "NotFoundError: Error code: 404 - {'error': {'message': 'The model `o1-mini` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}"
+    },
+    {
+      "task_id": "2024-I-3",
+      "ground_truth": 809,
+      "model_answer": null,
+      "correct": false,
+      "cost_usd": 0,
+      "tokens_in": 0,
+      "tokens_out": 0,
+      "error": "NotFoundError: Error code: 404 - {'error': {'message': 'The model `o1-mini` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}"
+    },
+    {
+      "task_id": "2024-II-11",
+      "ground_truth": 601,
+      "model_answer": null,
+      "correct": false,
+      "cost_usd": 0,
+      "tokens_in": 0,
+      "tokens_out": 0,
+      "error": "NotFoundError: Error code: 404 - {'error': {'message': 'The model `o1-mini` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}"
+    },
+    {
+      "task_id": "2024-I-11",
+      "ground_truth": 371,
+      "model_answer": null,
+      "correct": false,
+      "cost_usd": 0,
+      "tokens_in": 0,
+      "tokens_out": 0,
+      "error": "NotFoundError: Error code: 404 - {'error': {'message': 'The model `o1-mini` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}"
+    },
+    {
+      "task_id": "2024-I-12",
+      "ground_truth": 385,
+      "model_answer": null,
+      "correct": false,
+      "cost_usd": 0,
+      "tokens_in": 0,
+      "tokens_out": 0,
+      "error": "NotFoundError: Error code: 404 - {'error': {'message': 'The model `o1-mini` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}"
+    },
+    {
+      "task_id": "2024-II-12",
+      "ground_truth": 23,
+      "model_answer": null,
+      "correct": false,
+      "cost_usd": 0,
+      "tokens_in": 0,
+      "tokens_out": 0,
+      "error": "NotFoundError: Error code: 404 - {'error': {'message': 'The model `o1-mini` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}"
+    },
+    {
+      "task_id": "2024-II-6",
+      "ground_truth": 55,
+      "model_answer": null,
+      "correct": false,
+      "cost_usd": 0,
+      "tokens_in": 0,
+      "tokens_out": 0,
+      "error": "NotFoundError: Error code: 404 - {'error': {'message': 'The model `o1-mini` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}"
+    },
+    {
+      "task_id": "2024-I-2",
+      "ground_truth": 25,
+      "model_answer": null,
+      "correct": false,
+      "cost_usd": 0,
+      "tokens_in": 0,
+      "tokens_out": 0,
+      "error": "NotFoundError: Error code: 404 - {'error': {'message': 'The model `o1-mini` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}"
+    },
+    {
+      "task_id": "2024-I-4",
+      "ground_truth": 116,
+      "model_answer": null,
+      "correct": false,
+      "cost_usd": 0,
+      "tokens_in": 0,
+      "tokens_out": 0,
+      "error": "NotFoundError: Error code: 404 - {'error': {'message': 'The model `o1-mini` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}"
+    },
+    {
+      "task_id": "2024-II-3",
+      "ground_truth": 45,
+      "model_answer": null,
+      "correct": false,
+      "cost_usd": 0,
+      "tokens_in": 0,
+      "tokens_out": 0,
+      "error": "NotFoundError: Error code: 404 - {'error': {'message': 'The model `o1-mini` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}"
+    },
+    {
+      "task_id": "2024-II-4",
+      "ground_truth": 33,
+      "model_answer": null,
+      "correct": false,
+      "cost_usd": 0,
+      "tokens_in": 0,
+      "tokens_out": 0,
+      "error": "NotFoundError: Error code: 404 - {'error': {'message': 'The model `o1-mini` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}"
+    },
+    {
+      "task_id": "2024-II-7",
+      "ground_truth": 699,
+      "model_answer": null,
+      "correct": false,
+      "cost_usd": 0,
+      "tokens_in": 0,
+      "tokens_out": 0,
+      "error": "NotFoundError: Error code: 404 - {'error': {'message': 'The model `o1-mini` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}"
+    },
+    {
+      "task_id": "2024-I-6",
+      "ground_truth": 294,
+      "model_answer": null,
+      "correct": false,
+      "cost_usd": 0,
+      "tokens_in": 0,
+      "tokens_out": 0,
+      "error": "NotFoundError: Error code: 404 - {'error': {'message': 'The model `o1-mini` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}"
+    },
+    {
+      "task_id": "2024-I-13",
+      "ground_truth": 110,
+      "model_answer": null,
+      "correct": false,
+      "cost_usd": 0,
+      "tokens_in": 0,
+      "tokens_out": 0,
+      "error": "NotFoundError: Error code: 404 - {'error': {'message': 'The model `o1-mini` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}"
+    },
+    {
+      "task_id": "2024-I-15",
+      "ground_truth": 721,
+      "model_answer": null,
+      "correct": false,
+      "cost_usd": 0,
+      "tokens_in": 0,
+      "tokens_out": 0,
+      "error": "NotFoundError: Error code: 404 - {'error': {'message': 'The model `o1-mini` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}"
+    },
+    {
+      "task_id": "2024-II-15",
+      "ground_truth": 315,
+      "model_answer": null,
+      "correct": false,
+      "cost_usd": 0,
+      "tokens_in": 0,
+      "tokens_out": 0,
+      "error": "NotFoundError: Error code: 404 - {'error': {'message': 'The model `o1-mini` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}"
+    },
+    {
+      "task_id": "2024-II-10",
+      "ground_truth": 468,
+      "model_answer": null,
+      "correct": false,
+      "cost_usd": 0,
+      "tokens_in": 0,
+      "tokens_out": 0,
+      "error": "NotFoundError: Error code: 404 - {'error': {'message': 'The model `o1-mini` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}"
+    },
+    {
+      "task_id": "2024-II-5",
+      "ground_truth": 80,
+      "model_answer": null,
+      "correct": false,
+      "cost_usd": 0,
+      "tokens_in": 0,
+      "tokens_out": 0,
+      "error": "NotFoundError: Error code: 404 - {'error': {'message': 'The model `o1-mini` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}"
+    },
+    {
+      "task_id": "2024-I-9",
+      "ground_truth": 480,
+      "model_answer": null,
+      "correct": false,
+      "cost_usd": 0,
+      "tokens_in": 0,
+      "tokens_out": 0,
+      "error": "NotFoundError: Error code: 404 - {'error': {'message': 'The model `o1-mini` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}"
+    },
+    {
+      "task_id": "2024-II-2",
+      "ground_truth": 236,
+      "model_answer": null,
+      "correct": false,
+      "cost_usd": 0,
+      "tokens_in": 0,
+      "tokens_out": 0,
+      "error": "NotFoundError: Error code: 404 - {'error': {'message': 'The model `o1-mini` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}"
+    },
+    {
+      "task_id": "2024-II-9",
+      "ground_truth": 902,
+      "model_answer": null,
+      "correct": false,
+      "cost_usd": 0,
+      "tokens_in": 0,
+      "tokens_out": 0,
+      "error": "NotFoundError: Error code: 404 - {'error': {'message': 'The model `o1-mini` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}"
+    },
+    {
+      "task_id": "2024-I-10",
+      "ground_truth": 113,
+      "model_answer": null,
+      "correct": false,
+      "cost_usd": 0,
+      "tokens_in": 0,
+      "tokens_out": 0,
+      "error": "NotFoundError: Error code: 404 - {'error': {'message': 'The model `o1-mini` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}"
+    },
+    {
+      "task_id": "2024-II-8",
+      "ground_truth": 127,
+      "model_answer": null,
+      "correct": false,
+      "cost_usd": 0,
+      "tokens_in": 0,
+      "tokens_out": 0,
+      "error": "NotFoundError: Error code: 404 - {'error': {'message': 'The model `o1-mini` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}"
+    },
+    {
+      "task_id": "2024-II-14",
+      "ground_truth": 211,
+      "model_answer": null,
+      "correct": false,
+      "cost_usd": 0,
+      "tokens_in": 0,
+      "tokens_out": 0,
+      "error": "NotFoundError: Error code: 404 - {'error': {'message': 'The model `o1-mini` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}"
+    },
+    {
+      "task_id": "2024-II-1",
+      "ground_truth": 73,
+      "model_answer": null,
+      "correct": false,
+      "cost_usd": 0,
+      "tokens_in": 0,
+      "tokens_out": 0,
+      "error": "NotFoundError: Error code: 404 - {'error': {'message': 'The model `o1-mini` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}"
+    },
+    {
+      "task_id": "2024-II-13",
+      "ground_truth": 321,
+      "model_answer": null,
+      "correct": false,
+      "cost_usd": 0,
+      "tokens_in": 0,
+      "tokens_out": 0,
+      "error": "NotFoundError: Error code: 404 - {'error': {'message': 'The model `o1-mini` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}"
+    },
+    {
+      "task_id": "2024-I-5",
+      "ground_truth": 104,
+      "model_answer": null,
+      "correct": false,
+      "cost_usd": 0,
+      "tokens_in": 0,
+      "tokens_out": 0,
+      "error": "NotFoundError: Error code: 404 - {'error': {'message': 'The model `o1-mini` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}"
+    },
+    {
+      "task_id": "2024-I-7",
+      "ground_truth": 540,
+      "model_answer": null,
+      "correct": false,
+      "cost_usd": 0,
+      "tokens_in": 0,
+      "tokens_out": 0,
+      "error": "NotFoundError: Error code: 404 - {'error': {'message': 'The model `o1-mini` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}"
+    },
+    {
+      "task_id": "2024-I-14",
+      "ground_truth": 104,
+      "model_answer": null,
+      "correct": false,
+      "cost_usd": 0,
+      "tokens_in": 0,
+      "tokens_out": 0,
+      "error": "NotFoundError: Error code: 404 - {'error': {'message': 'The model `o1-mini` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}"
+    },
+    {
+      "task_id": "2024-I-1",
+      "ground_truth": 204,
+      "model_answer": null,
+      "correct": false,
+      "cost_usd": 0,
+      "tokens_in": 0,
+      "tokens_out": 0,
+      "error": "NotFoundError: Error code: 404 - {'error': {'message': 'The model `o1-mini` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}"
+    }
+  ]
+}

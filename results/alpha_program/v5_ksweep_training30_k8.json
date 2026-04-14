@@ -1,0 +1,3001 @@
+{
+  "experiment": "validation_run",
+  "label": "V5 K-sweep: qwen-22b verifier-loop on training-30, K=8",
+  "model": "qwen-22b",
+  "dataset": "arc1",
+  "split": "training",
+  "n_tasks_planned": 30,
+  "n_tasks_completed": 30,
+  "k_programs": 8,
+  "temperature": 0.9,
+  "max_tokens": 1024,
+  "seed": 42,
+  "elapsed_s": 778.3200159072876,
+  "summary": {
+    "n_tasks": 30,
+    "n_samples_per_task": 8,
+    "per_attempt_rate": 0.25416666666666665,
+    "deployable_rate": 0.43333333333333335,
+    "deployable_k": 13,
+    "oracle_rate": 0.5,
+    "oracle_k": 15,
+    "any_train_solved_rate": 0.43333333333333335,
+    "any_train_solved_k": 13,
+    "total_cost_usd": 0.3669032,
+    "total_tokens_in": 1070968,
+    "total_tokens_out": 254516,
+    "parse_error_rate": 0.020833333333333332
+  },
+  "per_task": [
+    {
+      "task_id": "arc1_training_0327",
+      "n_train_pairs": 3,
+      "per_attempt_rate": 0.0,
+      "best_train_score": 0.3333333333333333,
+      "any_train_solved": false,
+      "first_passing_test_correct": false,
+      "parse_error_rate": 0.375,
+      "candidates": [
+        {
+          "i": 0,
+          "train_passed": 0,
+          "train_total": 3,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": true,
+          "cost_usd": 0.0023594,
+          "tokens_in": 5653,
+          "tokens_out": 2048
+        },
+        {
+          "i": 1,
+          "train_passed": 0,
+          "train_total": 3,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.001841,
+          "tokens_in": 5653,
+          "tokens_out": 1184
+        },
+        {
+          "i": 2,
+          "train_passed": 0,
+          "train_total": 3,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0017156,
+          "tokens_in": 5653,
+          "tokens_out": 975
+        },
+        {
+          "i": 3,
+          "train_passed": 0,
+          "train_total": 3,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": true,
+          "cost_usd": 0.0023594,
+          "tokens_in": 5653,
+          "tokens_out": 2048
+        },
+        {
+          "i": 4,
+          "train_passed": 1,
+          "train_total": 3,
+          "train_score": 0.3333333333333333,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0017708,
+          "tokens_in": 5653,
+          "tokens_out": 1067
+        },
+        {
+          "i": 5,
+          "train_passed": 0,
+          "train_total": 3,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": true,
+          "cost_usd": 0.0023594,
+          "tokens_in": 5653,
+          "tokens_out": 2048
+        },
+        {
+          "i": 6,
+          "train_passed": 0,
+          "train_total": 3,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0023228000000000003,
+          "tokens_in": 5653,
+          "tokens_out": 1987
+        },
+        {
+          "i": 7,
+          "train_passed": 0,
+          "train_total": 3,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0023594,
+          "tokens_in": 5653,
+          "tokens_out": 2048
+        }
+      ]
+    },
+    {
+      "task_id": "arc1_training_0057",
+      "n_train_pairs": 4,
+      "per_attempt_rate": 0.0,
+      "best_train_score": 0.0,
+      "any_train_solved": false,
+      "first_passing_test_correct": false,
+      "parse_error_rate": 0.0,
+      "candidates": [
+        {
+          "i": 0,
+          "train_passed": 0,
+          "train_total": 4,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0016234,
+          "tokens_in": 1973,
+          "tokens_out": 2048
+        },
+        {
+          "i": 1,
+          "train_passed": 0,
+          "train_total": 4,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0016234,
+          "tokens_in": 1973,
+          "tokens_out": 2048
+        },
+        {
+          "i": 2,
+          "train_passed": 0,
+          "train_total": 4,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0016234,
+          "tokens_in": 1973,
+          "tokens_out": 2048
+        },
+        {
+          "i": 3,
+          "train_passed": 0,
+          "train_total": 4,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0016234,
+          "tokens_in": 1973,
+          "tokens_out": 2048
+        },
+        {
+          "i": 4,
+          "train_passed": 0,
+          "train_total": 4,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0016234,
+          "tokens_in": 1973,
+          "tokens_out": 2048
+        },
+        {
+          "i": 5,
+          "train_passed": 0,
+          "train_total": 4,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0016234,
+          "tokens_in": 1973,
+          "tokens_out": 2048
+        },
+        {
+          "i": 6,
+          "train_passed": 0,
+          "train_total": 4,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0016234,
+          "tokens_in": 1973,
+          "tokens_out": 2048
+        },
+        {
+          "i": 7,
+          "train_passed": 0,
+          "train_total": 4,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0016234,
+          "tokens_in": 1973,
+          "tokens_out": 2048
+        }
+      ]
+    },
+    {
+      "task_id": "arc1_training_0012",
+      "n_train_pairs": 3,
+      "per_attempt_rate": 0.0,
+      "best_train_score": 0.0,
+      "any_train_solved": false,
+      "first_passing_test_correct": false,
+      "parse_error_rate": 0.0,
+      "candidates": [
+        {
+          "i": 0,
+          "train_passed": 0,
+          "train_total": 3,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0018344000000000001,
+          "tokens_in": 3028,
+          "tokens_out": 2048
+        },
+        {
+          "i": 1,
+          "train_passed": 0,
+          "train_total": 3,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0009998,
+          "tokens_in": 3028,
+          "tokens_out": 657
+        },
+        {
+          "i": 2,
+          "train_passed": 0,
+          "train_total": 3,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0009362000000000001,
+          "tokens_in": 3028,
+          "tokens_out": 551
+        },
+        {
+          "i": 3,
+          "train_passed": 0,
+          "train_total": 3,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0007904,
+          "tokens_in": 3028,
+          "tokens_out": 308
+        },
+        {
+          "i": 4,
+          "train_passed": 0,
+          "train_total": 3,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0018344000000000001,
+          "tokens_in": 3028,
+          "tokens_out": 2048
+        },
+        {
+          "i": 5,
+          "train_passed": 0,
+          "train_total": 3,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0007736,
+          "tokens_in": 3028,
+          "tokens_out": 280
+        },
+        {
+          "i": 6,
+          "train_passed": 0,
+          "train_total": 3,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0012422,
+          "tokens_in": 3028,
+          "tokens_out": 1061
+        },
+        {
+          "i": 7,
+          "train_passed": 0,
+          "train_total": 3,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0009038,
+          "tokens_in": 3028,
+          "tokens_out": 497
+        }
+      ]
+    },
+    {
+      "task_id": "arc1_training_0379",
+      "n_train_pairs": 3,
+      "per_attempt_rate": 0.125,
+      "best_train_score": 1.0,
+      "any_train_solved": true,
+      "first_passing_test_correct": true,
+      "parse_error_rate": 0.0,
+      "candidates": [
+        {
+          "i": 0,
+          "train_passed": 3,
+          "train_total": 3,
+          "train_score": 1.0,
+          "test_correct": true,
+          "parse_error": false,
+          "cost_usd": 0.0009158,
+          "tokens_in": 1621,
+          "tokens_out": 986
+        },
+        {
+          "i": 1,
+          "train_passed": 0,
+          "train_total": 3,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0005264000000000001,
+          "tokens_in": 1621,
+          "tokens_out": 337
+        },
+        {
+          "i": 2,
+          "train_passed": 0,
+          "train_total": 3,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0005144000000000001,
+          "tokens_in": 1621,
+          "tokens_out": 317
+        },
+        {
+          "i": 3,
+          "train_passed": 0,
+          "train_total": 3,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0005384000000000001,
+          "tokens_in": 1621,
+          "tokens_out": 357
+        },
+        {
+          "i": 4,
+          "train_passed": 0,
+          "train_total": 3,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0005252000000000001,
+          "tokens_in": 1621,
+          "tokens_out": 335
+        },
+        {
+          "i": 5,
+          "train_passed": 0,
+          "train_total": 3,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0007802000000000001,
+          "tokens_in": 1621,
+          "tokens_out": 760
+        },
+        {
+          "i": 6,
+          "train_passed": 0,
+          "train_total": 3,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0005474000000000001,
+          "tokens_in": 1621,
+          "tokens_out": 372
+        },
+        {
+          "i": 7,
+          "train_passed": 0,
+          "train_total": 3,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0004952,
+          "tokens_in": 1621,
+          "tokens_out": 285
+        }
+      ]
+    },
+    {
+      "task_id": "arc1_training_0140",
+      "n_train_pairs": 3,
+      "per_attempt_rate": 0.0,
+      "best_train_score": 0.0,
+      "any_train_solved": false,
+      "first_passing_test_correct": false,
+      "parse_error_rate": 0.0,
+      "candidates": [
+        {
+          "i": 0,
+          "train_passed": 0,
+          "train_total": 3,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0020192,
+          "tokens_in": 3952,
+          "tokens_out": 2048
+        },
+        {
+          "i": 1,
+          "train_passed": 0,
+          "train_total": 3,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0020192,
+          "tokens_in": 3952,
+          "tokens_out": 2048
+        },
+        {
+          "i": 2,
+          "train_passed": 0,
+          "train_total": 3,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0020192,
+          "tokens_in": 3952,
+          "tokens_out": 2048
+        },
+        {
+          "i": 3,
+          "train_passed": 0,
+          "train_total": 3,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0014306,
+          "tokens_in": 3952,
+          "tokens_out": 1067
+        },
+        {
+          "i": 4,
+          "train_passed": 0,
+          "train_total": 3,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0020192,
+          "tokens_in": 3952,
+          "tokens_out": 2048
+        },
+        {
+          "i": 5,
+          "train_passed": 0,
+          "train_total": 3,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0020192,
+          "tokens_in": 3952,
+          "tokens_out": 2048
+        },
+        {
+          "i": 6,
+          "train_passed": 0,
+          "train_total": 3,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0014654000000000002,
+          "tokens_in": 3952,
+          "tokens_out": 1125
+        },
+        {
+          "i": 7,
+          "train_passed": 0,
+          "train_total": 3,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0020192,
+          "tokens_in": 3952,
+          "tokens_out": 2048
+        }
+      ]
+    },
+    {
+      "task_id": "arc1_training_0125",
+      "n_train_pairs": 4,
+      "per_attempt_rate": 0.0,
+      "best_train_score": 0.0,
+      "any_train_solved": false,
+      "first_passing_test_correct": false,
+      "parse_error_rate": 0.0,
+      "candidates": [
+        {
+          "i": 0,
+          "train_passed": 0,
+          "train_total": 4,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0033063999999999997,
+          "tokens_in": 10388,
+          "tokens_out": 2048
+        },
+        {
+          "i": 1,
+          "train_passed": 0,
+          "train_total": 4,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0032362,
+          "tokens_in": 10388,
+          "tokens_out": 1931
+        },
+        {
+          "i": 2,
+          "train_passed": 0,
+          "train_total": 4,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.002905,
+          "tokens_in": 10388,
+          "tokens_out": 1379
+        },
+        {
+          "i": 3,
+          "train_passed": 0,
+          "train_total": 4,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0033063999999999997,
+          "tokens_in": 10388,
+          "tokens_out": 2048
+        },
+        {
+          "i": 4,
+          "train_passed": 0,
+          "train_total": 4,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0028288,
+          "tokens_in": 10388,
+          "tokens_out": 1252
+        },
+        {
+          "i": 5,
+          "train_passed": 0,
+          "train_total": 4,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0033063999999999997,
+          "tokens_in": 10388,
+          "tokens_out": 2048
+        },
+        {
+          "i": 6,
+          "train_passed": 0,
+          "train_total": 4,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.002851,
+          "tokens_in": 10388,
+          "tokens_out": 1289
+        },
+        {
+          "i": 7,
+          "train_passed": 0,
+          "train_total": 4,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0028732,
+          "tokens_in": 10388,
+          "tokens_out": 1326
+        }
+      ]
+    },
+    {
+      "task_id": "arc1_training_0114",
+      "n_train_pairs": 3,
+      "per_attempt_rate": 0.125,
+      "best_train_score": 0.6666666666666666,
+      "any_train_solved": false,
+      "first_passing_test_correct": false,
+      "parse_error_rate": 0.0,
+      "candidates": [
+        {
+          "i": 0,
+          "train_passed": 0,
+          "train_total": 3,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0040982,
+          "tokens_in": 18589,
+          "tokens_out": 634
+        },
+        {
+          "i": 1,
+          "train_passed": 0,
+          "train_total": 3,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0041576,
+          "tokens_in": 18589,
+          "tokens_out": 733
+        },
+        {
+          "i": 2,
+          "train_passed": 0,
+          "train_total": 3,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0049124,
+          "tokens_in": 18589,
+          "tokens_out": 1991
+        },
+        {
+          "i": 3,
+          "train_passed": 2,
+          "train_total": 3,
+          "train_score": 0.6666666666666666,
+          "test_correct": true,
+          "parse_error": false,
+          "cost_usd": 0.004271,
+          "tokens_in": 18589,
+          "tokens_out": 922
+        },
+        {
+          "i": 4,
+          "train_passed": 0,
+          "train_total": 3,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0043658,
+          "tokens_in": 18589,
+          "tokens_out": 1080
+        },
+        {
+          "i": 5,
+          "train_passed": 0,
+          "train_total": 3,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0043748,
+          "tokens_in": 18589,
+          "tokens_out": 1095
+        },
+        {
+          "i": 6,
+          "train_passed": 0,
+          "train_total": 3,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0041954,
+          "tokens_in": 18589,
+          "tokens_out": 796
+        },
+        {
+          "i": 7,
+          "train_passed": 1,
+          "train_total": 3,
+          "train_score": 0.3333333333333333,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0042242,
+          "tokens_in": 18589,
+          "tokens_out": 844
+        }
+      ]
+    },
+    {
+      "task_id": "arc1_training_0071",
+      "n_train_pairs": 3,
+      "per_attempt_rate": 0.0,
+      "best_train_score": 0.0,
+      "any_train_solved": false,
+      "first_passing_test_correct": false,
+      "parse_error_rate": 0.125,
+      "candidates": [
+        {
+          "i": 0,
+          "train_passed": 0,
+          "train_total": 3,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0020498,
+          "tokens_in": 7162,
+          "tokens_out": 1029
+        },
+        {
+          "i": 1,
+          "train_passed": 0,
+          "train_total": 3,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0026612,
+          "tokens_in": 7162,
+          "tokens_out": 2048
+        },
+        {
+          "i": 2,
+          "train_passed": 0,
+          "train_total": 3,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": true,
+          "cost_usd": 0.0026612,
+          "tokens_in": 7162,
+          "tokens_out": 2048
+        },
+        {
+          "i": 3,
+          "train_passed": 0,
+          "train_total": 3,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0026612,
+          "tokens_in": 7162,
+          "tokens_out": 2048
+        },
+        {
+          "i": 4,
+          "train_passed": 0,
+          "train_total": 3,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0020185999999999997,
+          "tokens_in": 7162,
+          "tokens_out": 977
+        },
+        {
+          "i": 5,
+          "train_passed": 0,
+          "train_total": 3,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0015638000000000002,
+          "tokens_in": 7162,
+          "tokens_out": 219
+        },
+        {
+          "i": 6,
+          "train_passed": 0,
+          "train_total": 3,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0022814000000000003,
+          "tokens_in": 7162,
+          "tokens_out": 1415
+        },
+        {
+          "i": 7,
+          "train_passed": 0,
+          "train_total": 3,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0017348,
+          "tokens_in": 7162,
+          "tokens_out": 504
+        }
+      ]
+    },
+    {
+      "task_id": "arc1_training_0377",
+      "n_train_pairs": 5,
+      "per_attempt_rate": 0.0,
+      "best_train_score": 0.0,
+      "any_train_solved": false,
+      "first_passing_test_correct": false,
+      "parse_error_rate": 0.0,
+      "candidates": [
+        {
+          "i": 0,
+          "train_passed": 0,
+          "train_total": 5,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0019122000000000002,
+          "tokens_in": 6564,
+          "tokens_out": 999
+        },
+        {
+          "i": 1,
+          "train_passed": 0,
+          "train_total": 5,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0025416,
+          "tokens_in": 6564,
+          "tokens_out": 2048
+        },
+        {
+          "i": 2,
+          "train_passed": 0,
+          "train_total": 5,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.002022,
+          "tokens_in": 6564,
+          "tokens_out": 1182
+        },
+        {
+          "i": 3,
+          "train_passed": 0,
+          "train_total": 5,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0025116000000000006,
+          "tokens_in": 6564,
+          "tokens_out": 1998
+        },
+        {
+          "i": 4,
+          "train_passed": 0,
+          "train_total": 5,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0025416,
+          "tokens_in": 6564,
+          "tokens_out": 2048
+        },
+        {
+          "i": 5,
+          "train_passed": 0,
+          "train_total": 5,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0025284,
+          "tokens_in": 6564,
+          "tokens_out": 2026
+        },
+        {
+          "i": 6,
+          "train_passed": 0,
+          "train_total": 5,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.001974,
+          "tokens_in": 6564,
+          "tokens_out": 1102
+        },
+        {
+          "i": 7,
+          "train_passed": 0,
+          "train_total": 5,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0016722000000000002,
+          "tokens_in": 6564,
+          "tokens_out": 599
+        }
+      ]
+    },
+    {
+      "task_id": "arc1_training_0052",
+      "n_train_pairs": 4,
+      "per_attempt_rate": 0.75,
+      "best_train_score": 1.0,
+      "any_train_solved": true,
+      "first_passing_test_correct": true,
+      "parse_error_rate": 0.0,
+      "candidates": [
+        {
+          "i": 0,
+          "train_passed": 4,
+          "train_total": 4,
+          "train_score": 1.0,
+          "test_correct": true,
+          "parse_error": false,
+          "cost_usd": 0.0002518,
+          "tokens_in": 1181,
+          "tokens_out": 26
+        },
+        {
+          "i": 1,
+          "train_passed": 4,
+          "train_total": 4,
+          "train_score": 1.0,
+          "test_correct": true,
+          "parse_error": false,
+          "cost_usd": 0.0006004,
+          "tokens_in": 1181,
+          "tokens_out": 607
+        },
+        {
+          "i": 2,
+          "train_passed": 4,
+          "train_total": 4,
+          "train_score": 1.0,
+          "test_correct": true,
+          "parse_error": false,
+          "cost_usd": 0.0002518,
+          "tokens_in": 1181,
+          "tokens_out": 26
+        },
+        {
+          "i": 3,
+          "train_passed": 4,
+          "train_total": 4,
+          "train_score": 1.0,
+          "test_correct": true,
+          "parse_error": false,
+          "cost_usd": 0.0004474,
+          "tokens_in": 1181,
+          "tokens_out": 352
+        },
+        {
+          "i": 4,
+          "train_passed": 0,
+          "train_total": 4,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.000304,
+          "tokens_in": 1181,
+          "tokens_out": 113
+        },
+        {
+          "i": 5,
+          "train_passed": 4,
+          "train_total": 4,
+          "train_score": 1.0,
+          "test_correct": true,
+          "parse_error": false,
+          "cost_usd": 0.0002524,
+          "tokens_in": 1181,
+          "tokens_out": 27
+        },
+        {
+          "i": 6,
+          "train_passed": 4,
+          "train_total": 4,
+          "train_score": 1.0,
+          "test_correct": true,
+          "parse_error": false,
+          "cost_usd": 0.000517,
+          "tokens_in": 1181,
+          "tokens_out": 468
+        },
+        {
+          "i": 7,
+          "train_passed": 0,
+          "train_total": 4,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0002662,
+          "tokens_in": 1181,
+          "tokens_out": 50
+        }
+      ]
+    },
+    {
+      "task_id": "arc1_training_0346",
+      "n_train_pairs": 3,
+      "per_attempt_rate": 0.625,
+      "best_train_score": 1.0,
+      "any_train_solved": true,
+      "first_passing_test_correct": true,
+      "parse_error_rate": 0.0,
+      "candidates": [
+        {
+          "i": 0,
+          "train_passed": 2,
+          "train_total": 3,
+          "train_score": 0.6666666666666666,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0015614000000000001,
+          "tokens_in": 2638,
+          "tokens_out": 1723
+        },
+        {
+          "i": 1,
+          "train_passed": 1,
+          "train_total": 3,
+          "train_score": 0.3333333333333333,
+          "test_correct": true,
+          "parse_error": false,
+          "cost_usd": 0.0011036,
+          "tokens_in": 2638,
+          "tokens_out": 960
+        },
+        {
+          "i": 2,
+          "train_passed": 2,
+          "train_total": 3,
+          "train_score": 0.6666666666666666,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0012577999999999999,
+          "tokens_in": 2638,
+          "tokens_out": 1217
+        },
+        {
+          "i": 3,
+          "train_passed": 1,
+          "train_total": 3,
+          "train_score": 0.3333333333333333,
+          "test_correct": true,
+          "parse_error": false,
+          "cost_usd": 0.001079,
+          "tokens_in": 2638,
+          "tokens_out": 919
+        },
+        {
+          "i": 4,
+          "train_passed": 0,
+          "train_total": 3,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0012092000000000001,
+          "tokens_in": 2638,
+          "tokens_out": 1136
+        },
+        {
+          "i": 5,
+          "train_passed": 3,
+          "train_total": 3,
+          "train_score": 1.0,
+          "test_correct": true,
+          "parse_error": false,
+          "cost_usd": 0.0011414,
+          "tokens_in": 2638,
+          "tokens_out": 1023
+        },
+        {
+          "i": 6,
+          "train_passed": 0,
+          "train_total": 3,
+          "train_score": 0.0,
+          "test_correct": true,
+          "parse_error": false,
+          "cost_usd": 0.0009932,
+          "tokens_in": 2638,
+          "tokens_out": 776
+        },
+        {
+          "i": 7,
+          "train_passed": 1,
+          "train_total": 3,
+          "train_score": 0.3333333333333333,
+          "test_correct": true,
+          "parse_error": false,
+          "cost_usd": 0.0012488,
+          "tokens_in": 2638,
+          "tokens_out": 1202
+        }
+      ]
+    },
+    {
+      "task_id": "arc1_training_0279",
+      "n_train_pairs": 3,
+      "per_attempt_rate": 0.0,
+      "best_train_score": 0.0,
+      "any_train_solved": false,
+      "first_passing_test_correct": false,
+      "parse_error_rate": 0.0,
+      "candidates": [
+        {
+          "i": 0,
+          "train_passed": 0,
+          "train_total": 3,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.00224,
+          "tokens_in": 5056,
+          "tokens_out": 2048
+        },
+        {
+          "i": 1,
+          "train_passed": 0,
+          "train_total": 3,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.00224,
+          "tokens_in": 5056,
+          "tokens_out": 2048
+        },
+        {
+          "i": 2,
+          "train_passed": 0,
+          "train_total": 3,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.00224,
+          "tokens_in": 5056,
+          "tokens_out": 2048
+        },
+        {
+          "i": 3,
+          "train_passed": 0,
+          "train_total": 3,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.00224,
+          "tokens_in": 5056,
+          "tokens_out": 2048
+        },
+        {
+          "i": 4,
+          "train_passed": 0,
+          "train_total": 3,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.00224,
+          "tokens_in": 5056,
+          "tokens_out": 2048
+        },
+        {
+          "i": 5,
+          "train_passed": 0,
+          "train_total": 3,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.00224,
+          "tokens_in": 5056,
+          "tokens_out": 2048
+        },
+        {
+          "i": 6,
+          "train_passed": 0,
+          "train_total": 3,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0015902,
+          "tokens_in": 5056,
+          "tokens_out": 965
+        },
+        {
+          "i": 7,
+          "train_passed": 0,
+          "train_total": 3,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.00224,
+          "tokens_in": 5056,
+          "tokens_out": 2048
+        }
+      ]
+    },
+    {
+      "task_id": "arc1_training_0044",
+      "n_train_pairs": 3,
+      "per_attempt_rate": 0.0,
+      "best_train_score": 0.0,
+      "any_train_solved": false,
+      "first_passing_test_correct": false,
+      "parse_error_rate": 0.0,
+      "candidates": [
+        {
+          "i": 0,
+          "train_passed": 0,
+          "train_total": 3,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0021488,
+          "tokens_in": 4600,
+          "tokens_out": 2048
+        },
+        {
+          "i": 1,
+          "train_passed": 0,
+          "train_total": 3,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0021488,
+          "tokens_in": 4600,
+          "tokens_out": 2048
+        },
+        {
+          "i": 2,
+          "train_passed": 0,
+          "train_total": 3,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0021488,
+          "tokens_in": 4600,
+          "tokens_out": 2048
+        },
+        {
+          "i": 3,
+          "train_passed": 0,
+          "train_total": 3,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.002102,
+          "tokens_in": 4600,
+          "tokens_out": 1970
+        },
+        {
+          "i": 4,
+          "train_passed": 0,
+          "train_total": 3,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0017305999999999999,
+          "tokens_in": 4600,
+          "tokens_out": 1351
+        },
+        {
+          "i": 5,
+          "train_passed": 0,
+          "train_total": 3,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0021488,
+          "tokens_in": 4600,
+          "tokens_out": 2048
+        },
+        {
+          "i": 6,
+          "train_passed": 0,
+          "train_total": 3,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0016514000000000001,
+          "tokens_in": 4600,
+          "tokens_out": 1219
+        },
+        {
+          "i": 7,
+          "train_passed": 0,
+          "train_total": 3,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0021488,
+          "tokens_in": 4600,
+          "tokens_out": 2048
+        }
+      ]
+    },
+    {
+      "task_id": "arc1_training_0302",
+      "n_train_pairs": 2,
+      "per_attempt_rate": 0.625,
+      "best_train_score": 0.5,
+      "any_train_solved": false,
+      "first_passing_test_correct": false,
+      "parse_error_rate": 0.0,
+      "candidates": [
+        {
+          "i": 0,
+          "train_passed": 1,
+          "train_total": 2,
+          "train_score": 0.5,
+          "test_correct": true,
+          "parse_error": false,
+          "cost_usd": 0.0008832,
+          "tokens_in": 3894,
+          "tokens_out": 174
+        },
+        {
+          "i": 1,
+          "train_passed": 1,
+          "train_total": 2,
+          "train_score": 0.5,
+          "test_correct": true,
+          "parse_error": false,
+          "cost_usd": 0.000894,
+          "tokens_in": 3894,
+          "tokens_out": 192
+        },
+        {
+          "i": 2,
+          "train_passed": 1,
+          "train_total": 2,
+          "train_score": 0.5,
+          "test_correct": true,
+          "parse_error": false,
+          "cost_usd": 0.0011118000000000002,
+          "tokens_in": 3894,
+          "tokens_out": 555
+        },
+        {
+          "i": 3,
+          "train_passed": 0,
+          "train_total": 2,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0020076,
+          "tokens_in": 3894,
+          "tokens_out": 2048
+        },
+        {
+          "i": 4,
+          "train_passed": 1,
+          "train_total": 2,
+          "train_score": 0.5,
+          "test_correct": true,
+          "parse_error": false,
+          "cost_usd": 0.0009756,
+          "tokens_in": 3894,
+          "tokens_out": 328
+        },
+        {
+          "i": 5,
+          "train_passed": 1,
+          "train_total": 2,
+          "train_score": 0.5,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.001185,
+          "tokens_in": 3894,
+          "tokens_out": 677
+        },
+        {
+          "i": 6,
+          "train_passed": 0,
+          "train_total": 2,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0020076,
+          "tokens_in": 3894,
+          "tokens_out": 2048
+        },
+        {
+          "i": 7,
+          "train_passed": 1,
+          "train_total": 2,
+          "train_score": 0.5,
+          "test_correct": true,
+          "parse_error": false,
+          "cost_usd": 0.0009348000000000001,
+          "tokens_in": 3894,
+          "tokens_out": 260
+        }
+      ]
+    },
+    {
+      "task_id": "arc1_training_0216",
+      "n_train_pairs": 4,
+      "per_attempt_rate": 0.0,
+      "best_train_score": 0.75,
+      "any_train_solved": false,
+      "first_passing_test_correct": false,
+      "parse_error_rate": 0.0,
+      "candidates": [
+        {
+          "i": 0,
+          "train_passed": 3,
+          "train_total": 4,
+          "train_score": 0.75,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0014068,
+          "tokens_in": 3638,
+          "tokens_out": 1132
+        },
+        {
+          "i": 1,
+          "train_passed": 0,
+          "train_total": 4,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0013402,
+          "tokens_in": 3638,
+          "tokens_out": 1021
+        },
+        {
+          "i": 2,
+          "train_passed": 0,
+          "train_total": 4,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0019564,
+          "tokens_in": 3638,
+          "tokens_out": 2048
+        },
+        {
+          "i": 3,
+          "train_passed": 0,
+          "train_total": 4,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0014314,
+          "tokens_in": 3638,
+          "tokens_out": 1173
+        },
+        {
+          "i": 4,
+          "train_passed": 0,
+          "train_total": 4,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0011452,
+          "tokens_in": 3638,
+          "tokens_out": 696
+        },
+        {
+          "i": 5,
+          "train_passed": 0,
+          "train_total": 4,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0016588,
+          "tokens_in": 3638,
+          "tokens_out": 1552
+        },
+        {
+          "i": 6,
+          "train_passed": 3,
+          "train_total": 4,
+          "train_score": 0.75,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0014056,
+          "tokens_in": 3638,
+          "tokens_out": 1130
+        },
+        {
+          "i": 7,
+          "train_passed": 1,
+          "train_total": 4,
+          "train_score": 0.25,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0012184000000000001,
+          "tokens_in": 3638,
+          "tokens_out": 818
+        }
+      ]
+    },
+    {
+      "task_id": "arc1_training_0016",
+      "n_train_pairs": 3,
+      "per_attempt_rate": 0.0,
+      "best_train_score": 0.0,
+      "any_train_solved": false,
+      "first_passing_test_correct": false,
+      "parse_error_rate": 0.0,
+      "candidates": [
+        {
+          "i": 0,
+          "train_passed": 0,
+          "train_total": 3,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0015056,
+          "tokens_in": 5539,
+          "tokens_out": 663
+        },
+        {
+          "i": 1,
+          "train_passed": 0,
+          "train_total": 3,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0016286,
+          "tokens_in": 5539,
+          "tokens_out": 868
+        },
+        {
+          "i": 2,
+          "train_passed": 0,
+          "train_total": 3,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0014923999999999998,
+          "tokens_in": 5539,
+          "tokens_out": 641
+        },
+        {
+          "i": 3,
+          "train_passed": 0,
+          "train_total": 3,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0017954000000000002,
+          "tokens_in": 5539,
+          "tokens_out": 1146
+        },
+        {
+          "i": 4,
+          "train_passed": 0,
+          "train_total": 3,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.001655,
+          "tokens_in": 5539,
+          "tokens_out": 912
+        },
+        {
+          "i": 5,
+          "train_passed": 0,
+          "train_total": 3,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.001604,
+          "tokens_in": 5539,
+          "tokens_out": 827
+        },
+        {
+          "i": 6,
+          "train_passed": 0,
+          "train_total": 3,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0018271999999999997,
+          "tokens_in": 5539,
+          "tokens_out": 1199
+        },
+        {
+          "i": 7,
+          "train_passed": 0,
+          "train_total": 3,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0018241999999999998,
+          "tokens_in": 5539,
+          "tokens_out": 1194
+        }
+      ]
+    },
+    {
+      "task_id": "arc1_training_0015",
+      "n_train_pairs": 4,
+      "per_attempt_rate": 0.875,
+      "best_train_score": 1.0,
+      "any_train_solved": true,
+      "first_passing_test_correct": true,
+      "parse_error_rate": 0.0,
+      "candidates": [
+        {
+          "i": 0,
+          "train_passed": 4,
+          "train_total": 4,
+          "train_score": 1.0,
+          "test_correct": true,
+          "parse_error": false,
+          "cost_usd": 0.00047139999999999997,
+          "tokens_in": 1181,
+          "tokens_out": 392
+        },
+        {
+          "i": 1,
+          "train_passed": 4,
+          "train_total": 4,
+          "train_score": 1.0,
+          "test_correct": true,
+          "parse_error": false,
+          "cost_usd": 0.000493,
+          "tokens_in": 1181,
+          "tokens_out": 428
+        },
+        {
+          "i": 2,
+          "train_passed": 4,
+          "train_total": 4,
+          "train_score": 1.0,
+          "test_correct": true,
+          "parse_error": false,
+          "cost_usd": 0.0004564,
+          "tokens_in": 1181,
+          "tokens_out": 367
+        },
+        {
+          "i": 3,
+          "train_passed": 4,
+          "train_total": 4,
+          "train_score": 1.0,
+          "test_correct": true,
+          "parse_error": false,
+          "cost_usd": 0.00040420000000000007,
+          "tokens_in": 1181,
+          "tokens_out": 280
+        },
+        {
+          "i": 4,
+          "train_passed": 4,
+          "train_total": 4,
+          "train_score": 1.0,
+          "test_correct": true,
+          "parse_error": false,
+          "cost_usd": 0.00039160000000000003,
+          "tokens_in": 1181,
+          "tokens_out": 259
+        },
+        {
+          "i": 5,
+          "train_passed": 4,
+          "train_total": 4,
+          "train_score": 1.0,
+          "test_correct": true,
+          "parse_error": false,
+          "cost_usd": 0.00041020000000000005,
+          "tokens_in": 1181,
+          "tokens_out": 290
+        },
+        {
+          "i": 6,
+          "train_passed": 4,
+          "train_total": 4,
+          "train_score": 1.0,
+          "test_correct": true,
+          "parse_error": false,
+          "cost_usd": 0.00039820000000000003,
+          "tokens_in": 1181,
+          "tokens_out": 270
+        },
+        {
+          "i": 7,
+          "train_passed": 0,
+          "train_total": 4,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0004054,
+          "tokens_in": 1181,
+          "tokens_out": 282
+        }
+      ]
+    },
+    {
+      "task_id": "arc1_training_0047",
+      "n_train_pairs": 3,
+      "per_attempt_rate": 0.25,
+      "best_train_score": 1.0,
+      "any_train_solved": true,
+      "first_passing_test_correct": true,
+      "parse_error_rate": 0.0,
+      "candidates": [
+        {
+          "i": 0,
+          "train_passed": 0,
+          "train_total": 3,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.000734,
+          "tokens_in": 3028,
+          "tokens_out": 214
+        },
+        {
+          "i": 1,
+          "train_passed": 3,
+          "train_total": 3,
+          "train_score": 1.0,
+          "test_correct": true,
+          "parse_error": false,
+          "cost_usd": 0.0008222,
+          "tokens_in": 3028,
+          "tokens_out": 361
+        },
+        {
+          "i": 2,
+          "train_passed": 3,
+          "train_total": 3,
+          "train_score": 1.0,
+          "test_correct": true,
+          "parse_error": false,
+          "cost_usd": 0.0008024,
+          "tokens_in": 3028,
+          "tokens_out": 328
+        },
+        {
+          "i": 3,
+          "train_passed": 0,
+          "train_total": 3,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0007532000000000001,
+          "tokens_in": 3028,
+          "tokens_out": 246
+        },
+        {
+          "i": 4,
+          "train_passed": 0,
+          "train_total": 3,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0007448,
+          "tokens_in": 3028,
+          "tokens_out": 232
+        },
+        {
+          "i": 5,
+          "train_passed": 0,
+          "train_total": 3,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.000779,
+          "tokens_in": 3028,
+          "tokens_out": 289
+        },
+        {
+          "i": 6,
+          "train_passed": 0,
+          "train_total": 3,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0007502,
+          "tokens_in": 3028,
+          "tokens_out": 241
+        },
+        {
+          "i": 7,
+          "train_passed": 0,
+          "train_total": 3,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.000731,
+          "tokens_in": 3028,
+          "tokens_out": 209
+        }
+      ]
+    },
+    {
+      "task_id": "arc1_training_0111",
+      "n_train_pairs": 2,
+      "per_attempt_rate": 0.5,
+      "best_train_score": 1.0,
+      "any_train_solved": true,
+      "first_passing_test_correct": true,
+      "parse_error_rate": 0.0,
+      "candidates": [
+        {
+          "i": 0,
+          "train_passed": 0,
+          "train_total": 2,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0015324000000000002,
+          "tokens_in": 1518,
+          "tokens_out": 2048
+        },
+        {
+          "i": 1,
+          "train_passed": 0,
+          "train_total": 2,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.00039720000000000006,
+          "tokens_in": 1518,
+          "tokens_out": 156
+        },
+        {
+          "i": 2,
+          "train_passed": 0,
+          "train_total": 2,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0005478,
+          "tokens_in": 1518,
+          "tokens_out": 407
+        },
+        {
+          "i": 3,
+          "train_passed": 0,
+          "train_total": 2,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0015324000000000002,
+          "tokens_in": 1518,
+          "tokens_out": 2048
+        },
+        {
+          "i": 4,
+          "train_passed": 2,
+          "train_total": 2,
+          "train_score": 1.0,
+          "test_correct": true,
+          "parse_error": false,
+          "cost_usd": 0.000975,
+          "tokens_in": 1518,
+          "tokens_out": 1119
+        },
+        {
+          "i": 5,
+          "train_passed": 2,
+          "train_total": 2,
+          "train_score": 1.0,
+          "test_correct": true,
+          "parse_error": false,
+          "cost_usd": 0.0007836000000000001,
+          "tokens_in": 1518,
+          "tokens_out": 800
+        },
+        {
+          "i": 6,
+          "train_passed": 2,
+          "train_total": 2,
+          "train_score": 1.0,
+          "test_correct": true,
+          "parse_error": false,
+          "cost_usd": 0.0011952,
+          "tokens_in": 1518,
+          "tokens_out": 1486
+        },
+        {
+          "i": 7,
+          "train_passed": 2,
+          "train_total": 2,
+          "train_score": 1.0,
+          "test_correct": true,
+          "parse_error": false,
+          "cost_usd": 0.0004716,
+          "tokens_in": 1518,
+          "tokens_out": 280
+        }
+      ]
+    },
+    {
+      "task_id": "arc1_training_0119",
+      "n_train_pairs": 3,
+      "per_attempt_rate": 0.0,
+      "best_train_score": 0.0,
+      "any_train_solved": false,
+      "first_passing_test_correct": false,
+      "parse_error_rate": 0.0,
+      "candidates": [
+        {
+          "i": 0,
+          "train_passed": 0,
+          "train_total": 3,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0006536000000000001,
+          "tokens_in": 2368,
+          "tokens_out": 300
+        },
+        {
+          "i": 1,
+          "train_passed": 0,
+          "train_total": 3,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0017024000000000002,
+          "tokens_in": 2368,
+          "tokens_out": 2048
+        },
+        {
+          "i": 2,
+          "train_passed": 0,
+          "train_total": 3,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.000944,
+          "tokens_in": 2368,
+          "tokens_out": 784
+        },
+        {
+          "i": 3,
+          "train_passed": 0,
+          "train_total": 3,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0006883999999999999,
+          "tokens_in": 2368,
+          "tokens_out": 358
+        },
+        {
+          "i": 4,
+          "train_passed": 0,
+          "train_total": 3,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0017024000000000002,
+          "tokens_in": 2368,
+          "tokens_out": 2048
+        },
+        {
+          "i": 5,
+          "train_passed": 0,
+          "train_total": 3,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0007153999999999999,
+          "tokens_in": 2368,
+          "tokens_out": 403
+        },
+        {
+          "i": 6,
+          "train_passed": 0,
+          "train_total": 3,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0017024000000000002,
+          "tokens_in": 2368,
+          "tokens_out": 2048
+        },
+        {
+          "i": 7,
+          "train_passed": 0,
+          "train_total": 3,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0006764,
+          "tokens_in": 2368,
+          "tokens_out": 338
+        }
+      ]
+    },
+    {
+      "task_id": "arc1_training_0258",
+      "n_train_pairs": 3,
+      "per_attempt_rate": 0.75,
+      "best_train_score": 1.0,
+      "any_train_solved": true,
+      "first_passing_test_correct": true,
+      "parse_error_rate": 0.0,
+      "candidates": [
+        {
+          "i": 0,
+          "train_passed": 3,
+          "train_total": 3,
+          "train_score": 1.0,
+          "test_correct": true,
+          "parse_error": false,
+          "cost_usd": 0.0004706,
+          "tokens_in": 1561,
+          "tokens_out": 264
+        },
+        {
+          "i": 1,
+          "train_passed": 3,
+          "train_total": 3,
+          "train_score": 1.0,
+          "test_correct": true,
+          "parse_error": false,
+          "cost_usd": 0.00041000000000000005,
+          "tokens_in": 1561,
+          "tokens_out": 163
+        },
+        {
+          "i": 2,
+          "train_passed": 3,
+          "train_total": 3,
+          "train_score": 1.0,
+          "test_correct": true,
+          "parse_error": false,
+          "cost_usd": 0.00040400000000000006,
+          "tokens_in": 1561,
+          "tokens_out": 153
+        },
+        {
+          "i": 3,
+          "train_passed": 0,
+          "train_total": 3,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0003428000000000001,
+          "tokens_in": 1561,
+          "tokens_out": 51
+        },
+        {
+          "i": 4,
+          "train_passed": 0,
+          "train_total": 3,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.000503,
+          "tokens_in": 1561,
+          "tokens_out": 318
+        },
+        {
+          "i": 5,
+          "train_passed": 3,
+          "train_total": 3,
+          "train_score": 1.0,
+          "test_correct": true,
+          "parse_error": false,
+          "cost_usd": 0.00047660000000000004,
+          "tokens_in": 1561,
+          "tokens_out": 274
+        },
+        {
+          "i": 6,
+          "train_passed": 3,
+          "train_total": 3,
+          "train_score": 1.0,
+          "test_correct": true,
+          "parse_error": false,
+          "cost_usd": 0.0005857999999999999,
+          "tokens_in": 1561,
+          "tokens_out": 456
+        },
+        {
+          "i": 7,
+          "train_passed": 3,
+          "train_total": 3,
+          "train_score": 1.0,
+          "test_correct": true,
+          "parse_error": false,
+          "cost_usd": 0.0006098,
+          "tokens_in": 1561,
+          "tokens_out": 496
+        }
+      ]
+    },
+    {
+      "task_id": "arc1_training_0308",
+      "n_train_pairs": 3,
+      "per_attempt_rate": 1.0,
+      "best_train_score": 1.0,
+      "any_train_solved": true,
+      "first_passing_test_correct": true,
+      "parse_error_rate": 0.0,
+      "candidates": [
+        {
+          "i": 0,
+          "train_passed": 3,
+          "train_total": 3,
+          "train_score": 1.0,
+          "test_correct": true,
+          "parse_error": false,
+          "cost_usd": 0.0003728,
+          "tokens_in": 1438,
+          "tokens_out": 142
+        },
+        {
+          "i": 1,
+          "train_passed": 3,
+          "train_total": 3,
+          "train_score": 1.0,
+          "test_correct": true,
+          "parse_error": false,
+          "cost_usd": 0.000371,
+          "tokens_in": 1438,
+          "tokens_out": 139
+        },
+        {
+          "i": 2,
+          "train_passed": 3,
+          "train_total": 3,
+          "train_score": 1.0,
+          "test_correct": true,
+          "parse_error": false,
+          "cost_usd": 0.0003686,
+          "tokens_in": 1438,
+          "tokens_out": 135
+        },
+        {
+          "i": 3,
+          "train_passed": 3,
+          "train_total": 3,
+          "train_score": 1.0,
+          "test_correct": true,
+          "parse_error": false,
+          "cost_usd": 0.000371,
+          "tokens_in": 1438,
+          "tokens_out": 139
+        },
+        {
+          "i": 4,
+          "train_passed": 3,
+          "train_total": 3,
+          "train_score": 1.0,
+          "test_correct": true,
+          "parse_error": false,
+          "cost_usd": 0.0003824,
+          "tokens_in": 1438,
+          "tokens_out": 158
+        },
+        {
+          "i": 5,
+          "train_passed": 3,
+          "train_total": 3,
+          "train_score": 1.0,
+          "test_correct": true,
+          "parse_error": false,
+          "cost_usd": 0.00038960000000000004,
+          "tokens_in": 1438,
+          "tokens_out": 170
+        },
+        {
+          "i": 6,
+          "train_passed": 3,
+          "train_total": 3,
+          "train_score": 1.0,
+          "test_correct": true,
+          "parse_error": false,
+          "cost_usd": 0.0003878,
+          "tokens_in": 1438,
+          "tokens_out": 167
+        },
+        {
+          "i": 7,
+          "train_passed": 3,
+          "train_total": 3,
+          "train_score": 1.0,
+          "test_correct": true,
+          "parse_error": false,
+          "cost_usd": 0.000404,
+          "tokens_in": 1438,
+          "tokens_out": 194
+        }
+      ]
+    },
+    {
+      "task_id": "arc1_training_0013",
+      "n_train_pairs": 4,
+      "per_attempt_rate": 1.0,
+      "best_train_score": 1.0,
+      "any_train_solved": true,
+      "first_passing_test_correct": true,
+      "parse_error_rate": 0.0,
+      "candidates": [
+        {
+          "i": 0,
+          "train_passed": 4,
+          "train_total": 4,
+          "train_score": 1.0,
+          "test_correct": true,
+          "parse_error": false,
+          "cost_usd": 0.00046360000000000005,
+          "tokens_in": 1505,
+          "tokens_out": 271
+        },
+        {
+          "i": 1,
+          "train_passed": 4,
+          "train_total": 4,
+          "train_score": 1.0,
+          "test_correct": true,
+          "parse_error": false,
+          "cost_usd": 0.0004642,
+          "tokens_in": 1505,
+          "tokens_out": 272
+        },
+        {
+          "i": 2,
+          "train_passed": 4,
+          "train_total": 4,
+          "train_score": 1.0,
+          "test_correct": true,
+          "parse_error": false,
+          "cost_usd": 0.000463,
+          "tokens_in": 1505,
+          "tokens_out": 270
+        },
+        {
+          "i": 3,
+          "train_passed": 4,
+          "train_total": 4,
+          "train_score": 1.0,
+          "test_correct": true,
+          "parse_error": false,
+          "cost_usd": 0.0004666,
+          "tokens_in": 1505,
+          "tokens_out": 276
+        },
+        {
+          "i": 4,
+          "train_passed": 4,
+          "train_total": 4,
+          "train_score": 1.0,
+          "test_correct": true,
+          "parse_error": false,
+          "cost_usd": 0.0004594,
+          "tokens_in": 1505,
+          "tokens_out": 264
+        },
+        {
+          "i": 5,
+          "train_passed": 4,
+          "train_total": 4,
+          "train_score": 1.0,
+          "test_correct": true,
+          "parse_error": false,
+          "cost_usd": 0.00046060000000000003,
+          "tokens_in": 1505,
+          "tokens_out": 266
+        },
+        {
+          "i": 6,
+          "train_passed": 4,
+          "train_total": 4,
+          "train_score": 1.0,
+          "test_correct": true,
+          "parse_error": false,
+          "cost_usd": 0.0004654,
+          "tokens_in": 1505,
+          "tokens_out": 274
+        },
+        {
+          "i": 7,
+          "train_passed": 4,
+          "train_total": 4,
+          "train_score": 1.0,
+          "test_correct": true,
+          "parse_error": false,
+          "cost_usd": 0.00046060000000000003,
+          "tokens_in": 1505,
+          "tokens_out": 266
+        }
+      ]
+    },
+    {
+      "task_id": "arc1_training_0287",
+      "n_train_pairs": 3,
+      "per_attempt_rate": 0.0,
+      "best_train_score": 0.0,
+      "any_train_solved": false,
+      "first_passing_test_correct": false,
+      "parse_error_rate": 0.0,
+      "candidates": [
+        {
+          "i": 0,
+          "train_passed": 0,
+          "train_total": 3,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.003881,
+          "tokens_in": 13783,
+          "tokens_out": 1874
+        },
+        {
+          "i": 1,
+          "train_passed": 0,
+          "train_total": 3,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0030758,
+          "tokens_in": 13783,
+          "tokens_out": 532
+        },
+        {
+          "i": 2,
+          "train_passed": 0,
+          "train_total": 3,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0033914000000000006,
+          "tokens_in": 13783,
+          "tokens_out": 1058
+        },
+        {
+          "i": 3,
+          "train_passed": 0,
+          "train_total": 3,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0037952000000000003,
+          "tokens_in": 13783,
+          "tokens_out": 1731
+        },
+        {
+          "i": 4,
+          "train_passed": 0,
+          "train_total": 3,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0034022,
+          "tokens_in": 13783,
+          "tokens_out": 1076
+        },
+        {
+          "i": 5,
+          "train_passed": 0,
+          "train_total": 3,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0036104000000000006,
+          "tokens_in": 13783,
+          "tokens_out": 1423
+        },
+        {
+          "i": 6,
+          "train_passed": 0,
+          "train_total": 3,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0031436000000000003,
+          "tokens_in": 13783,
+          "tokens_out": 645
+        },
+        {
+          "i": 7,
+          "train_passed": 0,
+          "train_total": 3,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0036782000000000004,
+          "tokens_in": 13783,
+          "tokens_out": 1536
+        }
+      ]
+    },
+    {
+      "task_id": "arc1_training_0101",
+      "n_train_pairs": 2,
+      "per_attempt_rate": 0.25,
+      "best_train_score": 1.0,
+      "any_train_solved": true,
+      "first_passing_test_correct": true,
+      "parse_error_rate": 0.0,
+      "candidates": [
+        {
+          "i": 0,
+          "train_passed": 2,
+          "train_total": 2,
+          "train_score": 1.0,
+          "test_correct": true,
+          "parse_error": false,
+          "cost_usd": 0.0006018,
+          "tokens_in": 1743,
+          "tokens_out": 422
+        },
+        {
+          "i": 1,
+          "train_passed": 2,
+          "train_total": 2,
+          "train_score": 1.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.000543,
+          "tokens_in": 1743,
+          "tokens_out": 324
+        },
+        {
+          "i": 2,
+          "train_passed": 2,
+          "train_total": 2,
+          "train_score": 1.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0005034,
+          "tokens_in": 1743,
+          "tokens_out": 258
+        },
+        {
+          "i": 3,
+          "train_passed": 2,
+          "train_total": 2,
+          "train_score": 1.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0004908,
+          "tokens_in": 1743,
+          "tokens_out": 237
+        },
+        {
+          "i": 4,
+          "train_passed": 2,
+          "train_total": 2,
+          "train_score": 1.0,
+          "test_correct": true,
+          "parse_error": false,
+          "cost_usd": 0.0005543999999999999,
+          "tokens_in": 1743,
+          "tokens_out": 343
+        },
+        {
+          "i": 5,
+          "train_passed": 2,
+          "train_total": 2,
+          "train_score": 1.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0004848,
+          "tokens_in": 1743,
+          "tokens_out": 227
+        },
+        {
+          "i": 6,
+          "train_passed": 2,
+          "train_total": 2,
+          "train_score": 1.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.00054,
+          "tokens_in": 1743,
+          "tokens_out": 319
+        },
+        {
+          "i": 7,
+          "train_passed": 2,
+          "train_total": 2,
+          "train_score": 1.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0005076,
+          "tokens_in": 1743,
+          "tokens_out": 265
+        }
+      ]
+    },
+    {
+      "task_id": "arc1_training_0366",
+      "n_train_pairs": 3,
+      "per_attempt_rate": 0.0,
+      "best_train_score": 0.0,
+      "any_train_solved": false,
+      "first_passing_test_correct": false,
+      "parse_error_rate": 0.0,
+      "candidates": [
+        {
+          "i": 0,
+          "train_passed": 0,
+          "train_total": 3,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.001541,
+          "tokens_in": 5653,
+          "tokens_out": 684
+        },
+        {
+          "i": 1,
+          "train_passed": 0,
+          "train_total": 3,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.00191,
+          "tokens_in": 5653,
+          "tokens_out": 1299
+        },
+        {
+          "i": 2,
+          "train_passed": 0,
+          "train_total": 3,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0015788000000000002,
+          "tokens_in": 5653,
+          "tokens_out": 747
+        },
+        {
+          "i": 3,
+          "train_passed": 0,
+          "train_total": 3,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.001958,
+          "tokens_in": 5653,
+          "tokens_out": 1379
+        },
+        {
+          "i": 4,
+          "train_passed": 0,
+          "train_total": 3,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0015812,
+          "tokens_in": 5653,
+          "tokens_out": 751
+        },
+        {
+          "i": 5,
+          "train_passed": 0,
+          "train_total": 3,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0020606000000000005,
+          "tokens_in": 5653,
+          "tokens_out": 1550
+        },
+        {
+          "i": 6,
+          "train_passed": 0,
+          "train_total": 3,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0018818,
+          "tokens_in": 5653,
+          "tokens_out": 1252
+        },
+        {
+          "i": 7,
+          "train_passed": 0,
+          "train_total": 3,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0018254,
+          "tokens_in": 5653,
+          "tokens_out": 1158
+        }
+      ]
+    },
+    {
+      "task_id": "arc1_training_0332",
+      "n_train_pairs": 3,
+      "per_attempt_rate": 0.125,
+      "best_train_score": 1.0,
+      "any_train_solved": true,
+      "first_passing_test_correct": true,
+      "parse_error_rate": 0.0,
+      "candidates": [
+        {
+          "i": 0,
+          "train_passed": 0,
+          "train_total": 3,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.002042,
+          "tokens_in": 4066,
+          "tokens_out": 2048
+        },
+        {
+          "i": 1,
+          "train_passed": 2,
+          "train_total": 3,
+          "train_score": 0.6666666666666666,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0016328000000000002,
+          "tokens_in": 4066,
+          "tokens_out": 1366
+        },
+        {
+          "i": 2,
+          "train_passed": 0,
+          "train_total": 3,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0016202,
+          "tokens_in": 4066,
+          "tokens_out": 1345
+        },
+        {
+          "i": 3,
+          "train_passed": 0,
+          "train_total": 3,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0017144,
+          "tokens_in": 4066,
+          "tokens_out": 1502
+        },
+        {
+          "i": 4,
+          "train_passed": 2,
+          "train_total": 3,
+          "train_score": 0.6666666666666666,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0015224000000000001,
+          "tokens_in": 4066,
+          "tokens_out": 1182
+        },
+        {
+          "i": 5,
+          "train_passed": 0,
+          "train_total": 3,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0018854000000000002,
+          "tokens_in": 4066,
+          "tokens_out": 1787
+        },
+        {
+          "i": 6,
+          "train_passed": 0,
+          "train_total": 3,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.001523,
+          "tokens_in": 4066,
+          "tokens_out": 1183
+        },
+        {
+          "i": 7,
+          "train_passed": 3,
+          "train_total": 3,
+          "train_score": 1.0,
+          "test_correct": true,
+          "parse_error": false,
+          "cost_usd": 0.0013352000000000001,
+          "tokens_in": 4066,
+          "tokens_out": 870
+        }
+      ]
+    },
+    {
+      "task_id": "arc1_training_0359",
+      "n_train_pairs": 3,
+      "per_attempt_rate": 0.25,
+      "best_train_score": 1.0,
+      "any_train_solved": true,
+      "first_passing_test_correct": true,
+      "parse_error_rate": 0.0,
+      "candidates": [
+        {
+          "i": 0,
+          "train_passed": 0,
+          "train_total": 3,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0014815999999999998,
+          "tokens_in": 1264,
+          "tokens_out": 2048
+        },
+        {
+          "i": 1,
+          "train_passed": 3,
+          "train_total": 3,
+          "train_score": 1.0,
+          "test_correct": true,
+          "parse_error": false,
+          "cost_usd": 0.0012716,
+          "tokens_in": 1264,
+          "tokens_out": 1698
+        },
+        {
+          "i": 2,
+          "train_passed": 0,
+          "train_total": 3,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0014815999999999998,
+          "tokens_in": 1264,
+          "tokens_out": 2048
+        },
+        {
+          "i": 3,
+          "train_passed": 0,
+          "train_total": 3,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0012152,
+          "tokens_in": 1264,
+          "tokens_out": 1604
+        },
+        {
+          "i": 4,
+          "train_passed": 1,
+          "train_total": 3,
+          "train_score": 0.3333333333333333,
+          "test_correct": true,
+          "parse_error": false,
+          "cost_usd": 0.00035360000000000003,
+          "tokens_in": 1264,
+          "tokens_out": 168
+        },
+        {
+          "i": 5,
+          "train_passed": 0,
+          "train_total": 3,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0009818,
+          "tokens_in": 1264,
+          "tokens_out": 1215
+        },
+        {
+          "i": 6,
+          "train_passed": 0,
+          "train_total": 3,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0014815999999999998,
+          "tokens_in": 1264,
+          "tokens_out": 2048
+        },
+        {
+          "i": 7,
+          "train_passed": 0,
+          "train_total": 3,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0014815999999999998,
+          "tokens_in": 1264,
+          "tokens_out": 2048
+        }
+      ]
+    },
+    {
+      "task_id": "arc1_training_0214",
+      "n_train_pairs": 3,
+      "per_attempt_rate": 0.0,
+      "best_train_score": 0.0,
+      "any_train_solved": false,
+      "first_passing_test_correct": false,
+      "parse_error_rate": 0.0,
+      "candidates": [
+        {
+          "i": 0,
+          "train_passed": 0,
+          "train_total": 3,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0017144,
+          "tokens_in": 2428,
+          "tokens_out": 2048
+        },
+        {
+          "i": 1,
+          "train_passed": 0,
+          "train_total": 3,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0015578000000000002,
+          "tokens_in": 2428,
+          "tokens_out": 1787
+        },
+        {
+          "i": 2,
+          "train_passed": 0,
+          "train_total": 3,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0009632,
+          "tokens_in": 2428,
+          "tokens_out": 796
+        },
+        {
+          "i": 3,
+          "train_passed": 0,
+          "train_total": 3,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0010724,
+          "tokens_in": 2428,
+          "tokens_out": 978
+        },
+        {
+          "i": 4,
+          "train_passed": 0,
+          "train_total": 3,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0008216,
+          "tokens_in": 2428,
+          "tokens_out": 560
+        },
+        {
+          "i": 5,
+          "train_passed": 0,
+          "train_total": 3,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0008096000000000001,
+          "tokens_in": 2428,
+          "tokens_out": 540
+        },
+        {
+          "i": 6,
+          "train_passed": 0,
+          "train_total": 3,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0008924000000000001,
+          "tokens_in": 2428,
+          "tokens_out": 678
+        },
+        {
+          "i": 7,
+          "train_passed": 0,
+          "train_total": 3,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0017144,
+          "tokens_in": 2428,
+          "tokens_out": 2048
+        }
+      ]
+    },
+    {
+      "task_id": "arc1_training_0112",
+      "n_train_pairs": 3,
+      "per_attempt_rate": 0.375,
+      "best_train_score": 1.0,
+      "any_train_solved": true,
+      "first_passing_test_correct": true,
+      "parse_error_rate": 0.125,
+      "candidates": [
+        {
+          "i": 0,
+          "train_passed": 0,
+          "train_total": 3,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0017390000000000003,
+          "tokens_in": 6859,
+          "tokens_out": 612
+        },
+        {
+          "i": 1,
+          "train_passed": 0,
+          "train_total": 3,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0021758000000000003,
+          "tokens_in": 6859,
+          "tokens_out": 1340
+        },
+        {
+          "i": 2,
+          "train_passed": 3,
+          "train_total": 3,
+          "train_score": 1.0,
+          "test_correct": true,
+          "parse_error": false,
+          "cost_usd": 0.0018782000000000002,
+          "tokens_in": 6859,
+          "tokens_out": 844
+        },
+        {
+          "i": 3,
+          "train_passed": 0,
+          "train_total": 3,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": true,
+          "cost_usd": 0.0026006000000000002,
+          "tokens_in": 6859,
+          "tokens_out": 2048
+        },
+        {
+          "i": 4,
+          "train_passed": 2,
+          "train_total": 3,
+          "train_score": 0.6666666666666666,
+          "test_correct": true,
+          "parse_error": false,
+          "cost_usd": 0.0016856000000000002,
+          "tokens_in": 6859,
+          "tokens_out": 523
+        },
+        {
+          "i": 5,
+          "train_passed": 3,
+          "train_total": 3,
+          "train_score": 1.0,
+          "test_correct": true,
+          "parse_error": false,
+          "cost_usd": 0.002393,
+          "tokens_in": 6859,
+          "tokens_out": 1702
+        },
+        {
+          "i": 6,
+          "train_passed": 0,
+          "train_total": 3,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0026006000000000002,
+          "tokens_in": 6859,
+          "tokens_out": 2048
+        },
+        {
+          "i": 7,
+          "train_passed": 2,
+          "train_total": 3,
+          "train_score": 0.6666666666666666,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0017288000000000002,
+          "tokens_in": 6859,
+          "tokens_out": 595
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,6768 @@
+{
+  "experiment": "tier1_synthesis_ablation",
+  "n_episodes": 250,
+  "rates": {
+    "majority_vote": 0.708,
+    "synth_answers_only": 0.848,
+    "synth_full_reasoning": 0.896
+  },
+  "costs": {
+    "majority_vote": 0.0005455356,
+    "synth_answers_only": 0.00059601,
+    "synth_full_reasoning": 0.0009769728
+  },
+  "total_cost_usd": 0.25686180000000003,
+  "elapsed_s": 563.015754699707,
+  "episodes": [
+    {
+      "task_id": "math_001",
+      "ground_truth": "5",
+      "frameworks_assigned": [
+        "arithmetic",
+        "estimation",
+        "algebraic",
+        "working_backwards"
+      ],
+      "proposal_cost": 0.0003897,
+      "proposal_tokens": 1299,
+      "majority_vote": {
+        "answer": "5",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "x = 5",
+        "correct": true,
+        "extra_cost": 3.9599999999999994e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "x = 5",
+        "correct": true,
+        "extra_cost": 0.0003134999999999999
+      }
+    },
+    {
+      "task_id": "math_001",
+      "ground_truth": "5",
+      "frameworks_assigned": [
+        "algebraic",
+        "arithmetic",
+        "working_backwards",
+        "estimation"
+      ],
+      "proposal_cost": 0.0003501,
+      "proposal_tokens": 1167,
+      "majority_vote": {
+        "answer": "5",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "x = 5",
+        "correct": true,
+        "extra_cost": 3.9599999999999994e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "x = 5",
+        "correct": true,
+        "extra_cost": 0.0002736
+      }
+    },
+    {
+      "task_id": "math_002",
+      "ground_truth": "4",
+      "frameworks_assigned": [
+        "estimation",
+        "algebraic",
+        "working_backwards",
+        "arithmetic"
+      ],
+      "proposal_cost": 0.0004224,
+      "proposal_tokens": 1408,
+      "majority_vote": {
+        "answer": "Maria bought 4 pens",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "Maria bought 4 pens",
+        "correct": true,
+        "extra_cost": 4.9199999999999997e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "Maria bought 4 pens",
+        "correct": true,
+        "extra_cost": 0.0003252
+      }
+    },
+    {
+      "task_id": "math_002",
+      "ground_truth": "4",
+      "frameworks_assigned": [
+        "arithmetic",
+        "estimation",
+        "algebraic",
+        "working_backwards"
+      ],
+      "proposal_cost": 0.00037409999999999993,
+      "proposal_tokens": 1247,
+      "majority_vote": {
+        "answer": "Maria bought 4 pens",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "4 pens",
+        "correct": true,
+        "extra_cost": 5.04e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "Maria bought 4 pens",
+        "correct": true,
+        "extra_cost": 0.00027719999999999996
+      }
+    },
+    {
+      "task_id": "math_002",
+      "ground_truth": "4",
+      "frameworks_assigned": [
+        "estimation",
+        "working_backwards",
+        "arithmetic",
+        "algebraic"
+      ],
+      "proposal_cost": 0.0004491,
+      "proposal_tokens": 1497,
+      "majority_vote": {
+        "answer": "12) dollars",
+        "correct": false,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "4",
+        "correct": true,
+        "extra_cost": 4.709999999999999e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "4 pens",
+        "correct": true,
+        "extra_cost": 0.0003516
+      }
+    },
+    {
+      "task_id": "math_001",
+      "ground_truth": "5",
+      "frameworks_assigned": [
+        "working_backwards",
+        "estimation",
+        "arithmetic",
+        "algebraic"
+      ],
+      "proposal_cost": 0.0003642,
+      "proposal_tokens": 1214,
+      "majority_vote": {
+        "answer": "5",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "x = 5",
+        "correct": true,
+        "extra_cost": 3.9599999999999994e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "x = 5",
+        "correct": true,
+        "extra_cost": 0.00028799999999999995
+      }
+    },
+    {
+      "task_id": "math_002",
+      "ground_truth": "4",
+      "frameworks_assigned": [
+        "arithmetic",
+        "algebraic",
+        "estimation",
+        "working_backwards"
+      ],
+      "proposal_cost": 0.000375,
+      "proposal_tokens": 1250,
+      "majority_vote": {
+        "answer": "Maria bought 4 pens",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "Maria bought 4 pens",
+        "correct": true,
+        "extra_cost": 5.1e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "Maria bought 4 pens",
+        "correct": true,
+        "extra_cost": 0.00027780000000000003
+      }
+    },
+    {
+      "task_id": "math_002",
+      "ground_truth": "4",
+      "frameworks_assigned": [
+        "algebraic",
+        "arithmetic",
+        "working_backwards",
+        "estimation"
+      ],
+      "proposal_cost": 0.000384,
+      "proposal_tokens": 1280,
+      "majority_vote": {
+        "answer": "4",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "4",
+        "correct": true,
+        "extra_cost": 4.68e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "4",
+        "correct": true,
+        "extra_cost": 0.00028619999999999996
+      }
+    },
+    {
+      "task_id": "math_003",
+      "ground_truth": "4",
+      "frameworks_assigned": [
+        "working_backwards",
+        "algebraic",
+        "estimation",
+        "arithmetic"
+      ],
+      "proposal_cost": 0.00044909999999999997,
+      "proposal_tokens": 1497,
+      "majority_vote": {
+        "answer": "4",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "4",
+        "correct": true,
+        "extra_cost": 4.3499999999999993e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "4 days",
+        "correct": true,
+        "extra_cost": 0.0003594
+      }
+    },
+    {
+      "task_id": "math_001",
+      "ground_truth": "5",
+      "frameworks_assigned": [
+        "arithmetic",
+        "algebraic",
+        "estimation",
+        "working_backwards"
+      ],
+      "proposal_cost": 0.000381,
+      "proposal_tokens": 1270,
+      "majority_vote": {
+        "answer": "x = 5",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "x = 5",
+        "correct": true,
+        "extra_cost": 4.05e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "x = 5",
+        "correct": true,
+        "extra_cost": 0.0003051
+      }
+    },
+    {
+      "task_id": "math_001",
+      "ground_truth": "5",
+      "frameworks_assigned": [
+        "algebraic",
+        "estimation",
+        "arithmetic",
+        "working_backwards"
+      ],
+      "proposal_cost": 0.00037319999999999996,
+      "proposal_tokens": 1244,
+      "majority_vote": {
+        "answer": "5",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "x = 5",
+        "correct": true,
+        "extra_cost": 3.93e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "x = 5",
+        "correct": true,
+        "extra_cost": 0.0002964
+      }
+    },
+    {
+      "task_id": "math_003",
+      "ground_truth": "4",
+      "frameworks_assigned": [
+        "estimation",
+        "working_backwards",
+        "algebraic",
+        "arithmetic"
+      ],
+      "proposal_cost": 0.0004743,
+      "proposal_tokens": 1581,
+      "majority_vote": {
+        "answer": "4",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "4 days",
+        "correct": true,
+        "extra_cost": 4.3799999999999994e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "4 days",
+        "correct": true,
+        "extra_cost": 0.0003849
+      }
+    },
+    {
+      "task_id": "math_003",
+      "ground_truth": "4",
+      "frameworks_assigned": [
+        "algebraic",
+        "working_backwards",
+        "arithmetic",
+        "estimation"
+      ],
+      "proposal_cost": 0.0004764,
+      "proposal_tokens": 1588,
+      "majority_vote": {
+        "answer": "4 days",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "4 days",
+        "correct": true,
+        "extra_cost": 4.8899999999999996e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "4 days",
+        "correct": true,
+        "extra_cost": 0.000387
+      }
+    },
+    {
+      "task_id": "math_003",
+      "ground_truth": "4",
+      "frameworks_assigned": [
+        "algebraic",
+        "arithmetic",
+        "estimation",
+        "working_backwards"
+      ],
+      "proposal_cost": 0.00048029999999999997,
+      "proposal_tokens": 1601,
+      "majority_vote": {
+        "answer": "4 days",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "4 days",
+        "correct": true,
+        "extra_cost": 4.44e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "4 days",
+        "correct": true,
+        "extra_cost": 0.0003909
+      }
+    },
+    {
+      "task_id": "math_003",
+      "ground_truth": "4",
+      "frameworks_assigned": [
+        "working_backwards",
+        "arithmetic",
+        "algebraic",
+        "estimation"
+      ],
+      "proposal_cost": 0.0004866,
+      "proposal_tokens": 1622,
+      "majority_vote": {
+        "answer": "4",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "4",
+        "correct": true,
+        "extra_cost": 4.4099999999999995e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "4 days",
+        "correct": true,
+        "extra_cost": 0.00039690000000000005
+      }
+    },
+    {
+      "task_id": "math_005",
+      "ground_truth": "60",
+      "frameworks_assigned": [
+        "estimation",
+        "arithmetic",
+        "working_backwards",
+        "algebraic"
+      ],
+      "proposal_cost": 0.0004611,
+      "proposal_tokens": 1537,
+      "majority_vote": {
+        "answer": "60",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "60 km/h",
+        "correct": true,
+        "extra_cost": 4.44e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "60 km/h",
+        "correct": true,
+        "extra_cost": 0.0003762
+      }
+    },
+    {
+      "task_id": "math_004",
+      "ground_truth": "72",
+      "frameworks_assigned": [
+        "working_backwards",
+        "arithmetic",
+        "estimation",
+        "algebraic"
+      ],
+      "proposal_cost": 0.0005823,
+      "proposal_tokens": 1941,
+      "majority_vote": {
+        "answer": "72",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "72",
+        "correct": true,
+        "extra_cost": 4.59e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "72",
+        "correct": true,
+        "extra_cost": 0.0004935
+      }
+    },
+    {
+      "task_id": "math_004",
+      "ground_truth": "72",
+      "frameworks_assigned": [
+        "estimation",
+        "arithmetic",
+        "working_backwards",
+        "algebraic"
+      ],
+      "proposal_cost": 0.0005784,
+      "proposal_tokens": 1928,
+      "majority_vote": {
+        "answer": "72",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "72",
+        "correct": true,
+        "extra_cost": 4.35e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "72 square meters",
+        "correct": true,
+        "extra_cost": 0.0004902
+      }
+    },
+    {
+      "task_id": "math_004",
+      "ground_truth": "72",
+      "frameworks_assigned": [
+        "arithmetic",
+        "estimation",
+        "working_backwards",
+        "algebraic"
+      ],
+      "proposal_cost": 0.0005987999999999999,
+      "proposal_tokens": 1996,
+      "majority_vote": {
+        "answer": "72",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "72",
+        "correct": true,
+        "extra_cost": 4.77e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "72",
+        "correct": true,
+        "extra_cost": 0.0005103
+      }
+    },
+    {
+      "task_id": "math_004",
+      "ground_truth": "72",
+      "frameworks_assigned": [
+        "algebraic",
+        "arithmetic",
+        "estimation",
+        "working_backwards"
+      ],
+      "proposal_cost": 0.0005967,
+      "proposal_tokens": 1989,
+      "majority_vote": {
+        "answer": "36",
+        "correct": false,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "72",
+        "correct": true,
+        "extra_cost": 4.47e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "72 square meters",
+        "correct": true,
+        "extra_cost": 0.0005082
+      }
+    },
+    {
+      "task_id": "math_005",
+      "ground_truth": "60",
+      "frameworks_assigned": [
+        "working_backwards",
+        "arithmetic",
+        "algebraic",
+        "estimation"
+      ],
+      "proposal_cost": 0.00046559999999999993,
+      "proposal_tokens": 1552,
+      "majority_vote": {
+        "answer": "60",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "60 km/h",
+        "correct": true,
+        "extra_cost": 4.8e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "The average speed of the car is 60 km/h",
+        "correct": true,
+        "extra_cost": 0.00038340000000000005
+      }
+    },
+    {
+      "task_id": "math_004",
+      "ground_truth": "72",
+      "frameworks_assigned": [
+        "algebraic",
+        "working_backwards",
+        "estimation",
+        "arithmetic"
+      ],
+      "proposal_cost": 0.0005883,
+      "proposal_tokens": 1961,
+      "majority_vote": {
+        "answer": "72",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "72",
+        "correct": true,
+        "extra_cost": 4.6200000000000005e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "72",
+        "correct": true,
+        "extra_cost": 0.0004995
+      }
+    },
+    {
+      "task_id": "math_006",
+      "ground_truth": "3",
+      "frameworks_assigned": [
+        "algebraic",
+        "estimation",
+        "working_backwards",
+        "arithmetic"
+      ],
+      "proposal_cost": 0.000525,
+      "proposal_tokens": 1750,
+      "majority_vote": {
+        "answer": "3 hours",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "3 hours",
+        "correct": true,
+        "extra_cost": 5.13e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "3 hours",
+        "correct": true,
+        "extra_cost": 0.0004188
+      }
+    },
+    {
+      "task_id": "math_005",
+      "ground_truth": "60",
+      "frameworks_assigned": [
+        "algebraic",
+        "estimation",
+        "working_backwards",
+        "arithmetic"
+      ],
+      "proposal_cost": 0.0004497,
+      "proposal_tokens": 1499,
+      "majority_vote": {
+        "answer": "60 km/h",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "60 km/h",
+        "correct": true,
+        "extra_cost": 4.6800000000000006e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "60 km/h",
+        "correct": true,
+        "extra_cost": 0.0003654
+      }
+    },
+    {
+      "task_id": "math_005",
+      "ground_truth": "60",
+      "frameworks_assigned": [
+        "estimation",
+        "algebraic",
+        "working_backwards",
+        "arithmetic"
+      ],
+      "proposal_cost": 0.0004935,
+      "proposal_tokens": 1645,
+      "majority_vote": {
+        "answer": "60 km/h",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "60 km/h",
+        "correct": true,
+        "extra_cost": 4.5e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "60 km/h",
+        "correct": true,
+        "extra_cost": 0.00040919999999999997
+      }
+    },
+    {
+      "task_id": "math_006",
+      "ground_truth": "3",
+      "frameworks_assigned": [
+        "algebraic",
+        "estimation",
+        "arithmetic",
+        "working_backwards"
+      ],
+      "proposal_cost": 0.00045449999999999993,
+      "proposal_tokens": 1515,
+      "majority_vote": {
+        "answer": "3 hours",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "3 hours",
+        "correct": true,
+        "extra_cost": 5.73e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "3 hours",
+        "correct": true,
+        "extra_cost": 0.0003477
+      }
+    },
+    {
+      "task_id": "math_005",
+      "ground_truth": "60",
+      "frameworks_assigned": [
+        "algebraic",
+        "working_backwards",
+        "estimation",
+        "arithmetic"
+      ],
+      "proposal_cost": 0.0004614,
+      "proposal_tokens": 1538,
+      "majority_vote": {
+        "answer": "60",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "60 km/h",
+        "correct": true,
+        "extra_cost": 4.44e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "60 km/h",
+        "correct": true,
+        "extra_cost": 0.00037679999999999994
+      }
+    },
+    {
+      "task_id": "math_006",
+      "ground_truth": "3",
+      "frameworks_assigned": [
+        "working_backwards",
+        "algebraic",
+        "arithmetic",
+        "estimation"
+      ],
+      "proposal_cost": 0.0004494,
+      "proposal_tokens": 1498,
+      "majority_vote": {
+        "answer": "3 hours",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "3 hours",
+        "correct": true,
+        "extra_cost": 5.0700000000000006e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "3 hours",
+        "correct": true,
+        "extra_cost": 0.0003432
+      }
+    },
+    {
+      "task_id": "math_006",
+      "ground_truth": "3",
+      "frameworks_assigned": [
+        "arithmetic",
+        "working_backwards",
+        "estimation",
+        "algebraic"
+      ],
+      "proposal_cost": 0.000489,
+      "proposal_tokens": 1630,
+      "majority_vote": {
+        "answer": "3 hours",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "3 hours",
+        "correct": true,
+        "extra_cost": 5.4e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "3 hours",
+        "correct": true,
+        "extra_cost": 0.0003825
+      }
+    },
+    {
+      "task_id": "math_006",
+      "ground_truth": "3",
+      "frameworks_assigned": [
+        "algebraic",
+        "estimation",
+        "working_backwards",
+        "arithmetic"
+      ],
+      "proposal_cost": 0.0004902,
+      "proposal_tokens": 1634,
+      "majority_vote": {
+        "answer": "3",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "3 hours",
+        "correct": true,
+        "extra_cost": 5.01e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "3 hours",
+        "correct": true,
+        "extra_cost": 0.0003837
+      }
+    },
+    {
+      "task_id": "math_008",
+      "ground_truth": "36",
+      "frameworks_assigned": [
+        "algebraic",
+        "working_backwards",
+        "estimation",
+        "arithmetic"
+      ],
+      "proposal_cost": 0.0003648,
+      "proposal_tokens": 1216,
+      "majority_vote": {
+        "answer": "36",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "36",
+        "correct": true,
+        "extra_cost": 4.5600000000000004e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "36",
+        "correct": true,
+        "extra_cost": 0.00029069999999999996
+      }
+    },
+    {
+      "task_id": "math_008",
+      "ground_truth": "36",
+      "frameworks_assigned": [
+        "working_backwards",
+        "algebraic",
+        "arithmetic",
+        "estimation"
+      ],
+      "proposal_cost": 0.0004011,
+      "proposal_tokens": 1337,
+      "majority_vote": {
+        "answer": "36",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "36",
+        "correct": true,
+        "extra_cost": 3.8700000000000006e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "36",
+        "correct": true,
+        "extra_cost": 0.0003273
+      }
+    },
+    {
+      "task_id": "math_008",
+      "ground_truth": "36",
+      "frameworks_assigned": [
+        "working_backwards",
+        "arithmetic",
+        "estimation",
+        "algebraic"
+      ],
+      "proposal_cost": 0.000357,
+      "proposal_tokens": 1190,
+      "majority_vote": {
+        "answer": "36",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "36",
+        "correct": true,
+        "extra_cost": 4.5600000000000004e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "36",
+        "correct": true,
+        "extra_cost": 0.00028290000000000005
+      }
+    },
+    {
+      "task_id": "math_008",
+      "ground_truth": "36",
+      "frameworks_assigned": [
+        "working_backwards",
+        "estimation",
+        "algebraic",
+        "arithmetic"
+      ],
+      "proposal_cost": 0.0003693,
+      "proposal_tokens": 1231,
+      "majority_vote": {
+        "answer": "( x )",
+        "correct": false,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "36",
+        "correct": true,
+        "extra_cost": 3.99e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "36",
+        "correct": true,
+        "extra_cost": 0.00031319999999999997
+      }
+    },
+    {
+      "task_id": "math_009",
+      "ground_truth": "28",
+      "frameworks_assigned": [
+        "estimation",
+        "algebraic",
+        "arithmetic",
+        "working_backwards"
+      ],
+      "proposal_cost": 0.0004242,
+      "proposal_tokens": 1414,
+      "majority_vote": {
+        "answer": "frac{78}{3} = 26 ]",
+        "correct": false,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "26",
+        "correct": false,
+        "extra_cost": 4.35e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "28",
+        "correct": true,
+        "extra_cost": 0.0003423
+      }
+    },
+    {
+      "task_id": "math_009",
+      "ground_truth": "28",
+      "frameworks_assigned": [
+        "estimation",
+        "algebraic",
+        "arithmetic",
+        "working_backwards"
+      ],
+      "proposal_cost": 0.000453,
+      "proposal_tokens": 1510,
+      "majority_vote": {
+        "answer": "28",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "28",
+        "correct": true,
+        "extra_cost": 4.35e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "28",
+        "correct": true,
+        "extra_cost": 0.0003717
+      }
+    },
+    {
+      "task_id": "math_009",
+      "ground_truth": "28",
+      "frameworks_assigned": [
+        "algebraic",
+        "arithmetic",
+        "estimation",
+        "working_backwards"
+      ],
+      "proposal_cost": 0.00043319999999999996,
+      "proposal_tokens": 1444,
+      "majority_vote": {
+        "answer": "78",
+        "correct": false,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "28",
+        "correct": true,
+        "extra_cost": 4.59e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "28",
+        "correct": true,
+        "extra_cost": 0.00035190000000000004
+      }
+    },
+    {
+      "task_id": "math_009",
+      "ground_truth": "28",
+      "frameworks_assigned": [
+        "algebraic",
+        "estimation",
+        "working_backwards",
+        "arithmetic"
+      ],
+      "proposal_cost": 0.0005115,
+      "proposal_tokens": 1705,
+      "majority_vote": {
+        "answer": "78",
+        "correct": false,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "28",
+        "correct": true,
+        "extra_cost": 4.11e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "28",
+        "correct": true,
+        "extra_cost": 0.00042990000000000004
+      }
+    },
+    {
+      "task_id": "math_007",
+      "ground_truth": "6",
+      "frameworks_assigned": [
+        "arithmetic",
+        "algebraic",
+        "working_backwards",
+        "estimation"
+      ],
+      "proposal_cost": 0.0006294,
+      "proposal_tokens": 2098,
+      "majority_vote": {
+        "answer": "10 liters",
+        "correct": false,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "6 liters",
+        "correct": true,
+        "extra_cost": 4.8899999999999996e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "6 liters",
+        "correct": true,
+        "extra_cost": 0.0005019
+      }
+    },
+    {
+      "task_id": "math_007",
+      "ground_truth": "6",
+      "frameworks_assigned": [
+        "algebraic",
+        "estimation",
+        "arithmetic",
+        "working_backwards"
+      ],
+      "proposal_cost": 0.0006027,
+      "proposal_tokens": 2009,
+      "majority_vote": {
+        "answer": "4 text{ liters}",
+        "correct": false,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "4 liters",
+        "correct": false,
+        "extra_cost": 4.92e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "6 liters of pure water must be added to the mixture to reduce the alcohol concentration to 25%",
+        "correct": true,
+        "extra_cost": 0.0005112
+      }
+    },
+    {
+      "task_id": "math_009",
+      "ground_truth": "28",
+      "frameworks_assigned": [
+        "estimation",
+        "algebraic",
+        "working_backwards",
+        "arithmetic"
+      ],
+      "proposal_cost": 0.00048629999999999995,
+      "proposal_tokens": 1621,
+      "majority_vote": {
+        "answer": "26",
+        "correct": false,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "26",
+        "correct": false,
+        "extra_cost": 4.2e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "28",
+        "correct": true,
+        "extra_cost": 0.0004044
+      }
+    },
+    {
+      "task_id": "math_010",
+      "ground_truth": "56",
+      "frameworks_assigned": [
+        "estimation",
+        "algebraic",
+        "working_backwards",
+        "arithmetic"
+      ],
+      "proposal_cost": 0.0004272,
+      "proposal_tokens": 1424,
+      "majority_vote": {
+        "answer": "24 ]",
+        "correct": false,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "The sale price is 56",
+        "correct": true,
+        "extra_cost": 4.65e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "The sale price is 56",
+        "correct": true,
+        "extra_cost": 0.0003423
+      }
+    },
+    {
+      "task_id": "math_010",
+      "ground_truth": "56",
+      "frameworks_assigned": [
+        "working_backwards",
+        "arithmetic",
+        "algebraic",
+        "estimation"
+      ],
+      "proposal_cost": 0.00047609999999999997,
+      "proposal_tokens": 1587,
+      "majority_vote": {
+        "answer": "70%)",
+        "correct": false,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "56",
+        "correct": true,
+        "extra_cost": 4.6200000000000005e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "56",
+        "correct": true,
+        "extra_cost": 0.0003903
+      }
+    },
+    {
+      "task_id": "math_008",
+      "ground_truth": "36",
+      "frameworks_assigned": [
+        "algebraic",
+        "working_backwards",
+        "arithmetic",
+        "estimation"
+      ],
+      "proposal_cost": 0.00037949999999999995,
+      "proposal_tokens": 1265,
+      "majority_vote": {
+        "answer": "36",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "36",
+        "correct": true,
+        "extra_cost": 3.96e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "36",
+        "correct": true,
+        "extra_cost": 0.00030540000000000005
+      }
+    },
+    {
+      "task_id": "math_010",
+      "ground_truth": "56",
+      "frameworks_assigned": [
+        "working_backwards",
+        "estimation",
+        "arithmetic",
+        "algebraic"
+      ],
+      "proposal_cost": 0.00045059999999999995,
+      "proposal_tokens": 1502,
+      "majority_vote": {
+        "answer": "56",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "56",
+        "correct": true,
+        "extra_cost": 4.5600000000000004e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "56",
+        "correct": true,
+        "extra_cost": 0.0003894
+      }
+    },
+    {
+      "task_id": "pattern_001",
+      "ground_truth": "162",
+      "frameworks_assigned": [
+        "table",
+        "difference",
+        "formula",
+        "recursive"
+      ],
+      "proposal_cost": 0.0005363999999999999,
+      "proposal_tokens": 1788,
+      "majority_vote": {
+        "answer": "162",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "162",
+        "correct": true,
+        "extra_cost": 5.009999999999999e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "162",
+        "correct": true,
+        "extra_cost": 0.0004476
+      }
+    },
+    {
+      "task_id": "pattern_001",
+      "ground_truth": "162",
+      "frameworks_assigned": [
+        "table",
+        "formula",
+        "difference",
+        "recursive"
+      ],
+      "proposal_cost": 0.0005855999999999999,
+      "proposal_tokens": 1952,
+      "majority_vote": {
+        "answer": "162",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "162",
+        "correct": true,
+        "extra_cost": 4.0799999999999996e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "162",
+        "correct": true,
+        "extra_cost": 0.0004971
+      }
+    },
+    {
+      "task_id": "math_007",
+      "ground_truth": "6",
+      "frameworks_assigned": [
+        "working_backwards",
+        "arithmetic",
+        "estimation",
+        "algebraic"
+      ],
+      "proposal_cost": 0.0006228,
+      "proposal_tokens": 2076,
+      "majority_vote": {
+        "answer": "6 liters",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "6 liters",
+        "correct": true,
+        "extra_cost": 4.77e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "6 liters",
+        "correct": true,
+        "extra_cost": 0.0005258999999999999
+      }
+    },
+    {
+      "task_id": "pattern_001",
+      "ground_truth": "162",
+      "frameworks_assigned": [
+        "difference",
+        "table",
+        "recursive",
+        "formula"
+      ],
+      "proposal_cost": 0.0005001000000000001,
+      "proposal_tokens": 1667,
+      "majority_vote": {
+        "answer": "4)",
+        "correct": false,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "162",
+        "correct": true,
+        "extra_cost": 4.1099999999999996e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "162",
+        "correct": true,
+        "extra_cost": 0.00041129999999999997
+      }
+    },
+    {
+      "task_id": "pattern_001",
+      "ground_truth": "162",
+      "frameworks_assigned": [
+        "table",
+        "difference",
+        "formula",
+        "recursive"
+      ],
+      "proposal_cost": 0.0005778000000000001,
+      "proposal_tokens": 1926,
+      "majority_vote": {
+        "answer": "162",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "162",
+        "correct": true,
+        "extra_cost": 4.3799999999999994e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "162",
+        "correct": true,
+        "extra_cost": 0.0004784999999999999
+      }
+    },
+    {
+      "task_id": "math_007",
+      "ground_truth": "6",
+      "frameworks_assigned": [
+        "estimation",
+        "working_backwards",
+        "arithmetic",
+        "algebraic"
+      ],
+      "proposal_cost": 0.0006357,
+      "proposal_tokens": 2119,
+      "majority_vote": {
+        "answer": "6 \\text{ liters",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "4 liters",
+        "correct": false,
+        "extra_cost": 4.8e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "6 liters",
+        "correct": true,
+        "extra_cost": 0.0005325
+      }
+    },
+    {
+      "task_id": "pattern_002",
+      "ground_truth": "36",
+      "frameworks_assigned": [
+        "table",
+        "formula",
+        "recursive",
+        "difference"
+      ],
+      "proposal_cost": 0.000573,
+      "proposal_tokens": 1910,
+      "majority_vote": {
+        "answer": "36",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "36",
+        "correct": true,
+        "extra_cost": 4.14e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "36",
+        "correct": true,
+        "extra_cost": 0.0004818
+      }
+    },
+    {
+      "task_id": "math_007",
+      "ground_truth": "6",
+      "frameworks_assigned": [
+        "estimation",
+        "working_backwards",
+        "arithmetic",
+        "algebraic"
+      ],
+      "proposal_cost": 0.0006027,
+      "proposal_tokens": 2009,
+      "majority_vote": {
+        "answer": "6 liters of pure water must be added",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "6 liters",
+        "correct": true,
+        "extra_cost": 4.86e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "6 liters of pure water must be added",
+        "correct": true,
+        "extra_cost": 0.0005078999999999999
+      }
+    },
+    {
+      "task_id": "pattern_002",
+      "ground_truth": "36",
+      "frameworks_assigned": [
+        "difference",
+        "table",
+        "recursive",
+        "formula"
+      ],
+      "proposal_cost": 0.0006083999999999999,
+      "proposal_tokens": 2028,
+      "majority_vote": {
+        "answer": "36",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "36",
+        "correct": true,
+        "extra_cost": 4.41e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "36",
+        "correct": true,
+        "extra_cost": 0.0005168999999999999
+      }
+    },
+    {
+      "task_id": "pattern_002",
+      "ground_truth": "36",
+      "frameworks_assigned": [
+        "recursive",
+        "table",
+        "difference",
+        "formula"
+      ],
+      "proposal_cost": 0.0006242999999999999,
+      "proposal_tokens": 2081,
+      "majority_vote": {
+        "answer": "3)",
+        "correct": false,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "36)",
+        "correct": true,
+        "extra_cost": 4.1099999999999996e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "36",
+        "correct": true,
+        "extra_cost": 0.0005322
+      }
+    },
+    {
+      "task_id": "math_010",
+      "ground_truth": "56",
+      "frameworks_assigned": [
+        "working_backwards",
+        "estimation",
+        "algebraic",
+        "arithmetic"
+      ],
+      "proposal_cost": 0.00041759999999999996,
+      "proposal_tokens": 1392,
+      "majority_vote": {
+        "answer": "56",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "56",
+        "correct": true,
+        "extra_cost": 4.5600000000000004e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "56",
+        "correct": true,
+        "extra_cost": 0.0003314999999999999
+      }
+    },
+    {
+      "task_id": "pattern_002",
+      "ground_truth": "36",
+      "frameworks_assigned": [
+        "recursive",
+        "difference",
+        "formula",
+        "table"
+      ],
+      "proposal_cost": 0.0006045,
+      "proposal_tokens": 2015,
+      "majority_vote": {
+        "answer": "36",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "36",
+        "correct": true,
+        "extra_cost": 4.11e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "36",
+        "correct": true,
+        "extra_cost": 0.000513
+      }
+    },
+    {
+      "task_id": "pattern_003",
+      "ground_truth": "21",
+      "frameworks_assigned": [
+        "table",
+        "difference",
+        "recursive",
+        "formula"
+      ],
+      "proposal_cost": 0.0007884,
+      "proposal_tokens": 2628,
+      "majority_vote": {
+        "answer": "The next number in the sequence is 21",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "The next number in the sequence is 21",
+        "correct": true,
+        "extra_cost": 4.9800000000000004e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "21",
+        "correct": true,
+        "extra_cost": 0.0005991
+      }
+    },
+    {
+      "task_id": "pattern_003",
+      "ground_truth": "21",
+      "frameworks_assigned": [
+        "difference",
+        "recursive",
+        "table",
+        "formula"
+      ],
+      "proposal_cost": 0.0007851,
+      "proposal_tokens": 2617,
+      "majority_vote": {
+        "answer": "0)",
+        "correct": false,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "21",
+        "correct": true,
+        "extra_cost": 4.5299999999999997e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "21",
+        "correct": true,
+        "extra_cost": 0.0005937000000000001
+      }
+    },
+    {
+      "task_id": "pattern_004",
+      "ground_truth": "23",
+      "frameworks_assigned": [
+        "recursive",
+        "table",
+        "difference",
+        "formula"
+      ],
+      "proposal_cost": 0.0005985,
+      "proposal_tokens": 1995,
+      "majority_vote": {
+        "answer": "4)",
+        "correct": false,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "23",
+        "correct": true,
+        "extra_cost": 4.32e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "23",
+        "correct": true,
+        "extra_cost": 0.0005055
+      }
+    },
+    {
+      "task_id": "math_010",
+      "ground_truth": "56",
+      "frameworks_assigned": [
+        "working_backwards",
+        "estimation",
+        "arithmetic",
+        "algebraic"
+      ],
+      "proposal_cost": 0.0004128,
+      "proposal_tokens": 1376,
+      "majority_vote": {
+        "answer": "80",
+        "correct": false,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "56",
+        "correct": true,
+        "extra_cost": 4.47e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "56",
+        "correct": true,
+        "extra_cost": 0.000327
+      }
+    },
+    {
+      "task_id": "pattern_003",
+      "ground_truth": "21",
+      "frameworks_assigned": [
+        "recursive",
+        "formula",
+        "difference",
+        "table"
+      ],
+      "proposal_cost": 0.0007886999999999999,
+      "proposal_tokens": 2629,
+      "majority_vote": {
+        "answer": "a_{n-1} + a_{n-2} ]",
+        "correct": false,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "21",
+        "correct": true,
+        "extra_cost": 4.86e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "21",
+        "correct": true,
+        "extra_cost": 0.0005522999999999999
+      }
+    },
+    {
+      "task_id": "pattern_001",
+      "ground_truth": "162",
+      "frameworks_assigned": [
+        "recursive",
+        "difference",
+        "formula",
+        "table"
+      ],
+      "proposal_cost": 0.0005232,
+      "proposal_tokens": 1744,
+      "majority_vote": {
+        "answer": "2 times 3)",
+        "correct": false,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "162",
+        "correct": true,
+        "extra_cost": 4.17e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "162",
+        "correct": true,
+        "extra_cost": 0.0004347
+      }
+    },
+    {
+      "task_id": "pattern_004",
+      "ground_truth": "23",
+      "frameworks_assigned": [
+        "formula",
+        "difference",
+        "table",
+        "recursive"
+      ],
+      "proposal_cost": 0.0005739,
+      "proposal_tokens": 1913,
+      "majority_vote": {
+        "answer": "4)",
+        "correct": false,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "23",
+        "correct": true,
+        "extra_cost": 4.0799999999999996e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "23",
+        "correct": true,
+        "extra_cost": 0.0004812
+      }
+    },
+    {
+      "task_id": "pattern_005",
+      "ground_truth": "37",
+      "frameworks_assigned": [
+        "difference",
+        "formula",
+        "table",
+        "recursive"
+      ],
+      "proposal_cost": 0.0009356999999999999,
+      "proposal_tokens": 3119,
+      "majority_vote": {
+        "answer": "37",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "37",
+        "correct": true,
+        "extra_cost": 4.11e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "37",
+        "correct": true,
+        "extra_cost": 0.0006027000000000001
+      }
+    },
+    {
+      "task_id": "pattern_004",
+      "ground_truth": "23",
+      "frameworks_assigned": [
+        "difference",
+        "formula",
+        "table",
+        "recursive"
+      ],
+      "proposal_cost": 0.0005376,
+      "proposal_tokens": 1792,
+      "majority_vote": {
+        "answer": "The next number in the sequence is 23",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "23",
+        "correct": true,
+        "extra_cost": 4.32e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "23",
+        "correct": true,
+        "extra_cost": 0.0004449
+      }
+    },
+    {
+      "task_id": "pattern_002",
+      "ground_truth": "36",
+      "frameworks_assigned": [
+        "table",
+        "recursive",
+        "formula",
+        "difference"
+      ],
+      "proposal_cost": 0.0005751,
+      "proposal_tokens": 1917,
+      "majority_vote": {
+        "answer": "1^2)",
+        "correct": false,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "The next number in the sequence is 36",
+        "correct": true,
+        "extra_cost": 4.59e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "36",
+        "correct": true,
+        "extra_cost": 0.00048
+      }
+    },
+    {
+      "task_id": "pattern_004",
+      "ground_truth": "23",
+      "frameworks_assigned": [
+        "difference",
+        "recursive",
+        "table",
+        "formula"
+      ],
+      "proposal_cost": 0.0005787,
+      "proposal_tokens": 1929,
+      "majority_vote": {
+        "answer": "23",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "23",
+        "correct": true,
+        "extra_cost": 4.35e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "23",
+        "correct": true,
+        "extra_cost": 0.000486
+      }
+    },
+    {
+      "task_id": "pattern_005",
+      "ground_truth": "37",
+      "frameworks_assigned": [
+        "difference",
+        "recursive",
+        "formula",
+        "table"
+      ],
+      "proposal_cost": 0.0006537,
+      "proposal_tokens": 2179,
+      "majority_vote": {
+        "answer": "3)",
+        "correct": false,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "37",
+        "correct": true,
+        "extra_cost": 4.0799999999999996e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "37",
+        "correct": true,
+        "extra_cost": 0.0005556000000000001
+      }
+    },
+    {
+      "task_id": "pattern_006",
+      "ground_truth": "32",
+      "frameworks_assigned": [
+        "table",
+        "recursive",
+        "difference",
+        "formula"
+      ],
+      "proposal_cost": 0.0005667,
+      "proposal_tokens": 1889,
+      "majority_vote": {
+        "answer": "32",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "32",
+        "correct": true,
+        "extra_cost": 4.0799999999999996e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "32",
+        "correct": true,
+        "extra_cost": 0.0004764
+      }
+    },
+    {
+      "task_id": "pattern_004",
+      "ground_truth": "23",
+      "frameworks_assigned": [
+        "formula",
+        "table",
+        "recursive",
+        "difference"
+      ],
+      "proposal_cost": 0.000531,
+      "proposal_tokens": 1770,
+      "majority_vote": {
+        "answer": "4)",
+        "correct": false,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "23",
+        "correct": true,
+        "extra_cost": 4.0799999999999996e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "23",
+        "correct": true,
+        "extra_cost": 0.00043830000000000003
+      }
+    },
+    {
+      "task_id": "pattern_003",
+      "ground_truth": "21",
+      "frameworks_assigned": [
+        "formula",
+        "table",
+        "recursive",
+        "difference"
+      ],
+      "proposal_cost": 0.0007596,
+      "proposal_tokens": 2532,
+      "majority_vote": {
+        "answer": "21",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "21",
+        "correct": true,
+        "extra_cost": 4.29e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "21",
+        "correct": true,
+        "extra_cost": 0.00063
+      }
+    },
+    {
+      "task_id": "pattern_006",
+      "ground_truth": "32",
+      "frameworks_assigned": [
+        "table",
+        "formula",
+        "difference",
+        "recursive"
+      ],
+      "proposal_cost": 0.0006144,
+      "proposal_tokens": 2048,
+      "majority_vote": {
+        "answer": "32",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "32",
+        "correct": true,
+        "extra_cost": 4.0799999999999996e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "32",
+        "correct": true,
+        "extra_cost": 0.0005348999999999999
+      }
+    },
+    {
+      "task_id": "pattern_006",
+      "ground_truth": "32",
+      "frameworks_assigned": [
+        "recursive",
+        "formula",
+        "difference",
+        "table"
+      ],
+      "proposal_cost": 0.0006072,
+      "proposal_tokens": 2024,
+      "majority_vote": {
+        "answer": "32",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "32",
+        "correct": true,
+        "extra_cost": 4.05e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "The next number in the sequence is 32",
+        "correct": true,
+        "extra_cost": 0.0005030999999999999
+      }
+    },
+    {
+      "task_id": "pattern_006",
+      "ground_truth": "32",
+      "frameworks_assigned": [
+        "formula",
+        "recursive",
+        "table",
+        "difference"
+      ],
+      "proposal_cost": 0.0005844,
+      "proposal_tokens": 1948,
+      "majority_vote": {
+        "answer": "2)",
+        "correct": false,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "32",
+        "correct": true,
+        "extra_cost": 6.089999999999999e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "32",
+        "correct": true,
+        "extra_cost": 0.0004749
+      }
+    },
+    {
+      "task_id": "pattern_007",
+      "ground_truth": "32",
+      "frameworks_assigned": [
+        "table",
+        "difference",
+        "formula",
+        "recursive"
+      ],
+      "proposal_cost": 0.0006561,
+      "proposal_tokens": 2187,
+      "majority_vote": {
+        "answer": "3",
+        "correct": false,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "The 10th term of the sequence is 32",
+        "correct": true,
+        "extra_cost": 4.8e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "32",
+        "correct": true,
+        "extra_cost": 0.0005595
+      }
+    },
+    {
+      "task_id": "pattern_007",
+      "ground_truth": "32",
+      "frameworks_assigned": [
+        "recursive",
+        "table",
+        "difference",
+        "formula"
+      ],
+      "proposal_cost": 0.0006723,
+      "proposal_tokens": 2241,
+      "majority_vote": {
+        "answer": "32",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "28",
+        "correct": false,
+        "extra_cost": 4.41e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "32",
+        "correct": true,
+        "extra_cost": 0.000576
+      }
+    },
+    {
+      "task_id": "pattern_005",
+      "ground_truth": "37",
+      "frameworks_assigned": [
+        "formula",
+        "recursive",
+        "table",
+        "difference"
+      ],
+      "proposal_cost": 0.0007103999999999999,
+      "proposal_tokens": 2368,
+      "majority_vote": {
+        "answer": "37",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "37",
+        "correct": true,
+        "extra_cost": 4.35e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "37",
+        "correct": true,
+        "extra_cost": 0.000555
+      }
+    },
+    {
+      "task_id": "pattern_005",
+      "ground_truth": "37",
+      "frameworks_assigned": [
+        "recursive",
+        "table",
+        "difference",
+        "formula"
+      ],
+      "proposal_cost": 0.0007179,
+      "proposal_tokens": 2393,
+      "majority_vote": {
+        "answer": "37",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "37",
+        "correct": true,
+        "extra_cost": 4.1700000000000004e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "37",
+        "correct": true,
+        "extra_cost": 0.0005598
+      }
+    },
+    {
+      "task_id": "pattern_005",
+      "ground_truth": "37",
+      "frameworks_assigned": [
+        "recursive",
+        "formula",
+        "difference",
+        "table"
+      ],
+      "proposal_cost": 0.0006585,
+      "proposal_tokens": 2195,
+      "majority_vote": {
+        "answer": "The next number in the sequence is 37",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "The next number in the sequence is 37",
+        "correct": true,
+        "extra_cost": 4.74e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "The next number in the sequence is 37. All agents provided correct methods and arrived at the same answer, confirming that 37 is indeed the correct next term in the sequence",
+        "correct": true,
+        "extra_cost": 0.0005727000000000001
+      }
+    },
+    {
+      "task_id": "logic_001",
+      "ground_truth": "dog",
+      "frameworks_assigned": [
+        "constraint_propagation",
+        "elimination",
+        "direct_deduction",
+        "case_analysis"
+      ],
+      "proposal_cost": 0.0006452999999999999,
+      "proposal_tokens": 2151,
+      "majority_vote": {
+        "answer": "5",
+        "correct": false,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "Carol has a fish",
+        "correct": false,
+        "extra_cost": 4.8599999999999995e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "Carol has a dog",
+        "correct": true,
+        "extra_cost": 0.0004698
+      }
+    },
+    {
+      "task_id": "logic_001",
+      "ground_truth": "dog",
+      "frameworks_assigned": [
+        "elimination",
+        "constraint_propagation",
+        "case_analysis",
+        "direct_deduction"
+      ],
+      "proposal_cost": 0.0005367,
+      "proposal_tokens": 1789,
+      "majority_vote": {
+        "answer": "4",
+        "correct": false,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "Carol has a fish",
+        "correct": false,
+        "extra_cost": 4.8599999999999995e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "Carol has a fish",
+        "correct": false,
+        "extra_cost": 0.0004341
+      }
+    },
+    {
+      "task_id": "logic_001",
+      "ground_truth": "dog",
+      "frameworks_assigned": [
+        "case_analysis",
+        "constraint_propagation",
+        "elimination",
+        "direct_deduction"
+      ],
+      "proposal_cost": 0.0006606,
+      "proposal_tokens": 2202,
+      "majority_vote": {
+        "answer": "5",
+        "correct": false,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "Carol has the dog",
+        "correct": true,
+        "extra_cost": 5.009999999999999e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "Carol has the dog",
+        "correct": true,
+        "extra_cost": 0.0004904999999999999
+      }
+    },
+    {
+      "task_id": "pattern_003",
+      "ground_truth": "21",
+      "frameworks_assigned": [
+        "formula",
+        "table",
+        "difference",
+        "recursive"
+      ],
+      "proposal_cost": 0.0008669999999999999,
+      "proposal_tokens": 2890,
+      "majority_vote": {
+        "answer": "21",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "21",
+        "correct": true,
+        "extra_cost": 4.59e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "21",
+        "correct": true,
+        "extra_cost": 0.0005922000000000001
+      }
+    },
+    {
+      "task_id": "logic_001",
+      "ground_truth": "dog",
+      "frameworks_assigned": [
+        "elimination",
+        "case_analysis",
+        "direct_deduction",
+        "constraint_propagation"
+      ],
+      "proposal_cost": 0.0006573,
+      "proposal_tokens": 2191,
+      "majority_vote": {
+        "answer": "Carol has the dog",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "Carol has the dog",
+        "correct": true,
+        "extra_cost": 4.9199999999999997e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "Carol has a fish",
+        "correct": false,
+        "extra_cost": 0.00045
+      }
+    },
+    {
+      "task_id": "logic_002",
+      "ground_truth": "2",
+      "frameworks_assigned": [
+        "elimination",
+        "case_analysis",
+        "direct_deduction",
+        "constraint_propagation"
+      ],
+      "proposal_cost": 0.0008646,
+      "proposal_tokens": 2882,
+      "majority_vote": {
+        "answer": "4",
+        "correct": false,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "2",
+        "correct": true,
+        "extra_cost": 5.2799999999999996e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "The red house can be in position 1 or position 4 based on the two valid configurations. However, since the problem asks for the position of the red house and both configurations are valid, we can conclude that the red house is either in position 1 or 4. Given the multiple valid solutions, the most specific answer would be to state the position in one of the valid configurations, such as position 1 or 4. For the sake of a single answer, we can state the most left position as the primary answer",
+        "correct": false,
+        "extra_cost": 0.0005795999999999999
+      }
+    },
+    {
+      "task_id": "logic_003",
+      "ground_truth": "tea",
+      "frameworks_assigned": [
+        "direct_deduction",
+        "constraint_propagation",
+        "case_analysis",
+        "elimination"
+      ],
+      "proposal_cost": 0.0006353999999999999,
+      "proposal_tokens": 2118,
+      "majority_vote": {
+        "answer": "6",
+        "correct": false,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "Blake ordered tea",
+        "correct": true,
+        "extra_cost": 5.22e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "Blake ordered coffee",
+        "correct": false,
+        "extra_cost": 0.00048419999999999995
+      }
+    },
+    {
+      "task_id": "pattern_006",
+      "ground_truth": "32",
+      "frameworks_assigned": [
+        "table",
+        "formula",
+        "difference",
+        "recursive"
+      ],
+      "proposal_cost": 0.0006050999999999999,
+      "proposal_tokens": 2017,
+      "majority_vote": {
+        "answer": "32",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "32",
+        "correct": true,
+        "extra_cost": 4.0799999999999996e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "32",
+        "correct": true,
+        "extra_cost": 0.0005145
+      }
+    },
+    {
+      "task_id": "logic_002",
+      "ground_truth": "2",
+      "frameworks_assigned": [
+        "elimination",
+        "direct_deduction",
+        "case_analysis",
+        "constraint_propagation"
+      ],
+      "proposal_cost": 0.0007509,
+      "proposal_tokens": 2503,
+      "majority_vote": {
+        "answer": "4",
+        "correct": false,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "4",
+        "correct": false,
+        "extra_cost": 5.2799999999999996e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "The red house is in position 4",
+        "correct": false,
+        "extra_cost": 0.0005315999999999999
+      }
+    },
+    {
+      "task_id": "logic_003",
+      "ground_truth": "tea",
+      "frameworks_assigned": [
+        "elimination",
+        "case_analysis",
+        "constraint_propagation",
+        "direct_deduction"
+      ],
+      "proposal_cost": 0.0005853,
+      "proposal_tokens": 1951,
+      "majority_vote": {
+        "answer": "Blake ordered coffee",
+        "correct": false,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "Blake ordered coffee",
+        "correct": false,
+        "extra_cost": 5.25e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "Blake ordered coffee",
+        "correct": false,
+        "extra_cost": 0.0004566
+      }
+    },
+    {
+      "task_id": "logic_003",
+      "ground_truth": "tea",
+      "frameworks_assigned": [
+        "elimination",
+        "direct_deduction",
+        "case_analysis",
+        "constraint_propagation"
+      ],
+      "proposal_cost": 0.0005583000000000001,
+      "proposal_tokens": 1861,
+      "majority_vote": {
+        "answer": "Blake ordered coffee",
+        "correct": false,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "Blake ordered coffee",
+        "correct": false,
+        "extra_cost": 5.25e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "Blake ordered coffee",
+        "correct": false,
+        "extra_cost": 0.0004299
+      }
+    },
+    {
+      "task_id": "logic_001",
+      "ground_truth": "dog",
+      "frameworks_assigned": [
+        "case_analysis",
+        "constraint_propagation",
+        "direct_deduction",
+        "elimination"
+      ],
+      "proposal_cost": 0.0006033,
+      "proposal_tokens": 2011,
+      "majority_vote": {
+        "answer": "2",
+        "correct": false,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "Carol has a fish",
+        "correct": false,
+        "extra_cost": 5.04e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "Carol has the dog",
+        "correct": true,
+        "extra_cost": 0.0004545
+      }
+    },
+    {
+      "task_id": "pattern_007",
+      "ground_truth": "32",
+      "frameworks_assigned": [
+        "table",
+        "difference",
+        "formula",
+        "recursive"
+      ],
+      "proposal_cost": 0.0007365,
+      "proposal_tokens": 2455,
+      "majority_vote": {
+        "answer": "3",
+        "correct": false,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "28",
+        "correct": false,
+        "extra_cost": 4.2e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "32",
+        "correct": true,
+        "extra_cost": 0.0006402000000000001
+      }
+    },
+    {
+      "task_id": "logic_004",
+      "ground_truth": "no",
+      "frameworks_assigned": [
+        "elimination",
+        "case_analysis",
+        "constraint_propagation",
+        "direct_deduction"
+      ],
+      "proposal_cost": 0.0005210999999999999,
+      "proposal_tokens": 1737,
+      "majority_vote": {
+        "answer": "No",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "No",
+        "correct": true,
+        "extra_cost": 4.05e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "No",
+        "correct": true,
+        "extra_cost": 0.0004194
+      }
+    },
+    {
+      "task_id": "pattern_007",
+      "ground_truth": "32",
+      "frameworks_assigned": [
+        "recursive",
+        "table",
+        "difference",
+        "formula"
+      ],
+      "proposal_cost": 0.0006741,
+      "proposal_tokens": 2247,
+      "majority_vote": {
+        "answer": "32",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "28",
+        "correct": false,
+        "extra_cost": 4.26e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "32",
+        "correct": true,
+        "extra_cost": 0.0005412
+      }
+    },
+    {
+      "task_id": "logic_003",
+      "ground_truth": "tea",
+      "frameworks_assigned": [
+        "elimination",
+        "direct_deduction",
+        "constraint_propagation",
+        "case_analysis"
+      ],
+      "proposal_cost": 0.0006789,
+      "proposal_tokens": 2263,
+      "majority_vote": {
+        "answer": "Blake ordered coffee",
+        "correct": false,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "Blake ordered tea",
+        "correct": true,
+        "extra_cost": 5.2799999999999996e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "Blake ordered coffee",
+        "correct": false,
+        "extra_cost": 0.0004836
+      }
+    },
+    {
+      "task_id": "pattern_007",
+      "ground_truth": "32",
+      "frameworks_assigned": [
+        "difference",
+        "recursive",
+        "table",
+        "formula"
+      ],
+      "proposal_cost": 0.0006597,
+      "proposal_tokens": 2199,
+      "majority_vote": {
+        "answer": "32",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "32",
+        "correct": true,
+        "extra_cost": 4.59e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "32",
+        "correct": true,
+        "extra_cost": 0.0005631
+      }
+    },
+    {
+      "task_id": "logic_004",
+      "ground_truth": "no",
+      "frameworks_assigned": [
+        "case_analysis",
+        "direct_deduction",
+        "constraint_propagation",
+        "elimination"
+      ],
+      "proposal_cost": 0.0004755,
+      "proposal_tokens": 1585,
+      "majority_vote": {
+        "answer": "Yes",
+        "correct": false,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "Yes",
+        "correct": false,
+        "extra_cost": 4.0199999999999995e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "Yes",
+        "correct": false,
+        "extra_cost": 0.0003762
+      }
+    },
+    {
+      "task_id": "logic_004",
+      "ground_truth": "no",
+      "frameworks_assigned": [
+        "direct_deduction",
+        "case_analysis",
+        "constraint_propagation",
+        "elimination"
+      ],
+      "proposal_cost": 0.000474,
+      "proposal_tokens": 1580,
+      "majority_vote": {
+        "answer": "No",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "Yes",
+        "correct": false,
+        "extra_cost": 4.0799999999999996e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "Yes",
+        "correct": false,
+        "extra_cost": 0.0003906
+      }
+    },
+    {
+      "task_id": "logic_004",
+      "ground_truth": "no",
+      "frameworks_assigned": [
+        "case_analysis",
+        "elimination",
+        "direct_deduction",
+        "constraint_propagation"
+      ],
+      "proposal_cost": 0.0004923,
+      "proposal_tokens": 1641,
+      "majority_vote": {
+        "answer": "Yes",
+        "correct": false,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "Yes",
+        "correct": false,
+        "extra_cost": 4.23e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "Yes. All roses being flowers and some flowers being red allows for the possibility that some roses are red, based on the logical relationships between the sets of flowers and roses",
+        "correct": false,
+        "extra_cost": 0.00039569999999999997
+      }
+    },
+    {
+      "task_id": "logic_005",
+      "ground_truth": "20",
+      "frameworks_assigned": [
+        "direct_deduction",
+        "elimination",
+        "case_analysis",
+        "constraint_propagation"
+      ],
+      "proposal_cost": 0.0005877,
+      "proposal_tokens": 1959,
+      "majority_vote": {
+        "answer": "20",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "20",
+        "correct": true,
+        "extra_cost": 4.35e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "20",
+        "correct": true,
+        "extra_cost": 0.0005046
+      }
+    },
+    {
+      "task_id": "logic_002",
+      "ground_truth": "2",
+      "frameworks_assigned": [
+        "case_analysis",
+        "elimination",
+        "constraint_propagation",
+        "direct_deduction"
+      ],
+      "proposal_cost": 0.000828,
+      "proposal_tokens": 2760,
+      "majority_vote": {
+        "answer": "4",
+        "correct": false,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "4",
+        "correct": false,
+        "extra_cost": 5.2799999999999996e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "The red house can be in either position 2 or position 4 based on the given constraints. However, since the problem asks for a single answer and both positions are valid, we need to choose one. Given the logical consistency of both scenarios, the most straightforward and commonly expected answer is that the red house is in position 4. Therefore, the final answer is that the red house is in position 4",
+        "correct": true,
+        "extra_cost": 0.0005705999999999999
+      }
+    },
+    {
+      "task_id": "logic_005",
+      "ground_truth": "20",
+      "frameworks_assigned": [
+        "constraint_propagation",
+        "direct_deduction",
+        "case_analysis",
+        "elimination"
+      ],
+      "proposal_cost": 0.000792,
+      "proposal_tokens": 2640,
+      "majority_vote": {
+        "answer": "20",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "20",
+        "correct": true,
+        "extra_cost": 4.47e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "20",
+        "correct": true,
+        "extra_cost": 0.0005748
+      }
+    },
+    {
+      "task_id": "logic_006",
+      "ground_truth": "spike",
+      "frameworks_assigned": [
+        "elimination",
+        "constraint_propagation",
+        "case_analysis",
+        "direct_deduction"
+      ],
+      "proposal_cost": 0.00025739999999999997,
+      "proposal_tokens": 858,
+      "majority_vote": {
+        "answer": "2",
+        "correct": false,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "Spike is the shortest",
+        "correct": true,
+        "extra_cost": 4.05e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "Spike is the shortest",
+        "correct": true,
+        "extra_cost": 0.0001827
+      }
+    },
+    {
+      "task_id": "logic_002",
+      "ground_truth": "2",
+      "frameworks_assigned": [
+        "elimination",
+        "constraint_propagation",
+        "direct_deduction",
+        "case_analysis"
+      ],
+      "proposal_cost": 0.0007872,
+      "proposal_tokens": 2624,
+      "majority_vote": {
+        "answer": "4",
+        "correct": false,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "1",
+        "correct": false,
+        "extra_cost": 5.2799999999999996e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "The red house is in position 4",
+        "correct": false,
+        "extra_cost": 0.0005351999999999999
+      }
+    },
+    {
+      "task_id": "logic_004",
+      "ground_truth": "no",
+      "frameworks_assigned": [
+        "constraint_propagation",
+        "elimination",
+        "direct_deduction",
+        "case_analysis"
+      ],
+      "proposal_cost": 0.0004881,
+      "proposal_tokens": 1627,
+      "majority_vote": {
+        "answer": "No",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "Yes",
+        "correct": false,
+        "extra_cost": 4.319999999999999e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "No",
+        "correct": true,
+        "extra_cost": 0.0003888
+      }
+    },
+    {
+      "task_id": "logic_006",
+      "ground_truth": "spike",
+      "frameworks_assigned": [
+        "constraint_propagation",
+        "elimination",
+        "case_analysis",
+        "direct_deduction"
+      ],
+      "proposal_cost": 0.0002871,
+      "proposal_tokens": 957,
+      "majority_vote": {
+        "answer": "2",
+        "correct": false,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "Spike is the shortest",
+        "correct": true,
+        "extra_cost": 4.0799999999999996e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "Spike is the shortest",
+        "correct": true,
+        "extra_cost": 0.0002127
+      }
+    },
+    {
+      "task_id": "logic_003",
+      "ground_truth": "tea",
+      "frameworks_assigned": [
+        "elimination",
+        "constraint_propagation",
+        "case_analysis",
+        "direct_deduction"
+      ],
+      "proposal_cost": 0.0005841,
+      "proposal_tokens": 1947,
+      "majority_vote": {
+        "answer": "Blake ordered coffee",
+        "correct": false,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "Blake ordered tea",
+        "correct": true,
+        "extra_cost": 5.2799999999999996e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "Blake ordered coffee",
+        "correct": false,
+        "extra_cost": 0.0004563
+      }
+    },
+    {
+      "task_id": "logic_002",
+      "ground_truth": "2",
+      "frameworks_assigned": [
+        "constraint_propagation",
+        "direct_deduction",
+        "elimination",
+        "case_analysis"
+      ],
+      "proposal_cost": 0.0008301,
+      "proposal_tokens": 2767,
+      "majority_vote": {
+        "answer": "4",
+        "correct": false,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "4",
+        "correct": false,
+        "extra_cost": 5.2799999999999996e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "The red house is in position 4",
+        "correct": false,
+        "extra_cost": 0.000534
+      }
+    },
+    {
+      "task_id": "logic_006",
+      "ground_truth": "spike",
+      "frameworks_assigned": [
+        "direct_deduction",
+        "constraint_propagation",
+        "elimination",
+        "case_analysis"
+      ],
+      "proposal_cost": 0.00031529999999999997,
+      "proposal_tokens": 1051,
+      "majority_vote": {
+        "answer": "2",
+        "correct": false,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "Spike is the shortest",
+        "correct": true,
+        "extra_cost": 4.02e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "Spike is the shortest",
+        "correct": true,
+        "extra_cost": 0.00024089999999999997
+      }
+    },
+    {
+      "task_id": "logic_006",
+      "ground_truth": "spike",
+      "frameworks_assigned": [
+        "constraint_propagation",
+        "elimination",
+        "case_analysis",
+        "direct_deduction"
+      ],
+      "proposal_cost": 0.00033749999999999996,
+      "proposal_tokens": 1125,
+      "majority_vote": {
+        "answer": "Spike is the shortest",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "Spike is the shortest",
+        "correct": true,
+        "extra_cost": 4.0799999999999996e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "Spike is the shortest",
+        "correct": true,
+        "extra_cost": 0.00026279999999999994
+      }
+    },
+    {
+      "task_id": "word_001",
+      "ground_truth": "2.4",
+      "frameworks_assigned": [
+        "diagram",
+        "analogous_problem",
+        "units_analysis",
+        "simplify_first"
+      ],
+      "proposal_cost": 0.0007479,
+      "proposal_tokens": 2493,
+      "majority_vote": {
+        "answer": "2.4",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "2.4",
+        "correct": true,
+        "extra_cost": 5.2199999999999995e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "2.4",
+        "correct": true,
+        "extra_cost": 0.0005664
+      }
+    },
+    {
+      "task_id": "logic_006",
+      "ground_truth": "spike",
+      "frameworks_assigned": [
+        "constraint_propagation",
+        "direct_deduction",
+        "elimination",
+        "case_analysis"
+      ],
+      "proposal_cost": 0.0003516,
+      "proposal_tokens": 1172,
+      "majority_vote": {
+        "answer": "Spike is the shortest",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "Spike",
+        "correct": true,
+        "extra_cost": 3.96e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "Spike is the shortest",
+        "correct": true,
+        "extra_cost": 0.0002739
+      }
+    },
+    {
+      "task_id": "logic_005",
+      "ground_truth": "20",
+      "frameworks_assigned": [
+        "direct_deduction",
+        "elimination",
+        "constraint_propagation",
+        "case_analysis"
+      ],
+      "proposal_cost": 0.0006104999999999999,
+      "proposal_tokens": 2035,
+      "majority_vote": {
+        "answer": "20",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "20",
+        "correct": true,
+        "extra_cost": 4.35e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "20",
+        "correct": true,
+        "extra_cost": 0.0005274
+      }
+    },
+    {
+      "task_id": "logic_005",
+      "ground_truth": "20",
+      "frameworks_assigned": [
+        "constraint_propagation",
+        "case_analysis",
+        "elimination",
+        "direct_deduction"
+      ],
+      "proposal_cost": 0.0006072,
+      "proposal_tokens": 2024,
+      "majority_vote": {
+        "answer": "20",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "20",
+        "correct": true,
+        "extra_cost": 4.35e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "20",
+        "correct": true,
+        "extra_cost": 0.0005241
+      }
+    },
+    {
+      "task_id": "logic_005",
+      "ground_truth": "20",
+      "frameworks_assigned": [
+        "direct_deduction",
+        "elimination",
+        "case_analysis",
+        "constraint_propagation"
+      ],
+      "proposal_cost": 0.0005876999999999999,
+      "proposal_tokens": 1959,
+      "majority_vote": {
+        "answer": "20",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "20",
+        "correct": true,
+        "extra_cost": 4.35e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "20",
+        "correct": true,
+        "extra_cost": 0.000504
+      }
+    },
+    {
+      "task_id": "word_002",
+      "ground_truth": "2",
+      "frameworks_assigned": [
+        "analogous_problem",
+        "simplify_first",
+        "units_analysis",
+        "diagram"
+      ],
+      "proposal_cost": 0.0007800000000000001,
+      "proposal_tokens": 2600,
+      "majority_vote": {
+        "answer": "2",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "2 km/h",
+        "correct": true,
+        "extra_cost": 4.56e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "2 km/h",
+        "correct": true,
+        "extra_cost": 0.0006108
+      }
+    },
+    {
+      "task_id": "word_003",
+      "ground_truth": "200",
+      "frameworks_assigned": [
+        "diagram",
+        "simplify_first",
+        "analogous_problem",
+        "units_analysis"
+      ],
+      "proposal_cost": 0.0005775,
+      "proposal_tokens": 1925,
+      "majority_vote": {
+        "answer": "200",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "200",
+        "correct": true,
+        "extra_cost": 4.95e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "200 widgets",
+        "correct": true,
+        "extra_cost": 0.00046709999999999997
+      }
+    },
+    {
+      "task_id": "word_001",
+      "ground_truth": "2.4",
+      "frameworks_assigned": [
+        "analogous_problem",
+        "units_analysis",
+        "diagram",
+        "simplify_first"
+      ],
+      "proposal_cost": 0.0007262999999999999,
+      "proposal_tokens": 2421,
+      "majority_vote": {
+        "answer": "2.4",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "2.4",
+        "correct": true,
+        "extra_cost": 5.04e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "2.4",
+        "correct": true,
+        "extra_cost": 0.0005838
+      }
+    },
+    {
+      "task_id": "word_003",
+      "ground_truth": "200",
+      "frameworks_assigned": [
+        "diagram",
+        "analogous_problem",
+        "simplify_first",
+        "units_analysis"
+      ],
+      "proposal_cost": 0.0005715,
+      "proposal_tokens": 1905,
+      "majority_vote": {
+        "answer": "200",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "200 widgets",
+        "correct": true,
+        "extra_cost": 4.6800000000000006e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "200 widgets",
+        "correct": true,
+        "extra_cost": 0.00048269999999999997
+      }
+    },
+    {
+      "task_id": "word_002",
+      "ground_truth": "2",
+      "frameworks_assigned": [
+        "diagram",
+        "units_analysis",
+        "simplify_first",
+        "analogous_problem"
+      ],
+      "proposal_cost": 0.0008442,
+      "proposal_tokens": 2814,
+      "majority_vote": {
+        "answer": "2",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "2 km/h",
+        "correct": true,
+        "extra_cost": 4.59e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "2",
+        "correct": true,
+        "extra_cost": 0.0006347999999999999
+      }
+    },
+    {
+      "task_id": "word_001",
+      "ground_truth": "2.4",
+      "frameworks_assigned": [
+        "simplify_first",
+        "diagram",
+        "analogous_problem",
+        "units_analysis"
+      ],
+      "proposal_cost": 0.0007518,
+      "proposal_tokens": 2506,
+      "majority_vote": {
+        "answer": "2.4",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "2.4",
+        "correct": true,
+        "extra_cost": 5.25e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "2.4",
+        "correct": true,
+        "extra_cost": 0.0006111
+      }
+    },
+    {
+      "task_id": "word_004",
+      "ground_truth": "5",
+      "frameworks_assigned": [
+        "simplify_first",
+        "diagram",
+        "analogous_problem",
+        "units_analysis"
+      ],
+      "proposal_cost": 0.0005669999999999999,
+      "proposal_tokens": 1890,
+      "majority_vote": {
+        "answer": "5",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "5 cups of flour",
+        "correct": true,
+        "extra_cost": 4.92e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "5 cups of flour are needed to make 60 cookies",
+        "correct": true,
+        "extra_cost": 0.00047999999999999996
+      }
+    },
+    {
+      "task_id": "word_001",
+      "ground_truth": "2.4",
+      "frameworks_assigned": [
+        "simplify_first",
+        "analogous_problem",
+        "units_analysis",
+        "diagram"
+      ],
+      "proposal_cost": 0.0007193999999999999,
+      "proposal_tokens": 2398,
+      "majority_vote": {
+        "answer": "2.4",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "2.4",
+        "correct": true,
+        "extra_cost": 5.04e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "2.4",
+        "correct": true,
+        "extra_cost": 0.0005795999999999999
+      }
+    },
+    {
+      "task_id": "word_004",
+      "ground_truth": "5",
+      "frameworks_assigned": [
+        "diagram",
+        "simplify_first",
+        "analogous_problem",
+        "units_analysis"
+      ],
+      "proposal_cost": 0.0005298,
+      "proposal_tokens": 1766,
+      "majority_vote": {
+        "answer": "5",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "5 cups of flour",
+        "correct": true,
+        "extra_cost": 4.8e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "5 cups of flour",
+        "correct": true,
+        "extra_cost": 0.0004407
+      }
+    },
+    {
+      "task_id": "word_001",
+      "ground_truth": "2.4",
+      "frameworks_assigned": [
+        "analogous_problem",
+        "simplify_first",
+        "units_analysis",
+        "diagram"
+      ],
+      "proposal_cost": 0.0007151999999999999,
+      "proposal_tokens": 2384,
+      "majority_vote": {
+        "answer": "2.4",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "2.4",
+        "correct": true,
+        "extra_cost": 5.04e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "2.4",
+        "correct": true,
+        "extra_cost": 0.0005928
+      }
+    },
+    {
+      "task_id": "word_002",
+      "ground_truth": "2",
+      "frameworks_assigned": [
+        "diagram",
+        "analogous_problem",
+        "units_analysis",
+        "simplify_first"
+      ],
+      "proposal_cost": 0.0008148,
+      "proposal_tokens": 2716,
+      "majority_vote": {
+        "answer": "2",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "2 km/h",
+        "correct": true,
+        "extra_cost": 4.59e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "2",
+        "correct": true,
+        "extra_cost": 0.0006159
+      }
+    },
+    {
+      "task_id": "word_004",
+      "ground_truth": "5",
+      "frameworks_assigned": [
+        "simplify_first",
+        "analogous_problem",
+        "units_analysis",
+        "diagram"
+      ],
+      "proposal_cost": 0.0005579999999999999,
+      "proposal_tokens": 1860,
+      "majority_vote": {
+        "answer": "5",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "5 cups of flour are needed to make 60 cookies",
+        "correct": true,
+        "extra_cost": 5.1e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "5 cups of flour are needed to make 60 cookies. All agents provided the correct final answer of 5 cups, using different methods to arrive at the solution",
+        "correct": true,
+        "extra_cost": 0.00047729999999999995
+      }
+    },
+    {
+      "task_id": "word_005",
+      "ground_truth": "10",
+      "frameworks_assigned": [
+        "diagram",
+        "simplify_first",
+        "analogous_problem",
+        "units_analysis"
+      ],
+      "proposal_cost": 0.0006318,
+      "proposal_tokens": 2106,
+      "majority_vote": {
+        "answer": "Mary is 5 years old",
+        "correct": false,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "Mary is 10 years old",
+        "correct": true,
+        "extra_cost": 4.98e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "Mary is 5 years old",
+        "correct": false,
+        "extra_cost": 0.0005409
+      }
+    },
+    {
+      "task_id": "word_005",
+      "ground_truth": "10",
+      "frameworks_assigned": [
+        "analogous_problem",
+        "units_analysis",
+        "diagram",
+        "simplify_first"
+      ],
+      "proposal_cost": 0.0007268999999999999,
+      "proposal_tokens": 2423,
+      "majority_vote": {
+        "answer": "Mary is 5 years old now",
+        "correct": false,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "Mary is 10 years old now",
+        "correct": true,
+        "extra_cost": 4.8899999999999996e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "Mary is 5 years old",
+        "correct": false,
+        "extra_cost": 0.0006359999999999998
+      }
+    },
+    {
+      "task_id": "word_005",
+      "ground_truth": "10",
+      "frameworks_assigned": [
+        "simplify_first",
+        "units_analysis",
+        "analogous_problem",
+        "diagram"
+      ],
+      "proposal_cost": 0.0006981,
+      "proposal_tokens": 2327,
+      "majority_vote": {
+        "answer": "Mary is currently 5 years old",
+        "correct": false,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "Mary is currently 10 years old",
+        "correct": true,
+        "extra_cost": 5.009999999999999e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "Mary is currently 5 years old",
+        "correct": false,
+        "extra_cost": 0.0006039
+      }
+    },
+    {
+      "task_id": "word_002",
+      "ground_truth": "2",
+      "frameworks_assigned": [
+        "units_analysis",
+        "analogous_problem",
+        "simplify_first",
+        "diagram"
+      ],
+      "proposal_cost": 0.0008175,
+      "proposal_tokens": 2725,
+      "majority_vote": {
+        "answer": "2",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "2 km/h",
+        "correct": true,
+        "extra_cost": 4.62e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "2",
+        "correct": true,
+        "extra_cost": 0.0006297
+      }
+    },
+    {
+      "task_id": "word_006",
+      "ground_truth": "48",
+      "frameworks_assigned": [
+        "units_analysis",
+        "analogous_problem",
+        "diagram",
+        "simplify_first"
+      ],
+      "proposal_cost": 0.0005855999999999999,
+      "proposal_tokens": 1952,
+      "majority_vote": {
+        "answer": "48",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "48 dollars",
+        "correct": true,
+        "extra_cost": 4.709999999999999e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "48",
+        "correct": true,
+        "extra_cost": 0.00046019999999999996
+      }
+    },
+    {
+      "task_id": "word_003",
+      "ground_truth": "200",
+      "frameworks_assigned": [
+        "diagram",
+        "units_analysis",
+        "simplify_first",
+        "analogous_problem"
+      ],
+      "proposal_cost": 0.0005960999999999999,
+      "proposal_tokens": 1987,
+      "majority_vote": {
+        "answer": "80 text{ widgets per hour} )",
+        "correct": false,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "200 widgets",
+        "correct": true,
+        "extra_cost": 4.8899999999999996e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "200 widgets",
+        "correct": true,
+        "extra_cost": 0.00047789999999999996
+      }
+    },
+    {
+      "task_id": "word_005",
+      "ground_truth": "10",
+      "frameworks_assigned": [
+        "diagram",
+        "analogous_problem",
+        "units_analysis",
+        "simplify_first"
+      ],
+      "proposal_cost": 0.000744,
+      "proposal_tokens": 2480,
+      "majority_vote": {
+        "answer": "2M )",
+        "correct": false,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "Mary is currently 5 years old",
+        "correct": false,
+        "extra_cost": 4.74e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "Mary is currently 5 years old",
+        "correct": false,
+        "extra_cost": 0.0006279
+      }
+    },
+    {
+      "task_id": "word_002",
+      "ground_truth": "2",
+      "frameworks_assigned": [
+        "diagram",
+        "analogous_problem",
+        "simplify_first",
+        "units_analysis"
+      ],
+      "proposal_cost": 0.0008795999999999999,
+      "proposal_tokens": 2932,
+      "majority_vote": {
+        "answer": "2",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "2 km/h",
+        "correct": true,
+        "extra_cost": 4.59e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "2",
+        "correct": true,
+        "extra_cost": 0.0006359999999999998
+      }
+    },
+    {
+      "task_id": "word_003",
+      "ground_truth": "200",
+      "frameworks_assigned": [
+        "diagram",
+        "simplify_first",
+        "analogous_problem",
+        "units_analysis"
+      ],
+      "proposal_cost": 0.0006489,
+      "proposal_tokens": 2163,
+      "majority_vote": {
+        "answer": "200",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "200",
+        "correct": true,
+        "extra_cost": 4.68e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "200 widgets",
+        "correct": true,
+        "extra_cost": 0.0005148
+      }
+    },
+    {
+      "task_id": "word_006",
+      "ground_truth": "48",
+      "frameworks_assigned": [
+        "analogous_problem",
+        "diagram",
+        "units_analysis",
+        "simplify_first"
+      ],
+      "proposal_cost": 0.0005688,
+      "proposal_tokens": 1896,
+      "majority_vote": {
+        "answer": "48",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "48",
+        "correct": true,
+        "extra_cost": 4.95e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "48",
+        "correct": true,
+        "extra_cost": 0.0004728
+      }
+    },
+    {
+      "task_id": "word_007",
+      "ground_truth": "20",
+      "frameworks_assigned": [
+        "units_analysis",
+        "diagram",
+        "simplify_first",
+        "analogous_problem"
+      ],
+      "proposal_cost": 0.0005046,
+      "proposal_tokens": 1682,
+      "majority_vote": {
+        "answer": "20",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "20",
+        "correct": true,
+        "extra_cost": 4.47e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "20 meters per second",
+        "correct": true,
+        "extra_cost": 0.0004161
+      }
+    },
+    {
+      "task_id": "word_003",
+      "ground_truth": "200",
+      "frameworks_assigned": [
+        "diagram",
+        "analogous_problem",
+        "simplify_first",
+        "units_analysis"
+      ],
+      "proposal_cost": 0.0006033,
+      "proposal_tokens": 2011,
+      "majority_vote": {
+        "answer": "200",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "200 widgets",
+        "correct": true,
+        "extra_cost": 4.6800000000000006e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "200",
+        "correct": true,
+        "extra_cost": 0.000513
+      }
+    },
+    {
+      "task_id": "word_007",
+      "ground_truth": "20",
+      "frameworks_assigned": [
+        "diagram",
+        "simplify_first",
+        "analogous_problem",
+        "units_analysis"
+      ],
+      "proposal_cost": 0.0005093999999999999,
+      "proposal_tokens": 1698,
+      "majority_vote": {
+        "answer": "20 meters per second",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "20 m/s",
+        "correct": true,
+        "extra_cost": 4.71e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "20 meters per second",
+        "correct": true,
+        "extra_cost": 0.0004218
+      }
+    },
+    {
+      "task_id": "word_007",
+      "ground_truth": "20",
+      "frameworks_assigned": [
+        "simplify_first",
+        "analogous_problem",
+        "diagram",
+        "units_analysis"
+      ],
+      "proposal_cost": 0.0005066999999999999,
+      "proposal_tokens": 1689,
+      "majority_vote": {
+        "answer": "20 meters/second",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "20 meters per second",
+        "correct": true,
+        "extra_cost": 4.8299999999999995e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "20 meters per second",
+        "correct": true,
+        "extra_cost": 0.00041910000000000005
+      }
+    },
+    {
+      "task_id": "gsm8k_000",
+      "ground_truth": "2280",
+      "frameworks_assigned": [
+        "arithmetic",
+        "algebraic",
+        "working_backwards",
+        "estimation"
+      ],
+      "proposal_cost": 0.0005409,
+      "proposal_tokens": 1803,
+      "majority_vote": {
+        "answer": "2180",
+        "correct": false,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "2180",
+        "correct": false,
+        "extra_cost": 5.61e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "2180",
+        "correct": false,
+        "extra_cost": 0.00042329999999999993
+      }
+    },
+    {
+      "task_id": "gsm8k_000",
+      "ground_truth": "2280",
+      "frameworks_assigned": [
+        "arithmetic",
+        "estimation",
+        "algebraic",
+        "working_backwards"
+      ],
+      "proposal_cost": 0.0005721,
+      "proposal_tokens": 1907,
+      "majority_vote": {
+        "answer": "2180",
+        "correct": false,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "2180",
+        "correct": false,
+        "extra_cost": 5.6399999999999995e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "2180",
+        "correct": false,
+        "extra_cost": 0.0004545
+      }
+    },
+    {
+      "task_id": "gsm8k_000",
+      "ground_truth": "2280",
+      "frameworks_assigned": [
+        "estimation",
+        "arithmetic",
+        "algebraic",
+        "working_backwards"
+      ],
+      "proposal_cost": 0.0005466,
+      "proposal_tokens": 1822,
+      "majority_vote": {
+        "answer": "720",
+        "correct": false,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "2180 dollars",
+        "correct": false,
+        "extra_cost": 5.6399999999999995e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "2180",
+        "correct": false,
+        "extra_cost": 0.000429
+      }
+    },
+    {
+      "task_id": "word_004",
+      "ground_truth": "5",
+      "frameworks_assigned": [
+        "analogous_problem",
+        "units_analysis",
+        "simplify_first",
+        "diagram"
+      ],
+      "proposal_cost": 0.0005202,
+      "proposal_tokens": 1734,
+      "majority_vote": {
+        "answer": "5",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "5 cups of flour are needed to make 60 cookies",
+        "correct": true,
+        "extra_cost": 5.009999999999999e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "5 cups of flour",
+        "correct": true,
+        "extra_cost": 0.00043079999999999995
+      }
+    },
+    {
+      "task_id": "gsm8k_000",
+      "ground_truth": "2280",
+      "frameworks_assigned": [
+        "algebraic",
+        "estimation",
+        "arithmetic",
+        "working_backwards"
+      ],
+      "proposal_cost": 0.0005256,
+      "proposal_tokens": 1752,
+      "majority_vote": {
+        "answer": "2180",
+        "correct": false,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "2180",
+        "correct": false,
+        "extra_cost": 5.58e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "2180",
+        "correct": false,
+        "extra_cost": 0.0004077
+      }
+    },
+    {
+      "task_id": "gsm8k_001",
+      "ground_truth": "1",
+      "frameworks_assigned": [
+        "working_backwards",
+        "estimation",
+        "algebraic",
+        "arithmetic"
+      ],
+      "proposal_cost": 0.0004878,
+      "proposal_tokens": 1626,
+      "majority_vote": {
+        "answer": "1 hour",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "1 hour",
+        "correct": true,
+        "extra_cost": 5.1e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "1 hour",
+        "correct": true,
+        "extra_cost": 0.0003753
+      }
+    },
+    {
+      "task_id": "word_004",
+      "ground_truth": "5",
+      "frameworks_assigned": [
+        "simplify_first",
+        "diagram",
+        "units_analysis",
+        "analogous_problem"
+      ],
+      "proposal_cost": 0.000573,
+      "proposal_tokens": 1910,
+      "majority_vote": {
+        "answer": "5 cups of flour are needed to make 60 cookies",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "5 cups of flour are needed to make 60 cookies",
+        "correct": true,
+        "extra_cost": 5.2799999999999996e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "5 cups of flour are needed to make 60 cookies",
+        "correct": true,
+        "extra_cost": 0.00048479999999999997
+      }
+    },
+    {
+      "task_id": "word_006",
+      "ground_truth": "48",
+      "frameworks_assigned": [
+        "simplify_first",
+        "units_analysis",
+        "diagram",
+        "analogous_problem"
+      ],
+      "proposal_cost": 0.0005415,
+      "proposal_tokens": 1805,
+      "majority_vote": {
+        "answer": "48",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "48",
+        "correct": true,
+        "extra_cost": 4.65e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "48",
+        "correct": true,
+        "extra_cost": 0.0004455
+      }
+    },
+    {
+      "task_id": "word_006",
+      "ground_truth": "48",
+      "frameworks_assigned": [
+        "analogous_problem",
+        "units_analysis",
+        "simplify_first",
+        "diagram"
+      ],
+      "proposal_cost": 0.0006171,
+      "proposal_tokens": 2057,
+      "majority_vote": {
+        "answer": "The sale price is 48",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "48",
+        "correct": true,
+        "extra_cost": 4.8899999999999996e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "The sale price is 48",
+        "correct": true,
+        "extra_cost": 0.000513
+      }
+    },
+    {
+      "task_id": "gsm8k_001",
+      "ground_truth": "1",
+      "frameworks_assigned": [
+        "algebraic",
+        "working_backwards",
+        "estimation",
+        "arithmetic"
+      ],
+      "proposal_cost": 0.0005051999999999999,
+      "proposal_tokens": 1684,
+      "majority_vote": {
+        "answer": "2 ) pieces per minute",
+        "correct": false,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "2 pieces per minute",
+        "correct": false,
+        "extra_cost": 5.46e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "1 hour",
+        "correct": true,
+        "extra_cost": 0.00039210000000000004
+      }
+    },
+    {
+      "task_id": "word_006",
+      "ground_truth": "48",
+      "frameworks_assigned": [
+        "simplify_first",
+        "diagram",
+        "units_analysis",
+        "analogous_problem"
+      ],
+      "proposal_cost": 0.0005951999999999999,
+      "proposal_tokens": 1984,
+      "majority_vote": {
+        "answer": "48",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "48",
+        "correct": true,
+        "extra_cost": 4.77e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "The sale price is 48",
+        "correct": true,
+        "extra_cost": 0.0005004
+      }
+    },
+    {
+      "task_id": "gsm8k_001",
+      "ground_truth": "1",
+      "frameworks_assigned": [
+        "arithmetic",
+        "estimation",
+        "working_backwards",
+        "algebraic"
+      ],
+      "proposal_cost": 0.000513,
+      "proposal_tokens": 1710,
+      "majority_vote": {
+        "answer": "2 ) pieces per minute",
+        "correct": false,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "2 hours",
+        "correct": false,
+        "extra_cost": 5.31e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "1 hour",
+        "correct": true,
+        "extra_cost": 0.0003999
+      }
+    },
+    {
+      "task_id": "gsm8k_002",
+      "ground_truth": "5",
+      "frameworks_assigned": [
+        "algebraic",
+        "estimation",
+        "working_backwards",
+        "arithmetic"
+      ],
+      "proposal_cost": 0.00048389999999999994,
+      "proposal_tokens": 1613,
+      "majority_vote": {
+        "answer": "( t = 5 ) hours",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "5 hours",
+        "correct": true,
+        "extra_cost": 5.0700000000000006e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "5 hours",
+        "correct": true,
+        "extra_cost": 0.0003762
+      }
+    },
+    {
+      "task_id": "gsm8k_002",
+      "ground_truth": "5",
+      "frameworks_assigned": [
+        "estimation",
+        "algebraic",
+        "arithmetic",
+        "working_backwards"
+      ],
+      "proposal_cost": 0.0005216999999999999,
+      "proposal_tokens": 1739,
+      "majority_vote": {
+        "answer": "5",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "5 hours",
+        "correct": true,
+        "extra_cost": 5.04e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "5 hours",
+        "correct": true,
+        "extra_cost": 0.0004143
+      }
+    },
+    {
+      "task_id": "gsm8k_002",
+      "ground_truth": "5",
+      "frameworks_assigned": [
+        "estimation",
+        "working_backwards",
+        "algebraic",
+        "arithmetic"
+      ],
+      "proposal_cost": 0.0005097,
+      "proposal_tokens": 1699,
+      "majority_vote": {
+        "answer": "30 text{ miles})",
+        "correct": false,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "5 hours",
+        "correct": true,
+        "extra_cost": 5.19e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "5 hours",
+        "correct": true,
+        "extra_cost": 0.000402
+      }
+    },
+    {
+      "task_id": "gsm8k_001",
+      "ground_truth": "1",
+      "frameworks_assigned": [
+        "estimation",
+        "algebraic",
+        "working_backwards",
+        "arithmetic"
+      ],
+      "proposal_cost": 0.0005592,
+      "proposal_tokens": 1864,
+      "majority_vote": {
+        "answer": "1",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "1 hour",
+        "correct": true,
+        "extra_cost": 0.0001347
+      },
+      "synth_full_reasoning": {
+        "answer": "1 hour",
+        "correct": true,
+        "extra_cost": 0.0004464
+      }
+    },
+    {
+      "task_id": "gsm8k_002",
+      "ground_truth": "5",
+      "frameworks_assigned": [
+        "working_backwards",
+        "estimation",
+        "arithmetic",
+        "algebraic"
+      ],
+      "proposal_cost": 0.0004955999999999999,
+      "proposal_tokens": 1652,
+      "majority_vote": {
+        "answer": "5",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "5",
+        "correct": true,
+        "extra_cost": 4.8899999999999996e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "5 hours",
+        "correct": true,
+        "extra_cost": 0.00038340000000000005
+      }
+    },
+    {
+      "task_id": "gsm8k_003",
+      "ground_truth": "12",
+      "frameworks_assigned": [
+        "arithmetic",
+        "working_backwards",
+        "algebraic",
+        "estimation"
+      ],
+      "proposal_cost": 0.0005036999999999999,
+      "proposal_tokens": 1679,
+      "majority_vote": {
+        "answer": "12",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "12 candles are needed in total. The 4-year younger son is 8 years old, so the candles needed are 12 + 8 = 20 candles. Since candles come in packs of 5 for 3, James needs 4 packs (20/5 = 4), which cost 4  3 = 12. Therefore, the answer is 12",
+        "correct": true,
+        "extra_cost": 7.5e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "12",
+        "correct": true,
+        "extra_cost": 0.000396
+      }
+    },
+    {
+      "task_id": "word_007",
+      "ground_truth": "20",
+      "frameworks_assigned": [
+        "simplify_first",
+        "units_analysis",
+        "analogous_problem",
+        "diagram"
+      ],
+      "proposal_cost": 0.0005154,
+      "proposal_tokens": 1718,
+      "majority_vote": {
+        "answer": "20 meters/second",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "20 meters/second",
+        "correct": true,
+        "extra_cost": 4.74e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "20 meters/second",
+        "correct": true,
+        "extra_cost": 0.0004275
+      }
+    },
+    {
+      "task_id": "gsm8k_003",
+      "ground_truth": "12",
+      "frameworks_assigned": [
+        "estimation",
+        "arithmetic",
+        "algebraic",
+        "working_backwards"
+      ],
+      "proposal_cost": 0.0004896,
+      "proposal_tokens": 1632,
+      "majority_vote": {
+        "answer": "8) years old",
+        "correct": false,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "12) years old",
+        "correct": true,
+        "extra_cost": 5.19e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "James spends 12 on candles",
+        "correct": true,
+        "extra_cost": 0.00038340000000000005
+      }
+    },
+    {
+      "task_id": "word_007",
+      "ground_truth": "20",
+      "frameworks_assigned": [
+        "units_analysis",
+        "simplify_first",
+        "diagram",
+        "analogous_problem"
+      ],
+      "proposal_cost": 0.0005093999999999999,
+      "proposal_tokens": 1698,
+      "majority_vote": {
+        "answer": "20 meters/second",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "20 meters per second",
+        "correct": true,
+        "extra_cost": 4.7699999999999994e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "20 meters/second",
+        "correct": true,
+        "extra_cost": 0.0004218
+      }
+    },
+    {
+      "task_id": "gsm8k_003",
+      "ground_truth": "12",
+      "frameworks_assigned": [
+        "estimation",
+        "algebraic",
+        "arithmetic",
+        "working_backwards"
+      ],
+      "proposal_cost": 0.0005214,
+      "proposal_tokens": 1738,
+      "majority_vote": {
+        "answer": "12",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "12",
+        "correct": true,
+        "extra_cost": 5.16e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "12",
+        "correct": true,
+        "extra_cost": 0.0004143
+      }
+    },
+    {
+      "task_id": "gsm8k_004",
+      "ground_truth": "273",
+      "frameworks_assigned": [
+        "arithmetic",
+        "algebraic",
+        "working_backwards",
+        "estimation"
+      ],
+      "proposal_cost": 0.0005469,
+      "proposal_tokens": 1823,
+      "majority_vote": {
+        "answer": "273",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "273 yards",
+        "correct": true,
+        "extra_cost": 5.79e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "273 yards",
+        "correct": true,
+        "extra_cost": 0.00042839999999999995
+      }
+    },
+    {
+      "task_id": "gsm8k_004",
+      "ground_truth": "273",
+      "frameworks_assigned": [
+        "arithmetic",
+        "algebraic",
+        "working_backwards",
+        "estimation"
+      ],
+      "proposal_cost": 0.0005958,
+      "proposal_tokens": 1986,
+      "majority_vote": {
+        "answer": "273 yards",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "273 yards",
+        "correct": true,
+        "extra_cost": 5.7300000000000004e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "273 yards",
+        "correct": true,
+        "extra_cost": 0.00047759999999999995
+      }
+    },
+    {
+      "task_id": "gsm8k_004",
+      "ground_truth": "273",
+      "frameworks_assigned": [
+        "algebraic",
+        "working_backwards",
+        "arithmetic",
+        "estimation"
+      ],
+      "proposal_cost": 0.0005522999999999999,
+      "proposal_tokens": 1841,
+      "majority_vote": {
+        "answer": "273",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "273",
+        "correct": true,
+        "extra_cost": 5.909999999999999e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "273",
+        "correct": true,
+        "extra_cost": 0.0004332
+      }
+    },
+    {
+      "task_id": "word_005",
+      "ground_truth": "10",
+      "frameworks_assigned": [
+        "analogous_problem",
+        "diagram",
+        "units_analysis",
+        "simplify_first"
+      ],
+      "proposal_cost": 0.0006531,
+      "proposal_tokens": 2177,
+      "majority_vote": {
+        "answer": "Mary is currently 5 years old",
+        "correct": false,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "5",
+        "correct": false,
+        "extra_cost": 4.56e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "Mary is 5 years old",
+        "correct": false,
+        "extra_cost": 0.0005621999999999999
+      }
+    },
+    {
+      "task_id": "gsm8k_004",
+      "ground_truth": "273",
+      "frameworks_assigned": [
+        "working_backwards",
+        "estimation",
+        "algebraic",
+        "arithmetic"
+      ],
+      "proposal_cost": 0.0006479999999999999,
+      "proposal_tokens": 2160,
+      "majority_vote": {
+        "answer": "273 yards",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "273 yards",
+        "correct": true,
+        "extra_cost": 5.61e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "273 yards",
+        "correct": true,
+        "extra_cost": 0.0005265
+      }
+    },
+    {
+      "task_id": "gsm8k_004",
+      "ground_truth": "273",
+      "frameworks_assigned": [
+        "estimation",
+        "working_backwards",
+        "algebraic",
+        "arithmetic"
+      ],
+      "proposal_cost": 0.0005807999999999999,
+      "proposal_tokens": 1936,
+      "majority_vote": {
+        "answer": "273 yards",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "273 yards",
+        "correct": true,
+        "extra_cost": 5.6399999999999995e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "273 yards",
+        "correct": true,
+        "extra_cost": 0.00046229999999999996
+      }
+    },
+    {
+      "task_id": "gsm8k_005",
+      "ground_truth": "45",
+      "frameworks_assigned": [
+        "working_backwards",
+        "estimation",
+        "algebraic",
+        "arithmetic"
+      ],
+      "proposal_cost": 0.0005673,
+      "proposal_tokens": 1891,
+      "majority_vote": {
+        "answer": "45",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "45",
+        "correct": true,
+        "extra_cost": 5.8200000000000005e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "45",
+        "correct": true,
+        "extra_cost": 0.0003999
+      }
+    },
+    {
+      "task_id": "gsm8k_005",
+      "ground_truth": "45",
+      "frameworks_assigned": [
+        "estimation",
+        "algebraic",
+        "arithmetic",
+        "working_backwards"
+      ],
+      "proposal_cost": 0.000561,
+      "proposal_tokens": 1870,
+      "majority_vote": {
+        "answer": "75)",
+        "correct": false,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "45",
+        "correct": true,
+        "extra_cost": 6.12e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "45",
+        "correct": true,
+        "extra_cost": 0.00042090000000000004
+      }
+    },
+    {
+      "task_id": "gsm8k_001",
+      "ground_truth": "1",
+      "frameworks_assigned": [
+        "estimation",
+        "arithmetic",
+        "working_backwards",
+        "algebraic"
+      ],
+      "proposal_cost": 0.0005216999999999999,
+      "proposal_tokens": 1739,
+      "majority_vote": {
+        "answer": "1 \\text{ hour",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "1 hour",
+        "correct": true,
+        "extra_cost": 0.0001257
+      },
+      "synth_full_reasoning": {
+        "answer": "1 hour",
+        "correct": true,
+        "extra_cost": 0.0004086
+      }
+    },
+    {
+      "task_id": "gsm8k_005",
+      "ground_truth": "45",
+      "frameworks_assigned": [
+        "algebraic",
+        "working_backwards",
+        "arithmetic",
+        "estimation"
+      ],
+      "proposal_cost": 0.000543,
+      "proposal_tokens": 1810,
+      "majority_vote": {
+        "answer": "45",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "45",
+        "correct": true,
+        "extra_cost": 5.91e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "45",
+        "correct": true,
+        "extra_cost": 0.00041010000000000005
+      }
+    },
+    {
+      "task_id": "gsm8k_006",
+      "ground_truth": "21",
+      "frameworks_assigned": [
+        "working_backwards",
+        "arithmetic",
+        "estimation",
+        "algebraic"
+      ],
+      "proposal_cost": 0.0003621,
+      "proposal_tokens": 1207,
+      "majority_vote": {
+        "answer": "21",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "21",
+        "correct": true,
+        "extra_cost": 4.26e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "21",
+        "correct": true,
+        "extra_cost": 0.0002751
+      }
+    },
+    {
+      "task_id": "gsm8k_006",
+      "ground_truth": "21",
+      "frameworks_assigned": [
+        "estimation",
+        "working_backwards",
+        "algebraic",
+        "arithmetic"
+      ],
+      "proposal_cost": 0.0003426,
+      "proposal_tokens": 1142,
+      "majority_vote": {
+        "answer": "21",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "21",
+        "correct": true,
+        "extra_cost": 4.3799999999999994e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "21",
+        "correct": true,
+        "extra_cost": 0.0002562
+      }
+    },
+    {
+      "task_id": "gsm8k_006",
+      "ground_truth": "21",
+      "frameworks_assigned": [
+        "algebraic",
+        "arithmetic",
+        "estimation",
+        "working_backwards"
+      ],
+      "proposal_cost": 0.0003504,
+      "proposal_tokens": 1168,
+      "majority_vote": {
+        "answer": "21",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "21",
+        "correct": true,
+        "extra_cost": 4.29e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "21",
+        "correct": true,
+        "extra_cost": 0.000264
+      }
+    },
+    {
+      "task_id": "gsm8k_000",
+      "ground_truth": "2280",
+      "frameworks_assigned": [
+        "arithmetic",
+        "estimation",
+        "working_backwards",
+        "algebraic"
+      ],
+      "proposal_cost": 0.0005235,
+      "proposal_tokens": 1745,
+      "majority_vote": {
+        "answer": "2180",
+        "correct": false,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "2180",
+        "correct": false,
+        "extra_cost": 5.61e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "2180",
+        "correct": false,
+        "extra_cost": 0.0004059
+      }
+    },
+    {
+      "task_id": "gsm8k_003",
+      "ground_truth": "12",
+      "frameworks_assigned": [
+        "estimation",
+        "working_backwards",
+        "arithmetic",
+        "algebraic"
+      ],
+      "proposal_cost": 0.000498,
+      "proposal_tokens": 1660,
+      "majority_vote": {
+        "answer": "12",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "12",
+        "correct": true,
+        "extra_cost": 5.04e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "12",
+        "correct": true,
+        "extra_cost": 0.0003906
+      }
+    },
+    {
+      "task_id": "gsm8k_007",
+      "ground_truth": "145",
+      "frameworks_assigned": [
+        "algebraic",
+        "estimation",
+        "working_backwards",
+        "arithmetic"
+      ],
+      "proposal_cost": 0.0005909999999999999,
+      "proposal_tokens": 1970,
+      "majority_vote": {
+        "answer": "24)",
+        "correct": false,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "4800",
+        "correct": false,
+        "extra_cost": 4.83e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "The total cost of buying each cup is 1450",
+        "correct": true,
+        "extra_cost": 0.0004944
+      }
+    },
+    {
+      "task_id": "gsm8k_006",
+      "ground_truth": "21",
+      "frameworks_assigned": [
+        "algebraic",
+        "working_backwards",
+        "estimation",
+        "arithmetic"
+      ],
+      "proposal_cost": 0.00032910000000000003,
+      "proposal_tokens": 1097,
+      "majority_vote": {
+        "answer": "21",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "21",
+        "correct": true,
+        "extra_cost": 4.3799999999999994e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "21",
+        "correct": true,
+        "extra_cost": 0.0002427
+      }
+    },
+    {
+      "task_id": "gsm8k_005",
+      "ground_truth": "45",
+      "frameworks_assigned": [
+        "working_backwards",
+        "estimation",
+        "algebraic",
+        "arithmetic"
+      ],
+      "proposal_cost": 0.0005051999999999999,
+      "proposal_tokens": 1684,
+      "majority_vote": {
+        "answer": "25 )) joined the fairies",
+        "correct": false,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "25",
+        "correct": false,
+        "extra_cost": 5.9699999999999994e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "45",
+        "correct": true,
+        "extra_cost": 0.000372
+      }
+    },
+    {
+      "task_id": "gsm8k_006",
+      "ground_truth": "21",
+      "frameworks_assigned": [
+        "estimation",
+        "working_backwards",
+        "algebraic",
+        "arithmetic"
+      ],
+      "proposal_cost": 0.0003471,
+      "proposal_tokens": 1157,
+      "majority_vote": {
+        "answer": "21",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "21 years",
+        "correct": true,
+        "extra_cost": 4.5e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "21",
+        "correct": true,
+        "extra_cost": 0.0002607
+      }
+    },
+    {
+      "task_id": "gsm8k_008",
+      "ground_truth": "60",
+      "frameworks_assigned": [
+        "estimation",
+        "algebraic",
+        "arithmetic",
+        "working_backwards"
+      ],
+      "proposal_cost": 0.00046259999999999997,
+      "proposal_tokens": 1542,
+      "majority_vote": {
+        "answer": "60",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "60",
+        "correct": true,
+        "extra_cost": 5.16e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "60",
+        "correct": true,
+        "extra_cost": 0.0003621
+      }
+    },
+    {
+      "task_id": "gsm8k_003",
+      "ground_truth": "12",
+      "frameworks_assigned": [
+        "algebraic",
+        "working_backwards",
+        "estimation",
+        "arithmetic"
+      ],
+      "proposal_cost": 0.000507,
+      "proposal_tokens": 1690,
+      "majority_vote": {
+        "answer": "12",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "12",
+        "correct": true,
+        "extra_cost": 5.1e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "12",
+        "correct": true,
+        "extra_cost": 0.00040019999999999997
+      }
+    },
+    {
+      "task_id": "gsm8k_005",
+      "ground_truth": "45",
+      "frameworks_assigned": [
+        "algebraic",
+        "arithmetic",
+        "estimation",
+        "working_backwards"
+      ],
+      "proposal_cost": 0.0005739,
+      "proposal_tokens": 1913,
+      "majority_vote": {
+        "answer": "45",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "45",
+        "correct": true,
+        "extra_cost": 5.94e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "45",
+        "correct": true,
+        "extra_cost": 0.0004407
+      }
+    },
+    {
+      "task_id": "gsm8k_002",
+      "ground_truth": "5",
+      "frameworks_assigned": [
+        "working_backwards",
+        "arithmetic",
+        "algebraic",
+        "estimation"
+      ],
+      "proposal_cost": 0.0005736,
+      "proposal_tokens": 1912,
+      "majority_vote": {
+        "answer": "5 hours",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "5 hours",
+        "correct": true,
+        "extra_cost": 5.31e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "5 hours",
+        "correct": true,
+        "extra_cost": 0.00045660000000000004
+      }
+    },
+    {
+      "task_id": "gsm8k_008",
+      "ground_truth": "60",
+      "frameworks_assigned": [
+        "arithmetic",
+        "estimation",
+        "working_backwards",
+        "algebraic"
+      ],
+      "proposal_cost": 0.0004452,
+      "proposal_tokens": 1484,
+      "majority_vote": {
+        "answer": "60",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "60",
+        "correct": true,
+        "extra_cost": 4.77e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "60",
+        "correct": true,
+        "extra_cost": 0.0003441
+      }
+    },
+    {
+      "task_id": "gsm8k_009",
+      "ground_truth": "122",
+      "frameworks_assigned": [
+        "arithmetic",
+        "working_backwards",
+        "algebraic",
+        "estimation"
+      ],
+      "proposal_cost": 0.0004986,
+      "proposal_tokens": 1662,
+      "majority_vote": {
+        "answer": "36)",
+        "correct": false,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "122",
+        "correct": true,
+        "extra_cost": 4.9199999999999997e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "122",
+        "correct": true,
+        "extra_cost": 0.00039749999999999996
+      }
+    },
+    {
+      "task_id": "gsm8k_009",
+      "ground_truth": "122",
+      "frameworks_assigned": [
+        "working_backwards",
+        "algebraic",
+        "arithmetic",
+        "estimation"
+      ],
+      "proposal_cost": 0.0004923,
+      "proposal_tokens": 1641,
+      "majority_vote": {
+        "answer": "44)",
+        "correct": false,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "122",
+        "correct": true,
+        "extra_cost": 4.8299999999999995e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "122",
+        "correct": true,
+        "extra_cost": 0.0003914999999999999
+      }
+    },
+    {
+      "task_id": "gsm8k_009",
+      "ground_truth": "122",
+      "frameworks_assigned": [
+        "arithmetic",
+        "estimation",
+        "working_backwards",
+        "algebraic"
+      ],
+      "proposal_cost": 0.0004944,
+      "proposal_tokens": 1648,
+      "majority_vote": {
+        "answer": "122",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "122",
+        "correct": true,
+        "extra_cost": 4.8599999999999995e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "122",
+        "correct": true,
+        "extra_cost": 0.00039359999999999997
+      }
+    },
+    {
+      "task_id": "gsm8k_007",
+      "ground_truth": "145",
+      "frameworks_assigned": [
+        "estimation",
+        "working_backwards",
+        "algebraic",
+        "arithmetic"
+      ],
+      "proposal_cost": 0.0005736,
+      "proposal_tokens": 1912,
+      "majority_vote": {
+        "answer": "4800",
+        "correct": false,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "4800",
+        "correct": false,
+        "extra_cost": 4.8e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "145",
+        "correct": true,
+        "extra_cost": 0.0004784999999999999
+      }
+    },
+    {
+      "task_id": "gsm8k_007",
+      "ground_truth": "145",
+      "frameworks_assigned": [
+        "algebraic",
+        "estimation",
+        "working_backwards",
+        "arithmetic"
+      ],
+      "proposal_cost": 0.0005511,
+      "proposal_tokens": 1837,
+      "majority_vote": {
+        "answer": "The total cost of buying each cup is 7.5",
+        "correct": false,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "7.5",
+        "correct": false,
+        "extra_cost": 5.43e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "The total cost of buying each cup is 20",
+        "correct": false,
+        "extra_cost": 0.00045840000000000003
+      }
+    },
+    {
+      "task_id": "gsm8k_007",
+      "ground_truth": "145",
+      "frameworks_assigned": [
+        "working_backwards",
+        "arithmetic",
+        "estimation",
+        "algebraic"
+      ],
+      "proposal_cost": 0.0005202,
+      "proposal_tokens": 1734,
+      "majority_vote": {
+        "answer": "4800",
+        "correct": false,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "4800",
+        "correct": false,
+        "extra_cost": 5.01e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "20",
+        "correct": false,
+        "extra_cost": 0.00042479999999999997
+      }
+    },
+    {
+      "task_id": "gsm8k_010",
+      "ground_truth": "29",
+      "frameworks_assigned": [
+        "estimation",
+        "working_backwards",
+        "algebraic",
+        "arithmetic"
+      ],
+      "proposal_cost": 0.0007844999999999999,
+      "proposal_tokens": 2615,
+      "majority_vote": {
+        "answer": "29",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "29 liters",
+        "correct": true,
+        "extra_cost": 8.85e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "29 liters",
+        "correct": true,
+        "extra_cost": 0.0005750999999999999
+      }
+    },
+    {
+      "task_id": "gsm8k_008",
+      "ground_truth": "60",
+      "frameworks_assigned": [
+        "algebraic",
+        "estimation",
+        "arithmetic",
+        "working_backwards"
+      ],
+      "proposal_cost": 0.0004317,
+      "proposal_tokens": 1439,
+      "majority_vote": {
+        "answer": "60",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "60 students",
+        "correct": true,
+        "extra_cost": 5.2799999999999996e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "60 students are enrolled this year in the calligraphy class",
+        "correct": true,
+        "extra_cost": 0.0003336
+      }
+    },
+    {
+      "task_id": "gsm8k_011",
+      "ground_truth": "80",
+      "frameworks_assigned": [
+        "estimation",
+        "arithmetic",
+        "working_backwards",
+        "algebraic"
+      ],
+      "proposal_cost": 0.0005676,
+      "proposal_tokens": 1892,
+      "majority_vote": {
+        "answer": "80",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "80",
+        "correct": true,
+        "extra_cost": 5.5799999999999994e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "80",
+        "correct": true,
+        "extra_cost": 0.00044280000000000003
+      }
+    },
+    {
+      "task_id": "gsm8k_008",
+      "ground_truth": "60",
+      "frameworks_assigned": [
+        "working_backwards",
+        "estimation",
+        "algebraic",
+        "arithmetic"
+      ],
+      "proposal_cost": 0.00046019999999999996,
+      "proposal_tokens": 1534,
+      "majority_vote": {
+        "answer": "60",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "60",
+        "correct": true,
+        "extra_cost": 5.22e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "60 students are enrolled this year in the calligraphy class",
+        "correct": true,
+        "extra_cost": 0.00036239999999999997
+      }
+    },
+    {
+      "task_id": "gsm8k_008",
+      "ground_truth": "60",
+      "frameworks_assigned": [
+        "algebraic",
+        "arithmetic",
+        "estimation",
+        "working_backwards"
+      ],
+      "proposal_cost": 0.0004689,
+      "proposal_tokens": 1563,
+      "majority_vote": {
+        "answer": "60",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "60 students are enrolled this year in the calligraphy class",
+        "correct": true,
+        "extra_cost": 5.4e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "60",
+        "correct": true,
+        "extra_cost": 0.0003681
+      }
+    },
+    {
+      "task_id": "gsm8k_011",
+      "ground_truth": "80",
+      "frameworks_assigned": [
+        "estimation",
+        "working_backwards",
+        "algebraic",
+        "arithmetic"
+      ],
+      "proposal_cost": 0.0005147999999999999,
+      "proposal_tokens": 1716,
+      "majority_vote": {
+        "answer": "80",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "80",
+        "correct": true,
+        "extra_cost": 5.73e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "80",
+        "correct": true,
+        "extra_cost": 0.0003933
+      }
+    },
+    {
+      "task_id": "gsm8k_011",
+      "ground_truth": "80",
+      "frameworks_assigned": [
+        "working_backwards",
+        "estimation",
+        "algebraic",
+        "arithmetic"
+      ],
+      "proposal_cost": 0.0005736,
+      "proposal_tokens": 1912,
+      "majority_vote": {
+        "answer": "80",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "80",
+        "correct": true,
+        "extra_cost": 5.49e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "80",
+        "correct": true,
+        "extra_cost": 0.0004488
+      }
+    },
+    {
+      "task_id": "gsm8k_007",
+      "ground_truth": "145",
+      "frameworks_assigned": [
+        "algebraic",
+        "estimation",
+        "arithmetic",
+        "working_backwards"
+      ],
+      "proposal_cost": 0.0005451,
+      "proposal_tokens": 1817,
+      "majority_vote": {
+        "answer": "6000 ]",
+        "correct": false,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "6000",
+        "correct": false,
+        "extra_cost": 4.8899999999999996e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "145",
+        "correct": true,
+        "extra_cost": 0.00045029999999999994
+      }
+    },
+    {
+      "task_id": "gsm8k_009",
+      "ground_truth": "122",
+      "frameworks_assigned": [
+        "working_backwards",
+        "estimation",
+        "algebraic",
+        "arithmetic"
+      ],
+      "proposal_cost": 0.0005154,
+      "proposal_tokens": 1718,
+      "majority_vote": {
+        "answer": "40 )",
+        "correct": false,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "122",
+        "correct": true,
+        "extra_cost": 4.9199999999999997e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "122",
+        "correct": true,
+        "extra_cost": 0.0004139999999999999
+      }
+    },
+    {
+      "task_id": "gsm8k_012",
+      "ground_truth": "36",
+      "frameworks_assigned": [
+        "arithmetic",
+        "algebraic",
+        "estimation",
+        "working_backwards"
+      ],
+      "proposal_cost": 0.0005028,
+      "proposal_tokens": 1676,
+      "majority_vote": {
+        "answer": "36",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "36 hours",
+        "correct": true,
+        "extra_cost": 5.009999999999999e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "36 hours",
+        "correct": true,
+        "extra_cost": 0.00039749999999999996
+      }
+    },
+    {
+      "task_id": "gsm8k_012",
+      "ground_truth": "36",
+      "frameworks_assigned": [
+        "working_backwards",
+        "estimation",
+        "algebraic",
+        "arithmetic"
+      ],
+      "proposal_cost": 0.0005252999999999999,
+      "proposal_tokens": 1751,
+      "majority_vote": {
+        "answer": "36",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "36 hours",
+        "correct": true,
+        "extra_cost": 5.07e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "36 hours",
+        "correct": true,
+        "extra_cost": 0.0004197
+      }
+    },
+    {
+      "task_id": "gsm8k_009",
+      "ground_truth": "122",
+      "frameworks_assigned": [
+        "estimation",
+        "working_backwards",
+        "algebraic",
+        "arithmetic"
+      ],
+      "proposal_cost": 0.00048629999999999995,
+      "proposal_tokens": 1621,
+      "majority_vote": {
+        "answer": "122",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "122",
+        "correct": true,
+        "extra_cost": 4.98e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "122",
+        "correct": true,
+        "extra_cost": 0.0003852
+      }
+    },
+    {
+      "task_id": "gsm8k_010",
+      "ground_truth": "29",
+      "frameworks_assigned": [
+        "algebraic",
+        "arithmetic",
+        "estimation",
+        "working_backwards"
+      ],
+      "proposal_cost": 0.0007325999999999999,
+      "proposal_tokens": 2442,
+      "majority_vote": {
+        "answer": "29",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "29 liters",
+        "correct": true,
+        "extra_cost": 8.52e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "29",
+        "correct": true,
+        "extra_cost": 0.0005232
+      }
+    },
+    {
+      "task_id": "gsm8k_010",
+      "ground_truth": "29",
+      "frameworks_assigned": [
+        "estimation",
+        "algebraic",
+        "working_backwards",
+        "arithmetic"
+      ],
+      "proposal_cost": 0.0007374,
+      "proposal_tokens": 2458,
+      "majority_vote": {
+        "answer": "29 liters",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "29 liters",
+        "correct": true,
+        "extra_cost": 8.58e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "29 liters",
+        "correct": true,
+        "extra_cost": 0.0005202
+      }
+    },
+    {
+      "task_id": "gsm8k_013",
+      "ground_truth": "1430",
+      "frameworks_assigned": [
+        "arithmetic",
+        "algebraic",
+        "working_backwards",
+        "estimation"
+      ],
+      "proposal_cost": 0.0005763,
+      "proposal_tokens": 1921,
+      "majority_vote": {
+        "answer": "1430",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "1430",
+        "correct": true,
+        "extra_cost": 5.7300000000000004e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "1430",
+        "correct": true,
+        "extra_cost": 0.0004479
+      }
+    },
+    {
+      "task_id": "gsm8k_010",
+      "ground_truth": "29",
+      "frameworks_assigned": [
+        "estimation",
+        "arithmetic",
+        "algebraic",
+        "working_backwards"
+      ],
+      "proposal_cost": 0.0007955999999999999,
+      "proposal_tokens": 2652,
+      "majority_vote": {
+        "answer": "29",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "29",
+        "correct": true,
+        "extra_cost": 8.549999999999999e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "29 liters",
+        "correct": true,
+        "extra_cost": 0.00057
+      }
+    },
+    {
+      "task_id": "gsm8k_010",
+      "ground_truth": "29",
+      "frameworks_assigned": [
+        "estimation",
+        "arithmetic",
+        "algebraic",
+        "working_backwards"
+      ],
+      "proposal_cost": 0.0007764,
+      "proposal_tokens": 2588,
+      "majority_vote": {
+        "answer": "3) liters",
+        "correct": false,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "29 liters",
+        "correct": true,
+        "extra_cost": 0.00016769999999999998
+      },
+      "synth_full_reasoning": {
+        "answer": "29 liters",
+        "correct": true,
+        "extra_cost": 0.0005615999999999999
+      }
+    },
+    {
+      "task_id": "gsm8k_013",
+      "ground_truth": "1430",
+      "frameworks_assigned": [
+        "estimation",
+        "working_backwards",
+        "arithmetic",
+        "algebraic"
+      ],
+      "proposal_cost": 0.0005043000000000001,
+      "proposal_tokens": 1681,
+      "majority_vote": {
+        "answer": "1430",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "1430",
+        "correct": true,
+        "extra_cost": 5.7600000000000004e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "1430",
+        "correct": true,
+        "extra_cost": 0.00038639999999999996
+      }
+    },
+    {
+      "task_id": "gsm8k_013",
+      "ground_truth": "1430",
+      "frameworks_assigned": [
+        "working_backwards",
+        "arithmetic",
+        "algebraic",
+        "estimation"
+      ],
+      "proposal_cost": 0.0005112,
+      "proposal_tokens": 1704,
+      "majority_vote": {
+        "answer": "1430",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "1430",
+        "correct": true,
+        "extra_cost": 5.7600000000000004e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "1430",
+        "correct": true,
+        "extra_cost": 0.00039329999999999996
+      }
+    },
+    {
+      "task_id": "gsm8k_014",
+      "ground_truth": "5",
+      "frameworks_assigned": [
+        "estimation",
+        "working_backwards",
+        "algebraic",
+        "arithmetic"
+      ],
+      "proposal_cost": 0.0003936,
+      "proposal_tokens": 1312,
+      "majority_vote": {
+        "answer": "35 ) pounds",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "5 pounds/day",
+        "correct": true,
+        "extra_cost": 4.8299999999999995e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "5 pounds per day",
+        "correct": true,
+        "extra_cost": 0.0002985
+      }
+    },
+    {
+      "task_id": "gsm8k_013",
+      "ground_truth": "1430",
+      "frameworks_assigned": [
+        "estimation",
+        "working_backwards",
+        "arithmetic",
+        "algebraic"
+      ],
+      "proposal_cost": 0.00051,
+      "proposal_tokens": 1700,
+      "majority_vote": {
+        "answer": "1430",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "1430",
+        "correct": true,
+        "extra_cost": 5.6399999999999995e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "1430",
+        "correct": true,
+        "extra_cost": 0.0003921
+      }
+    },
+    {
+      "task_id": "gsm8k_014",
+      "ground_truth": "5",
+      "frameworks_assigned": [
+        "working_backwards",
+        "estimation",
+        "algebraic",
+        "arithmetic"
+      ],
+      "proposal_cost": 0.0004185,
+      "proposal_tokens": 1395,
+      "majority_vote": {
+        "answer": "5 pounds/day",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "5 pounds/day",
+        "correct": true,
+        "extra_cost": 4.709999999999999e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "5 pounds/day",
+        "correct": true,
+        "extra_cost": 0.00032309999999999994
+      }
+    },
+    {
+      "task_id": "gsm8k_014",
+      "ground_truth": "5",
+      "frameworks_assigned": [
+        "algebraic",
+        "working_backwards",
+        "arithmetic",
+        "estimation"
+      ],
+      "proposal_cost": 0.00042659999999999996,
+      "proposal_tokens": 1422,
+      "majority_vote": {
+        "answer": "5",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "5 pounds per day",
+        "correct": true,
+        "extra_cost": 4.83e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "5 pounds/day",
+        "correct": true,
+        "extra_cost": 0.00033059999999999996
+      }
+    },
+    {
+      "task_id": "gsm8k_014",
+      "ground_truth": "5",
+      "frameworks_assigned": [
+        "arithmetic",
+        "algebraic",
+        "working_backwards",
+        "estimation"
+      ],
+      "proposal_cost": 0.00043139999999999997,
+      "proposal_tokens": 1438,
+      "majority_vote": {
+        "answer": "5 pounds of insects per day",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "5 pounds/day",
+        "correct": true,
+        "extra_cost": 5.07e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "5 pounds/day",
+        "correct": true,
+        "extra_cost": 0.0003357
+      }
+    },
+    {
+      "task_id": "gsm8k_014",
+      "ground_truth": "5",
+      "frameworks_assigned": [
+        "algebraic",
+        "working_backwards",
+        "arithmetic",
+        "estimation"
+      ],
+      "proposal_cost": 0.0004041,
+      "proposal_tokens": 1347,
+      "majority_vote": {
+        "answer": "5 pounds/day",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "0.5 pounds/day",
+        "correct": true,
+        "extra_cost": 4.8899999999999996e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "5 pounds/day",
+        "correct": true,
+        "extra_cost": 0.00030869999999999997
+      }
+    },
+    {
+      "task_id": "gsm8k_015",
+      "ground_truth": "5",
+      "frameworks_assigned": [
+        "estimation",
+        "algebraic",
+        "working_backwards",
+        "arithmetic"
+      ],
+      "proposal_cost": 0.0004494,
+      "proposal_tokens": 1498,
+      "majority_vote": {
+        "answer": "240 ]",
+        "correct": false,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "Joey is winning by 5 points",
+        "correct": true,
+        "extra_cost": 5.34e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "Joey is now winning by 5 points",
+        "correct": true,
+        "extra_cost": 0.00034409999999999996
+      }
+    },
+    {
+      "task_id": "gsm8k_015",
+      "ground_truth": "5",
+      "frameworks_assigned": [
+        "arithmetic",
+        "algebraic",
+        "estimation",
+        "working_backwards"
+      ],
+      "proposal_cost": 0.0004839,
+      "proposal_tokens": 1613,
+      "majority_vote": {
+        "answer": "Joey is winning by 5 points",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "Joey is winning by 5 points",
+        "correct": true,
+        "extra_cost": 5.52e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "Joey is winning by 5 points",
+        "correct": true,
+        "extra_cost": 0.00037830000000000003
+      }
+    },
+    {
+      "task_id": "gsm8k_011",
+      "ground_truth": "80",
+      "frameworks_assigned": [
+        "estimation",
+        "working_backwards",
+        "arithmetic",
+        "algebraic"
+      ],
+      "proposal_cost": 0.0005660999999999999,
+      "proposal_tokens": 1887,
+      "majority_vote": {
+        "answer": "80",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "80",
+        "correct": true,
+        "extra_cost": 5.55e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "80",
+        "correct": true,
+        "extra_cost": 0.0004452
+      }
+    },
+    {
+      "task_id": "gsm8k_015",
+      "ground_truth": "5",
+      "frameworks_assigned": [
+        "arithmetic",
+        "working_backwards",
+        "estimation",
+        "algebraic"
+      ],
+      "proposal_cost": 0.0004833,
+      "proposal_tokens": 1611,
+      "majority_vote": {
+        "answer": "Joey is now winning by 5 points",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "Joey is now winning by 5 points",
+        "correct": true,
+        "extra_cost": 5.55e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "Joey is now winning by 5 points",
+        "correct": true,
+        "extra_cost": 0.0003779999999999999
+      }
+    },
+    {
+      "task_id": "gsm8k_015",
+      "ground_truth": "5",
+      "frameworks_assigned": [
+        "arithmetic",
+        "working_backwards",
+        "estimation",
+        "algebraic"
+      ],
+      "proposal_cost": 0.0004746,
+      "proposal_tokens": 1582,
+      "majority_vote": {
+        "answer": "Joey is winning by 5 points",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "Joey is winning by 5 points",
+        "correct": true,
+        "extra_cost": 5.88e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "Joey is now winning by 5 points",
+        "correct": true,
+        "extra_cost": 0.0003696
+      }
+    },
+    {
+      "task_id": "gsm8k_015",
+      "ground_truth": "5",
+      "frameworks_assigned": [
+        "estimation",
+        "algebraic",
+        "arithmetic",
+        "working_backwards"
+      ],
+      "proposal_cost": 0.0005166,
+      "proposal_tokens": 1722,
+      "majority_vote": {
+        "answer": "240",
+        "correct": false,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "5",
+        "correct": true,
+        "extra_cost": 5.13e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "5 points",
+        "correct": true,
+        "extra_cost": 0.0004098
+      }
+    },
+    {
+      "task_id": "gsm8k_016",
+      "ground_truth": "5",
+      "frameworks_assigned": [
+        "algebraic",
+        "estimation",
+        "working_backwards",
+        "arithmetic"
+      ],
+      "proposal_cost": 0.0004227,
+      "proposal_tokens": 1409,
+      "majority_vote": {
+        "answer": "Each child received 5 books",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "Each child received 5 books",
+        "correct": true,
+        "extra_cost": 5.6399999999999995e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "Each child received 5 books",
+        "correct": true,
+        "extra_cost": 0.00031769999999999997
+      }
+    },
+    {
+      "task_id": "gsm8k_016",
+      "ground_truth": "5",
+      "frameworks_assigned": [
+        "arithmetic",
+        "algebraic",
+        "working_backwards",
+        "estimation"
+      ],
+      "proposal_cost": 0.0004122,
+      "proposal_tokens": 1374,
+      "majority_vote": {
+        "answer": "5",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "20 books",
+        "correct": false,
+        "extra_cost": 5.2199999999999995e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "5",
+        "correct": true,
+        "extra_cost": 0.0003063
+      }
+    },
+    {
+      "task_id": "gsm8k_011",
+      "ground_truth": "80",
+      "frameworks_assigned": [
+        "algebraic",
+        "estimation",
+        "working_backwards",
+        "arithmetic"
+      ],
+      "proposal_cost": 0.0005241,
+      "proposal_tokens": 1747,
+      "majority_vote": {
+        "answer": "600 )",
+        "correct": false,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "80",
+        "correct": true,
+        "extra_cost": 5.85e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "80",
+        "correct": true,
+        "extra_cost": 0.0004032
+      }
+    },
+    {
+      "task_id": "gsm8k_012",
+      "ground_truth": "36",
+      "frameworks_assigned": [
+        "arithmetic",
+        "algebraic",
+        "working_backwards",
+        "estimation"
+      ],
+      "proposal_cost": 0.000531,
+      "proposal_tokens": 1770,
+      "majority_vote": {
+        "answer": "36",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "36",
+        "correct": true,
+        "extra_cost": 4.98e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "36 hours",
+        "correct": true,
+        "extra_cost": 0.0004254
+      }
+    },
+    {
+      "task_id": "gsm8k_016",
+      "ground_truth": "5",
+      "frameworks_assigned": [
+        "algebraic",
+        "working_backwards",
+        "arithmetic",
+        "estimation"
+      ],
+      "proposal_cost": 0.00043380000000000003,
+      "proposal_tokens": 1446,
+      "majority_vote": {
+        "answer": "5",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "20 books were purchased in total. Since Sarah gave an equal number of books to her 4 kids, each child got 20 \u00f7 4 = 5 books. Therefore, each child got 5 books",
+        "correct": true,
+        "extra_cost": 6.809999999999999e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "Each child received 5 books",
+        "correct": true,
+        "extra_cost": 0.00032910000000000003
+      }
+    },
+    {
+      "task_id": "gsm8k_016",
+      "ground_truth": "5",
+      "frameworks_assigned": [
+        "estimation",
+        "arithmetic",
+        "algebraic",
+        "working_backwards"
+      ],
+      "proposal_cost": 0.00043559999999999996,
+      "proposal_tokens": 1452,
+      "majority_vote": {
+        "answer": "frac{300}{15} approx 20 ]",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "Each child received 5 books",
+        "correct": true,
+        "extra_cost": 5.76e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "Each child received 5 books",
+        "correct": true,
+        "extra_cost": 0.0003306
+      }
+    },
+    {
+      "task_id": "gsm8k_016",
+      "ground_truth": "5",
+      "frameworks_assigned": [
+        "estimation",
+        "algebraic",
+        "working_backwards",
+        "arithmetic"
+      ],
+      "proposal_cost": 0.0004089,
+      "proposal_tokens": 1363,
+      "majority_vote": {
+        "answer": "5",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "5",
+        "correct": true,
+        "extra_cost": 4.8899999999999996e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "5",
+        "correct": true,
+        "extra_cost": 0.000303
+      }
+    },
+    {
+      "task_id": "gsm8k_017",
+      "ground_truth": "66",
+      "frameworks_assigned": [
+        "arithmetic",
+        "estimation",
+        "algebraic",
+        "working_backwards"
+      ],
+      "proposal_cost": 0.00040829999999999995,
+      "proposal_tokens": 1361,
+      "majority_vote": {
+        "answer": "66",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "66",
+        "correct": true,
+        "extra_cost": 4.6200000000000005e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "66",
+        "correct": true,
+        "extra_cost": 0.000312
+      }
+    },
+    {
+      "task_id": "gsm8k_017",
+      "ground_truth": "66",
+      "frameworks_assigned": [
+        "arithmetic",
+        "algebraic",
+        "working_backwards",
+        "estimation"
+      ],
+      "proposal_cost": 0.00042,
+      "proposal_tokens": 1400,
+      "majority_vote": {
+        "answer": "66",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "66",
+        "correct": true,
+        "extra_cost": 4.68e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "66",
+        "correct": true,
+        "extra_cost": 0.00032340000000000005
+      }
+    },
+    {
+      "task_id": "gsm8k_012",
+      "ground_truth": "36",
+      "frameworks_assigned": [
+        "algebraic",
+        "arithmetic",
+        "estimation",
+        "working_backwards"
+      ],
+      "proposal_cost": 0.0005271,
+      "proposal_tokens": 1757,
+      "majority_vote": {
+        "answer": "36",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "36 hours",
+        "correct": true,
+        "extra_cost": 5.009999999999999e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "36 hours",
+        "correct": true,
+        "extra_cost": 0.00042179999999999995
+      }
+    },
+    {
+      "task_id": "gsm8k_017",
+      "ground_truth": "66",
+      "frameworks_assigned": [
+        "estimation",
+        "arithmetic",
+        "working_backwards",
+        "algebraic"
+      ],
+      "proposal_cost": 0.00043919999999999994,
+      "proposal_tokens": 1464,
+      "majority_vote": {
+        "answer": "66",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "66 dollars",
+        "correct": true,
+        "extra_cost": 4.709999999999999e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "66",
+        "correct": true,
+        "extra_cost": 0.0003423
+      }
+    },
+    {
+      "task_id": "gsm8k_017",
+      "ground_truth": "66",
+      "frameworks_assigned": [
+        "algebraic",
+        "working_backwards",
+        "estimation",
+        "arithmetic"
+      ],
+      "proposal_cost": 0.00043439999999999993,
+      "proposal_tokens": 1448,
+      "majority_vote": {
+        "answer": "66",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "66",
+        "correct": true,
+        "extra_cost": 4.8e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "66",
+        "correct": true,
+        "extra_cost": 0.0003378
+      }
+    },
+    {
+      "task_id": "gsm8k_012",
+      "ground_truth": "36",
+      "frameworks_assigned": [
+        "working_backwards",
+        "estimation",
+        "arithmetic",
+        "algebraic"
+      ],
+      "proposal_cost": 0.00047039999999999994,
+      "proposal_tokens": 1568,
+      "majority_vote": {
+        "answer": "36",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "36",
+        "correct": true,
+        "extra_cost": 4.92e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "36 hours",
+        "correct": true,
+        "extra_cost": 0.0003648
+      }
+    },
+    {
+      "task_id": "gsm8k_017",
+      "ground_truth": "66",
+      "frameworks_assigned": [
+        "working_backwards",
+        "arithmetic",
+        "algebraic",
+        "estimation"
+      ],
+      "proposal_cost": 0.0004416,
+      "proposal_tokens": 1472,
+      "majority_vote": {
+        "answer": "66",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "66",
+        "correct": true,
+        "extra_cost": 4.6200000000000005e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "66",
+        "correct": true,
+        "extra_cost": 0.000345
+      }
+    },
+    {
+      "task_id": "gsm8k_018",
+      "ground_truth": "15",
+      "frameworks_assigned": [
+        "arithmetic",
+        "estimation",
+        "working_backwards",
+        "algebraic"
+      ],
+      "proposal_cost": 0.0004257,
+      "proposal_tokens": 1419,
+      "majority_vote": {
+        "answer": "15",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "15",
+        "correct": true,
+        "extra_cost": 4.8899999999999996e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "15",
+        "correct": true,
+        "extra_cost": 0.00032040000000000004
+      }
+    },
+    {
+      "task_id": "gsm8k_018",
+      "ground_truth": "15",
+      "frameworks_assigned": [
+        "arithmetic",
+        "algebraic",
+        "working_backwards",
+        "estimation"
+      ],
+      "proposal_cost": 0.000441,
+      "proposal_tokens": 1470,
+      "majority_vote": {
+        "answer": "15",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "15",
+        "correct": true,
+        "extra_cost": 4.98e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "15",
+        "correct": true,
+        "extra_cost": 0.0003354
+      }
+    },
+    {
+      "task_id": "gsm8k_018",
+      "ground_truth": "15",
+      "frameworks_assigned": [
+        "working_backwards",
+        "algebraic",
+        "estimation",
+        "arithmetic"
+      ],
+      "proposal_cost": 0.0004236,
+      "proposal_tokens": 1412,
+      "majority_vote": {
+        "answer": "15",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "15",
+        "correct": true,
+        "extra_cost": 4.8899999999999996e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "15",
+        "correct": true,
+        "extra_cost": 0.0003183
+      }
+    },
+    {
+      "task_id": "gsm8k_018",
+      "ground_truth": "15",
+      "frameworks_assigned": [
+        "working_backwards",
+        "arithmetic",
+        "algebraic",
+        "estimation"
+      ],
+      "proposal_cost": 0.00040649999999999996,
+      "proposal_tokens": 1355,
+      "majority_vote": {
+        "answer": "15",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "5",
+        "correct": false,
+        "extra_cost": 4.8299999999999995e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "15",
+        "correct": true,
+        "extra_cost": 0.00030090000000000005
+      }
+    },
+    {
+      "task_id": "gsm8k_019",
+      "ground_truth": "40",
+      "frameworks_assigned": [
+        "arithmetic",
+        "estimation",
+        "working_backwards",
+        "algebraic"
+      ],
+      "proposal_cost": 0.00047939999999999994,
+      "proposal_tokens": 1598,
+      "majority_vote": {
+        "answer": "40",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "40",
+        "correct": true,
+        "extra_cost": 6.0899999999999996e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "40",
+        "correct": true,
+        "extra_cost": 0.0003423
+      }
+    },
+    {
+      "task_id": "gsm8k_013",
+      "ground_truth": "1430",
+      "frameworks_assigned": [
+        "estimation",
+        "algebraic",
+        "arithmetic",
+        "working_backwards"
+      ],
+      "proposal_cost": 0.0005231999999999999,
+      "proposal_tokens": 1744,
+      "majority_vote": {
+        "answer": "1430",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "1430",
+        "correct": true,
+        "extra_cost": 5.7e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "1430",
+        "correct": true,
+        "extra_cost": 0.00040529999999999993
+      }
+    },
+    {
+      "task_id": "gsm8k_019",
+      "ground_truth": "40",
+      "frameworks_assigned": [
+        "arithmetic",
+        "algebraic",
+        "working_backwards",
+        "estimation"
+      ],
+      "proposal_cost": 0.0004959,
+      "proposal_tokens": 1653,
+      "majority_vote": {
+        "answer": "40",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "40",
+        "correct": true,
+        "extra_cost": 5.9699999999999994e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "40",
+        "correct": true,
+        "extra_cost": 0.0003585
+      }
+    },
+    {
+      "task_id": "gsm8k_019",
+      "ground_truth": "40",
+      "frameworks_assigned": [
+        "estimation",
+        "algebraic",
+        "working_backwards",
+        "arithmetic"
+      ],
+      "proposal_cost": 0.0004881,
+      "proposal_tokens": 1627,
+      "majority_vote": {
+        "answer": "40",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "40",
+        "correct": true,
+        "extra_cost": 5.94e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "40",
+        "correct": true,
+        "extra_cost": 0.000351
+      }
+    },
+    {
+      "task_id": "gsm8k_019",
+      "ground_truth": "40",
+      "frameworks_assigned": [
+        "working_backwards",
+        "estimation",
+        "algebraic",
+        "arithmetic"
+      ],
+      "proposal_cost": 0.0005676,
+      "proposal_tokens": 1892,
+      "majority_vote": {
+        "answer": "40",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "40",
+        "correct": true,
+        "extra_cost": 6.21e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "40",
+        "correct": true,
+        "extra_cost": 0.0004272
+      }
+    },
+    {
+      "task_id": "gsm8k_018",
+      "ground_truth": "15",
+      "frameworks_assigned": [
+        "estimation",
+        "working_backwards",
+        "algebraic",
+        "arithmetic"
+      ],
+      "proposal_cost": 0.0004545,
+      "proposal_tokens": 1515,
+      "majority_vote": {
+        "answer": "15",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "5",
+        "correct": false,
+        "extra_cost": 4.8599999999999995e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "15",
+        "correct": true,
+        "extra_cost": 0.0003486
+      }
+    },
+    {
+      "task_id": "gsm8k_019",
+      "ground_truth": "40",
+      "frameworks_assigned": [
+        "working_backwards",
+        "algebraic",
+        "estimation",
+        "arithmetic"
+      ],
+      "proposal_cost": 0.0005856,
+      "proposal_tokens": 1952,
+      "majority_vote": {
+        "answer": "40",
+        "correct": true,
+        "extra_cost": 0
+      },
+      "synth_answers_only": {
+        "answer": "40",
+        "correct": true,
+        "extra_cost": 6.269999999999999e-05
+      },
+      "synth_full_reasoning": {
+        "answer": "40",
+        "correct": true,
+        "extra_cost": 0.000441
+      }
+    }
+  ]
+}

@@ -1,0 +1,541 @@
+{
+  "baselines": {
+    "qwen-7b": {
+      "correct_rate": 0.733,
+      "n_correct": 22,
+      "n_total": 30,
+      "cost": 0.003
+    },
+    "qwen-22b": {
+      "correct_rate": 0.867,
+      "n_correct": 26,
+      "n_total": 30,
+      "cost": 0.0067
+    },
+    "qwen-17b": {
+      "correct_rate": 0.7,
+      "n_correct": 21,
+      "n_total": 30,
+      "cost": 0.1735
+    }
+  },
+  "conditions": [
+    {
+      "idx": 1,
+      "model_config": "all-7b",
+      "topology": "propose-only",
+      "gamma": 0.0,
+      "diversity": 0.48,
+      "correct_pct": 73,
+      "cost_per_ep": 0.0005,
+      "cumul_cost": 0.191,
+      "elapsed_s": 1499
+    },
+    {
+      "idx": 2,
+      "model_config": "all-7b",
+      "topology": "propose-only",
+      "gamma": 0.5,
+      "diversity": 0.75,
+      "correct_pct": 67,
+      "cost_per_ep": 0.0007,
+      "cumul_cost": 0.201,
+      "elapsed_s": 1737
+    },
+    {
+      "idx": 3,
+      "model_config": "all-7b",
+      "topology": "propose-only",
+      "gamma": 1.0,
+      "diversity": 0.75,
+      "correct_pct": 73,
+      "cost_per_ep": 0.0006,
+      "cumul_cost": 0.209,
+      "elapsed_s": 1938
+    },
+    {
+      "idx": 4,
+      "model_config": "all-7b",
+      "topology": "propose-only",
+      "gamma": 2.0,
+      "diversity": 0.75,
+      "correct_pct": 60,
+      "cost_per_ep": 0.0006,
+      "cumul_cost": 0.217,
+      "elapsed_s": 2130
+    },
+    {
+      "idx": 5,
+      "model_config": "all-7b",
+      "topology": "propose-only",
+      "gamma": 4.0,
+      "diversity": 0.75,
+      "correct_pct": 73,
+      "cost_per_ep": 0.0006,
+      "cumul_cost": 0.226,
+      "elapsed_s": 2343
+    },
+    {
+      "idx": 6,
+      "model_config": "all-7b",
+      "topology": "propose-only",
+      "gamma": 8.0,
+      "diversity": 0.75,
+      "correct_pct": 67,
+      "cost_per_ep": 0.0006,
+      "cumul_cost": 0.235,
+      "elapsed_s": 2536
+    },
+    {
+      "idx": 7,
+      "model_config": "all-7b",
+      "topology": "propose-critique",
+      "gamma": 0.0,
+      "diversity": 0.38,
+      "correct_pct": 73,
+      "cost_per_ep": 0.0007,
+      "cumul_cost": 0.245,
+      "elapsed_s": 2730
+    },
+    {
+      "idx": 8,
+      "model_config": "all-7b",
+      "topology": "propose-critique",
+      "gamma": 0.5,
+      "diversity": 0.75,
+      "correct_pct": 53,
+      "cost_per_ep": 0.0006,
+      "cumul_cost": 0.255,
+      "elapsed_s": 2915
+    },
+    {
+      "idx": 9,
+      "model_config": "all-7b",
+      "topology": "propose-critique",
+      "gamma": 1.0,
+      "diversity": 0.75,
+      "correct_pct": 67,
+      "cost_per_ep": 0.0006,
+      "cumul_cost": 0.264,
+      "elapsed_s": 3089
+    },
+    {
+      "idx": 10,
+      "model_config": "all-7b",
+      "topology": "propose-critique",
+      "gamma": 2.0,
+      "diversity": 0.75,
+      "correct_pct": 60,
+      "cost_per_ep": 0.0007,
+      "cumul_cost": 0.274,
+      "elapsed_s": 3306
+    },
+    {
+      "idx": 11,
+      "model_config": "all-7b",
+      "topology": "propose-critique",
+      "gamma": 4.0,
+      "diversity": 0.75,
+      "correct_pct": 67,
+      "cost_per_ep": 0.0007,
+      "cumul_cost": 0.285,
+      "elapsed_s": 3513
+    },
+    {
+      "idx": 12,
+      "model_config": "all-7b",
+      "topology": "propose-critique",
+      "gamma": 8.0,
+      "diversity": 0.75,
+      "correct_pct": 53,
+      "cost_per_ep": 0.0007,
+      "cumul_cost": 0.295,
+      "elapsed_s": 3712
+    },
+    {
+      "idx": 13,
+      "model_config": "all-7b",
+      "topology": "propose-critique-synth",
+      "gamma": 0.0,
+      "diversity": 0.37,
+      "correct_pct": 80,
+      "cost_per_ep": 0.0005,
+      "cumul_cost": 0.303,
+      "elapsed_s": 3872
+    },
+    {
+      "idx": 14,
+      "model_config": "all-7b",
+      "topology": "propose-critique-synth",
+      "gamma": 0.5,
+      "diversity": 0.75,
+      "correct_pct": 73,
+      "cost_per_ep": 0.0006,
+      "cumul_cost": 0.311,
+      "elapsed_s": 4046
+    },
+    {
+      "idx": 15,
+      "model_config": "all-7b",
+      "topology": "propose-critique-synth",
+      "gamma": 1.0,
+      "diversity": 0.75,
+      "correct_pct": 73,
+      "cost_per_ep": 0.0005,
+      "cumul_cost": 0.32,
+      "elapsed_s": 4216
+    },
+    {
+      "idx": 16,
+      "model_config": "all-7b",
+      "topology": "propose-critique-synth",
+      "gamma": 2.0,
+      "diversity": 0.75,
+      "correct_pct": 93,
+      "cost_per_ep": 0.0006,
+      "cumul_cost": 0.328,
+      "elapsed_s": 4389
+    },
+    {
+      "idx": 17,
+      "model_config": "all-7b",
+      "topology": "propose-critique-synth",
+      "gamma": 4.0,
+      "diversity": 0.75,
+      "correct_pct": 80,
+      "cost_per_ep": 0.0006,
+      "cumul_cost": 0.337,
+      "elapsed_s": 4573
+    },
+    {
+      "idx": 18,
+      "model_config": "all-7b",
+      "topology": "propose-critique-synth",
+      "gamma": 8.0,
+      "diversity": 0.75,
+      "correct_pct": 80,
+      "cost_per_ep": 0.0006,
+      "cumul_cost": 0.345,
+      "elapsed_s": 4742
+    },
+    {
+      "idx": 19,
+      "model_config": "all-7b",
+      "topology": "consensus-insight",
+      "gamma": 0.0,
+      "diversity": 0.45,
+      "correct_pct": 67,
+      "cost_per_ep": 0.0006,
+      "cumul_cost": 0.354,
+      "elapsed_s": 4946
+    },
+    {
+      "idx": 20,
+      "model_config": "all-7b",
+      "topology": "consensus-insight",
+      "gamma": 0.5,
+      "diversity": 0.75,
+      "correct_pct": 60,
+      "cost_per_ep": 0.0005,
+      "cumul_cost": 0.362,
+      "elapsed_s": 5113
+    },
+    {
+      "idx": 21,
+      "model_config": "all-7b",
+      "topology": "consensus-insight",
+      "gamma": 1.0,
+      "diversity": 0.75,
+      "correct_pct": 87,
+      "cost_per_ep": 0.0005,
+      "cumul_cost": 0.369,
+      "elapsed_s": 5292
+    },
+    {
+      "idx": 22,
+      "model_config": "all-7b",
+      "topology": "consensus-insight",
+      "gamma": 2.0,
+      "diversity": 0.75,
+      "correct_pct": 67,
+      "cost_per_ep": 0.0006,
+      "cumul_cost": 0.378,
+      "elapsed_s": 5479
+    },
+    {
+      "idx": 23,
+      "model_config": "all-7b",
+      "topology": "consensus-insight",
+      "gamma": 4.0,
+      "diversity": 0.75,
+      "correct_pct": 60,
+      "cost_per_ep": 0.0005,
+      "cumul_cost": 0.385,
+      "elapsed_s": 5657
+    },
+    {
+      "idx": 24,
+      "model_config": "all-7b",
+      "topology": "consensus-insight",
+      "gamma": 8.0,
+      "diversity": 0.75,
+      "correct_pct": 60,
+      "cost_per_ep": 0.0005,
+      "cumul_cost": 0.393,
+      "elapsed_s": 5838
+    },
+    {
+      "idx": 25,
+      "model_config": "all-7b",
+      "topology": "full-debate",
+      "gamma": 0.0,
+      "diversity": 0.5,
+      "correct_pct": 87,
+      "cost_per_ep": 0.0004,
+      "cumul_cost": 0.4,
+      "elapsed_s": 5961
+    },
+    {
+      "idx": 26,
+      "model_config": "all-7b",
+      "topology": "full-debate",
+      "gamma": 0.5,
+      "diversity": 0.75,
+      "correct_pct": 80,
+      "cost_per_ep": 0.0005,
+      "cumul_cost": 0.407,
+      "elapsed_s": 6102
+    },
+    {
+      "idx": 27,
+      "model_config": "all-7b",
+      "topology": "full-debate",
+      "gamma": 1.0,
+      "diversity": 0.75,
+      "correct_pct": 93,
+      "cost_per_ep": 0.0004,
+      "cumul_cost": 0.413,
+      "elapsed_s": 6226
+    },
+    {
+      "idx": 28,
+      "model_config": "all-7b",
+      "topology": "full-debate",
+      "gamma": 2.0,
+      "diversity": 0.75,
+      "correct_pct": 80,
+      "cost_per_ep": 0.0004,
+      "cumul_cost": 0.419,
+      "elapsed_s": 6353
+    },
+    {
+      "idx": 29,
+      "model_config": "all-7b",
+      "topology": "full-debate",
+      "gamma": 4.0,
+      "diversity": 0.75,
+      "correct_pct": 93,
+      "cost_per_ep": 0.0004,
+      "cumul_cost": 0.426,
+      "elapsed_s": 6485
+    },
+    {
+      "idx": 30,
+      "model_config": "all-7b",
+      "topology": "full-debate",
+      "gamma": 8.0,
+      "diversity": 0.75,
+      "correct_pct": 80,
+      "cost_per_ep": 0.0004,
+      "cumul_cost": 0.432,
+      "elapsed_s": 6605
+    },
+    {
+      "idx": 31,
+      "model_config": "all-7b",
+      "topology": "all-insight-synth",
+      "gamma": 0.0,
+      "diversity": 0.5,
+      "correct_pct": 93,
+      "cost_per_ep": 0.0003,
+      "cumul_cost": 0.437,
+      "elapsed_s": 6713
+    },
+    {
+      "idx": 32,
+      "model_config": "all-7b",
+      "topology": "all-insight-synth",
+      "gamma": 0.5,
+      "diversity": 0.75,
+      "correct_pct": 80,
+      "cost_per_ep": 0.0004,
+      "cumul_cost": 0.443,
+      "elapsed_s": 6833
+    },
+    {
+      "idx": 33,
+      "model_config": "all-7b",
+      "topology": "all-insight-synth",
+      "gamma": 1.0,
+      "diversity": 0.75,
+      "correct_pct": 93,
+      "cost_per_ep": 0.0003,
+      "cumul_cost": 0.447,
+      "elapsed_s": 6907
+    },
+    {
+      "idx": 34,
+      "model_config": "all-7b",
+      "topology": "all-insight-synth",
+      "gamma": 2.0,
+      "diversity": 0.75,
+      "correct_pct": 93,
+      "cost_per_ep": 0.0003,
+      "cumul_cost": 0.452,
+      "elapsed_s": 7016
+    },
+    {
+      "idx": 35,
+      "model_config": "all-7b",
+      "topology": "all-insight-synth",
+      "gamma": 4.0,
+      "diversity": 0.75,
+      "correct_pct": 100,
+      "cost_per_ep": 0.0003,
+      "cumul_cost": 0.457,
+      "elapsed_s": 7109
+    },
+    {
+      "idx": 36,
+      "model_config": "all-7b",
+      "topology": "all-insight-synth",
+      "gamma": 8.0,
+      "diversity": 0.75,
+      "correct_pct": 87,
+      "cost_per_ep": 0.0004,
+      "cumul_cost": 0.462,
+      "elapsed_s": 7231
+    },
+    {
+      "idx": 37,
+      "model_config": "all-22b",
+      "topology": "propose-only",
+      "gamma": 0.0,
+      "diversity": 0.33,
+      "correct_pct": 93,
+      "cost_per_ep": 0.0011,
+      "cumul_cost": 0.48,
+      "elapsed_s": 8029
+    },
+    {
+      "idx": 38,
+      "model_config": "all-22b",
+      "topology": "propose-only",
+      "gamma": 0.5,
+      "diversity": 0.75,
+      "correct_pct": 93,
+      "cost_per_ep": 0.0012,
+      "cumul_cost": 0.498,
+      "elapsed_s": 9043
+    },
+    {
+      "idx": 39,
+      "model_config": "all-22b",
+      "topology": "propose-only",
+      "gamma": 1.0,
+      "diversity": 0.75,
+      "correct_pct": 100,
+      "cost_per_ep": 0.0013,
+      "cumul_cost": 0.517,
+      "elapsed_s": 10006
+    },
+    {
+      "idx": 40,
+      "model_config": "all-22b",
+      "topology": "propose-only",
+      "gamma": 2.0,
+      "diversity": 0.75,
+      "correct_pct": 93,
+      "cost_per_ep": 0.0011,
+      "cumul_cost": 0.534,
+      "elapsed_s": 10779
+    },
+    {
+      "idx": 41,
+      "model_config": "all-22b",
+      "topology": "propose-only",
+      "gamma": 4.0,
+      "diversity": 0.75,
+      "correct_pct": 80,
+      "cost_per_ep": 0.0015,
+      "cumul_cost": 0.556,
+      "elapsed_s": 11556
+    },
+    {
+      "idx": 42,
+      "model_config": "all-22b",
+      "topology": "propose-only",
+      "gamma": 8.0,
+      "diversity": 0.75,
+      "correct_pct": 87,
+      "cost_per_ep": 0.0014,
+      "cumul_cost": 0.576,
+      "elapsed_s": 13287
+    },
+    {
+      "idx": 43,
+      "model_config": "all-22b",
+      "topology": "propose-critique",
+      "gamma": 0.0,
+      "diversity": 0.43,
+      "correct_pct": 73,
+      "cost_per_ep": 0.0014,
+      "cumul_cost": 0.597,
+      "elapsed_s": 14322
+    },
+    {
+      "idx": 44,
+      "model_config": "all-22b",
+      "topology": "propose-critique",
+      "gamma": 0.5,
+      "diversity": 0.75,
+      "correct_pct": 93,
+      "cost_per_ep": 0.0011,
+      "cumul_cost": 0.613,
+      "elapsed_s": 14958
+    },
+    {
+      "idx": 45,
+      "model_config": "all-22b",
+      "topology": "propose-critique",
+      "gamma": 1.0,
+      "diversity": 0.75,
+      "correct_pct": 100,
+      "cost_per_ep": 0.0011,
+      "cumul_cost": 0.63,
+      "elapsed_s": 15701
+    },
+    {
+      "idx": 46,
+      "model_config": "all-22b",
+      "topology": "propose-critique",
+      "gamma": 2.0,
+      "diversity": 0.75,
+      "correct_pct": 87,
+      "cost_per_ep": 0.001,
+      "cumul_cost": 0.646,
+      "elapsed_s": 16348
+    },
+    {
+      "idx": 47,
+      "model_config": "all-22b",
+      "topology": "propose-critique",
+      "gamma": 4.0,
+      "diversity": 0.75,
+      "correct_pct": 73,
+      "cost_per_ep": 0.0019,
+      "cumul_cost": 0.675,
+      "elapsed_s": 17510
+    }
+  ]
+}

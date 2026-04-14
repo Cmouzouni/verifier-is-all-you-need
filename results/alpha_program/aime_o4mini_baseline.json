@@ -1,0 +1,312 @@
+{
+  "experiment": "aime_same_task_baseline",
+  "model": "o4-mini",
+  "n": 30,
+  "n_correct": 24,
+  "rate": 0.8,
+  "total_cost_usd": 0.3407525,
+  "cost_per_task": 0.011358416666666668,
+  "elapsed_s": 325.3776578903198,
+  "per_task": [
+    {
+      "task_id": "2024-I-4",
+      "ground_truth": 116,
+      "model_answer": 116,
+      "correct": true,
+      "cost_usd": 0.0035794,
+      "tokens_in": 162,
+      "tokens_out": 773,
+      "error": null
+    },
+    {
+      "task_id": "2024-II-4",
+      "ground_truth": 33,
+      "model_answer": 33,
+      "correct": true,
+      "cost_usd": 0.008027800000000002,
+      "tokens_in": 186,
+      "tokens_out": 1778,
+      "error": null
+    },
+    {
+      "task_id": "2024-I-3",
+      "ground_truth": 809,
+      "model_answer": 809,
+      "correct": true,
+      "cost_usd": 0.009062900000000002,
+      "tokens_in": 135,
+      "tokens_out": 2026,
+      "error": null
+    },
+    {
+      "task_id": "2024-I-2",
+      "ground_truth": 25,
+      "model_answer": 25,
+      "correct": true,
+      "cost_usd": 0.0131164,
+      "tokens_in": 88,
+      "tokens_out": 2959,
+      "error": null
+    },
+    {
+      "task_id": "2024-II-12",
+      "ground_truth": 23,
+      "model_answer": 23,
+      "correct": true,
+      "cost_usd": 0.0171226,
+      "tokens_in": 218,
+      "tokens_out": 3837,
+      "error": null
+    },
+    {
+      "task_id": "2024-I-7",
+      "ground_truth": 540,
+      "model_answer": 540,
+      "correct": true,
+      "cost_usd": 0.008125700000000001,
+      "tokens_in": 83,
+      "tokens_out": 1826,
+      "error": null
+    },
+    {
+      "task_id": "2024-II-6",
+      "ground_truth": 55,
+      "model_answer": 55,
+      "correct": true,
+      "cost_usd": 0.0103114,
+      "tokens_in": 98,
+      "tokens_out": 2319,
+      "error": null
+    },
+    {
+      "task_id": "2024-II-11",
+      "ground_truth": 601,
+      "model_answer": 601,
+      "correct": true,
+      "cost_usd": 0.0201003,
+      "tokens_in": 105,
+      "tokens_out": 4542,
+      "error": null
+    },
+    {
+      "task_id": "2024-I-1",
+      "ground_truth": 204,
+      "model_answer": 204,
+      "correct": true,
+      "cost_usd": 0.005528600000000001,
+      "tokens_in": 170,
+      "tokens_out": 1214,
+      "error": null
+    },
+    {
+      "task_id": "2024-II-3",
+      "ground_truth": 45,
+      "model_answer": 45,
+      "correct": true,
+      "cost_usd": 0.0081851,
+      "tokens_in": 169,
+      "tokens_out": 1818,
+      "error": null
+    },
+    {
+      "task_id": "2024-II-7",
+      "ground_truth": 699,
+      "model_answer": 699,
+      "correct": true,
+      "cost_usd": 0.015466,
+      "tokens_in": 108,
+      "tokens_out": 3488,
+      "error": null
+    },
+    {
+      "task_id": "2024-I-13",
+      "ground_truth": 110,
+      "model_answer": 110,
+      "correct": true,
+      "cost_usd": 0.014698200000000003,
+      "tokens_in": 102,
+      "tokens_out": 3315,
+      "error": null
+    },
+    {
+      "task_id": "2024-I-6",
+      "ground_truth": 294,
+      "model_answer": 294,
+      "correct": true,
+      "cost_usd": 0.016645200000000002,
+      "tokens_in": 92,
+      "tokens_out": 3760,
+      "error": null
+    },
+    {
+      "task_id": "2024-I-15",
+      "ground_truth": 721,
+      "model_answer": 721,
+      "correct": true,
+      "cost_usd": 0.012085700000000001,
+      "tokens_in": 135,
+      "tokens_out": 2713,
+      "error": null
+    },
+    {
+      "task_id": "2024-II-9",
+      "ground_truth": 902,
+      "model_answer": 902,
+      "correct": true,
+      "cost_usd": 0.019976,
+      "tokens_in": 136,
+      "tokens_out": 4506,
+      "error": null
+    },
+    {
+      "task_id": "2024-II-10",
+      "ground_truth": 468,
+      "model_answer": 468,
+      "correct": true,
+      "cost_usd": 0.024455200000000003,
+      "tokens_in": 92,
+      "tokens_out": 5535,
+      "error": null
+    },
+    {
+      "task_id": "2024-II-5",
+      "ground_truth": 80,
+      "model_answer": 80,
+      "correct": true,
+      "cost_usd": 0.023631300000000004,
+      "tokens_in": 95,
+      "tokens_out": 5347,
+      "error": null
+    },
+    {
+      "task_id": "2024-II-1",
+      "ground_truth": 73,
+      "model_answer": 73,
+      "correct": true,
+      "cost_usd": 0.0059015,
+      "tokens_in": 137,
+      "tokens_out": 1307,
+      "error": null
+    },
+    {
+      "task_id": "2024-I-9",
+      "ground_truth": 480,
+      "model_answer": 480,
+      "correct": true,
+      "cost_usd": 0.014166900000000001,
+      "tokens_in": 119,
+      "tokens_out": 3190,
+      "error": null
+    },
+    {
+      "task_id": "2024-II-2",
+      "ground_truth": 236,
+      "model_answer": 236,
+      "correct": true,
+      "cost_usd": 0.013346300000000002,
+      "tokens_in": 109,
+      "tokens_out": 3006,
+      "error": null
+    },
+    {
+      "task_id": "2024-I-11",
+      "ground_truth": 371,
+      "model_answer": null,
+      "correct": false,
+      "cost_usd": 0,
+      "tokens_in": 0,
+      "tokens_out": 0,
+      "error": "APIConnectionError: Connection error."
+    },
+    {
+      "task_id": "2024-I-8",
+      "ground_truth": 197,
+      "model_answer": null,
+      "correct": false,
+      "cost_usd": 0,
+      "tokens_in": 0,
+      "tokens_out": 0,
+      "error": "APIConnectionError: Connection error."
+    },
+    {
+      "task_id": "2024-I-12",
+      "ground_truth": 385,
+      "model_answer": null,
+      "correct": false,
+      "cost_usd": 0,
+      "tokens_in": 0,
+      "tokens_out": 0,
+      "error": "APIConnectionError: Connection error."
+    },
+    {
+      "task_id": "2024-II-8",
+      "ground_truth": 127,
+      "model_answer": 127,
+      "correct": true,
+      "cost_usd": 0.019586600000000003,
+      "tokens_in": 198,
+      "tokens_out": 4402,
+      "error": null
+    },
+    {
+      "task_id": "2024-I-14",
+      "ground_truth": 104,
+      "model_answer": 104,
+      "correct": true,
+      "cost_usd": 0.020246600000000003,
+      "tokens_in": 182,
+      "tokens_out": 4556,
+      "error": null
+    },
+    {
+      "task_id": "2024-II-13",
+      "ground_truth": 321,
+      "model_answer": 321,
+      "correct": true,
+      "cost_usd": 0.0101277,
+      "tokens_in": 95,
+      "tokens_out": 2278,
+      "error": null
+    },
+    {
+      "task_id": "2024-II-15",
+      "ground_truth": 315,
+      "model_answer": null,
+      "correct": false,
+      "cost_usd": 0,
+      "tokens_in": 0,
+      "tokens_out": 0,
+      "error": "APIConnectionError: Connection error."
+    },
+    {
+      "task_id": "2024-II-14",
+      "ground_truth": 211,
+      "model_answer": null,
+      "correct": false,
+      "cost_usd": 0,
+      "tokens_in": 0,
+      "tokens_out": 0,
+      "error": "APIConnectionError: Connection error."
+    },
+    {
+      "task_id": "2024-I-5",
+      "ground_truth": 104,
+      "model_answer": 104,
+      "correct": true,
+      "cost_usd": 0.0272591,
+      "tokens_in": 109,
+      "tokens_out": 6168,
+      "error": null
+    },
+    {
+      "task_id": "2024-I-10",
+      "ground_truth": 113,
+      "model_answer": null,
+      "correct": false,
+      "cost_usd": 0,
+      "tokens_in": 0,
+      "tokens_out": 0,
+      "error": "APIConnectionError: Connection error."
+    }
+  ]
+}

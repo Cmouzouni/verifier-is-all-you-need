@@ -1,0 +1,39 @@
+{
+  "started": 1775562185.5008152,
+  "phases": {
+    "baseline_qwen17b_thinking": {
+      "name": "qwen-17b w/ thinking",
+      "type": "baseline",
+      "k": 2,
+      "n": 30,
+      "rate": 0.06666666666666667,
+      "cost": 0.4668762,
+      "elapsed_s": 726.8003330230713
+    },
+    "baseline_deepseek": {
+      "name": "deepseek-v3.1",
+      "type": "baseline",
+      "k": 0,
+      "n": 30,
+      "rate": 0.0,
+      "cost": 0.1359009,
+      "elapsed_s": 112.95169425010681
+    },
+    "baseline_llama70b": {
+      "name": "llama-3.3-70b",
+      "type": "baseline",
+      "k": 3,
+      "n": 30,
+      "rate": 0.1,
+      "cost": 0.08296024,
+      "elapsed_s": 35.44950819015503
+    }
+  },
+  "completed_phases": [
+    "baseline_qwen17b_thinking",
+    "baseline_deepseek",
+    "baseline_llama70b"
+  ],
+  "elapsed_s": 0.0,
+  "total_cost_usd": 0.6862578600000001
+}

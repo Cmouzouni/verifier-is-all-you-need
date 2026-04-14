@@ -1,0 +1,746 @@
+{
+  "experiment": "tier1_frontier_fairness",
+  "model": "qwen-17b",
+  "settings": {
+    "thinking": true,
+    "max_tokens": 4096
+  },
+  "phase_a": {
+    "n": 30,
+    "rate": 0.8666666666666667,
+    "cost_total": 0.1382712,
+    "cost_per": 0.00460904,
+    "results": [
+      {
+        "task_id": "math_006",
+        "answer": "3 hours",
+        "correct": true,
+        "cost": 0.0052128,
+        "tokens_in": 90,
+        "tokens_out": 1433,
+        "raw_preview": "To find the time it takes for the trains to be 420 km apart, we can follow these steps:\n\n1.  **Identify the speeds of the trains:**\n    *   Train 1 speed: 80 km/h\n    *   Train 2 speed: 60 km/h\n\n2.  *"
+      },
+      {
+        "task_id": "math_001",
+        "answer": "5",
+        "correct": true,
+        "cost": 0.0026148,
+        "tokens_in": 56,
+        "tokens_out": 717,
+        "raw_preview": "To solve for $x$ in the equation $3x + 7 = 22$, follow these steps:\n\n1.  **Subtract 7 from both sides** to isolate the term with $x$:\n    $$3x + 7 - 7 = 22 - 7$$\n    $$3x = 15$$\n\n2.  **Divide both sid"
+      },
+      {
+        "task_id": "math_005",
+        "answer": "60 km/h",
+        "correct": true,
+        "cost": 0.0029988000000000003,
+        "tokens_in": 66,
+        "tokens_out": 822,
+        "raw_preview": "To find the average speed, we use the formula:\n\n$$ \\text{Average Speed} = \\frac{\\text{Total Distance}}{\\text{Total Time}} $$\n\n**Step 1: Identify the given values.**\n*   Distance = 150 km\n*   Time = 2."
+      },
+      {
+        "task_id": "math_008",
+        "answer": "36",
+        "correct": true,
+        "cost": 0.0032256000000000003,
+        "tokens_in": 54,
+        "tokens_out": 887,
+        "raw_preview": "To find 15% of 240, you can follow these steps:\n\n1.  **Convert the percentage to a decimal:**\n    15% = 0.15\n\n2.  **Multiply the decimal by the number:**\n    $240 \\times 0.15$\n\n    Alternatively, you "
+      },
+      {
+        "task_id": "math_002",
+        "answer": "4",
+        "correct": true,
+        "cost": 0.0036768,
+        "tokens_in": 80,
+        "tokens_out": 1008,
+        "raw_preview": "Here is the step-by-step solution:\n\n1.  **Calculate the cost of the notebooks:**\n    Maria buys 3 notebooks at $4 each.\n    $3 \\times \\$4 = \\$12$\n\n2.  **Determine the amount spent on pens:**\n    The t"
+      },
+      {
+        "task_id": "math_003",
+        "answer": "4 days",
+        "correct": true,
+        "cost": 0.004204200000000001,
+        "tokens_in": 71,
+        "tokens_out": 1156,
+        "raw_preview": "To solve this problem, we can use the concept of \"worker-days,\" which represents the total amount of effort required to complete the task.\n\n**Step 1: Calculate the total work required.**\nThe total wor"
+      },
+      {
+        "task_id": "math_004",
+        "answer": "72",
+        "correct": true,
+        "cost": 0.0046752,
+        "tokens_in": 70,
+        "tokens_out": 1287,
+        "raw_preview": "Here is the step-by-step solution:\n\n1.  **Define the variables:**\n    Let $W$ be the width of the garden.\n    Let $L$ be the length of the garden.\n\n2.  **Use the given information to set up equations:"
+      },
+      {
+        "task_id": "math_010",
+        "answer": "56",
+        "correct": true,
+        "cost": 0.003363,
+        "tokens_in": 67,
+        "tokens_out": 923,
+        "raw_preview": "To find the sale price of the shirt, follow these steps:\n\n1.  **Identify the original price and the discount percentage:**\n    *   Original Price = $80\n    *   Discount = 30%\n\n2.  **Calculate the disc"
+      },
+      {
+        "task_id": "pattern_003",
+        "answer": "21",
+        "correct": true,
+        "cost": 0.0025788,
+        "tokens_in": 74,
+        "tokens_out": 704,
+        "raw_preview": "This sequence is known as the Fibonacci sequence. The pattern is that each number is the sum of the two preceding numbers.\n\nHere is the breakdown:\n*   1 + 1 = 2\n*   1 + 2 = 3\n*   2 + 3 = 5\n*   3 + 5 ="
+      },
+      {
+        "task_id": "math_007",
+        "answer": "6",
+        "correct": true,
+        "cost": 0.0069126,
+        "tokens_in": 79,
+        "tokens_out": 1907,
+        "raw_preview": "Here is the step-by-step solution to the problem:\n\n**1. Determine the amount of pure alcohol in the initial mixture.**\nThe initial mixture is 10 liters with a 40% alcohol concentration.\n$$ \\text{Amoun"
+      },
+      {
+        "task_id": "pattern_005",
+        "answer": "37",
+        "correct": true,
+        "cost": 0.0040812,
+        "tokens_in": 70,
+        "tokens_out": 1122,
+        "raw_preview": "To find the next number in the sequence 2, 5, 10, 17, 26, let's analyze the pattern between the terms.\n\n**Step 1: Calculate the differences between consecutive terms.**\n*   5 - 2 = 3\n*   10 - 5 = 5\n* "
+      },
+      {
+        "task_id": "pattern_001",
+        "answer": "162",
+        "correct": true,
+        "cost": 0.0027576,
+        "tokens_in": 66,
+        "tokens_out": 755,
+        "raw_preview": "To find the next number in the sequence 2, 6, 18, 54, ?, we need to identify the pattern between the numbers.\n\n1.  **Analyze the ratio between consecutive terms:**\n    *   $6 \\div 2 = 3$\n    *   $18 \\"
+      },
+      {
+        "task_id": "pattern_004",
+        "answer": "23",
+        "correct": true,
+        "cost": 0.0024972,
+        "tokens_in": 70,
+        "tokens_out": 682,
+        "raw_preview": "To find the next number in the sequence, let's analyze the pattern between the given numbers: 3, 7, 11, 15, 19.\n\n1.  **Calculate the difference between consecutive terms:**\n    *   $7 - 3 = 4$\n    *  "
+      },
+      {
+        "task_id": "pattern_007",
+        "answer": "32",
+        "correct": true,
+        "cost": 0.003162,
+        "tokens_in": 74,
+        "tokens_out": 866,
+        "raw_preview": "To find the 10th term of the sequence, we first need to identify the pattern.\n\n1.  **Identify the type of sequence:**\n    Look at the difference between consecutive terms:\n    *   $8 - 5 = 3$\n    *   "
+      },
+      {
+        "task_id": "pattern_002",
+        "answer": "36",
+        "correct": true,
+        "cost": 0.0049518,
+        "tokens_in": 69,
+        "tokens_out": 1364,
+        "raw_preview": "The sequence provided is: 1, 4, 9, 16, 25.\n\nStep 1: Identify the relationship between the numbers.\n- 1 is $1^2$ (1 \u00d7 1)\n- 4 is $2^2$ (2 \u00d7 2)\n- 9 is $3^2$ (3 \u00d7 3)\n- 16 is $4^2$ (4 \u00d7 4)\n- 25 is $5^2$ (5"
+      },
+      {
+        "task_id": "math_009",
+        "answer": "28",
+        "correct": true,
+        "cost": 0.005253600000000001,
+        "tokens_in": 62,
+        "tokens_out": 1449,
+        "raw_preview": "To find the largest of the three consecutive even numbers, we can set up an algebraic equation.\n\n1.  **Define the variables:**\n    Let the first (smallest) consecutive even number be $x$.\n    Since ev"
+      },
+      {
+        "task_id": "pattern_006",
+        "answer": "32",
+        "correct": true,
+        "cost": 0.0037020000000000004,
+        "tokens_in": 68,
+        "tokens_out": 1017,
+        "raw_preview": "To find the next number in the sequence 1, 2, 4, 8, 16, ?, we need to identify the pattern governing the numbers.\n\n1.  **Analyze the ratio between consecutive terms:**\n    *   $2 \\div 1 = 2$\n    *   $"
+      },
+      {
+        "task_id": "logic_005",
+        "answer": "20",
+        "correct": true,
+        "cost": 0.0037818,
+        "tokens_in": 69,
+        "tokens_out": 1039,
+        "raw_preview": "Let's define the variables:\nLet $C$ be the number of chickens.\nLet $W$ be the number of cows.\n\nWe know the following facts:\n1. Each chicken has 1 head and 2 legs.\n2. Each cow has 1 head and 4 legs.\n3."
+      },
+      {
+        "task_id": "logic_006",
+        "answer": "Spike",
+        "correct": true,
+        "cost": 0.0022314,
+        "tokens_in": 59,
+        "tokens_out": 610,
+        "raw_preview": "1.  **Analyze the first statement:** \"Tom is taller than Jerry.\" This means Tom's height > Jerry's height.\n2.  **Analyze the second statement:** \"Jerry is taller than Spike.\" This means Jerry's height"
+      },
+      {
+        "task_id": "word_001",
+        "answer": "2.4",
+        "correct": true,
+        "cost": 0.0052434,
+        "tokens_in": 87,
+        "tokens_out": 1442,
+        "raw_preview": "To find the time it takes to fill the tank when both pipes are opened together, we need to determine their combined work rate.\n\n1.  **Find the rate of each pipe:**\n    *   Pipe A fills the tank in 6 h"
+      },
+      {
+        "task_id": "logic_004",
+        "answer": "No",
+        "correct": true,
+        "cost": 0.0065568,
+        "tokens_in": 68,
+        "tokens_out": 1810,
+        "raw_preview": "To determine if the conclusion follows logically from the premises, let's break down the statements using set logic:\n\n1.  **Premise 1:** \"All roses are flowers.\"\n    *   This means the set of Roses is"
+      },
+      {
+        "task_id": "word_005",
+        "answer": "5",
+        "correct": false,
+        "cost": 0.003432,
+        "tokens_in": 74,
+        "tokens_out": 941,
+        "raw_preview": "Let $M$ be Mary's current age and $J$ be John's current age.\n\nFrom the problem statement, we can derive two equations:\n1. \"John is twice as old as Mary\":\n   $J = 2M$\n\n2. \"In 5 years, John will be 1.5 "
+      },
+      {
+        "task_id": "word_004",
+        "answer": "5 cups",
+        "correct": true,
+        "cost": 0.0037944000000000003,
+        "tokens_in": 72,
+        "tokens_out": 1042,
+        "raw_preview": "To find the number of cups of flour needed, we can set up a proportion based on the original recipe.\n\n1.  **Identify the original ratio:**\n    The recipe uses 2 cups of flour for 24 cookies.\n    Ratio"
+      },
+      {
+        "task_id": "word_002",
+        "answer": "2",
+        "correct": true,
+        "cost": 0.004936200000000001,
+        "tokens_in": 73,
+        "tokens_out": 1359,
+        "raw_preview": "Let $b$ be the speed of the boat in still water (in km/h) and $c$ be the speed of the current (in km/h).\n\n1.  **Calculate the upstream speed:**\n    The boat travels 24 km upstream in 3 hours.\n    $$ \\"
+      },
+      {
+        "task_id": "logic_003",
+        "answer": "Coffee",
+        "correct": false,
+        "cost": 0.008639400000000002,
+        "tokens_in": 101,
+        "tokens_out": 2383,
+        "raw_preview": "Here is the step-by-step logical deduction to solve the problem:\n\n1.  **Analyze the Seating Arrangement:**\n    There are three seats: Left, Middle, and Right.\n    *   We are told **Blake is sitting on"
+      },
+      {
+        "task_id": "logic_001",
+        "answer": "",
+        "correct": false,
+        "cost": 0.014797800000000002,
+        "tokens_in": 87,
+        "tokens_out": 4096,
+        "raw_preview": ""
+      },
+      {
+        "task_id": "word_007",
+        "answer": "20 m/s",
+        "correct": true,
+        "cost": 0.0038766,
+        "tokens_in": 71,
+        "tokens_out": 1065,
+        "raw_preview": "To find the speed of the train, we can follow these steps:\n\n1.  **Identify the distance covered:** When a train passes a pole (a stationary object with negligible width), the distance it covers is equ"
+      },
+      {
+        "task_id": "word_006",
+        "answer": "48",
+        "correct": true,
+        "cost": 0.0036402,
+        "tokens_in": 79,
+        "tokens_out": 998,
+        "raw_preview": "Here is the step-by-step solution:\n\n1.  **Calculate the marked price (regular price):**\n    The store buys the items at $40 and marks them up by 50%.\n    Markup amount = $40 \\times 0.50 = $20$\n    Mar"
+      },
+      {
+        "task_id": "word_003",
+        "answer": "200",
+        "correct": true,
+        "cost": 0.011473200000000001,
+        "tokens_in": 72,
+        "tokens_out": 3175,
+        "raw_preview": "Here is the step-by-step solution:\n\n**Step 1: Determine the production rate of a single machine.**\nFirst, we find out how many widgets one machine produces in the given 6-hour timeframe.\n$$480 \\text{ "
+      },
+      {
+        "task_id": "logic_002",
+        "answer": "",
+        "correct": false,
+        "cost": 0,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "raw_preview": ""
+      }
+    ]
+  },
+  "gsm8k_50": {
+    "n": 50,
+    "rate": 0.9,
+    "cost_total": 0.2310714,
+    "cost_per": 0.004621428,
+    "results": [
+      {
+        "task_id": "gsm8k_006",
+        "answer": "21",
+        "correct": true,
+        "cost": 0.0023304000000000003,
+        "tokens_in": 68,
+        "tokens_out": 636,
+        "raw_preview": "Here is the step-by-step solution:\n\n1.  **Find the brother's current age:**\n    Ann is 9 years old. Her brother is twice her age.\n    $9 \\times 2 = 18$ years old.\n\n2.  **Find the brother's age in 3 ye"
+      },
+      {
+        "task_id": "gsm8k_002",
+        "answer": "5 hours",
+        "correct": true,
+        "cost": 0.004327800000000001,
+        "tokens_in": 91,
+        "tokens_out": 1187,
+        "raw_preview": "Here is the step-by-step solution:\n\n1.  **Calculate the duration of the first trip:**\n    Tom sails from 1 PM to 4 PM.\n    Duration = $4 - 1 = 3$ hours.\n\n2.  **Calculate the distance traveled:**\n    T"
+      },
+      {
+        "task_id": "gsm8k_001",
+        "answer": "1",
+        "correct": true,
+        "cost": 0.0038166,
+        "tokens_in": 97,
+        "tokens_out": 1044,
+        "raw_preview": "Here is the step-by-step solution:\n\n1.  **Find Kalinda's rate:** Kalinda adds 4 pieces per minute.\n2.  **Find Mom's rate:** Her mom places half as many pieces as Kalinda.\n    $4 \\text{ pieces} / 2 = 2"
+      },
+      {
+        "task_id": "gsm8k_000",
+        "answer": "2180",
+        "correct": false,
+        "cost": 0.0037050000000000004,
+        "tokens_in": 103,
+        "tokens_out": 1012,
+        "raw_preview": "To find the total amount of money raised, we need to determine how much each girl raised and then add those amounts together.\n\n1.  **Alexandra:** The problem states that Alexandra raises **$430**.\n2. "
+      },
+      {
+        "task_id": "gsm8k_005",
+        "answer": "45",
+        "correct": true,
+        "cost": 0.004071,
+        "tokens_in": 119,
+        "tokens_out": 1111,
+        "raw_preview": "Here is the step-by-step solution to the problem:\n\n1.  **Initial Count:** Katelyn initially saw **50** fairies.\n2.  **Addition:** Her friend saw half as many fairies as Katelyn saw come from the east "
+      },
+      {
+        "task_id": "gsm8k_008",
+        "answer": "60",
+        "correct": true,
+        "cost": 0.0032796000000000006,
+        "tokens_in": 84,
+        "tokens_out": 897,
+        "raw_preview": "To find the number of students enrolled this year, follow these steps:\n\n1.  **Identify the original enrollment:** Last year, there were 50 students.\n2.  **Calculate the increase in enrollment:** Find "
+      },
+      {
+        "task_id": "gsm8k_009",
+        "answer": "122",
+        "correct": true,
+        "cost": 0.0031608,
+        "tokens_in": 84,
+        "tokens_out": 864,
+        "raw_preview": "Here is the step-by-step solution:\n\n1.  **Find the number of crabs Bo has:**\n    The problem states that Bo has 40 crabs.\n    Bo = 40\n\n2.  **Find the number of crabs Monic has:**\n    Monic has 4 fewer"
+      },
+      {
+        "task_id": "gsm8k_003",
+        "answer": "12",
+        "correct": true,
+        "cost": 0.006898200000000001,
+        "tokens_in": 91,
+        "tokens_out": 1901,
+        "raw_preview": "Here is the step-by-step solution:\n\n1.  **Find the age of the second son:**\n    The first son is 12 years old. The second son is 4 years younger.\n    $12 - 4 = 8$ years old.\n\n2.  **Calculate the total"
+      },
+      {
+        "task_id": "gsm8k_011",
+        "answer": "80",
+        "correct": true,
+        "cost": 0.0044196,
+        "tokens_in": 106,
+        "tokens_out": 1210,
+        "raw_preview": "Here is the step-by-step calculation to solve the problem:\n\n1.  **Calculate the total number of burritos given to the students:**\n    There are 50 students, and each student receives 10 burritos.\n    "
+      },
+      {
+        "task_id": "gsm8k_004",
+        "answer": "273 yards",
+        "correct": true,
+        "cost": 0.008202,
+        "tokens_in": 104,
+        "tokens_out": 2261,
+        "raw_preview": "Here is the step-by-step solution to the problem:\n\n**Step 1: Calculate the yards of yarn Mariah used.**\nMariah used $1/4$ of a skein. Since there are $364$ yards in a full skein, we divide $364$ by $4"
+      },
+      {
+        "task_id": "gsm8k_010",
+        "answer": "29",
+        "correct": true,
+        "cost": 0.0044604,
+        "tokens_in": 204,
+        "tokens_out": 1205,
+        "raw_preview": "Here is the step-by-step solution to the problem:\n\n1.  **Calculate the removal rate for each setting:**\n    *   **Low setting:** The problem states it removes **1 liter** per day.\n    *   **Medium set"
+      },
+      {
+        "task_id": "gsm8k_012",
+        "answer": "36",
+        "correct": true,
+        "cost": 0.003135,
+        "tokens_in": 89,
+        "tokens_out": 856,
+        "raw_preview": "Here is the step-by-step solution:\n\n1.  **Calculate the time spent reading per session:**\n    Jim reads for half as long as he watches TV. Since he watches TV for 2 hours, he reads for $2 / 2 = 1$ hou"
+      },
+      {
+        "task_id": "gsm8k_014",
+        "answer": "5",
+        "correct": true,
+        "cost": 0.0029052,
+        "tokens_in": 78,
+        "tokens_out": 794,
+        "raw_preview": "Here is the step-by-step solution:\n\n1.  **Calculate the total weekly insect consumption for the flock:**\n    Since one duck needs 3.5 pounds per week, a flock of 10 ducks needs:\n    $3.5 \\text{ pounds"
+      },
+      {
+        "task_id": "gsm8k_013",
+        "answer": "1,430",
+        "correct": true,
+        "cost": 0.0047418,
+        "tokens_in": 103,
+        "tokens_out": 1300,
+        "raw_preview": "Here is the step-by-step calculation to determine how much Janet paid:\n\n1.  **Calculate the cost of the material and construction:**\n    Janet paid $500 for the material and $800 for the jeweler.\n    "
+      },
+      {
+        "task_id": "gsm8k_015",
+        "answer": "5",
+        "correct": true,
+        "cost": 0.0041976,
+        "tokens_in": 90,
+        "tokens_out": 1151,
+        "raw_preview": "Here is the step-by-step solution:\n\n1.  **Calculate Joey's new score:**\n    Joey started with 214 points and scored 26 more.\n    $214 + 26 = 240$ points.\n\n2.  **Calculate Marcy's new score:**\n    Marc"
+      },
+      {
+        "task_id": "gsm8k_016",
+        "answer": "5",
+        "correct": true,
+        "cost": 0.0031458000000000002,
+        "tokens_in": 89,
+        "tokens_out": 859,
+        "raw_preview": "To solve this problem, we need to follow these steps:\n\n1.  **Find the total number of books purchased:**\n    Sarah spent $300 total, and each book cost $15.\n    $$300 \\div 15 = 20 \\text{ books}$$\n\n2. "
+      },
+      {
+        "task_id": "gsm8k_018",
+        "answer": "15",
+        "correct": true,
+        "cost": 0.0032405999999999997,
+        "tokens_in": 85,
+        "tokens_out": 886,
+        "raw_preview": "Here is the step-by-step solution:\n\n1.  **Identify the original amount:** Eve started with 20 pieces of pomelos.\n2.  **Calculate the amount left:** The problem states she is left with 1/4 of the origi"
+      },
+      {
+        "task_id": "gsm8k_017",
+        "answer": "66",
+        "correct": true,
+        "cost": 0.0032802000000000005,
+        "tokens_in": 79,
+        "tokens_out": 898,
+        "raw_preview": "To find the total amount Ted spent, we need to calculate the cost of the books and the pencils separately and then add them together.\n\n1.  **Calculate the cost of the books:**\n    Ted buys 3 books at "
+      },
+      {
+        "task_id": "gsm8k_020",
+        "answer": "93",
+        "correct": true,
+        "cost": 0.0024888,
+        "tokens_in": 74,
+        "tokens_out": 679,
+        "raw_preview": "Step 1: Calculate the daily cost of food.\nJen has 3 fish, and each fish needs $1 worth of food per day.\nTotal daily cost = 3 fish \u00d7 $1/fish = $3 per day.\n\nStep 2: Determine the number of days in the m"
+      },
+      {
+        "task_id": "gsm8k_022",
+        "answer": "1,520",
+        "correct": true,
+        "cost": 0.0045000000000000005,
+        "tokens_in": 96,
+        "tokens_out": 1234,
+        "raw_preview": "Here is the step-by-step solution:\n\n**Step 1: Calculate the total amount of tips Rafaela received.**\nRafaela received a $20 tip from each of the 40 customers.\n$$40 \\text{ customers} \\times \\$20/\\text{"
+      },
+      {
+        "task_id": "gsm8k_026",
+        "answer": "21",
+        "correct": true,
+        "cost": 0.0027576000000000002,
+        "tokens_in": 108,
+        "tokens_out": 748,
+        "raw_preview": "Here is the step-by-step solution:\n\n1.  **Find Liam's total earnings:**\n    The problem states that Liam made **$63**.\n\n2.  **Find Mitchell's total earnings:**\n    Mitchell sold 21 lemonades at $4 eac"
+      },
+      {
+        "task_id": "gsm8k_023",
+        "answer": "11,050",
+        "correct": true,
+        "cost": 0.0050988000000000006,
+        "tokens_in": 104,
+        "tokens_out": 1399,
+        "raw_preview": "Here is the step-by-step solution to the problem:\n\n**Step 1: Find the original cost per balloon.**\nThe problem states that filling 20 balloons cost $900. To find the cost of a single balloon, divide t"
+      },
+      {
+        "task_id": "gsm8k_025",
+        "answer": "40,000",
+        "correct": true,
+        "cost": 0.0044394,
+        "tokens_in": 109,
+        "tokens_out": 1215,
+        "raw_preview": "Here is the step-by-step solution:\n\n1.  **Calculate the loan amount:**\n    John gets a loan worth 40% of his house's value ($250,000).\n    $250,000 \\times 0.40 = $100,000$\n\n2.  **Calculate the amount "
+      },
+      {
+        "task_id": "gsm8k_024",
+        "answer": "90",
+        "correct": true,
+        "cost": 0.005078399999999999,
+        "tokens_in": 124,
+        "tokens_out": 1390,
+        "raw_preview": "To find the total money raised from the profit, we can follow these steps:\n\n1.  **Calculate the total number of lollipops sold:**\n    There are 30 students, and on average, each student sold 10 lollip"
+      },
+      {
+        "task_id": "gsm8k_021",
+        "answer": "2,000",
+        "correct": true,
+        "cost": 0.0085944,
+        "tokens_in": 134,
+        "tokens_out": 2365,
+        "raw_preview": "Here is the step-by-step solution to find out how many steps Elliott took during his jog:\n\n1.  **Identify the total goal:** Elliott wants to walk **10,000** steps in a day.\n\n2.  **Calculate the steps "
+      },
+      {
+        "task_id": "gsm8k_028",
+        "answer": "14",
+        "correct": true,
+        "cost": 0.004545000000000001,
+        "tokens_in": 111,
+        "tokens_out": 1244,
+        "raw_preview": "Let's break this down step by step using a variable to represent the unknown number of people.\n\n1.  **Define the variable:** Let $x$ be the number of people who got on the bus at the terminal.\n2.  **F"
+      },
+      {
+        "task_id": "gsm8k_029",
+        "answer": "23",
+        "correct": true,
+        "cost": 0.004608,
+        "tokens_in": 108,
+        "tokens_out": 1262,
+        "raw_preview": "Here is the step-by-step solution:\n\n1.  **Find the number of red cars:**\n    The problem states there are **12** red cars.\n\n2.  **Find the number of green cars:**\n    There are 2 fewer green cars than"
+      },
+      {
+        "task_id": "gsm8k_031",
+        "answer": "123",
+        "correct": true,
+        "cost": 0.0034218,
+        "tokens_in": 93,
+        "tokens_out": 935,
+        "raw_preview": "Here is the step-by-step solution:\n\n1.  **Find the number of boys:**\n    The problem states there are 30 boys.\n    Boys = 30\n\n2.  **Find the number of girls:**\n    There are 3 times as many girls as b"
+      },
+      {
+        "task_id": "gsm8k_032",
+        "answer": "98",
+        "correct": true,
+        "cost": 0.0048462,
+        "tokens_in": 79,
+        "tokens_out": 1333,
+        "raw_preview": "To find the perimeter of the room, we need to determine the dimensions of the rectangle in the same unit (feets).\n\n1.  **Convert the length to feet:**\n    The length is given as 3 yards. Since there a"
+      },
+      {
+        "task_id": "gsm8k_019",
+        "answer": "40",
+        "correct": true,
+        "cost": 0.005877,
+        "tokens_in": 123,
+        "tokens_out": 1612,
+        "raw_preview": "Here is the step-by-step breakdown to solve the problem:\n\n1.  **Count the adopted kittens:** The sisters are driving home with **7** adopted kittens.\n2.  **Calculate Patchy's kittens:** Patchy had \"th"
+      },
+      {
+        "task_id": "gsm8k_027",
+        "answer": "18",
+        "correct": true,
+        "cost": 0.009469799999999999,
+        "tokens_in": 99,
+        "tokens_out": 2614,
+        "raw_preview": "Let $x$ be the number of vacuum cleaners Melanie started with.\n\n1.  **Green House:** Melanie sold a third of her vacuum cleaners.\n    *   Sold: $\\frac{1}{3}x$\n    *   Remaining: $x - \\frac{1}{3}x = \\f"
+      },
+      {
+        "task_id": "gsm8k_030",
+        "answer": "145",
+        "correct": true,
+        "cost": 0.009666600000000001,
+        "tokens_in": 151,
+        "tokens_out": 2660,
+        "raw_preview": "To find out how many points the class is missing, we need to calculate the total points collected by each student and then compare the sum to the required threshold.\n\n1.  **Adam's points:**\n    The pr"
+      },
+      {
+        "task_id": "gsm8k_035",
+        "answer": "38.00",
+        "correct": true,
+        "cost": 0.0044382,
+        "tokens_in": 125,
+        "tokens_out": 1212,
+        "raw_preview": "To find the total amount Winston spent, we need to calculate the cost for each type of fruit and then add them together.\n\n1.  **Calculate the cost of the peaches:**\n    Winston picked 6 pounds of peac"
+      },
+      {
+        "task_id": "gsm8k_033",
+        "answer": "7.00",
+        "correct": true,
+        "cost": 0.0053928000000000005,
+        "tokens_in": 90,
+        "tokens_out": 1483,
+        "raw_preview": "Here is the step-by-step solution:\n\n1.  **Calculate the cost of the lollipops in the initial purchase:**\n    Manolo bought 5 lollipops, and each costs $0.40.\n    $5 \\times \\$0.40 = \\$2.00$\n\n2.  **Calc"
+      },
+      {
+        "task_id": "gsm8k_038",
+        "answer": "50",
+        "correct": true,
+        "cost": 0.0035844,
+        "tokens_in": 76,
+        "tokens_out": 983,
+        "raw_preview": "Here is the step-by-step solution:\n\n1.  **Find the total number of parts in the ratio:**\n    The ratio is 3:2.\n    Total parts = 3 + 2 = 5 parts.\n\n2.  **Calculate the value of one part:**\n    The tota"
+      },
+      {
+        "task_id": "gsm8k_039",
+        "answer": "84",
+        "correct": true,
+        "cost": 0.004172400000000001,
+        "tokens_in": 108,
+        "tokens_out": 1141,
+        "raw_preview": "Here is the step-by-step solution to the problem:\n\n1.  **Calculate the grapes Madeline ate:**\n    Madeline ate 6 grapes.\n\n2.  **Calculate the grapes the brother used:**\n    The brother used 5 times as"
+      },
+      {
+        "task_id": "gsm8k_037",
+        "answer": "50",
+        "correct": true,
+        "cost": 0.0062202,
+        "tokens_in": 101,
+        "tokens_out": 1711,
+        "raw_preview": "Here is the step-by-step solution:\n\n1.  **Find the total number of votes:**\n    The problem states there were 100 voters, so the total number of votes is 100.\n\n2.  **Calculate the number of votes for "
+      },
+      {
+        "task_id": "gsm8k_041",
+        "answer": "8,000",
+        "correct": true,
+        "cost": 0.0035172000000000003,
+        "tokens_in": 78,
+        "tokens_out": 964,
+        "raw_preview": "Let's define the variables based on the information given:\n1.  Let $H$ be the number of copies Harald sold.\n2.  Since Marilyn sold 10 times as many copies as Harald, Marilyn sold $10 \\times H$ copies."
+      },
+      {
+        "task_id": "gsm8k_040",
+        "answer": "50",
+        "correct": true,
+        "cost": 0.0061524,
+        "tokens_in": 102,
+        "tokens_out": 1692,
+        "raw_preview": "1.  **Identify the number of days in the month:**\n    The month is April, which has 30 days.\n\n2.  **Divide the month into halves:**\n    *   First half: 15 days\n    *   Second half: 15 days\n\n3.  **Defi"
+      },
+      {
+        "task_id": "gsm8k_036",
+        "answer": "320",
+        "correct": true,
+        "cost": 0.010351800000000001,
+        "tokens_in": 117,
+        "tokens_out": 2856,
+        "raw_preview": "Here is the step-by-step breakdown to solve the problem:\n\n1.  **Initial Amount:**\n    Elaine started with **20** Pokemon cards.\n\n2.  **First Month Collection:**\n    She collected three times the initi"
+      },
+      {
+        "task_id": "gsm8k_045",
+        "answer": "276",
+        "correct": true,
+        "cost": 0.0040554,
+        "tokens_in": 105,
+        "tokens_out": 1109,
+        "raw_preview": "To find out how many wheels will be left, we need to calculate the total number of wheels Henry uses to assemble the toys and subtract that from the total number of wheels he has.\n\n**Step 1: Calculate"
+      },
+      {
+        "task_id": "gsm8k_042",
+        "answer": "280",
+        "correct": true,
+        "cost": 0.0048126,
+        "tokens_in": 95,
+        "tokens_out": 1321,
+        "raw_preview": "To find the total number of children in the drill, we can break the problem down into steps:\n\n**Step 1: Calculate the number of children in one school.**\n*   There are 8 children standing in each row."
+      },
+      {
+        "task_id": "gsm8k_043",
+        "answer": "30",
+        "correct": true,
+        "cost": 0.0028788000000000004,
+        "tokens_in": 88,
+        "tokens_out": 785,
+        "raw_preview": "Here is the step-by-step solution:\n\n1.  **Find Mike's age:** We are given that Mike is 24 years old.\n2.  **Find Martha's age:** Martha is 4 years younger than Mike.\n    *   $24 - 4 = 20$\n    *   So, M"
+      },
+      {
+        "task_id": "gsm8k_034",
+        "answer": "",
+        "correct": false,
+        "cost": 0.014811600000000001,
+        "tokens_in": 110,
+        "tokens_out": 4096,
+        "raw_preview": ""
+      },
+      {
+        "task_id": "gsm8k_048",
+        "answer": "10",
+        "correct": true,
+        "cost": 0.0022146,
+        "tokens_in": 103,
+        "tokens_out": 598,
+        "raw_preview": "Here is the step-by-step solution:\n\n1.  **Find the weight after the increase:**\n    Jamaal starts with an 8-pound weight. He increases this weight by 50%.\n    $50\\% \\text{ of } 8 \\text{ pounds} = 0.5 "
+      },
+      {
+        "task_id": "gsm8k_049",
+        "answer": "84",
+        "correct": true,
+        "cost": 0.0040416,
+        "tokens_in": 100,
+        "tokens_out": 1106,
+        "raw_preview": "Here is the step-by-step solution:\n\n1.  **Calculate the total age of the sisters:**\n    There are 3 sisters, and each is 16 years old.\n    $3 \\text{ sisters} \\times 16 \\text{ years/sister} = 48 \\text{"
+      },
+      {
+        "task_id": "gsm8k_047",
+        "answer": "25",
+        "correct": true,
+        "cost": 0.005718,
+        "tokens_in": 122,
+        "tokens_out": 1568,
+        "raw_preview": "Here is the step-by-step solution:\n\n1.  **Find the number of boxes:**\n    Nik has 200 crayons and puts them into groups of 8. Since each group goes into a box, we divide the total number of crayons by"
+      },
+      {
+        "task_id": "gsm8k_007",
+        "answer": "",
+        "correct": false,
+        "cost": 0,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "raw_preview": ""
+      },
+      {
+        "task_id": "gsm8k_044",
+        "answer": "",
+        "correct": false,
+        "cost": 0,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "raw_preview": ""
+      },
+      {
+        "task_id": "gsm8k_046",
+        "answer": "",
+        "correct": false,
+        "cost": 0,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "raw_preview": ""
+      }
+    ]
+  },
+  "total_cost_usd": 0.3693426,
+  "elapsed_s": 519.6981289386749
+}

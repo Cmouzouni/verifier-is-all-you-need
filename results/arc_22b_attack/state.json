@@ -1,0 +1,73 @@
+{
+  "phases": {
+    "bestofn_22b_8": {
+      "name": "qwen-22b_best_of_8",
+      "type": "oracle",
+      "k": 12,
+      "n": 30,
+      "rate": 0.4,
+      "cost": 0.25296979999999997,
+      "elapsed_s": 856.2721762657166
+    },
+    "game_4x22b_synth22b": {
+      "name": "4x22b_synth22b",
+      "type": "synth",
+      "k": 4,
+      "n": 30,
+      "rate": 0.13333333333333333,
+      "any_proposer_rate": 0.36666666666666664,
+      "cost": 0.1686964,
+      "elapsed_s": 2619.828283071518
+    },
+    "majvote_22b_8": {
+      "name": "qwen-22b_majvote_8",
+      "type": "consensus",
+      "k": 10,
+      "n": 30,
+      "rate": 0.3333333333333333,
+      "any_correct": 13,
+      "cost": 0.23745320000000003,
+      "elapsed_s": 3229.8472797870636
+    },
+    "game_8x22b_synth22b": {
+      "name": "8x22b_synth22b",
+      "type": "synth",
+      "k": 6,
+      "n": 30,
+      "rate": 0.2,
+      "any_proposer_rate": 0.36666666666666664,
+      "cost": 0.2864246,
+      "elapsed_s": 3719.1406610012054
+    },
+    "bestofn_22b_16": {
+      "name": "qwen-22b_best_of_16",
+      "type": "oracle",
+      "k": 13,
+      "n": 30,
+      "rate": 0.43333333333333335,
+      "cost": 0.5081608,
+      "elapsed_s": 5836.196578741074
+    },
+    "game_4x22b_4xllama_synth22b": {
+      "name": "4x22b_4xllama_synth22b",
+      "type": "synth",
+      "k": 3,
+      "n": 30,
+      "rate": 0.1,
+      "any_proposer_rate": 0.3333333333333333,
+      "cost": 0.45604976,
+      "elapsed_s": 2048.5126190185547
+    }
+  },
+  "completed": [
+    "bestofn_22b_8",
+    "game_4x22b_synth22b",
+    "majvote_22b_8",
+    "game_8x22b_synth22b",
+    "bestofn_22b_16",
+    "game_4x22b_4xllama_synth22b"
+  ],
+  "started": 1775563478.072366,
+  "elapsed_s": 21965.423853874207,
+  "total_cost_usd": 1.656784760000003
+}

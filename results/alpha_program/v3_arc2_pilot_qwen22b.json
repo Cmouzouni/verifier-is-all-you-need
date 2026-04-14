@@ -1,0 +1,1043 @@
+{
+  "experiment": "validation_run",
+  "label": "V3: qwen-22b verifier-loop on ARC-AGI-2 test pilot (n=100, K=32, parallel)",
+  "model": "qwen-22b",
+  "dataset": "arc2",
+  "split": "test",
+  "n_tasks_planned": 100,
+  "n_tasks_completed": 0,
+  "k_programs": 32,
+  "temperature": 0.9,
+  "max_tokens": 1024,
+  "seed": 42,
+  "elapsed_s": 30.418317079544067,
+  "summary": {
+    "n_tasks": 100,
+    "n_samples_per_task": 32,
+    "per_attempt_rate": 0.0,
+    "deployable_rate": 0.0,
+    "deployable_k": 0,
+    "oracle_rate": 0.0,
+    "oracle_k": 0,
+    "any_train_solved_rate": 0.0,
+    "any_train_solved_k": 0,
+    "total_cost_usd": 0.0014364,
+    "total_tokens_in": 4020,
+    "total_tokens_out": 1054,
+    "parse_error_rate": 0.0
+  },
+  "per_task": [
+    {
+      "task_id": "arc2_test_0163",
+      "n_train_pairs": 5,
+      "per_attempt_rate": 0.0,
+      "best_train_score": 0.0,
+      "any_train_solved": false,
+      "first_passing_test_correct": false,
+      "parse_error_rate": 0.0,
+      "candidates": [
+        {
+          "i": 2,
+          "train_passed": 0,
+          "train_total": 5,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0014364,
+          "tokens_in": 4020,
+          "tokens_out": 1054
+        }
+      ]
+    },
+    {
+      "task_id": "arc2_test_0028",
+      "n_train_pairs": 3,
+      "per_attempt_rate": 0.0,
+      "best_train_score": 0.0,
+      "any_train_solved": false,
+      "first_passing_test_correct": false,
+      "parse_error_rate": 0.0,
+      "candidates": []
+    },
+    {
+      "task_id": "arc2_test_0006",
+      "n_train_pairs": 3,
+      "per_attempt_rate": 0.0,
+      "best_train_score": 0.0,
+      "any_train_solved": false,
+      "first_passing_test_correct": false,
+      "parse_error_rate": 0.0,
+      "candidates": []
+    },
+    {
+      "task_id": "arc2_test_0070",
+      "n_train_pairs": 2,
+      "per_attempt_rate": 0.0,
+      "best_train_score": 0.0,
+      "any_train_solved": false,
+      "first_passing_test_correct": false,
+      "parse_error_rate": 0.0,
+      "candidates": []
+    },
+    {
+      "task_id": "arc2_test_0062",
+      "n_train_pairs": 3,
+      "per_attempt_rate": 0.0,
+      "best_train_score": 0.0,
+      "any_train_solved": false,
+      "first_passing_test_correct": false,
+      "parse_error_rate": 0.0,
+      "candidates": []
+    },
+    {
+      "task_id": "arc2_test_0057",
+      "n_train_pairs": 2,
+      "per_attempt_rate": 0.0,
+      "best_train_score": 0.0,
+      "any_train_solved": false,
+      "first_passing_test_correct": false,
+      "parse_error_rate": 0.0,
+      "candidates": []
+    },
+    {
+      "task_id": "arc2_test_0035",
+      "n_train_pairs": 4,
+      "per_attempt_rate": 0.0,
+      "best_train_score": 0.0,
+      "any_train_solved": false,
+      "first_passing_test_correct": false,
+      "parse_error_rate": 0.0,
+      "candidates": []
+    },
+    {
+      "task_id": "arc2_test_0026",
+      "n_train_pairs": 5,
+      "per_attempt_rate": 0.0,
+      "best_train_score": 0.0,
+      "any_train_solved": false,
+      "first_passing_test_correct": false,
+      "parse_error_rate": 0.0,
+      "candidates": []
+    },
+    {
+      "task_id": "arc2_test_0139",
+      "n_train_pairs": 3,
+      "per_attempt_rate": 0.0,
+      "best_train_score": 0.0,
+      "any_train_solved": false,
+      "first_passing_test_correct": false,
+      "parse_error_rate": 0.0,
+      "candidates": []
+    },
+    {
+      "task_id": "arc2_test_0022",
+      "n_train_pairs": 2,
+      "per_attempt_rate": 0.0,
+      "best_train_score": 0.0,
+      "any_train_solved": false,
+      "first_passing_test_correct": false,
+      "parse_error_rate": 0.0,
+      "candidates": []
+    },
+    {
+      "task_id": "arc2_test_0151",
+      "n_train_pairs": 2,
+      "per_attempt_rate": 0.0,
+      "best_train_score": 0.0,
+      "any_train_solved": false,
+      "first_passing_test_correct": false,
+      "parse_error_rate": 0.0,
+      "candidates": []
+    },
+    {
+      "task_id": "arc2_test_0108",
+      "n_train_pairs": 4,
+      "per_attempt_rate": 0.0,
+      "best_train_score": 0.0,
+      "any_train_solved": false,
+      "first_passing_test_correct": false,
+      "parse_error_rate": 0.0,
+      "candidates": []
+    },
+    {
+      "task_id": "arc2_test_0008",
+      "n_train_pairs": 3,
+      "per_attempt_rate": 0.0,
+      "best_train_score": 0.0,
+      "any_train_solved": false,
+      "first_passing_test_correct": false,
+      "parse_error_rate": 0.0,
+      "candidates": []
+    },
+    {
+      "task_id": "arc2_test_0007",
+      "n_train_pairs": 2,
+      "per_attempt_rate": 0.0,
+      "best_train_score": 0.0,
+      "any_train_solved": false,
+      "first_passing_test_correct": false,
+      "parse_error_rate": 0.0,
+      "candidates": []
+    },
+    {
+      "task_id": "arc2_test_0023",
+      "n_train_pairs": 2,
+      "per_attempt_rate": 0.0,
+      "best_train_score": 0.0,
+      "any_train_solved": false,
+      "first_passing_test_correct": false,
+      "parse_error_rate": 0.0,
+      "candidates": []
+    },
+    {
+      "task_id": "arc2_test_0055",
+      "n_train_pairs": 3,
+      "per_attempt_rate": 0.0,
+      "best_train_score": 0.0,
+      "any_train_solved": false,
+      "first_passing_test_correct": false,
+      "parse_error_rate": 0.0,
+      "candidates": []
+    },
+    {
+      "task_id": "arc2_test_0059",
+      "n_train_pairs": 2,
+      "per_attempt_rate": 0.0,
+      "best_train_score": 0.0,
+      "any_train_solved": false,
+      "first_passing_test_correct": false,
+      "parse_error_rate": 0.0,
+      "candidates": []
+    },
+    {
+      "task_id": "arc2_test_0129",
+      "n_train_pairs": 5,
+      "per_attempt_rate": 0.0,
+      "best_train_score": 0.0,
+      "any_train_solved": false,
+      "first_passing_test_correct": false,
+      "parse_error_rate": 0.0,
+      "candidates": []
+    },
+    {
+      "task_id": "arc2_test_0164",
+      "n_train_pairs": 5,
+      "per_attempt_rate": 0.0,
+      "best_train_score": 0.0,
+      "any_train_solved": false,
+      "first_passing_test_correct": false,
+      "parse_error_rate": 0.0,
+      "candidates": []
+    },
+    {
+      "task_id": "arc2_test_0143",
+      "n_train_pairs": 5,
+      "per_attempt_rate": 0.0,
+      "best_train_score": 0.0,
+      "any_train_solved": false,
+      "first_passing_test_correct": false,
+      "parse_error_rate": 0.0,
+      "candidates": []
+    },
+    {
+      "task_id": "arc2_test_0050",
+      "n_train_pairs": 2,
+      "per_attempt_rate": 0.0,
+      "best_train_score": 0.0,
+      "any_train_solved": false,
+      "first_passing_test_correct": false,
+      "parse_error_rate": 0.0,
+      "candidates": []
+    },
+    {
+      "task_id": "arc2_test_0158",
+      "n_train_pairs": 2,
+      "per_attempt_rate": 0.0,
+      "best_train_score": 0.0,
+      "any_train_solved": false,
+      "first_passing_test_correct": false,
+      "parse_error_rate": 0.0,
+      "candidates": []
+    },
+    {
+      "task_id": "arc2_test_0107",
+      "n_train_pairs": 3,
+      "per_attempt_rate": 0.0,
+      "best_train_score": 0.0,
+      "any_train_solved": false,
+      "first_passing_test_correct": false,
+      "parse_error_rate": 0.0,
+      "candidates": []
+    },
+    {
+      "task_id": "arc2_test_0056",
+      "n_train_pairs": 2,
+      "per_attempt_rate": 0.0,
+      "best_train_score": 0.0,
+      "any_train_solved": false,
+      "first_passing_test_correct": false,
+      "parse_error_rate": 0.0,
+      "candidates": []
+    },
+    {
+      "task_id": "arc2_test_0114",
+      "n_train_pairs": 2,
+      "per_attempt_rate": 0.0,
+      "best_train_score": 0.0,
+      "any_train_solved": false,
+      "first_passing_test_correct": false,
+      "parse_error_rate": 0.0,
+      "candidates": []
+    },
+    {
+      "task_id": "arc2_test_0071",
+      "n_train_pairs": 2,
+      "per_attempt_rate": 0.0,
+      "best_train_score": 0.0,
+      "any_train_solved": false,
+      "first_passing_test_correct": false,
+      "parse_error_rate": 0.0,
+      "candidates": []
+    },
+    {
+      "task_id": "arc2_test_0001",
+      "n_train_pairs": 2,
+      "per_attempt_rate": 0.0,
+      "best_train_score": 0.0,
+      "any_train_solved": false,
+      "first_passing_test_correct": false,
+      "parse_error_rate": 0.0,
+      "candidates": []
+    },
+    {
+      "task_id": "arc2_test_0040",
+      "n_train_pairs": 6,
+      "per_attempt_rate": 0.0,
+      "best_train_score": 0.0,
+      "any_train_solved": false,
+      "first_passing_test_correct": false,
+      "parse_error_rate": 0.0,
+      "candidates": []
+    },
+    {
+      "task_id": "arc2_test_0155",
+      "n_train_pairs": 2,
+      "per_attempt_rate": 0.0,
+      "best_train_score": 0.0,
+      "any_train_solved": false,
+      "first_passing_test_correct": false,
+      "parse_error_rate": 0.0,
+      "candidates": []
+    },
+    {
+      "task_id": "arc2_test_0087",
+      "n_train_pairs": 2,
+      "per_attempt_rate": 0.0,
+      "best_train_score": 0.0,
+      "any_train_solved": false,
+      "first_passing_test_correct": false,
+      "parse_error_rate": 0.0,
+      "candidates": []
+    },
+    {
+      "task_id": "arc2_test_0141",
+      "n_train_pairs": 3,
+      "per_attempt_rate": 0.0,
+      "best_train_score": 0.0,
+      "any_train_solved": false,
+      "first_passing_test_correct": false,
+      "parse_error_rate": 0.0,
+      "candidates": []
+    },
+    {
+      "task_id": "arc2_test_0039",
+      "n_train_pairs": 6,
+      "per_attempt_rate": 0.0,
+      "best_train_score": 0.0,
+      "any_train_solved": false,
+      "first_passing_test_correct": false,
+      "parse_error_rate": 0.0,
+      "candidates": []
+    },
+    {
+      "task_id": "arc2_test_0156",
+      "n_train_pairs": 2,
+      "per_attempt_rate": 0.0,
+      "best_train_score": 0.0,
+      "any_train_solved": false,
+      "first_passing_test_correct": false,
+      "parse_error_rate": 0.0,
+      "candidates": []
+    },
+    {
+      "task_id": "arc2_test_0086",
+      "n_train_pairs": 3,
+      "per_attempt_rate": 0.0,
+      "best_train_score": 0.0,
+      "any_train_solved": false,
+      "first_passing_test_correct": false,
+      "parse_error_rate": 0.0,
+      "candidates": []
+    },
+    {
+      "task_id": "arc2_test_0159",
+      "n_train_pairs": 3,
+      "per_attempt_rate": 0.0,
+      "best_train_score": 0.0,
+      "any_train_solved": false,
+      "first_passing_test_correct": false,
+      "parse_error_rate": 0.0,
+      "candidates": []
+    },
+    {
+      "task_id": "arc2_test_0152",
+      "n_train_pairs": 4,
+      "per_attempt_rate": 0.0,
+      "best_train_score": 0.0,
+      "any_train_solved": false,
+      "first_passing_test_correct": false,
+      "parse_error_rate": 0.0,
+      "candidates": []
+    },
+    {
+      "task_id": "arc2_test_0097",
+      "n_train_pairs": 3,
+      "per_attempt_rate": 0.0,
+      "best_train_score": 0.0,
+      "any_train_solved": false,
+      "first_passing_test_correct": false,
+      "parse_error_rate": 0.0,
+      "candidates": []
+    },
+    {
+      "task_id": "arc2_test_0024",
+      "n_train_pairs": 3,
+      "per_attempt_rate": 0.0,
+      "best_train_score": 0.0,
+      "any_train_solved": false,
+      "first_passing_test_correct": false,
+      "parse_error_rate": 0.0,
+      "candidates": []
+    },
+    {
+      "task_id": "arc2_test_0091",
+      "n_train_pairs": 2,
+      "per_attempt_rate": 0.0,
+      "best_train_score": 0.0,
+      "any_train_solved": false,
+      "first_passing_test_correct": false,
+      "parse_error_rate": 0.0,
+      "candidates": []
+    },
+    {
+      "task_id": "arc2_test_0088",
+      "n_train_pairs": 2,
+      "per_attempt_rate": 0.0,
+      "best_train_score": 0.0,
+      "any_train_solved": false,
+      "first_passing_test_correct": false,
+      "parse_error_rate": 0.0,
+      "candidates": []
+    },
+    {
+      "task_id": "arc2_test_0077",
+      "n_train_pairs": 2,
+      "per_attempt_rate": 0.0,
+      "best_train_score": 0.0,
+      "any_train_solved": false,
+      "first_passing_test_correct": false,
+      "parse_error_rate": 0.0,
+      "candidates": []
+    },
+    {
+      "task_id": "arc2_test_0033",
+      "n_train_pairs": 3,
+      "per_attempt_rate": 0.0,
+      "best_train_score": 0.0,
+      "any_train_solved": false,
+      "first_passing_test_correct": false,
+      "parse_error_rate": 0.0,
+      "candidates": []
+    },
+    {
+      "task_id": "arc2_test_0103",
+      "n_train_pairs": 3,
+      "per_attempt_rate": 0.0,
+      "best_train_score": 0.0,
+      "any_train_solved": false,
+      "first_passing_test_correct": false,
+      "parse_error_rate": 0.0,
+      "candidates": []
+    },
+    {
+      "task_id": "arc2_test_0005",
+      "n_train_pairs": 3,
+      "per_attempt_rate": 0.0,
+      "best_train_score": 0.0,
+      "any_train_solved": false,
+      "first_passing_test_correct": false,
+      "parse_error_rate": 0.0,
+      "candidates": []
+    },
+    {
+      "task_id": "arc2_test_0093",
+      "n_train_pairs": 2,
+      "per_attempt_rate": 0.0,
+      "best_train_score": 0.0,
+      "any_train_solved": false,
+      "first_passing_test_correct": false,
+      "parse_error_rate": 0.0,
+      "candidates": []
+    },
+    {
+      "task_id": "arc2_test_0058",
+      "n_train_pairs": 2,
+      "per_attempt_rate": 0.0,
+      "best_train_score": 0.0,
+      "any_train_solved": false,
+      "first_passing_test_correct": false,
+      "parse_error_rate": 0.0,
+      "candidates": []
+    },
+    {
+      "task_id": "arc2_test_0068",
+      "n_train_pairs": 2,
+      "per_attempt_rate": 0.0,
+      "best_train_score": 0.0,
+      "any_train_solved": false,
+      "first_passing_test_correct": false,
+      "parse_error_rate": 0.0,
+      "candidates": []
+    },
+    {
+      "task_id": "arc2_test_0015",
+      "n_train_pairs": 3,
+      "per_attempt_rate": 0.0,
+      "best_train_score": 0.0,
+      "any_train_solved": false,
+      "first_passing_test_correct": false,
+      "parse_error_rate": 0.0,
+      "candidates": []
+    },
+    {
+      "task_id": "arc2_test_0118",
+      "n_train_pairs": 3,
+      "per_attempt_rate": 0.0,
+      "best_train_score": 0.0,
+      "any_train_solved": false,
+      "first_passing_test_correct": false,
+      "parse_error_rate": 0.0,
+      "candidates": []
+    },
+    {
+      "task_id": "arc2_test_0048",
+      "n_train_pairs": 3,
+      "per_attempt_rate": 0.0,
+      "best_train_score": 0.0,
+      "any_train_solved": false,
+      "first_passing_test_correct": false,
+      "parse_error_rate": 0.0,
+      "candidates": []
+    },
+    {
+      "task_id": "arc2_test_0010",
+      "n_train_pairs": 3,
+      "per_attempt_rate": 0.0,
+      "best_train_score": 0.0,
+      "any_train_solved": false,
+      "first_passing_test_correct": false,
+      "parse_error_rate": 0.0,
+      "candidates": []
+    },
+    {
+      "task_id": "arc2_test_0166",
+      "n_train_pairs": 3,
+      "per_attempt_rate": 0.0,
+      "best_train_score": 0.0,
+      "any_train_solved": false,
+      "first_passing_test_correct": false,
+      "parse_error_rate": 0.0,
+      "candidates": []
+    },
+    {
+      "task_id": "arc2_test_0037",
+      "n_train_pairs": 4,
+      "per_attempt_rate": 0.0,
+      "best_train_score": 0.0,
+      "any_train_solved": false,
+      "first_passing_test_correct": false,
+      "parse_error_rate": 0.0,
+      "candidates": []
+    },
+    {
+      "task_id": "arc2_test_0106",
+      "n_train_pairs": 3,
+      "per_attempt_rate": 0.0,
+      "best_train_score": 0.0,
+      "any_train_solved": false,
+      "first_passing_test_correct": false,
+      "parse_error_rate": 0.0,
+      "candidates": []
+    },
+    {
+      "task_id": "arc2_test_0080",
+      "n_train_pairs": 3,
+      "per_attempt_rate": 0.0,
+      "best_train_score": 0.0,
+      "any_train_solved": false,
+      "first_passing_test_correct": false,
+      "parse_error_rate": 0.0,
+      "candidates": []
+    },
+    {
+      "task_id": "arc2_test_0079",
+      "n_train_pairs": 3,
+      "per_attempt_rate": 0.0,
+      "best_train_score": 0.0,
+      "any_train_solved": false,
+      "first_passing_test_correct": false,
+      "parse_error_rate": 0.0,
+      "candidates": []
+    },
+    {
+      "task_id": "arc2_test_0110",
+      "n_train_pairs": 3,
+      "per_attempt_rate": 0.0,
+      "best_train_score": 0.0,
+      "any_train_solved": false,
+      "first_passing_test_correct": false,
+      "parse_error_rate": 0.0,
+      "candidates": []
+    },
+    {
+      "task_id": "arc2_test_0046",
+      "n_train_pairs": 3,
+      "per_attempt_rate": 0.0,
+      "best_train_score": 0.0,
+      "any_train_solved": false,
+      "first_passing_test_correct": false,
+      "parse_error_rate": 0.0,
+      "candidates": []
+    },
+    {
+      "task_id": "arc2_test_0073",
+      "n_train_pairs": 3,
+      "per_attempt_rate": 0.0,
+      "best_train_score": 0.0,
+      "any_train_solved": false,
+      "first_passing_test_correct": false,
+      "parse_error_rate": 0.0,
+      "candidates": []
+    },
+    {
+      "task_id": "arc2_test_0149",
+      "n_train_pairs": 3,
+      "per_attempt_rate": 0.0,
+      "best_train_score": 0.0,
+      "any_train_solved": false,
+      "first_passing_test_correct": false,
+      "parse_error_rate": 0.0,
+      "candidates": []
+    },
+    {
+      "task_id": "arc2_test_0090",
+      "n_train_pairs": 2,
+      "per_attempt_rate": 0.0,
+      "best_train_score": 0.0,
+      "any_train_solved": false,
+      "first_passing_test_correct": false,
+      "parse_error_rate": 0.0,
+      "candidates": []
+    },
+    {
+      "task_id": "arc2_test_0154",
+      "n_train_pairs": 4,
+      "per_attempt_rate": 0.0,
+      "best_train_score": 0.0,
+      "any_train_solved": false,
+      "first_passing_test_correct": false,
+      "parse_error_rate": 0.0,
+      "candidates": []
+    },
+    {
+      "task_id": "arc2_test_0123",
+      "n_train_pairs": 4,
+      "per_attempt_rate": 0.0,
+      "best_train_score": 0.0,
+      "any_train_solved": false,
+      "first_passing_test_correct": false,
+      "parse_error_rate": 0.0,
+      "candidates": []
+    },
+    {
+      "task_id": "arc2_test_0084",
+      "n_train_pairs": 3,
+      "per_attempt_rate": 0.0,
+      "best_train_score": 0.0,
+      "any_train_solved": false,
+      "first_passing_test_correct": false,
+      "parse_error_rate": 0.0,
+      "candidates": []
+    },
+    {
+      "task_id": "arc2_test_0029",
+      "n_train_pairs": 3,
+      "per_attempt_rate": 0.0,
+      "best_train_score": 0.0,
+      "any_train_solved": false,
+      "first_passing_test_correct": false,
+      "parse_error_rate": 0.0,
+      "candidates": []
+    },
+    {
+      "task_id": "arc2_test_0098",
+      "n_train_pairs": 3,
+      "per_attempt_rate": 0.0,
+      "best_train_score": 0.0,
+      "any_train_solved": false,
+      "first_passing_test_correct": false,
+      "parse_error_rate": 0.0,
+      "candidates": []
+    },
+    {
+      "task_id": "arc2_test_0142",
+      "n_train_pairs": 3,
+      "per_attempt_rate": 0.0,
+      "best_train_score": 0.0,
+      "any_train_solved": false,
+      "first_passing_test_correct": false,
+      "parse_error_rate": 0.0,
+      "candidates": []
+    },
+    {
+      "task_id": "arc2_test_0116",
+      "n_train_pairs": 3,
+      "per_attempt_rate": 0.0,
+      "best_train_score": 0.0,
+      "any_train_solved": false,
+      "first_passing_test_correct": false,
+      "parse_error_rate": 0.0,
+      "candidates": []
+    },
+    {
+      "task_id": "arc2_test_0102",
+      "n_train_pairs": 4,
+      "per_attempt_rate": 0.0,
+      "best_train_score": 0.0,
+      "any_train_solved": false,
+      "first_passing_test_correct": false,
+      "parse_error_rate": 0.0,
+      "candidates": []
+    },
+    {
+      "task_id": "arc2_test_0012",
+      "n_train_pairs": 3,
+      "per_attempt_rate": 0.0,
+      "best_train_score": 0.0,
+      "any_train_solved": false,
+      "first_passing_test_correct": false,
+      "parse_error_rate": 0.0,
+      "candidates": []
+    },
+    {
+      "task_id": "arc2_test_0117",
+      "n_train_pairs": 3,
+      "per_attempt_rate": 0.0,
+      "best_train_score": 0.0,
+      "any_train_solved": false,
+      "first_passing_test_correct": false,
+      "parse_error_rate": 0.0,
+      "candidates": []
+    },
+    {
+      "task_id": "arc2_test_0160",
+      "n_train_pairs": 2,
+      "per_attempt_rate": 0.0,
+      "best_train_score": 0.0,
+      "any_train_solved": false,
+      "first_passing_test_correct": false,
+      "parse_error_rate": 0.0,
+      "candidates": []
+    },
+    {
+      "task_id": "arc2_test_0121",
+      "n_train_pairs": 3,
+      "per_attempt_rate": 0.0,
+      "best_train_score": 0.0,
+      "any_train_solved": false,
+      "first_passing_test_correct": false,
+      "parse_error_rate": 0.0,
+      "candidates": []
+    },
+    {
+      "task_id": "arc2_test_0081",
+      "n_train_pairs": 4,
+      "per_attempt_rate": 0.0,
+      "best_train_score": 0.0,
+      "any_train_solved": false,
+      "first_passing_test_correct": false,
+      "parse_error_rate": 0.0,
+      "candidates": []
+    },
+    {
+      "task_id": "arc2_test_0109",
+      "n_train_pairs": 4,
+      "per_attempt_rate": 0.0,
+      "best_train_score": 0.0,
+      "any_train_solved": false,
+      "first_passing_test_correct": false,
+      "parse_error_rate": 0.0,
+      "candidates": []
+    },
+    {
+      "task_id": "arc2_test_0020",
+      "n_train_pairs": 4,
+      "per_attempt_rate": 0.0,
+      "best_train_score": 0.0,
+      "any_train_solved": false,
+      "first_passing_test_correct": false,
+      "parse_error_rate": 0.0,
+      "candidates": []
+    },
+    {
+      "task_id": "arc2_test_0047",
+      "n_train_pairs": 3,
+      "per_attempt_rate": 0.0,
+      "best_train_score": 0.0,
+      "any_train_solved": false,
+      "first_passing_test_correct": false,
+      "parse_error_rate": 0.0,
+      "candidates": []
+    },
+    {
+      "task_id": "arc2_test_0045",
+      "n_train_pairs": 3,
+      "per_attempt_rate": 0.0,
+      "best_train_score": 0.0,
+      "any_train_solved": false,
+      "first_passing_test_correct": false,
+      "parse_error_rate": 0.0,
+      "candidates": []
+    },
+    {
+      "task_id": "arc2_test_0132",
+      "n_train_pairs": 3,
+      "per_attempt_rate": 0.0,
+      "best_train_score": 0.0,
+      "any_train_solved": false,
+      "first_passing_test_correct": false,
+      "parse_error_rate": 0.0,
+      "candidates": []
+    },
+    {
+      "task_id": "arc2_test_0085",
+      "n_train_pairs": 3,
+      "per_attempt_rate": 0.0,
+      "best_train_score": 0.0,
+      "any_train_solved": false,
+      "first_passing_test_correct": false,
+      "parse_error_rate": 0.0,
+      "candidates": []
+    },
+    {
+      "task_id": "arc2_test_0034",
+      "n_train_pairs": 4,
+      "per_attempt_rate": 0.0,
+      "best_train_score": 0.0,
+      "any_train_solved": false,
+      "first_passing_test_correct": false,
+      "parse_error_rate": 0.0,
+      "candidates": []
+    },
+    {
+      "task_id": "arc2_test_0082",
+      "n_train_pairs": 2,
+      "per_attempt_rate": 0.0,
+      "best_train_score": 0.0,
+      "any_train_solved": false,
+      "first_passing_test_correct": false,
+      "parse_error_rate": 0.0,
+      "candidates": []
+    },
+    {
+      "task_id": "arc2_test_0009",
+      "n_train_pairs": 3,
+      "per_attempt_rate": 0.0,
+      "best_train_score": 0.0,
+      "any_train_solved": false,
+      "first_passing_test_correct": false,
+      "parse_error_rate": 0.0,
+      "candidates": []
+    },
+    {
+      "task_id": "arc2_test_0126",
+      "n_train_pairs": 2,
+      "per_attempt_rate": 0.0,
+      "best_train_score": 0.0,
+      "any_train_solved": false,
+      "first_passing_test_correct": false,
+      "parse_error_rate": 0.0,
+      "candidates": []
+    },
+    {
+      "task_id": "arc2_test_0122",
+      "n_train_pairs": 3,
+      "per_attempt_rate": 0.0,
+      "best_train_score": 0.0,
+      "any_train_solved": false,
+      "first_passing_test_correct": false,
+      "parse_error_rate": 0.0,
+      "candidates": []
+    },
+    {
+      "task_id": "arc2_test_0021",
+      "n_train_pairs": 4,
+      "per_attempt_rate": 0.0,
+      "best_train_score": 0.0,
+      "any_train_solved": false,
+      "first_passing_test_correct": false,
+      "parse_error_rate": 0.0,
+      "candidates": []
+    },
+    {
+      "task_id": "arc2_test_0120",
+      "n_train_pairs": 3,
+      "per_attempt_rate": 0.0,
+      "best_train_score": 0.0,
+      "any_train_solved": false,
+      "first_passing_test_correct": false,
+      "parse_error_rate": 0.0,
+      "candidates": []
+    },
+    {
+      "task_id": "arc2_test_0031",
+      "n_train_pairs": 2,
+      "per_attempt_rate": 0.0,
+      "best_train_score": 0.0,
+      "any_train_solved": false,
+      "first_passing_test_correct": false,
+      "parse_error_rate": 0.0,
+      "candidates": []
+    },
+    {
+      "task_id": "arc2_test_0128",
+      "n_train_pairs": 5,
+      "per_attempt_rate": 0.0,
+      "best_train_score": 0.0,
+      "any_train_solved": false,
+      "first_passing_test_correct": false,
+      "parse_error_rate": 0.0,
+      "candidates": []
+    },
+    {
+      "task_id": "arc2_test_0150",
+      "n_train_pairs": 3,
+      "per_attempt_rate": 0.0,
+      "best_train_score": 0.0,
+      "any_train_solved": false,
+      "first_passing_test_correct": false,
+      "parse_error_rate": 0.0,
+      "candidates": []
+    },
+    {
+      "task_id": "arc2_test_0096",
+      "n_train_pairs": 5,
+      "per_attempt_rate": 0.0,
+      "best_train_score": 0.0,
+      "any_train_solved": false,
+      "first_passing_test_correct": false,
+      "parse_error_rate": 0.0,
+      "candidates": []
+    },
+    {
+      "task_id": "arc2_test_0133",
+      "n_train_pairs": 3,
+      "per_attempt_rate": 0.0,
+      "best_train_score": 0.0,
+      "any_train_solved": false,
+      "first_passing_test_correct": false,
+      "parse_error_rate": 0.0,
+      "candidates": []
+    },
+    {
+      "task_id": "arc2_test_0136",
+      "n_train_pairs": 4,
+      "per_attempt_rate": 0.0,
+      "best_train_score": 0.0,
+      "any_train_solved": false,
+      "first_passing_test_correct": false,
+      "parse_error_rate": 0.0,
+      "candidates": []
+    },
+    {
+      "task_id": "arc2_test_0165",
+      "n_train_pairs": 4,
+      "per_attempt_rate": 0.0,
+      "best_train_score": 0.0,
+      "any_train_solved": false,
+      "first_passing_test_correct": false,
+      "parse_error_rate": 0.0,
+      "candidates": []
+    },
+    {
+      "task_id": "arc2_test_0041",
+      "n_train_pairs": 2,
+      "per_attempt_rate": 0.0,
+      "best_train_score": 0.0,
+      "any_train_solved": false,
+      "first_passing_test_correct": false,
+      "parse_error_rate": 0.0,
+      "candidates": []
+    },
+    {
+      "task_id": "arc2_test_0153",
+      "n_train_pairs": 4,
+      "per_attempt_rate": 0.0,
+      "best_train_score": 0.0,
+      "any_train_solved": false,
+      "first_passing_test_correct": false,
+      "parse_error_rate": 0.0,
+      "candidates": []
+    },
+    {
+      "task_id": "arc2_test_0101",
+      "n_train_pairs": 4,
+      "per_attempt_rate": 0.0,
+      "best_train_score": 0.0,
+      "any_train_solved": false,
+      "first_passing_test_correct": false,
+      "parse_error_rate": 0.0,
+      "candidates": []
+    },
+    {
+      "task_id": "arc2_test_0004",
+      "n_train_pairs": 3,
+      "per_attempt_rate": 0.0,
+      "best_train_score": 0.0,
+      "any_train_solved": false,
+      "first_passing_test_correct": false,
+      "parse_error_rate": 0.0,
+      "candidates": []
+    },
+    {
+      "task_id": "arc2_test_0145",
+      "n_train_pairs": 3,
+      "per_attempt_rate": 0.0,
+      "best_train_score": 0.0,
+      "any_train_solved": false,
+      "first_passing_test_correct": false,
+      "parse_error_rate": 0.0,
+      "candidates": []
+    },
+    {
+      "task_id": "arc2_test_0051",
+      "n_train_pairs": 2,
+      "per_attempt_rate": 0.0,
+      "best_train_score": 0.0,
+      "any_train_solved": false,
+      "first_passing_test_correct": false,
+      "parse_error_rate": 0.0,
+      "candidates": []
+    }
+  ]
+}

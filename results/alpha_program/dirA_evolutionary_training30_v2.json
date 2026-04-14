@@ -1,0 +1,4082 @@
+{
+  "experiment": "dirA_evolutionary",
+  "phase": "final",
+  "model": "qwen-22b",
+  "dataset": "arc1",
+  "split": "training",
+  "n_tasks": 30,
+  "k_per_round": 8,
+  "rounds": 3,
+  "total_k": 24,
+  "top_n_attempts": 3,
+  "elapsed_s": 3226.694666147232,
+  "summary": {
+    "n_tasks": 30,
+    "n_samples_per_task": 32,
+    "per_attempt_rate": 0.15485074626865672,
+    "deployable_rate": 0.43333333333333335,
+    "deployable_k": 13,
+    "oracle_rate": 0.5333333333333333,
+    "oracle_k": 16,
+    "any_train_solved_rate": 0.4666666666666667,
+    "any_train_solved_k": 14,
+    "total_cost_usd": 0.914338,
+    "total_tokens_in": 2846075,
+    "total_tokens_out": 575205,
+    "parse_error_rate": 0.05037313432835821
+  },
+  "per_task": [
+    {
+      "task_id": "arc1_training_0327",
+      "n_train_pairs": 3,
+      "n_candidates": 24,
+      "best_train_score": 0.0,
+      "any_train_solved": false,
+      "first_passing_test_correct": false,
+      "candidates": [
+        {
+          "i": 5,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0018062000000000002
+        },
+        {
+          "i": 6,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0015722
+        },
+        {
+          "i": 3,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0017162000000000002
+        },
+        {
+          "i": 0,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.001784
+        },
+        {
+          "i": 7,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": true,
+          "cost_usd": 0.0
+        },
+        {
+          "i": 2,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0016238000000000001
+        },
+        {
+          "i": 4,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0018218000000000002
+        },
+        {
+          "i": 1,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0020504
+        },
+        {
+          "i": 15,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0015056000000000002
+        },
+        {
+          "i": 13,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0015734000000000002
+        },
+        {
+          "i": 10,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.001652
+        },
+        {
+          "i": 9,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.001733
+        },
+        {
+          "i": 12,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.001796
+        },
+        {
+          "i": 14,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0018806
+        },
+        {
+          "i": 11,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0022592
+        },
+        {
+          "i": 8,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0017096000000000001
+        },
+        {
+          "i": 17,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0023594
+        },
+        {
+          "i": 22,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0023594
+        },
+        {
+          "i": 20,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0019436000000000002
+        },
+        {
+          "i": 23,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0015434000000000001
+        },
+        {
+          "i": 21,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0017804000000000001
+        },
+        {
+          "i": 16,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0019562000000000004
+        },
+        {
+          "i": 18,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0017102000000000003
+        },
+        {
+          "i": 19,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0016322
+        }
+      ]
+    },
+    {
+      "task_id": "arc1_training_0057",
+      "n_train_pairs": 4,
+      "n_candidates": 24,
+      "best_train_score": 0.0,
+      "any_train_solved": false,
+      "first_passing_test_correct": false,
+      "candidates": [
+        {
+          "i": 6,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0011638
+        },
+        {
+          "i": 2,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0006448
+        },
+        {
+          "i": 4,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": true,
+          "cost_usd": 0.0
+        },
+        {
+          "i": 5,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": true,
+          "cost_usd": 0.0
+        },
+        {
+          "i": 1,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": true,
+          "cost_usd": 0.0
+        },
+        {
+          "i": 7,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": true,
+          "cost_usd": 0.0
+        },
+        {
+          "i": 3,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0005997999999999999
+        },
+        {
+          "i": 0,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": true,
+          "cost_usd": 0.0
+        },
+        {
+          "i": 14,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0006004
+        },
+        {
+          "i": 12,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0006027999999999999
+        },
+        {
+          "i": 13,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0016234
+        },
+        {
+          "i": 9,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0016234
+        },
+        {
+          "i": 10,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0016234
+        },
+        {
+          "i": 11,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0016234
+        },
+        {
+          "i": 15,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0016234
+        },
+        {
+          "i": 8,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0016234
+        },
+        {
+          "i": 18,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0005518
+        },
+        {
+          "i": 22,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0016234
+        },
+        {
+          "i": 17,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0016234
+        },
+        {
+          "i": 20,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0016234
+        },
+        {
+          "i": 16,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0007582
+        },
+        {
+          "i": 19,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": true,
+          "cost_usd": 0.0
+        },
+        {
+          "i": 23,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": true,
+          "cost_usd": 0.0
+        },
+        {
+          "i": 21,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": true,
+          "cost_usd": 0.0
+        }
+      ]
+    },
+    {
+      "task_id": "arc1_training_0012",
+      "n_train_pairs": 3,
+      "n_candidates": 8,
+      "best_train_score": 1.0,
+      "any_train_solved": true,
+      "first_passing_test_correct": true,
+      "candidates": [
+        {
+          "i": 1,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0008756
+        },
+        {
+          "i": 0,
+          "train_score": 1.0,
+          "test_correct": true,
+          "parse_error": false,
+          "cost_usd": 0.0008126
+        },
+        {
+          "i": 2,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0009446
+        },
+        {
+          "i": 4,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0008162
+        },
+        {
+          "i": 3,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0010927999999999999
+        },
+        {
+          "i": 5,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.000851
+        },
+        {
+          "i": 7,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0008012000000000001
+        },
+        {
+          "i": 6,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0008312
+        }
+      ]
+    },
+    {
+      "task_id": "arc1_training_0379",
+      "n_train_pairs": 3,
+      "n_candidates": 24,
+      "best_train_score": 0.3333333333333333,
+      "any_train_solved": false,
+      "first_passing_test_correct": false,
+      "candidates": [
+        {
+          "i": 0,
+          "train_score": 0.3333333333333333,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0005546
+        },
+        {
+          "i": 1,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0006434000000000001
+        },
+        {
+          "i": 2,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0005396
+        },
+        {
+          "i": 6,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.00053
+        },
+        {
+          "i": 4,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0005834000000000001
+        },
+        {
+          "i": 5,
+          "train_score": 0.3333333333333333,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0006074000000000001
+        },
+        {
+          "i": 3,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0006194000000000001
+        },
+        {
+          "i": 7,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0005564000000000001
+        },
+        {
+          "i": 9,
+          "train_score": 0.3333333333333333,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0007138
+        },
+        {
+          "i": 11,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0007504
+        },
+        {
+          "i": 12,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0007186
+        },
+        {
+          "i": 14,
+          "train_score": 0.3333333333333333,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0007222000000000001
+        },
+        {
+          "i": 13,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0007642
+        },
+        {
+          "i": 8,
+          "train_score": 0.3333333333333333,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0007576
+        },
+        {
+          "i": 15,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0007066
+        },
+        {
+          "i": 10,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0007528
+        },
+        {
+          "i": 16,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0008422000000000001
+        },
+        {
+          "i": 17,
+          "train_score": 0.3333333333333333,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0008788
+        },
+        {
+          "i": 23,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.000811
+        },
+        {
+          "i": 20,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.00079
+        },
+        {
+          "i": 21,
+          "train_score": 0.3333333333333333,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0008397999999999999
+        },
+        {
+          "i": 22,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0008212
+        },
+        {
+          "i": 19,
+          "train_score": 0.3333333333333333,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0016966
+        },
+        {
+          "i": 18,
+          "train_score": 0.3333333333333333,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0009154000000000001
+        }
+      ]
+    },
+    {
+      "task_id": "arc1_training_0140",
+      "n_train_pairs": 3,
+      "n_candidates": 24,
+      "best_train_score": 0.0,
+      "any_train_solved": false,
+      "first_passing_test_correct": false,
+      "candidates": [
+        {
+          "i": 0,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0020192
+        },
+        {
+          "i": 1,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0020192
+        },
+        {
+          "i": 3,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.001445
+        },
+        {
+          "i": 7,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.001484
+        },
+        {
+          "i": 2,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0011084
+        },
+        {
+          "i": 5,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0012926
+        },
+        {
+          "i": 4,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0020192
+        },
+        {
+          "i": 6,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0020192
+        },
+        {
+          "i": 9,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0010262000000000001
+        },
+        {
+          "i": 8,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0020192
+        },
+        {
+          "i": 11,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0020192
+        },
+        {
+          "i": 14,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0020192
+        },
+        {
+          "i": 13,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0020192
+        },
+        {
+          "i": 12,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0020192
+        },
+        {
+          "i": 15,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0020192
+        },
+        {
+          "i": 10,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0020192
+        },
+        {
+          "i": 20,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0015218000000000002
+        },
+        {
+          "i": 22,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0015956
+        },
+        {
+          "i": 21,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0018068000000000001
+        },
+        {
+          "i": 23,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0020192
+        },
+        {
+          "i": 19,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0012482
+        },
+        {
+          "i": 18,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0012536000000000001
+        },
+        {
+          "i": 16,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": true,
+          "cost_usd": 0.0
+        },
+        {
+          "i": 17,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": true,
+          "cost_usd": 0.0
+        }
+      ]
+    },
+    {
+      "task_id": "arc1_training_0125",
+      "n_train_pairs": 4,
+      "n_candidates": 24,
+      "best_train_score": 0.0,
+      "any_train_solved": false,
+      "first_passing_test_correct": false,
+      "candidates": [
+        {
+          "i": 4,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0027363999999999995
+        },
+        {
+          "i": 2,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0028077999999999996
+        },
+        {
+          "i": 0,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0026883999999999996
+        },
+        {
+          "i": 1,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0029332
+        },
+        {
+          "i": 3,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0033063999999999997
+        },
+        {
+          "i": 6,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0033063999999999997
+        },
+        {
+          "i": 7,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0033063999999999997
+        },
+        {
+          "i": 5,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.002692
+        },
+        {
+          "i": 9,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0027538
+        },
+        {
+          "i": 8,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0032073999999999996
+        },
+        {
+          "i": 10,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0032518
+        },
+        {
+          "i": 13,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0029511999999999997
+        },
+        {
+          "i": 12,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.002932
+        },
+        {
+          "i": 15,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0030058
+        },
+        {
+          "i": 14,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0033063999999999997
+        },
+        {
+          "i": 11,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0033063999999999997
+        },
+        {
+          "i": 16,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.002614
+        },
+        {
+          "i": 17,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0030177999999999997
+        },
+        {
+          "i": 19,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.002947
+        },
+        {
+          "i": 21,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0026991999999999997
+        },
+        {
+          "i": 18,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0030327999999999996
+        },
+        {
+          "i": 23,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.003055
+        },
+        {
+          "i": 20,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0031336
+        },
+        {
+          "i": 22,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0033063999999999997
+        }
+      ]
+    },
+    {
+      "task_id": "arc1_training_0114",
+      "n_train_pairs": 3,
+      "n_candidates": 24,
+      "best_train_score": 0.3333333333333333,
+      "any_train_solved": false,
+      "first_passing_test_correct": false,
+      "candidates": [
+        {
+          "i": 1,
+          "train_score": 0.3333333333333333,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.004319
+        },
+        {
+          "i": 2,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0043082
+        },
+        {
+          "i": 3,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0041522
+        },
+        {
+          "i": 4,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0044408
+        },
+        {
+          "i": 7,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.00422
+        },
+        {
+          "i": 6,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.004946600000000001
+        },
+        {
+          "i": 0,
+          "train_score": 0.3333333333333333,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.004037
+        },
+        {
+          "i": 5,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0041102
+        },
+        {
+          "i": 14,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.004299
+        },
+        {
+          "i": 8,
+          "train_score": 0.3333333333333333,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0044172
+        },
+        {
+          "i": 12,
+          "train_score": 0.3333333333333333,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0043602
+        },
+        {
+          "i": 9,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0044934
+        },
+        {
+          "i": 13,
+          "train_score": 0.3333333333333333,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.004497
+        },
+        {
+          "i": 11,
+          "train_score": 0.3333333333333333,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.004506
+        },
+        {
+          "i": 10,
+          "train_score": 0.3333333333333333,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0046866
+        },
+        {
+          "i": 15,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0044724
+        },
+        {
+          "i": 17,
+          "train_score": 0.3333333333333333,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0044152
+        },
+        {
+          "i": 16,
+          "train_score": 0.3333333333333333,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.004339
+        },
+        {
+          "i": 18,
+          "train_score": 0.3333333333333333,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0044968000000000004
+        },
+        {
+          "i": 19,
+          "train_score": 0.3333333333333333,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0043522
+        },
+        {
+          "i": 20,
+          "train_score": 0.3333333333333333,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0043804
+        },
+        {
+          "i": 21,
+          "train_score": 0.3333333333333333,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0043251999999999995
+        },
+        {
+          "i": 22,
+          "train_score": 0.3333333333333333,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0045046
+        },
+        {
+          "i": 23,
+          "train_score": 0.3333333333333333,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.004498
+        }
+      ]
+    },
+    {
+      "task_id": "arc1_training_0071",
+      "n_train_pairs": 3,
+      "n_candidates": 24,
+      "best_train_score": 0.0,
+      "any_train_solved": false,
+      "first_passing_test_correct": false,
+      "candidates": [
+        {
+          "i": 0,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0022004
+        },
+        {
+          "i": 3,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0018368000000000002
+        },
+        {
+          "i": 5,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0016328000000000002
+        },
+        {
+          "i": 7,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.002129
+        },
+        {
+          "i": 1,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0019958000000000003
+        },
+        {
+          "i": 4,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0016958000000000001
+        },
+        {
+          "i": 2,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0020258000000000003
+        },
+        {
+          "i": 6,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0026612
+        },
+        {
+          "i": 10,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.001682
+        },
+        {
+          "i": 13,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.002093
+        },
+        {
+          "i": 8,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0026612
+        },
+        {
+          "i": 9,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0026612
+        },
+        {
+          "i": 14,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0024926
+        },
+        {
+          "i": 11,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": true,
+          "cost_usd": 0.0026612
+        },
+        {
+          "i": 12,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": true,
+          "cost_usd": 0.0026612
+        },
+        {
+          "i": 15,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0026612
+        },
+        {
+          "i": 17,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0017474
+        },
+        {
+          "i": 20,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0016496000000000002
+        },
+        {
+          "i": 16,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0021224
+        },
+        {
+          "i": 19,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0022166
+        },
+        {
+          "i": 21,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0021878
+        },
+        {
+          "i": 23,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0022082
+        },
+        {
+          "i": 18,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0020702
+        },
+        {
+          "i": 22,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0019316000000000001
+        }
+      ]
+    },
+    {
+      "task_id": "arc1_training_0377",
+      "n_train_pairs": 5,
+      "n_candidates": 8,
+      "best_train_score": 1.0,
+      "any_train_solved": true,
+      "first_passing_test_correct": true,
+      "candidates": [
+        {
+          "i": 1,
+          "train_score": 0.2,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0019542
+        },
+        {
+          "i": 0,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0025416
+        },
+        {
+          "i": 2,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0016782000000000004
+        },
+        {
+          "i": 4,
+          "train_score": 1.0,
+          "test_correct": true,
+          "parse_error": false,
+          "cost_usd": 0.0017382000000000003
+        },
+        {
+          "i": 3,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0017304
+        },
+        {
+          "i": 7,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0018636000000000002
+        },
+        {
+          "i": 6,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0021864000000000002
+        },
+        {
+          "i": 5,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0019488
+        }
+      ]
+    },
+    {
+      "task_id": "arc1_training_0052",
+      "n_train_pairs": 4,
+      "n_candidates": 8,
+      "best_train_score": 1.0,
+      "any_train_solved": true,
+      "first_passing_test_correct": true,
+      "candidates": [
+        {
+          "i": 1,
+          "train_score": 1.0,
+          "test_correct": true,
+          "parse_error": false,
+          "cost_usd": 0.0002518
+        },
+        {
+          "i": 2,
+          "train_score": 1.0,
+          "test_correct": true,
+          "parse_error": false,
+          "cost_usd": 0.0002518
+        },
+        {
+          "i": 0,
+          "train_score": 1.0,
+          "test_correct": true,
+          "parse_error": false,
+          "cost_usd": 0.00043180000000000003
+        },
+        {
+          "i": 6,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.00026680000000000003
+        },
+        {
+          "i": 3,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.00026680000000000003
+        },
+        {
+          "i": 4,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.00026680000000000003
+        },
+        {
+          "i": 5,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.00026680000000000003
+        },
+        {
+          "i": 7,
+          "train_score": 1.0,
+          "test_correct": true,
+          "parse_error": false,
+          "cost_usd": 0.0002518
+        }
+      ]
+    },
+    {
+      "task_id": "arc1_training_0346",
+      "n_train_pairs": 3,
+      "n_candidates": 24,
+      "best_train_score": 0.6666666666666666,
+      "any_train_solved": false,
+      "first_passing_test_correct": false,
+      "candidates": [
+        {
+          "i": 4,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.000779
+        },
+        {
+          "i": 3,
+          "train_score": 0.3333333333333333,
+          "test_correct": true,
+          "parse_error": false,
+          "cost_usd": 0.0006062000000000001
+        },
+        {
+          "i": 5,
+          "train_score": 0.3333333333333333,
+          "test_correct": true,
+          "parse_error": false,
+          "cost_usd": 0.0009002000000000001
+        },
+        {
+          "i": 7,
+          "train_score": 0.0,
+          "test_correct": true,
+          "parse_error": false,
+          "cost_usd": 0.0009554000000000001
+        },
+        {
+          "i": 1,
+          "train_score": 0.0,
+          "test_correct": true,
+          "parse_error": false,
+          "cost_usd": 0.0011342000000000001
+        },
+        {
+          "i": 6,
+          "train_score": 0.3333333333333333,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.001169
+        },
+        {
+          "i": 2,
+          "train_score": 0.3333333333333333,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0012782
+        },
+        {
+          "i": 0,
+          "train_score": 0.6666666666666666,
+          "test_correct": true,
+          "parse_error": false,
+          "cost_usd": 0.001271
+        },
+        {
+          "i": 12,
+          "train_score": 0.0,
+          "test_correct": true,
+          "parse_error": false,
+          "cost_usd": 0.0013478
+        },
+        {
+          "i": 8,
+          "train_score": 0.3333333333333333,
+          "test_correct": true,
+          "parse_error": false,
+          "cost_usd": 0.0014612
+        },
+        {
+          "i": 11,
+          "train_score": 0.3333333333333333,
+          "test_correct": true,
+          "parse_error": false,
+          "cost_usd": 0.0014174
+        },
+        {
+          "i": 9,
+          "train_score": 0.6666666666666666,
+          "test_correct": true,
+          "parse_error": false,
+          "cost_usd": 0.0014504000000000001
+        },
+        {
+          "i": 10,
+          "train_score": 0.6666666666666666,
+          "test_correct": true,
+          "parse_error": false,
+          "cost_usd": 0.00155
+        },
+        {
+          "i": 15,
+          "train_score": 0.3333333333333333,
+          "test_correct": true,
+          "parse_error": false,
+          "cost_usd": 0.0015865999999999999
+        },
+        {
+          "i": 14,
+          "train_score": 0.0,
+          "test_correct": true,
+          "parse_error": false,
+          "cost_usd": 0.0017816
+        },
+        {
+          "i": 13,
+          "train_score": 0.6666666666666666,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0015662
+        },
+        {
+          "i": 17,
+          "train_score": 0.6666666666666666,
+          "test_correct": true,
+          "parse_error": false,
+          "cost_usd": 0.0018234000000000002
+        },
+        {
+          "i": 18,
+          "train_score": 0.6666666666666666,
+          "test_correct": true,
+          "parse_error": false,
+          "cost_usd": 0.0016626000000000002
+        },
+        {
+          "i": 21,
+          "train_score": 0.6666666666666666,
+          "test_correct": true,
+          "parse_error": false,
+          "cost_usd": 0.0016326000000000001
+        },
+        {
+          "i": 20,
+          "train_score": 0.6666666666666666,
+          "test_correct": true,
+          "parse_error": false,
+          "cost_usd": 0.0019284
+        },
+        {
+          "i": 23,
+          "train_score": 0.6666666666666666,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.001713
+        },
+        {
+          "i": 16,
+          "train_score": 0.6666666666666666,
+          "test_correct": true,
+          "parse_error": false,
+          "cost_usd": 0.0016116000000000001
+        },
+        {
+          "i": 19,
+          "train_score": 0.6666666666666666,
+          "test_correct": true,
+          "parse_error": false,
+          "cost_usd": 0.0017424
+        },
+        {
+          "i": 22,
+          "train_score": 0.6666666666666666,
+          "test_correct": true,
+          "parse_error": false,
+          "cost_usd": 0.0017376000000000002
+        }
+      ]
+    },
+    {
+      "task_id": "arc1_training_0279",
+      "n_train_pairs": 3,
+      "n_candidates": 24,
+      "best_train_score": 0.0,
+      "any_train_solved": false,
+      "first_passing_test_correct": false,
+      "candidates": [
+        {
+          "i": 7,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0016346
+        },
+        {
+          "i": 2,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.00224
+        },
+        {
+          "i": 0,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.00224
+        },
+        {
+          "i": 3,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.00224
+        },
+        {
+          "i": 5,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.00224
+        },
+        {
+          "i": 4,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.00224
+        },
+        {
+          "i": 1,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.00224
+        },
+        {
+          "i": 6,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0022184
+        },
+        {
+          "i": 8,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0018164000000000001
+        },
+        {
+          "i": 9,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.00224
+        },
+        {
+          "i": 10,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.00224
+        },
+        {
+          "i": 14,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0021098000000000002
+        },
+        {
+          "i": 11,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.00224
+        },
+        {
+          "i": 12,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.00224
+        },
+        {
+          "i": 15,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.00224
+        },
+        {
+          "i": 13,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0016964
+        },
+        {
+          "i": 20,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.001475
+        },
+        {
+          "i": 16,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0017954000000000002
+        },
+        {
+          "i": 17,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0015968000000000002
+        },
+        {
+          "i": 19,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.001622
+        },
+        {
+          "i": 21,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.00224
+        },
+        {
+          "i": 18,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0012925999999999999
+        },
+        {
+          "i": 23,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0021554
+        },
+        {
+          "i": 22,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.00224
+        }
+      ]
+    },
+    {
+      "task_id": "arc1_training_0044",
+      "n_train_pairs": 3,
+      "n_candidates": 24,
+      "best_train_score": 0.0,
+      "any_train_solved": false,
+      "first_passing_test_correct": false,
+      "candidates": [
+        {
+          "i": 2,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0021488
+        },
+        {
+          "i": 4,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.001763
+        },
+        {
+          "i": 3,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0021068000000000003
+        },
+        {
+          "i": 7,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0012584
+        },
+        {
+          "i": 5,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0021488
+        },
+        {
+          "i": 0,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0021488
+        },
+        {
+          "i": 6,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0021488
+        },
+        {
+          "i": 1,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0021488
+        },
+        {
+          "i": 12,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0017461999999999998
+        },
+        {
+          "i": 10,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0019364
+        },
+        {
+          "i": 11,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0019268
+        },
+        {
+          "i": 9,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0019988
+        },
+        {
+          "i": 8,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0021488
+        },
+        {
+          "i": 13,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0020798
+        },
+        {
+          "i": 14,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0015697999999999999
+        },
+        {
+          "i": 15,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0021488
+        },
+        {
+          "i": 20,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.001556
+        },
+        {
+          "i": 21,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0021488
+        },
+        {
+          "i": 22,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.002069
+        },
+        {
+          "i": 23,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0021488
+        },
+        {
+          "i": 18,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0021488
+        },
+        {
+          "i": 19,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0019261999999999999
+        },
+        {
+          "i": 17,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0021488
+        },
+        {
+          "i": 16,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0021488
+        }
+      ]
+    },
+    {
+      "task_id": "arc1_training_0302",
+      "n_train_pairs": 2,
+      "n_candidates": 24,
+      "best_train_score": 0.5,
+      "any_train_solved": false,
+      "first_passing_test_correct": false,
+      "candidates": [
+        {
+          "i": 0,
+          "train_score": 0.5,
+          "test_correct": true,
+          "parse_error": false,
+          "cost_usd": 0.0008844000000000001
+        },
+        {
+          "i": 3,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0008712
+        },
+        {
+          "i": 1,
+          "train_score": 0.5,
+          "test_correct": true,
+          "parse_error": false,
+          "cost_usd": 0.0009786
+        },
+        {
+          "i": 5,
+          "train_score": 0.5,
+          "test_correct": true,
+          "parse_error": false,
+          "cost_usd": 0.0009138000000000001
+        },
+        {
+          "i": 2,
+          "train_score": 0.5,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0011346000000000001
+        },
+        {
+          "i": 4,
+          "train_score": 0.5,
+          "test_correct": true,
+          "parse_error": false,
+          "cost_usd": 0.001071
+        },
+        {
+          "i": 7,
+          "train_score": 0.5,
+          "test_correct": true,
+          "parse_error": false,
+          "cost_usd": 0.0009798
+        },
+        {
+          "i": 6,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0020076
+        },
+        {
+          "i": 8,
+          "train_score": 0.5,
+          "test_correct": true,
+          "parse_error": false,
+          "cost_usd": 0.0012282
+        },
+        {
+          "i": 11,
+          "train_score": 0.5,
+          "test_correct": true,
+          "parse_error": false,
+          "cost_usd": 0.0012036
+        },
+        {
+          "i": 9,
+          "train_score": 0.5,
+          "test_correct": true,
+          "parse_error": false,
+          "cost_usd": 0.0012066
+        },
+        {
+          "i": 15,
+          "train_score": 0.5,
+          "test_correct": true,
+          "parse_error": false,
+          "cost_usd": 0.0013134000000000002
+        },
+        {
+          "i": 12,
+          "train_score": 0.5,
+          "test_correct": true,
+          "parse_error": false,
+          "cost_usd": 0.0012276
+        },
+        {
+          "i": 10,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0021978
+        },
+        {
+          "i": 14,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": true,
+          "cost_usd": 0.0021978
+        },
+        {
+          "i": 13,
+          "train_score": 0.5,
+          "test_correct": true,
+          "parse_error": false,
+          "cost_usd": 0.0011934
+        },
+        {
+          "i": 16,
+          "train_score": 0.5,
+          "test_correct": true,
+          "parse_error": false,
+          "cost_usd": 0.0013128
+        },
+        {
+          "i": 17,
+          "train_score": 0.5,
+          "test_correct": true,
+          "parse_error": false,
+          "cost_usd": 0.001296
+        },
+        {
+          "i": 18,
+          "train_score": 0.5,
+          "test_correct": true,
+          "parse_error": false,
+          "cost_usd": 0.001311
+        },
+        {
+          "i": 19,
+          "train_score": 0.5,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0013842000000000001
+        },
+        {
+          "i": 22,
+          "train_score": 0.5,
+          "test_correct": true,
+          "parse_error": false,
+          "cost_usd": 0.0013805999999999998
+        },
+        {
+          "i": 20,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0021978
+        },
+        {
+          "i": 21,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0021978
+        },
+        {
+          "i": 23,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0016518
+        }
+      ]
+    },
+    {
+      "task_id": "arc1_training_0216",
+      "n_train_pairs": 4,
+      "n_candidates": 24,
+      "best_train_score": 0.75,
+      "any_train_solved": false,
+      "first_passing_test_correct": false,
+      "candidates": [
+        {
+          "i": 0,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0009424
+        },
+        {
+          "i": 2,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0011806
+        },
+        {
+          "i": 1,
+          "train_score": 0.25,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0012645999999999998
+        },
+        {
+          "i": 6,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0012472
+        },
+        {
+          "i": 4,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0014422
+        },
+        {
+          "i": 3,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.001684
+        },
+        {
+          "i": 5,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0019564
+        },
+        {
+          "i": 7,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0019564
+        },
+        {
+          "i": 11,
+          "train_score": 0.25,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0013538000000000003
+        },
+        {
+          "i": 9,
+          "train_score": 0.25,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0013748000000000002
+        },
+        {
+          "i": 14,
+          "train_score": 0.25,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0013274
+        },
+        {
+          "i": 8,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0021692
+        },
+        {
+          "i": 10,
+          "train_score": 0.25,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0014288000000000003
+        },
+        {
+          "i": 13,
+          "train_score": 0.25,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0013844
+        },
+        {
+          "i": 12,
+          "train_score": 0.25,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0013718000000000003
+        },
+        {
+          "i": 15,
+          "train_score": 0.25,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0014588000000000001
+        },
+        {
+          "i": 20,
+          "train_score": 0.25,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0017456000000000001
+        },
+        {
+          "i": 17,
+          "train_score": 0.75,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0018572
+        },
+        {
+          "i": 16,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0024901999999999997
+        },
+        {
+          "i": 19,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": true,
+          "cost_usd": 0.0024901999999999997
+        },
+        {
+          "i": 22,
+          "train_score": 0.25,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0017492
+        },
+        {
+          "i": 21,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": true,
+          "cost_usd": 0.0024901999999999997
+        },
+        {
+          "i": 23,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": true,
+          "cost_usd": 0.0024901999999999997
+        },
+        {
+          "i": 18,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": true,
+          "cost_usd": 0.0024901999999999997
+        }
+      ]
+    },
+    {
+      "task_id": "arc1_training_0016",
+      "n_train_pairs": 3,
+      "n_candidates": 24,
+      "best_train_score": 0.0,
+      "any_train_solved": false,
+      "first_passing_test_correct": false,
+      "candidates": [
+        {
+          "i": 0,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0016454
+        },
+        {
+          "i": 2,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0015974
+        },
+        {
+          "i": 3,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0015398
+        },
+        {
+          "i": 4,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0016261999999999997
+        },
+        {
+          "i": 1,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0018518
+        },
+        {
+          "i": 5,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0016831999999999997
+        },
+        {
+          "i": 6,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.00179
+        },
+        {
+          "i": 7,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.00218
+        },
+        {
+          "i": 12,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0015014
+        },
+        {
+          "i": 11,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0016838
+        },
+        {
+          "i": 9,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0019171999999999998
+        },
+        {
+          "i": 8,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0017371999999999997
+        },
+        {
+          "i": 15,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0017588
+        },
+        {
+          "i": 10,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0017234000000000001
+        },
+        {
+          "i": 14,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0017504
+        },
+        {
+          "i": 13,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0019694
+        },
+        {
+          "i": 18,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0015926
+        },
+        {
+          "i": 20,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0016928
+        },
+        {
+          "i": 17,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.001787
+        },
+        {
+          "i": 16,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0018644
+        },
+        {
+          "i": 22,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0017846
+        },
+        {
+          "i": 23,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0018398
+        },
+        {
+          "i": 19,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0016292
+        },
+        {
+          "i": 21,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0016424
+        }
+      ]
+    },
+    {
+      "task_id": "arc1_training_0015",
+      "n_train_pairs": 4,
+      "n_candidates": 8,
+      "best_train_score": 1.0,
+      "any_train_solved": true,
+      "first_passing_test_correct": true,
+      "candidates": [
+        {
+          "i": 0,
+          "train_score": 1.0,
+          "test_correct": true,
+          "parse_error": false,
+          "cost_usd": 0.000412
+        },
+        {
+          "i": 2,
+          "train_score": 1.0,
+          "test_correct": true,
+          "parse_error": false,
+          "cost_usd": 0.00039220000000000005
+        },
+        {
+          "i": 1,
+          "train_score": 1.0,
+          "test_correct": true,
+          "parse_error": false,
+          "cost_usd": 0.0004594
+        },
+        {
+          "i": 3,
+          "train_score": 1.0,
+          "test_correct": true,
+          "parse_error": false,
+          "cost_usd": 0.00042220000000000007
+        },
+        {
+          "i": 5,
+          "train_score": 1.0,
+          "test_correct": true,
+          "parse_error": false,
+          "cost_usd": 0.000394
+        },
+        {
+          "i": 6,
+          "train_score": 1.0,
+          "test_correct": true,
+          "parse_error": false,
+          "cost_usd": 0.0003904
+        },
+        {
+          "i": 7,
+          "train_score": 1.0,
+          "test_correct": true,
+          "parse_error": false,
+          "cost_usd": 0.00037660000000000005
+        },
+        {
+          "i": 4,
+          "train_score": 1.0,
+          "test_correct": true,
+          "parse_error": false,
+          "cost_usd": 0.0011794
+        }
+      ]
+    },
+    {
+      "task_id": "arc1_training_0047",
+      "n_train_pairs": 3,
+      "n_candidates": 8,
+      "best_train_score": 1.0,
+      "any_train_solved": true,
+      "first_passing_test_correct": true,
+      "candidates": [
+        {
+          "i": 1,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0007364
+        },
+        {
+          "i": 2,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0007634
+        },
+        {
+          "i": 5,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0007466
+        },
+        {
+          "i": 4,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0007507999999999999
+        },
+        {
+          "i": 7,
+          "train_score": 1.0,
+          "test_correct": true,
+          "parse_error": false,
+          "cost_usd": 0.001154
+        },
+        {
+          "i": 0,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0013784000000000001
+        },
+        {
+          "i": 6,
+          "train_score": 1.0,
+          "test_correct": true,
+          "parse_error": false,
+          "cost_usd": 0.0018344000000000001
+        },
+        {
+          "i": 3,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0018344000000000001
+        }
+      ]
+    },
+    {
+      "task_id": "arc1_training_0111",
+      "n_train_pairs": 2,
+      "n_candidates": 8,
+      "best_train_score": 1.0,
+      "any_train_solved": true,
+      "first_passing_test_correct": true,
+      "candidates": [
+        {
+          "i": 5,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.000597
+        },
+        {
+          "i": 0,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0015324000000000002
+        },
+        {
+          "i": 1,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0015324000000000002
+        },
+        {
+          "i": 2,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0015324000000000002
+        },
+        {
+          "i": 4,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0015324000000000002
+        },
+        {
+          "i": 3,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0015324000000000002
+        },
+        {
+          "i": 7,
+          "train_score": 1.0,
+          "test_correct": true,
+          "parse_error": false,
+          "cost_usd": 0.0014328000000000001
+        },
+        {
+          "i": 6,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0015324000000000002
+        }
+      ]
+    },
+    {
+      "task_id": "arc1_training_0119",
+      "n_train_pairs": 3,
+      "n_candidates": 24,
+      "best_train_score": 1.0,
+      "any_train_solved": true,
+      "first_passing_test_correct": true,
+      "candidates": [
+        {
+          "i": 0,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0007856
+        },
+        {
+          "i": 2,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.000887
+        },
+        {
+          "i": 6,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.000776
+        },
+        {
+          "i": 1,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0017024000000000002
+        },
+        {
+          "i": 3,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0017024000000000002
+        },
+        {
+          "i": 4,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0017024000000000002
+        },
+        {
+          "i": 5,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0017024000000000002
+        },
+        {
+          "i": 7,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": true,
+          "cost_usd": 0.0
+        },
+        {
+          "i": 9,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0006458
+        },
+        {
+          "i": 12,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0006746
+        },
+        {
+          "i": 11,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0006938
+        },
+        {
+          "i": 8,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0017024000000000002
+        },
+        {
+          "i": 13,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0017024000000000002
+        },
+        {
+          "i": 14,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0017024000000000002
+        },
+        {
+          "i": 15,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0008612
+        },
+        {
+          "i": 10,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0017024000000000002
+        },
+        {
+          "i": 20,
+          "train_score": 1.0,
+          "test_correct": true,
+          "parse_error": false,
+          "cost_usd": 0.0006008
+        },
+        {
+          "i": 17,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0017024000000000002
+        },
+        {
+          "i": 19,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0017024000000000002
+        },
+        {
+          "i": 18,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0017024000000000002
+        },
+        {
+          "i": 21,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0017024000000000002
+        },
+        {
+          "i": 22,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0017024000000000002
+        },
+        {
+          "i": 23,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0017024000000000002
+        },
+        {
+          "i": 16,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0017024000000000002
+        }
+      ]
+    },
+    {
+      "task_id": "arc1_training_0258",
+      "n_train_pairs": 3,
+      "n_candidates": 8,
+      "best_train_score": 1.0,
+      "any_train_solved": true,
+      "first_passing_test_correct": true,
+      "candidates": [
+        {
+          "i": 0,
+          "train_score": 1.0,
+          "test_correct": true,
+          "parse_error": false,
+          "cost_usd": 0.00041480000000000005
+        },
+        {
+          "i": 2,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.00034100000000000005
+        },
+        {
+          "i": 1,
+          "train_score": 1.0,
+          "test_correct": true,
+          "parse_error": false,
+          "cost_usd": 0.00041480000000000005
+        },
+        {
+          "i": 4,
+          "train_score": 1.0,
+          "test_correct": true,
+          "parse_error": false,
+          "cost_usd": 0.00033440000000000005
+        },
+        {
+          "i": 7,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0003332
+        },
+        {
+          "i": 5,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.00034520000000000004
+        },
+        {
+          "i": 3,
+          "train_score": 1.0,
+          "test_correct": true,
+          "parse_error": false,
+          "cost_usd": 0.00040760000000000004
+        },
+        {
+          "i": 6,
+          "train_score": 1.0,
+          "test_correct": true,
+          "parse_error": false,
+          "cost_usd": 0.0008432
+        }
+      ]
+    },
+    {
+      "task_id": "arc1_training_0308",
+      "n_train_pairs": 3,
+      "n_candidates": 8,
+      "best_train_score": 1.0,
+      "any_train_solved": true,
+      "first_passing_test_correct": true,
+      "candidates": [
+        {
+          "i": 1,
+          "train_score": 1.0,
+          "test_correct": true,
+          "parse_error": false,
+          "cost_usd": 0.00036740000000000004
+        },
+        {
+          "i": 0,
+          "train_score": 1.0,
+          "test_correct": true,
+          "parse_error": false,
+          "cost_usd": 0.00038060000000000004
+        },
+        {
+          "i": 2,
+          "train_score": 1.0,
+          "test_correct": true,
+          "parse_error": false,
+          "cost_usd": 0.00037160000000000003
+        },
+        {
+          "i": 4,
+          "train_score": 1.0,
+          "test_correct": true,
+          "parse_error": false,
+          "cost_usd": 0.000371
+        },
+        {
+          "i": 5,
+          "train_score": 1.0,
+          "test_correct": true,
+          "parse_error": false,
+          "cost_usd": 0.00036740000000000004
+        },
+        {
+          "i": 6,
+          "train_score": 1.0,
+          "test_correct": true,
+          "parse_error": false,
+          "cost_usd": 0.00036740000000000004
+        },
+        {
+          "i": 3,
+          "train_score": 1.0,
+          "test_correct": true,
+          "parse_error": false,
+          "cost_usd": 0.00043220000000000004
+        },
+        {
+          "i": 7,
+          "train_score": 1.0,
+          "test_correct": true,
+          "parse_error": false,
+          "cost_usd": 0.00036740000000000004
+        }
+      ]
+    },
+    {
+      "task_id": "arc1_training_0013",
+      "n_train_pairs": 4,
+      "n_candidates": 8,
+      "best_train_score": 1.0,
+      "any_train_solved": true,
+      "first_passing_test_correct": true,
+      "candidates": [
+        {
+          "i": 0,
+          "train_score": 1.0,
+          "test_correct": true,
+          "parse_error": false,
+          "cost_usd": 0.000463
+        },
+        {
+          "i": 1,
+          "train_score": 1.0,
+          "test_correct": true,
+          "parse_error": false,
+          "cost_usd": 0.0004642
+        },
+        {
+          "i": 2,
+          "train_score": 1.0,
+          "test_correct": true,
+          "parse_error": false,
+          "cost_usd": 0.0004612
+        },
+        {
+          "i": 3,
+          "train_score": 1.0,
+          "test_correct": true,
+          "parse_error": false,
+          "cost_usd": 0.0004684
+        },
+        {
+          "i": 4,
+          "train_score": 1.0,
+          "test_correct": true,
+          "parse_error": false,
+          "cost_usd": 0.0004654
+        },
+        {
+          "i": 6,
+          "train_score": 1.0,
+          "test_correct": true,
+          "parse_error": false,
+          "cost_usd": 0.0004594
+        },
+        {
+          "i": 5,
+          "train_score": 1.0,
+          "test_correct": true,
+          "parse_error": false,
+          "cost_usd": 0.00046179999999999995
+        },
+        {
+          "i": 7,
+          "train_score": 1.0,
+          "test_correct": true,
+          "parse_error": false,
+          "cost_usd": 0.00047260000000000005
+        }
+      ]
+    },
+    {
+      "task_id": "arc1_training_0287",
+      "n_train_pairs": 3,
+      "n_candidates": 24,
+      "best_train_score": 0.0,
+      "any_train_solved": false,
+      "first_passing_test_correct": false,
+      "candidates": [
+        {
+          "i": 1,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0032288
+        },
+        {
+          "i": 5,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0035306000000000005
+        },
+        {
+          "i": 2,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.003985400000000001
+        },
+        {
+          "i": 6,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0036056000000000005
+        },
+        {
+          "i": 4,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.003985400000000001
+        },
+        {
+          "i": 7,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.003985400000000001
+        },
+        {
+          "i": 0,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0036974000000000004
+        },
+        {
+          "i": 3,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0033842000000000004
+        },
+        {
+          "i": 10,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0032870000000000004
+        },
+        {
+          "i": 8,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0037316000000000003
+        },
+        {
+          "i": 9,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.003985400000000001
+        },
+        {
+          "i": 12,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.003985400000000001
+        },
+        {
+          "i": 13,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.003985400000000001
+        },
+        {
+          "i": 14,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.003985400000000001
+        },
+        {
+          "i": 15,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.003985400000000001
+        },
+        {
+          "i": 11,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0034292000000000003
+        },
+        {
+          "i": 17,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0034172000000000004
+        },
+        {
+          "i": 16,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.003985400000000001
+        },
+        {
+          "i": 21,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0037106000000000005
+        },
+        {
+          "i": 18,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.003985400000000001
+        },
+        {
+          "i": 20,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.003985400000000001
+        },
+        {
+          "i": 19,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.003985400000000001
+        },
+        {
+          "i": 22,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.003851
+        },
+        {
+          "i": 23,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.003985400000000001
+        }
+      ]
+    },
+    {
+      "task_id": "arc1_training_0101",
+      "n_train_pairs": 2,
+      "n_candidates": 24,
+      "best_train_score": 1.0,
+      "any_train_solved": true,
+      "first_passing_test_correct": false,
+      "candidates": [
+        {
+          "i": 0,
+          "train_score": 1.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0005154
+        },
+        {
+          "i": 1,
+          "train_score": 1.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.000513
+        },
+        {
+          "i": 2,
+          "train_score": 1.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0004974
+        },
+        {
+          "i": 4,
+          "train_score": 1.0,
+          "test_correct": true,
+          "parse_error": false,
+          "cost_usd": 0.0004848
+        },
+        {
+          "i": 3,
+          "train_score": 1.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0004883999999999999
+        },
+        {
+          "i": 5,
+          "train_score": 1.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.000546
+        },
+        {
+          "i": 6,
+          "train_score": 1.0,
+          "test_correct": true,
+          "parse_error": false,
+          "cost_usd": 0.000492
+        },
+        {
+          "i": 7,
+          "train_score": 1.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0004932000000000001
+        },
+        {
+          "i": 8,
+          "train_score": 1.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.000711
+        },
+        {
+          "i": 9,
+          "train_score": 1.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0007224
+        },
+        {
+          "i": 10,
+          "train_score": 1.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0007242
+        },
+        {
+          "i": 11,
+          "train_score": 1.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0007277999999999999
+        },
+        {
+          "i": 12,
+          "train_score": 1.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0007247999999999999
+        },
+        {
+          "i": 13,
+          "train_score": 1.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0007218
+        },
+        {
+          "i": 14,
+          "train_score": 1.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0007266
+        },
+        {
+          "i": 15,
+          "train_score": 1.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.000735
+        },
+        {
+          "i": 16,
+          "train_score": 1.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0007488
+        },
+        {
+          "i": 17,
+          "train_score": 1.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0007272
+        },
+        {
+          "i": 18,
+          "train_score": 1.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0007152
+        },
+        {
+          "i": 19,
+          "train_score": 1.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0007116000000000001
+        },
+        {
+          "i": 20,
+          "train_score": 1.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0007134
+        },
+        {
+          "i": 21,
+          "train_score": 1.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0007296000000000001
+        },
+        {
+          "i": 22,
+          "train_score": 1.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0007187999999999999
+        },
+        {
+          "i": 23,
+          "train_score": 1.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0007212000000000001
+        }
+      ]
+    },
+    {
+      "task_id": "arc1_training_0366",
+      "n_train_pairs": 3,
+      "n_candidates": 24,
+      "best_train_score": 0.0,
+      "any_train_solved": false,
+      "first_passing_test_correct": false,
+      "candidates": [
+        {
+          "i": 3,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0017306
+        },
+        {
+          "i": 7,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0016082
+        },
+        {
+          "i": 6,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.001784
+        },
+        {
+          "i": 4,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.002123
+        },
+        {
+          "i": 2,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.001943
+        },
+        {
+          "i": 1,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.002105
+        },
+        {
+          "i": 0,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0015176000000000002
+        },
+        {
+          "i": 5,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0018656000000000002
+        },
+        {
+          "i": 8,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0015014000000000002
+        },
+        {
+          "i": 10,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0018578000000000002
+        },
+        {
+          "i": 13,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.001631
+        },
+        {
+          "i": 9,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0020636000000000005
+        },
+        {
+          "i": 14,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0023594
+        },
+        {
+          "i": 12,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0023594
+        },
+        {
+          "i": 15,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": true,
+          "cost_usd": 0.0023594
+        },
+        {
+          "i": 11,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0018902000000000003
+        },
+        {
+          "i": 19,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.00161
+        },
+        {
+          "i": 17,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0016562000000000003
+        },
+        {
+          "i": 16,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": true,
+          "cost_usd": 0.0023594
+        },
+        {
+          "i": 20,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.002354
+        },
+        {
+          "i": 21,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": true,
+          "cost_usd": 0.0023594
+        },
+        {
+          "i": 22,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0023594
+        },
+        {
+          "i": 23,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": true,
+          "cost_usd": 0.0023594
+        },
+        {
+          "i": 18,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": true,
+          "cost_usd": 0.0023594
+        }
+      ]
+    },
+    {
+      "task_id": "arc1_training_0332",
+      "n_train_pairs": 3,
+      "n_candidates": 16,
+      "best_train_score": 1.0,
+      "any_train_solved": true,
+      "first_passing_test_correct": true,
+      "candidates": [
+        {
+          "i": 1,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0014924
+        },
+        {
+          "i": 6,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0013352000000000001
+        },
+        {
+          "i": 3,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0014822000000000001
+        },
+        {
+          "i": 5,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0015542
+        },
+        {
+          "i": 7,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0015812
+        },
+        {
+          "i": 4,
+          "train_score": 0.6666666666666666,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.001751
+        },
+        {
+          "i": 2,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0017924
+        },
+        {
+          "i": 0,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0017054000000000001
+        },
+        {
+          "i": 8,
+          "train_score": 0.3333333333333333,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0020691999999999998
+        },
+        {
+          "i": 9,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0023812
+        },
+        {
+          "i": 10,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0023812
+        },
+        {
+          "i": 15,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0021861999999999997
+        },
+        {
+          "i": 11,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0018376
+        },
+        {
+          "i": 13,
+          "train_score": 1.0,
+          "test_correct": true,
+          "parse_error": false,
+          "cost_usd": 0.0020794
+        },
+        {
+          "i": 12,
+          "train_score": 1.0,
+          "test_correct": true,
+          "parse_error": false,
+          "cost_usd": 0.001816
+        },
+        {
+          "i": 14,
+          "train_score": 1.0,
+          "test_correct": true,
+          "parse_error": false,
+          "cost_usd": 0.0020248
+        }
+      ]
+    },
+    {
+      "task_id": "arc1_training_0359",
+      "n_train_pairs": 3,
+      "n_candidates": 8,
+      "best_train_score": 1.0,
+      "any_train_solved": true,
+      "first_passing_test_correct": true,
+      "candidates": [
+        {
+          "i": 5,
+          "train_score": 1.0,
+          "test_correct": true,
+          "parse_error": false,
+          "cost_usd": 0.0010316
+        },
+        {
+          "i": 6,
+          "train_score": 0.3333333333333333,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.00040639999999999996
+        },
+        {
+          "i": 7,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0005516000000000001
+        },
+        {
+          "i": 1,
+          "train_score": 0.3333333333333333,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.000386
+        },
+        {
+          "i": 4,
+          "train_score": 0.3333333333333333,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.000377
+        },
+        {
+          "i": 0,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": true,
+          "cost_usd": 0.0
+        },
+        {
+          "i": 2,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": true,
+          "cost_usd": 0.0
+        },
+        {
+          "i": 3,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": true,
+          "cost_usd": 0.0
+        }
+      ]
+    },
+    {
+      "task_id": "arc1_training_0214",
+      "n_train_pairs": 3,
+      "n_candidates": 24,
+      "best_train_score": 0.0,
+      "any_train_solved": false,
+      "first_passing_test_correct": false,
+      "candidates": [
+        {
+          "i": 0,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0015734000000000002
+        },
+        {
+          "i": 1,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0007262000000000001
+        },
+        {
+          "i": 4,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0007772
+        },
+        {
+          "i": 2,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0008707999999999999
+        },
+        {
+          "i": 7,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0008312
+        },
+        {
+          "i": 5,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0011594
+        },
+        {
+          "i": 3,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0010207999999999999
+        },
+        {
+          "i": 6,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0008522
+        },
+        {
+          "i": 12,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0007417999999999999
+        },
+        {
+          "i": 10,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.000908
+        },
+        {
+          "i": 13,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0017144
+        },
+        {
+          "i": 8,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0015961999999999999
+        },
+        {
+          "i": 14,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.001502
+        },
+        {
+          "i": 11,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0013448
+        },
+        {
+          "i": 15,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0011426
+        },
+        {
+          "i": 9,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.001208
+        },
+        {
+          "i": 18,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0007922000000000001
+        },
+        {
+          "i": 22,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0009014000000000001
+        },
+        {
+          "i": 16,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0012404
+        },
+        {
+          "i": 17,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0011084
+        },
+        {
+          "i": 19,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0017144
+        },
+        {
+          "i": 23,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0017144
+        },
+        {
+          "i": 21,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.001151
+        },
+        {
+          "i": 20,
+          "train_score": 0.0,
+          "test_correct": null,
+          "parse_error": false,
+          "cost_usd": 0.0017144
+        }
+      ]
+    },
+    {
+      "task_id": "arc1_training_0112",
+      "n_train_pairs": 3,
+      "n_candidates": 8,
+      "best_train_score": 1.0,
+      "any_train_solved": true,
+      "first_passing_test_correct": true,
+      "candidates": [
+        {
+          "i": 1,
+          "train_score": 1.0,
+          "test_correct": true,
+          "parse_error": false,
+          "cost_usd": 0.002117
+        },
+        {
+          "i": 2,
+          "train_score": 0.6666666666666666,
+          "test_correct": true,
+          "parse_error": false,
+          "cost_usd": 0.0018746000000000001
+        },
+        {
+          "i": 0,
+          "train_score": 1.0,
+          "test_correct": true,
+          "parse_error": false,
+          "cost_usd": 0.0018158000000000002
+        },
+        {
+          "i": 4,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0016748000000000002
+        },
+        {
+          "i": 6,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0016646000000000002
+        },
+        {
+          "i": 3,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0015836000000000001
+        },
+        {
+          "i": 7,
+          "train_score": 1.0,
+          "test_correct": true,
+          "parse_error": false,
+          "cost_usd": 0.0018410000000000002
+        },
+        {
+          "i": 5,
+          "train_score": 0.0,
+          "test_correct": false,
+          "parse_error": false,
+          "cost_usd": 0.0017978000000000002
+        }
+      ]
+    }
+  ]
+}

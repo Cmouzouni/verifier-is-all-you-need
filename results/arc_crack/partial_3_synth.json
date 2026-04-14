@@ -1,0 +1,258 @@
+{
+  "phase": "synth",
+  "results": {
+    "EXP-A1__16x7b_synth17b": {
+      "name": "EXP-A1__16x7b_synth17b",
+      "k": 1,
+      "n": 30,
+      "rate": 0.03333333333333333,
+      "any_proposer_rate": 0.13333333333333333,
+      "avg_proposers_correct": 1.4333333333333333,
+      "cost": 0.9654402000000001,
+      "cost_per_episode": 0.03218134,
+      "type": "synth",
+      "records": [
+        {
+          "task_id": "arc_0125",
+          "n_proposers_correct": 0,
+          "synth_correct": false,
+          "prop_cost": 0.040331399999999996,
+          "synth_cost": 0.0326358,
+          "total_cost": 0.0729672
+        },
+        {
+          "task_id": "arc_0071",
+          "n_proposers_correct": 0,
+          "synth_correct": false,
+          "prop_cost": 0.0255738,
+          "synth_cost": 0.027007200000000002,
+          "total_cost": 0.052581
+        },
+        {
+          "task_id": "arc_0052",
+          "n_proposers_correct": 0,
+          "synth_correct": false,
+          "prop_cost": 0.0017778,
+          "synth_cost": 0.015291,
+          "total_cost": 0.017068800000000002
+        },
+        {
+          "task_id": "arc_0057",
+          "n_proposers_correct": 0,
+          "synth_correct": false,
+          "prop_cost": 0.004715399999999999,
+          "synth_cost": 0.0164142,
+          "total_cost": 0.0211296
+        },
+        {
+          "task_id": "arc_0012",
+          "n_proposers_correct": 0,
+          "synth_correct": false,
+          "prop_cost": 0.008537399999999999,
+          "synth_cost": 0.0177384,
+          "total_cost": 0.026275800000000002
+        },
+        {
+          "task_id": "arc_0114",
+          "n_proposers_correct": 0,
+          "synth_correct": false,
+          "prop_cost": 0.0666942,
+          "synth_cost": 0.036358800000000004,
+          "total_cost": 0.103053
+        },
+        {
+          "task_id": "arc_0044",
+          "n_proposers_correct": 0,
+          "synth_correct": false,
+          "prop_cost": 0.0146418,
+          "synth_cost": 0.0205152,
+          "total_cost": 0.035157
+        },
+        {
+          "task_id": "arc_0302",
+          "n_proposers_correct": 0,
+          "synth_correct": false,
+          "prop_cost": 0.012162,
+          "synth_cost": 0.019801799999999998,
+          "total_cost": 0.0319638
+        },
+        {
+          "task_id": "arc_0377",
+          "n_proposers_correct": 0,
+          "synth_correct": false,
+          "prop_cost": 0.0229158,
+          "synth_cost": 0.025258799999999998,
+          "total_cost": 0.0481746
+        },
+        {
+          "task_id": "arc_0279",
+          "n_proposers_correct": 0,
+          "synth_correct": false,
+          "prop_cost": 0.0160536,
+          "synth_cost": 0.0206028,
+          "total_cost": 0.036656400000000006
+        },
+        {
+          "task_id": "arc_0015",
+          "n_proposers_correct": 16,
+          "synth_correct": false,
+          "prop_cost": 0.0017958,
+          "synth_cost": 0.015327,
+          "total_cost": 0.0171228
+        },
+        {
+          "task_id": "arc_0379",
+          "n_proposers_correct": 0,
+          "synth_correct": false,
+          "prop_cost": 0.0034097999999999997,
+          "synth_cost": 0.0159252,
+          "total_cost": 0.019335
+        },
+        {
+          "task_id": "arc_0258",
+          "n_proposers_correct": 0,
+          "synth_correct": false,
+          "prop_cost": 0.0029874,
+          "synth_cost": 0.0154404,
+          "total_cost": 0.0184278
+        },
+        {
+          "task_id": "arc_0308",
+          "n_proposers_correct": 0,
+          "synth_correct": false,
+          "prop_cost": 0.0033066,
+          "synth_cost": 0.0168168,
+          "total_cost": 0.0201234
+        },
+        {
+          "task_id": "arc_0119",
+          "n_proposers_correct": 0,
+          "synth_correct": false,
+          "prop_cost": 0.0059859,
+          "synth_cost": 0.016598400000000003,
+          "total_cost": 0.0225843
+        },
+        {
+          "task_id": "arc_0047",
+          "n_proposers_correct": 0,
+          "synth_correct": false,
+          "prop_cost": 0.0085434,
+          "synth_cost": 0.017750400000000003,
+          "total_cost": 0.026293800000000003
+        },
+        {
+          "task_id": "arc_0140",
+          "n_proposers_correct": 0,
+          "synth_correct": false,
+          "prop_cost": 0.0119346,
+          "synth_cost": 0,
+          "total_cost": 0.0119346
+        },
+        {
+          "task_id": "arc_0327",
+          "n_proposers_correct": 0,
+          "synth_correct": false,
+          "prop_cost": 0.0181104,
+          "synth_cost": 0,
+          "total_cost": 0.0181104
+        },
+        {
+          "task_id": "arc_0016",
+          "n_proposers_correct": 0,
+          "synth_correct": false,
+          "prop_cost": 0.0187884,
+          "synth_cost": 0.0231744,
+          "total_cost": 0.0419628
+        },
+        {
+          "task_id": "arc_0346",
+          "n_proposers_correct": 1,
+          "synth_correct": false,
+          "prop_cost": 0.0072114,
+          "synth_cost": 0,
+          "total_cost": 0.0072114
+        },
+        {
+          "task_id": "arc_0013",
+          "n_proposers_correct": 12,
+          "synth_correct": false,
+          "prop_cost": 0.0030738,
+          "synth_cost": 0.015939,
+          "total_cost": 0.019012799999999996
+        },
+        {
+          "task_id": "arc_0287",
+          "n_proposers_correct": 0,
+          "synth_correct": false,
+          "prop_cost": 0.0491367,
+          "synth_cost": 0.033502800000000006,
+          "total_cost": 0.0826395
+        },
+        {
+          "task_id": "arc_0359",
+          "n_proposers_correct": 0,
+          "synth_correct": false,
+          "prop_cost": 0.0019998,
+          "synth_cost": 0.0152496,
+          "total_cost": 0.0172494
+        },
+        {
+          "task_id": "arc_0111",
+          "n_proposers_correct": 0,
+          "synth_correct": false,
+          "prop_cost": 0.0031458000000000002,
+          "synth_cost": 0.0160254,
+          "total_cost": 0.0191712
+        },
+        {
+          "task_id": "arc_0332",
+          "n_proposers_correct": 0,
+          "synth_correct": false,
+          "prop_cost": 0.0119934,
+          "synth_cost": 0.018422400000000002,
+          "total_cost": 0.0304158
+        },
+        {
+          "task_id": "arc_0216",
+          "n_proposers_correct": 0,
+          "synth_correct": false,
+          "prop_cost": 0.01053,
+          "synth_cost": 0,
+          "total_cost": 0.01053
+        },
+        {
+          "task_id": "arc_0214",
+          "n_proposers_correct": 0,
+          "synth_correct": false,
+          "prop_cost": 0.0066354,
+          "synth_cost": 0.017534400000000002,
+          "total_cost": 0.0241698
+        },
+        {
+          "task_id": "arc_0112",
+          "n_proposers_correct": 0,
+          "synth_correct": false,
+          "prop_cost": 0.0263196,
+          "synth_cost": 0.030316799999999998,
+          "total_cost": 0.056636399999999996
+        },
+        {
+          "task_id": "arc_0101",
+          "n_proposers_correct": 14,
+          "synth_correct": true,
+          "prop_cost": 0.0040625999999999995,
+          "synth_cost": 0.013963799999999998,
+          "total_cost": 0.018026399999999998
+        },
+        {
+          "task_id": "arc_0366",
+          "n_proposers_correct": 0,
+          "synth_correct": false,
+          "prop_cost": 0.0181806,
+          "synth_cost": 0.0212748,
+          "total_cost": 0.0394554
+        }
+      ]
+    }
+  }
+}

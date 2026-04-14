@@ -1,0 +1,74 @@
+======================================================================
+COMPREHENSIVE FACTORIAL EXPERIMENT
+======================================================================
+  γ values:       [0.0, 0.5, 1.0, 2.0, 4.0, 8.0]
+  Model configs:  ['all-7b', 'all-22b', 'propose22b-crit7b', 'propose7b-synth22b', 'propose17b-crit7b']
+  Topologies:     ['propose-only', 'propose-critique', 'propose-critique-synth', 'consensus-insight', 'full-debate', 'all-insight-synth']
+  Episodes/cond:  15
+  Total episodes: 2700
+  Total API calls: 10800
+
+Initialized clients: ['qwen-22b', 'qwen-17b', 'qwen-7b']
+
+--- BASELINES: Single model per task ---
+  qwen-7b     : 73.3% correct (22/30) — $0.0030
+  qwen-22b    : 86.7% correct (26/30) — $0.0067
+  qwen-17b    : 70.0% correct (21/30) — $0.1735
+  [  1/180] all-7b               propose-only           γ= 0.0 | D=0.48 correct=73% cost/ep=$0.0005 cumul=$0.191 [1499s]
+  [  2/180] all-7b               propose-only           γ= 0.5 | D=0.75 correct=67% cost/ep=$0.0007 cumul=$0.201 [1737s]
+  [  3/180] all-7b               propose-only           γ= 1.0 | D=0.75 correct=73% cost/ep=$0.0006 cumul=$0.209 [1938s]
+  [  4/180] all-7b               propose-only           γ= 2.0 | D=0.75 correct=60% cost/ep=$0.0006 cumul=$0.217 [2130s]
+  [  5/180] all-7b               propose-only           γ= 4.0 | D=0.75 correct=73% cost/ep=$0.0006 cumul=$0.226 [2343s]
+  [  6/180] all-7b               propose-only           γ= 8.0 | D=0.75 correct=67% cost/ep=$0.0006 cumul=$0.235 [2536s]
+  [  7/180] all-7b               propose-critique       γ= 0.0 | D=0.38 correct=73% cost/ep=$0.0007 cumul=$0.245 [2730s]
+  [  8/180] all-7b               propose-critique       γ= 0.5 | D=0.75 correct=53% cost/ep=$0.0006 cumul=$0.255 [2915s]
+  [  9/180] all-7b               propose-critique       γ= 1.0 | D=0.75 correct=67% cost/ep=$0.0006 cumul=$0.264 [3089s]
+  [ 10/180] all-7b               propose-critique       γ= 2.0 | D=0.75 correct=60% cost/ep=$0.0007 cumul=$0.274 [3306s]
+  [ 11/180] all-7b               propose-critique       γ= 4.0 | D=0.75 correct=67% cost/ep=$0.0007 cumul=$0.285 [3513s]
+  [ 12/180] all-7b               propose-critique       γ= 8.0 | D=0.75 correct=53% cost/ep=$0.0007 cumul=$0.295 [3712s]
+  [ 13/180] all-7b               propose-critique-synth γ= 0.0 | D=0.37 correct=80% cost/ep=$0.0005 cumul=$0.303 [3872s]
+  [ 14/180] all-7b               propose-critique-synth γ= 0.5 | D=0.75 correct=73% cost/ep=$0.0006 cumul=$0.311 [4046s]
+  [ 15/180] all-7b               propose-critique-synth γ= 1.0 | D=0.75 correct=73% cost/ep=$0.0005 cumul=$0.320 [4216s]
+  [ 16/180] all-7b               propose-critique-synth γ= 2.0 | D=0.75 correct=93% cost/ep=$0.0006 cumul=$0.328 [4389s]
+  [ 17/180] all-7b               propose-critique-synth γ= 4.0 | D=0.75 correct=80% cost/ep=$0.0006 cumul=$0.337 [4573s]
+  [ 18/180] all-7b               propose-critique-synth γ= 8.0 | D=0.75 correct=80% cost/ep=$0.0006 cumul=$0.345 [4742s]
+  [ 19/180] all-7b               consensus-insight      γ= 0.0 | D=0.45 correct=67% cost/ep=$0.0006 cumul=$0.354 [4946s]
+  [ 20/180] all-7b               consensus-insight      γ= 0.5 | D=0.75 correct=60% cost/ep=$0.0005 cumul=$0.362 [5113s]
+  [ 21/180] all-7b               consensus-insight      γ= 1.0 | D=0.75 correct=87% cost/ep=$0.0005 cumul=$0.369 [5292s]
+  [ 22/180] all-7b               consensus-insight      γ= 2.0 | D=0.75 correct=67% cost/ep=$0.0006 cumul=$0.378 [5479s]
+  [ 23/180] all-7b               consensus-insight      γ= 4.0 | D=0.75 correct=60% cost/ep=$0.0005 cumul=$0.385 [5657s]
+  [ 24/180] all-7b               consensus-insight      γ= 8.0 | D=0.75 correct=60% cost/ep=$0.0005 cumul=$0.393 [5838s]
+  [ 25/180] all-7b               full-debate            γ= 0.0 | D=0.50 correct=87% cost/ep=$0.0004 cumul=$0.400 [5961s]
+  [ 26/180] all-7b               full-debate            γ= 0.5 | D=0.75 correct=80% cost/ep=$0.0005 cumul=$0.407 [6102s]
+  [ 27/180] all-7b               full-debate            γ= 1.0 | D=0.75 correct=93% cost/ep=$0.0004 cumul=$0.413 [6226s]
+  [ 28/180] all-7b               full-debate            γ= 2.0 | D=0.75 correct=80% cost/ep=$0.0004 cumul=$0.419 [6353s]
+  [ 29/180] all-7b               full-debate            γ= 4.0 | D=0.75 correct=93% cost/ep=$0.0004 cumul=$0.426 [6485s]
+  [ 30/180] all-7b               full-debate            γ= 8.0 | D=0.75 correct=80% cost/ep=$0.0004 cumul=$0.432 [6605s]
+  [ 31/180] all-7b               all-insight-synth      γ= 0.0 | D=0.50 correct=93% cost/ep=$0.0003 cumul=$0.437 [6713s]
+  [ 32/180] all-7b               all-insight-synth      γ= 0.5 | D=0.75 correct=80% cost/ep=$0.0004 cumul=$0.443 [6833s]
+  [ 33/180] all-7b               all-insight-synth      γ= 1.0 | D=0.75 correct=93% cost/ep=$0.0003 cumul=$0.447 [6907s]
+  [ 34/180] all-7b               all-insight-synth      γ= 2.0 | D=0.75 correct=93% cost/ep=$0.0003 cumul=$0.452 [7016s]
+  [ 35/180] all-7b               all-insight-synth      γ= 4.0 | D=0.75 correct=100% cost/ep=$0.0003 cumul=$0.457 [7109s]
+  [ 36/180] all-7b               all-insight-synth      γ= 8.0 | D=0.75 correct=87% cost/ep=$0.0004 cumul=$0.462 [7231s]
+  [ 37/180] all-22b              propose-only           γ= 0.0 | D=0.33 correct=93% cost/ep=$0.0011 cumul=$0.480 [8029s]
+  [RETRY 1/3] qwen-22b: APIConnectionError, waiting 2s...
+  [ 38/180] all-22b              propose-only           γ= 0.5 | D=0.75 correct=93% cost/ep=$0.0012 cumul=$0.498 [9043s]
+  [ 39/180] all-22b              propose-only           γ= 1.0 | D=0.75 correct=100% cost/ep=$0.0013 cumul=$0.517 [10006s]
+  [RETRY 1/3] qwen-22b: InternalServerError, waiting 2s...
+  [ 40/180] all-22b              propose-only           γ= 2.0 | D=0.75 correct=93% cost/ep=$0.0011 cumul=$0.534 [10779s]
+  [ 41/180] all-22b              propose-only           γ= 4.0 | D=0.75 correct=80% cost/ep=$0.0015 cumul=$0.556 [11556s]
+  [RETRY 1/3] qwen-22b: APIConnectionError, waiting 2s...
+  [RETRY 1/3] qwen-22b: APIConnectionError, waiting 2s...
+  [RETRY 2/3] qwen-22b: APIConnectionError, waiting 4s...
+  [ 42/180] all-22b              propose-only           γ= 8.0 | D=0.75 correct=87% cost/ep=$0.0014 cumul=$0.576 [13287s]
+  [RETRY 1/3] qwen-22b: InternalServerError, waiting 2s...
+  [RETRY 1/3] qwen-22b: InternalServerError, waiting 2s...
+  [RETRY 2/3] qwen-22b: InternalServerError, waiting 4s...
+  [RETRY 1/3] qwen-22b: InternalServerError, waiting 2s...
+  [RETRY 1/3] qwen-22b: InternalServerError, waiting 2s...
+  [ 43/180] all-22b              propose-critique       γ= 0.0 | D=0.43 correct=73% cost/ep=$0.0014 cumul=$0.597 [14322s]
+  [ 44/180] all-22b              propose-critique       γ= 0.5 | D=0.75 correct=93% cost/ep=$0.0011 cumul=$0.613 [14958s]
+  [ 45/180] all-22b              propose-critique       γ= 1.0 | D=0.75 correct=100% cost/ep=$0.0011 cumul=$0.630 [15701s]
+  [RETRY 1/3] qwen-22b: InternalServerError, waiting 2s...
+  [ 46/180] all-22b              propose-critique       γ= 2.0 | D=0.75 correct=87% cost/ep=$0.0010 cumul=$0.646 [16348s]
+  [ 47/180] all-22b              propose-critique       γ= 4.0 | D=0.75 correct=73% cost/ep=$0.0019 cumul=$0.675 [17510s]

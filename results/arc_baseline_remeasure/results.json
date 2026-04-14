@@ -1,0 +1,67 @@
+{
+  "results": {
+    "qwen-7b": {
+      "model": "qwen-7b",
+      "n_tasks": 30,
+      "n_samples_per_task": 5,
+      "per_attempt": {
+        "k": 15,
+        "n": 150,
+        "rate": 0.1
+      },
+      "any_correct": {
+        "k": 3,
+        "n": 30,
+        "rate": 0.1
+      },
+      "majority_vote": {
+        "k": 3,
+        "n": 30,
+        "rate": 0.1
+      },
+      "total_cost": 0.13352789999999987
+    },
+    "qwen-22b": {
+      "model": "qwen-22b",
+      "n_tasks": 30,
+      "n_samples_per_task": 5,
+      "per_attempt": {
+        "k": 34,
+        "n": 150,
+        "rate": 0.22666666666666666
+      },
+      "any_correct": {
+        "k": 10,
+        "n": 30,
+        "rate": 0.3333333333333333
+      },
+      "majority_vote": {
+        "k": 8,
+        "n": 30,
+        "rate": 0.26666666666666666
+      },
+      "total_cost": 0.2049626
+    },
+    "qwen-17b": {
+      "model": "qwen-17b",
+      "n_tasks": 30,
+      "n_samples_per_task": 5,
+      "per_attempt": {
+        "k": 15,
+        "n": 150,
+        "rate": 0.1
+      },
+      "any_correct": {
+        "k": 8,
+        "n": 30,
+        "rate": 0.26666666666666666
+      },
+      "majority_vote": {
+        "k": 5,
+        "n": 30,
+        "rate": 0.16666666666666666
+      },
+      "total_cost": 2.325402600000001
+    }
+  }
+}
