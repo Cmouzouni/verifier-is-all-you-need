@@ -348,7 +348,7 @@ def fig_pareto_revised():
                edgecolors="black", linewidths=1.2,
                label="qwen-17b (thinking, FAIR)", zorder=6)
 
-    # Pareto frontier — solid, thicker, more visible
+    # Pareto frontier — bold red, high zorder so it's visible above dots
     all_pts = []
     for (mc, tp, g), eps in by_cond.items():
         cost = sum(e["total_cost_usd"] for e in eps) / len(eps)
@@ -363,8 +363,11 @@ def fig_pareto_revised():
             best = r
     if pareto:
         px, py = zip(*pareto)
-        ax.step(px, py, where="post", color="black", linestyle="-", linewidth=1.8,
-                alpha=0.85, label="Pareto frontier", zorder=4)
+        # Extend frontier to the right edge of the plot
+        px = list(px) + [ax.get_xlim()[1] if ax.get_xlim()[1] > 0 else 0.05]
+        py = list(py) + [py[-1]]
+        ax.step(px, py, where="post", color="#e74c3c", linestyle="-", linewidth=2.2,
+                alpha=0.9, label="Pareto frontier", zorder=7)
 
     ax.set_xscale("log")
     ax.set_xlabel("Cost per problem (USD, log scale)")
