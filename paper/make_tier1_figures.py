@@ -34,7 +34,7 @@ plt.rcParams.update({
     "axes.spines.right": False,
 })
 
-FIG_DIR = Path("pivot-a/paper/figures")
+FIG_DIR = Path("paper/figures")
 FIG_DIR.mkdir(parents=True, exist_ok=True)
 
 
@@ -52,7 +52,7 @@ def wilson_ci(k, n, z=1.96):
 # FIGURE 6: GSM8K results
 # ════════════════════════════════════════════════════════════════════════
 def fig_gsm8k():
-    data = json.load(open("pivot-a/results/tier1_gsm8k/results.json"))
+    data = json.load(open("results/tier1_gsm8k/results.json"))
 
     # Baselines
     bls = data["baselines"]
@@ -144,7 +144,7 @@ def fig_gsm8k():
 # FIGURE 7: Synthesis ablation
 # ════════════════════════════════════════════════════════════════════════
 def fig_synthesis_ablation():
-    data = json.load(open("pivot-a/results/tier1_synthesis/results.json"))
+    data = json.load(open("results/tier1_synthesis/results.json"))
     rates = data["rates"]
     costs = data["costs"]
 
@@ -209,9 +209,9 @@ def fig_capability_ceiling():
     """Show that the game lifts cheap models to the ceiling but doesn't push past it."""
 
     # Phase A data
-    family_data = json.load(open("pivot-a/results/tier1_family/results.json"))
-    main_data = json.load(open("pivot-a/results/full_sweep/results.json"))
-    cache = json.load(open("pivot-a/results/cached_results.json"))
+    family_data = json.load(open("results/tier1_family/results.json"))
+    main_data = json.load(open("results/full_sweep/results.json"))
+    cache = json.load(open("results/cached_results.json"))
 
     # Build the data: pairs of (single-model rate, game-with-that-model rate)
     # All on Phase A tasks
@@ -294,9 +294,9 @@ def fig_capability_ceiling():
 # ════════════════════════════════════════════════════════════════════════
 def fig_pareto_revised():
     """Pareto frontier with the FAIR qwen-17b baseline (Tier 1.4)."""
-    main_data = json.load(open("pivot-a/results/full_sweep/results.json"))
-    cache = json.load(open("pivot-a/results/cached_results.json"))
-    frontier_data = json.load(open("pivot-a/results/tier1_frontier/results.json"))
+    main_data = json.load(open("results/full_sweep/results.json"))
+    cache = json.load(open("results/cached_results.json"))
+    frontier_data = json.load(open("results/tier1_frontier/results.json"))
 
     fig, ax = plt.subplots(figsize=(7.0, 4.5))
 

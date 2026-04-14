@@ -30,7 +30,7 @@ plt.rcParams.update({
     "axes.spines.right": False,
 })
 
-FIG_DIR = Path("pivot-a/paper/figures")
+FIG_DIR = Path("paper/figures")
 FIG_DIR.mkdir(parents=True, exist_ok=True)
 
 
@@ -49,7 +49,7 @@ def wilson_ci(k, n, z=1.96):
 # ════════════════════════════════════════════════════════════════════════
 
 def fig_arc_ranking():
-    state = json.loads(Path("pivot-a/results/arc_22b_attack/state.json").read_text())
+    state = json.loads(Path("results/arc_22b_attack/state.json").read_text())
 
     # Hand-curated ordering and labels
     # qwen-22b single baseline re-measured: 34/150 = 22.7% (Wilson 95% CI [16.7%, 30.0%])

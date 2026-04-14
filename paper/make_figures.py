@@ -76,8 +76,8 @@ GAMMA_VALUES = [0.0, 0.5, 1.0, 2.0, 4.0, 8.0]
 
 
 def load_data():
-    data = json.load(open("pivot-a/results/full_sweep/results.json"))
-    cache = json.load(open("pivot-a/results/cached_results.json"))
+    data = json.load(open("results/full_sweep/results.json"))
+    cache = json.load(open("results/cached_results.json"))
     return data, cache
 
 
@@ -149,7 +149,7 @@ def fig_pareto(data, cache):
     ax.legend(loc="lower right", ncol=2, framealpha=0.9, fontsize=7)
 
     fig.tight_layout()
-    fig.savefig("pivot-a/paper/figures/fig1_pareto.pdf")
+    fig.savefig("paper/figures/fig1_pareto.pdf")
     plt.close(fig)
     print("✓ fig1_pareto.pdf")
 
@@ -189,7 +189,10 @@ def fig_topology(data, cache):
     ax.axhline(cache["baselines"]["qwen-22b"]["correct_rate"], color="orange", linestyle=":",
                linewidth=1.0, alpha=0.7, label=f"qwen-22B single ({cache['baselines']['qwen-22b']['correct_rate']:.0%})")
     ax.axhline(cache["baselines"]["qwen-17b"]["correct_rate"], color="red", linestyle=":",
-               linewidth=1.0, alpha=0.7, label=f"qwen-397B single ({cache['baselines']['qwen-17b']['correct_rate']:.0%})")
+               linewidth=1.0, alpha=0.5, label=f"qwen-397B no-think ({cache['baselines']['qwen-17b']['correct_rate']:.0%})")
+    # Corrected Tier 1.4 frontier baseline (thinking enabled)
+    ax.axhline(0.867, color="purple", linestyle="--",
+               linewidth=1.2, alpha=0.8, label="qwen-397B thinking (87%)")
 
     ax.set_xticks(x)
     ax.set_xticklabels([TOPOLOGY_LABELS[t] for t in TOPOLOGY_ORDER], rotation=18, ha="right")
@@ -200,7 +203,7 @@ def fig_topology(data, cache):
     ax.legend(loc="lower right", framealpha=0.9, fontsize=7)
 
     fig.tight_layout()
-    fig.savefig("pivot-a/paper/figures/fig2_topology.pdf")
+    fig.savefig("paper/figures/fig2_topology.pdf")
     plt.close(fig)
     print("✓ fig2_topology.pdf")
 
@@ -259,7 +262,7 @@ def fig_gamma_response(data):
     axes[1].legend(loc="lower left", fontsize=6, framealpha=0.9, ncol=2)
 
     fig.tight_layout()
-    fig.savefig("pivot-a/paper/figures/fig3_gamma_response.pdf")
+    fig.savefig("paper/figures/fig3_gamma_response.pdf")
     plt.close(fig)
     print("✓ fig3_gamma_response.pdf")
 
@@ -301,7 +304,7 @@ def fig_heatmap(data):
 
     ax.set_title("Model config × Topology (averaged across γ)", pad=8)
     fig.tight_layout()
-    fig.savefig("pivot-a/paper/figures/fig4_heatmap.pdf")
+    fig.savefig("paper/figures/fig4_heatmap.pdf")
     plt.close(fig)
     print("✓ fig4_heatmap.pdf")
 
@@ -364,7 +367,7 @@ def fig_winners(data, cache):
         ax.text(c * 1.05, i, f"${c:.5f}", va="center", fontsize=7)
 
     fig.tight_layout()
-    fig.savefig("pivot-a/paper/figures/fig5_winners.pdf")
+    fig.savefig("paper/figures/fig5_winners.pdf")
     plt.close(fig)
     print("✓ fig5_winners.pdf")
 
@@ -443,7 +446,7 @@ def compute_paper_stats(data, cache):
 
 
 def main():
-    Path("pivot-a/paper/figures").mkdir(parents=True, exist_ok=True)
+    Path("paper/figures").mkdir(parents=True, exist_ok=True)
     data, cache = load_data()
     print(f"Loaded {len(data['episodes'])} episodes from {len(set((e['model_config'],e['topology'],e['gamma']) for e in data['episodes']))} conditions")
 
