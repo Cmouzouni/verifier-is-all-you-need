@@ -93,39 +93,15 @@ and the Verification Boundary That Does}
 % ABSTRACT
 %% ====================================================================
 \begin{abstract}
-We test six architectural interventions for multi-agent LLM reasoning---game-theoretic allocation, critic-driven refinement, increased sampling budget, code-specialist proposers, heterogeneous multi-model ensembles, and evolutionary inter-round information flow---and find that \textbf{none of them improves over the simplest possible baseline}: sample $K$ programs independently from a single model, execute each in a sandbox, return the first that passes verification.
-The architecture does not matter.
-The verifier is all you need.
+We test six architectural interventions for multi-agent LLM reasoning---game-theoretic allocation, critic-driven refinement, sampling budget scaling, code-specialist proposers, heterogeneous multi-model ensembles, and evolutionary inter-round information flow---and find that \textbf{none improves} over the simplest possible baseline: $K$ independent samples from one model, sandboxed execution, majority vote.
 
-This finding emerges from a systematic empirical campaign ($\sim\!7{,}000$ LLM-agent episodes, $\sim\!\$40$ in API cost) spanning five benchmarks.
-We first identify the \emph{verifiability boundary}: a sharp divide between tasks where an LLM aggregator can verify candidate outputs by re-reading them ($+14$ to $+29$pp over majority vote on math tasks) and tasks where verification requires re-deriving the problem ($-3$ to $-13$pp vs.\ the single-model baseline on ARC-AGI, and $13$--$23$pp \emph{below} majority vote on the same proposal pool).
-The boundary is mechanistic, not statistical: the same LLM-synthesis primitive that lifts Phase~A from $70.8\%$ to $89.6\%$ ($+18.8$pp) is \emph{dominated} by majority vote on ARC by $13$--$23$pp.
+The finding rests on the \emph{verifiability boundary}: LLM-based aggregation helps ($+14$ to $+29$pp) when the LLM can verify candidates by re-reading them, and \emph{actively hurts} ($-3$ to $-23$pp) when verification requires re-deriving the problem.
+Replacing the LLM aggregator with a symbolic verifier (Python execution) dissolves this boundary: HumanEval $97\%$ pass@$16$, AIME~2024 $76.7\%$ ($23/30$, within $3$pp of same-task o4-mini at $2.2\times$ lower cost), ARC-AGI-1 $18.2\%$ ($73/400$, lowest published cost-per-correct).
+Six architectural elaborations tested at matched budgets are all null.
 
-Replacing the LLM aggregator with a symbolic verifier (sandboxed Python execution) dissolves the boundary.
-On three benchmarks with the simplest possible architecture---$K\!=\!16$ independent samples from a $22$B-active-parameter model, execution-based filtering, majority vote:
-\begin{itemize}[leftmargin=1.2em, itemsep=2pt]
-\item \textbf{HumanEval:} $159/164 = 97.0\%$ pass@$K$ at \$$0.003$/task---\textbf{higher accuracy than every published frontier model} (o1: $93\%$, Claude~3.5: $92\%$) at $50\times$ lower cost.
-\item \textbf{AIME 2024:} $23/30 = 76.7\%$ at \$$0.005$/task---within $3$pp of a same-task o4-mini baseline ($24/30 = 80\%$) at $2.2\times$ lower cost per correct answer.
-\item \textbf{ARC-AGI-1:} $73/400 = 18.2\%$ at \$$0.029$/task---the lowest published cost-per-correct (\$$0.16$), $29\times$ cheaper than o1.
-\end{itemize}
-
-We then ask: can any architectural elaboration improve on this? We test six mechanisms at matched compute budgets, all on the same ARC task battery:
-\textbf{(i)}~game-theoretic MFG allocation vs.\ random ($p>0.4$);
-\textbf{(ii)}~critic-driven failure feedback ($40\%$ vs.\ $43\%$ cold baseline);
-\textbf{(iii)}~sampling budget sweep ($K\!=\!8$ ties $K\!=\!64$);
-\textbf{(iv)}~code-specialist proposer (worse than generalist);
-\textbf{(v)}~three-model heterogeneous union ($16.5\%$ vs.\ $17.4\%$ single-model);
-\textbf{(vi)}~evolutionary refinement with inter-round information flow ($43.3\%$ ties cold $K\!=\!8$).
-\textbf{All six are null.}
-
-Two additional null results define the outer boundary: the architecture fails on ARC-AGI-2 ($0/100$), where the Python DSL cannot express the required abstractions, and a same-task DeepSeek-V3.1 baseline ($2.8\%$ strict-match despite $80$--$94\%$ cell match) confirms the boundary mechanically.
-
-The contribution is a precise map of what matters and what does not for multi-agent LLM reasoning.
-What matters: proposer quality and verification grounding.
-What does not: allocation strategy, critic feedback, sampling budget beyond $K\!\approx\!8$, model diversity, or inter-agent communication.
-The results suggest that the field's investment in elaborate multi-agent wiring is misallocated when symbolic verification is available---the engineering effort belongs in the verifier, not the architecture.
+The contribution is a precise empirical map: \emph{what matters} is proposer quality and verification grounding; \emph{what does not} is allocation strategy, critic feedback, sampling budget beyond $K\!\approx\!8$, model diversity, or inter-agent communication.
 Total cost: $\sim\!\$40$.
-Code, data, and all cached results are available at \url{https://github.com/Cmouzouni/verifier-is-all-you-need}.
+Code and data: \url{https://github.com/Cmouzouni/verifier-is-all-you-need}.
 \end{abstract}
 
 \keywords{multi-agent LLMs, falsification, verifiability boundary, symbolic verification, inference-time compute, ARC-AGI, AIME, HumanEval.}
