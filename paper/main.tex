@@ -79,7 +79,7 @@
 \title[The Verifier Is All You Need]
 {The Verifier Is All You Need:\\[3pt]
 Six Architectural Interventions That Don't Matter\\[2pt]
-and the Verification Boundary That Does}
+and the Verifiability Boundary That Does}
 
 \author{Charafeddine Mouzouni}
 
@@ -95,7 +95,7 @@ and the Verification Boundary That Does}
 \begin{abstract}
 We test six architectural interventions for multi-agent LLM reasoning---game-theoretic allocation, critic-driven refinement, sampling budget scaling, code-specialist proposers, heterogeneous multi-model ensembles, and evolutionary inter-round information flow---and find that \textbf{none improves} over the simplest possible baseline: $K$ independent samples from one model, sandboxed execution, majority vote.
 
-The finding rests on the \emph{verifiability boundary}: LLM-based aggregation helps ($+14$ to $+29$pp) when the LLM can verify candidates by re-reading them, and \emph{actively hurts} ($-3$ to $-23$pp) when verification requires re-deriving the problem.
+The finding rests on the \emph{verifiability boundary}: LLM-based aggregation helps ($+14$ to $+29$pp) when the LLM can verify candidates by re-reading them, and \emph{actively hurts} ($-3$ to $-13$pp vs.\ the single-model baseline) when verification requires re-deriving the problem.
 Replacing the LLM aggregator with a symbolic verifier (Python execution) dissolves this boundary: HumanEval $97\%$ pass@$16$, AIME~2024 $76.7\%$ ($23/30$, within $3$pp of same-task o4-mini at $2.2\times$ lower cost), ARC-AGI-1 $18.2\%$ ($73/400$, lowest published cost-per-correct).
 Six architectural elaborations tested at matched budgets are all null.
 
@@ -124,7 +124,7 @@ Our experiments falsify this conjecture cleanly: the congestion mechanism produc
 \paragraph{The central question.}
 We ask: \emph{when a cheap symbolic verifier exists (code execution, unit tests, symbolic math checkers), does multi-agent architecture---allocation, critic feedback, inter-agent communication, model diversity---add any measurable value over the simplest possible baseline of independent sampling plus execution-based filtering?}
 
-Our answer, established by approximately $7{,}000$ episodes across five task domains and six controlled architectural interventions, is:
+Our answer, established by $\sim\!5{,}650$ Act~I deliberation episodes plus $\sim\!1{,}500$ Act~II task-level runs across five task domains and six controlled architectural interventions, is:
 \begin{quote}
 \emph{\textbf{No.}
 The simplest possible architecture---$K$ independent samples from a single model, sandboxed execution, majority vote---matches or exceeds every elaboration we tested: game-theoretic allocation, critic-driven refinement, evolutionary inter-round information flow, heterogeneous multi-model ensembles, code-specialist proposers, and increased sampling budget ($K\!=\!8$ ties $K\!=\!64$).
@@ -133,7 +133,7 @@ When a symbolic verifier is available, the cheapest correct answer comes from in
 \end{quote}
 
 This finding rests on a deeper structural insight: the \textbf{verifiability boundary}.
-LLM-based aggregation (a ``synthesis node'' that reads candidate outputs and picks the best one) helps by $+14$ to $+29$pp on tasks where the LLM can verify candidates by re-reading them (math, word problems), and \textbf{actively hurts} by $-3$ to $-23$pp on tasks where verification requires re-deriving the problem (ARC-AGI visual grids).
+LLM-based aggregation (a ``synthesis node'' that reads candidate outputs and picks the best one) helps by $+14$ to $+29$pp on tasks where the LLM can verify candidates by re-reading them (math, word problems), and \textbf{actively hurts} by $-3$ to $-13$pp vs.\ the single-model baseline on tasks where verification requires re-deriving the problem (ARC-AGI visual grids).
 Replacing the LLM aggregator with a symbolic verifier dissolves this boundary and achieves frontier-competitive accuracy on three benchmarks (HumanEval $97\%$, AIME $76.7\%$, ARC-AGI-1 $18.2\%$) at $29$--$278\times$ lower cost per correct answer than o1.
 But no architectural elaboration on top of the verifier moves the needle further.
 
@@ -787,9 +787,9 @@ Each proposer call costs $\$0.001$--$\$0.003$ depending on grid size; the entire
 \centering
 \includegraphics[width=0.95\linewidth]{figures/fig10_arc_ranking.pdf}
 \caption{Seven architectures on ARC-AGI ($30$ problems, all using \texttt{qwen-22b} as the proposer; mixed-arch row uses $4$ \texttt{qwen-22b} + $4$ \texttt{llama-70b}).
-The single-model baseline ($30\%$, gray) is the reference.
+The single-model baseline ($22.7\%$, $n\!=\!150$, gray) is the reference.
 Pure parallelism (oracle best-of-$N$, blue) reaches the natural ceiling of $40$--$43\%$.
-Simple majority vote (green) captures $83\%$ of the oracle ceiling at $33.3\%$, beating the baseline by $+3.3$pp.
+Simple majority vote (green) captures $83\%$ of the oracle ceiling at $33.3\%$, beating the baseline by $+10.7$pp.
 LLM-synthesized games (red) all fall \emph{below} the single-model baseline---synth recovers only a fraction of the candidates that are correct in the proposal pool, and is misled by noisy ones.
 Wilson $95\%$ CIs shown.}
 \label{fig:arc_ranking}
@@ -900,13 +900,13 @@ The CIs overlap, confirming the pilot was representative; we report the $n\!=\!4
 
 \begin{table}[h]
 \centering\small
-\caption{Cost-per-correct comparison on ARC-AGI-1 public eval. AlphaProgram is validated on the full canonical $400$-task evaluation split; DeepSeek-V3.1 is a same-task baseline; other rows are published numbers from the respective model providers.}
+\caption{Cost-per-correct comparison on ARC-AGI-1 public eval. Our architecture is validated on the full canonical $400$-task evaluation split; DeepSeek-V3.1 is a same-task baseline; other rows are published numbers from the respective model providers.}
 \label{tab:arc-cost}
 \begin{tabular}{lcccr}
 \toprule
 Architecture & $n$ & Correctness & \$/task & \$/correct \\
 \midrule
-\textbf{AlphaProgram (this work)} & $\mathbf{400}$ & $\mathbf{18.2\%}$ {\scriptsize[14.8, 22.3]} & \$$0.029$ & $\mathbf{\$0.161}$ \\
+\textbf{Our architecture (this work)} & $\mathbf{400}$ & $\mathbf{18.2\%}$ {\scriptsize[14.8, 22.3]} & \$$0.029$ & $\mathbf{\$0.161}$ \\
 DeepSeek-V3.1 (same task) & $400$ & $2.8\%$ {\scriptsize[1.5, 4.9]} & \$$0.006$ & \$$0.211$ \\
 GPT-4o (published) & $400$ & $\sim\!7\%$ & \$$0.050$ & \$$0.714$ \\
 Claude~3.5 Sonnet (published) & $400$ & $\sim\!21\%$ & \$$0.100$ & \$$0.476$ \\
@@ -916,14 +916,14 @@ o1 (published) & $400$ & $\sim\!32\%$ & \$$1.500$ & \$$4.688$ \\
 \end{tabular}
 \end{table}
 
-AlphaProgram is the lowest cost-per-correct in the comparison: $3.0\times$ cheaper than Claude~3.5 Sonnet, $4.4\times$ cheaper than GPT-4o, $11.7\times$ cheaper than DeepSeek-R1, and $29\times$ cheaper than o1.
-In absolute accuracy, AlphaProgram is below Claude ($-3$pp) and above GPT-4o ($+11$pp) and DeepSeek-R1 ($+2$pp), though below o1 ($-14$pp).
+Our architecture is the lowest cost-per-correct in the comparison: $3.0\times$ cheaper than Claude~3.5 Sonnet, $4.4\times$ cheaper than GPT-4o, $11.7\times$ cheaper than DeepSeek-R1, and $29\times$ cheaper than o1.
+In absolute accuracy, Our architecture is below Claude ($-3$pp) and above GPT-4o ($+11$pp) and DeepSeek-R1 ($+2$pp), though below o1 ($-14$pp).
 
 \paragraph{The verifiability boundary, confirmed mechanically.}
 The same-task DeepSeek-V3.1 baseline ($n\!=\!400$) produces $2.8\%$ strict-grid-match on the evaluation split.
 Manual inspection reveals that DeepSeek-V3.1 achieves $80$--$94\%$ cell-level match on most tasks---it ``almost'' solves them---but ARC's exact-grid scoring destroys near-correct outputs.
 This is precisely the verifiability boundary in mechanistic form: the frontier model cannot self-verify its output to fix the last wrong cell, and it has no external feedback loop to catch the error.
-AlphaProgram's program-execution filter catches these errors during candidate screening, which is why the architecture works despite using a weaker base model.
+Our architecture's program-execution filter catches these errors during candidate screening, which is why the architecture works despite using a weaker base model.
 
 \subsection{AIME 2024 (the crown jewel)}\label{sec:act2-aime}
 
@@ -938,13 +938,13 @@ Cost-per-correct: \$$0.0065$.
 
 \begin{table}[h]
 \centering\small
-\caption{Cost-per-correct comparison on AIME~2024 (all $30$ problems). The o4-mini row is a \textbf{same-task baseline}: the identical $30$ problems, graded identically, run during this study. Other frontier rows use published numbers. AlphaProgram is within $3$pp of the same-task o4-mini baseline at $2.2\times$ lower cost per correct answer.}
+\caption{Cost-per-correct comparison on AIME~2024 (all $30$ problems). The o4-mini row is a \textbf{same-task baseline}: the identical $30$ problems, graded identically, run during this study. Other frontier rows use published numbers. Our architecture is within $3$pp of the same-task o4-mini baseline at $2.2\times$ lower cost per correct answer.}
 \label{tab:aime-cost}
 \begin{tabular}{lcccr}
 \toprule
 Architecture & $n$ & Correctness & \$/task & \$/correct \\
 \midrule
-\textbf{AlphaProgram (this work)} & $30$ & $\mathbf{76.7\%}$ {\scriptsize[59.1, 88.2]} & \$$0.005$ & $\mathbf{\$0.0065}$ \\
+\textbf{Our architecture (this work)} & $30$ & $\mathbf{76.7\%}$ {\scriptsize[59.1, 88.2]} & \$$0.005$ & $\mathbf{\$0.0065}$ \\
 \textbf{o4-mini (same-task baseline)} & $\mathbf{30}$ & $\mathbf{80.0\%}$ {\scriptsize[62.7, 90.5]} & \$$0.011$ & \$$0.014$ \\
 \midrule
 GPT-4o (published) & $30$ & $\sim\!9\%$ & \$$0.050$ & \$$0.556$ \\
@@ -959,7 +959,7 @@ o1 (published) & $30$ & $\sim\!83\%$ & \$$1.500$ & \$$1.807$ \\
 
 The same-task o4-mini baseline is the most important row in this table.
 On the identical $30$ problems, graded identically, o4-mini achieves $24/30 = 80.0\%$ at \$$0.011$/task ($6$ of $30$ problems returned API connection errors; on the $24$ problems it answered, o4-mini was $24/24 = 100\%$ correct).
-AlphaProgram achieves $23/30 = 76.7\%$ at \$$0.005$/task---within $3.3$pp of o4-mini at $\mathbf{2.2\times}$ \textbf{lower cost per correct answer}.
+Our architecture achieves $23/30 = 76.7\%$ at \$$0.005$/task---within $3.3$pp of o4-mini at $\mathbf{2.2\times}$ \textbf{lower cost per correct answer}.
 The CIs overlap heavily ($[59.1\%, 88.2\%]$ vs $[62.7\%, 90.5\%]$), so the accuracy difference is not statistically significant.
 
 The published o1 number ($\sim\!83\%$ at \$$1.50$/task) implies a $278\times$ cost ratio, but this comparison uses different evaluation conditions.
@@ -1033,7 +1033,7 @@ This parallels the Act~I falsification of MFG framework selection: in both cases
 \subsection{Null result 2: ARC-AGI-2 breaks the architecture}\label{sec:act2-arc2}
 
 ARC-AGI-2 (launched 2025) is materially harder than ARC-AGI-1; all published frontier models score below $5\%$.
-We ran AlphaProgram (identical configuration to Section~\ref{sec:act2-arc}: \texttt{qwen-22b}, $K\!=\!16$, same Python DSL) on $100$ randomly sampled tasks from the ARC-AGI-2 test split.
+We ran Our architecture (identical configuration to Section~\ref{sec:act2-arc}: \texttt{qwen-22b}, $K\!=\!16$, same Python DSL) on $100$ randomly sampled tasks from the ARC-AGI-2 test split.
 
 Result: $0/100$ deployable (Wilson 95\% CI $[0.0\%, 3.7\%]$).
 Only $1$ task in $100$ produced any program that passed all training pairs.
@@ -1104,7 +1104,7 @@ The two mechanisms explore the same solution space; the evolutionary overhead ad
 1 & MFG allocation (\S\ref{sec:results-falsification}) & ties random ($p>0.4$) & random \\
 2 & Critic feedback (\S\ref{sec:act2-critic}) & $40\%$ vs $43\%$ cold & cold $K\!=\!32$ \\
 3 & $K$ sweep$^\dagger$ & $43\%$ at $K\!=\!8$, $47\%$ at $K\!=\!64$ & $K\!=\!8$ \\
-4 & Code-specialist$^\ddagger$ & $14\%$ (7/30 partial) & \texttt{qwen-22b} ($43\%$) \\
+4 & Code-specialist$^\ddagger$ & $1/7 = 14\%$ (terminated at 7/30) & \texttt{qwen-22b} ($43\%$) \\
 5 & 3-model union (\S\ref{sec:act2-heterogeneous}) & $16.5\%$ vs $17.4\%$ single & single $K\!=\!16$ \\
 6 & Evolutionary (\S\ref{sec:act2-evolutionary}) & $43.3\%$ = $43.3\%$ cold & cold $K\!=\!8$ \\
 \bottomrule
@@ -1283,7 +1283,7 @@ We set out to determine whether multi-agent LLM architecture matters for hard re
 The answer is precise: \textbf{when a symbolic verifier is available, the architecture does not matter.}
 
 \emph{The verifiability boundary.}
-We identify and characterize a sharp boundary between tasks where LLM-based aggregation helps ($+14$ to $+29$pp on math) and tasks where it hurts ($-3$ to $-23$pp on ARC-AGI visual grids).
+We identify and characterize a sharp boundary between tasks where LLM-based aggregation helps ($+14$ to $+29$pp on math) and tasks where it hurts ($-3$ to $-13$pp vs.\ the single-model baseline on ARC-AGI visual grids).
 The active ingredient is LLM aggregation ($+14$pp); reading reasoning adds $+5$pp.
 Both vanish on tasks where the LLM cannot verify outputs without re-solving the problem.
 
@@ -1505,6 +1505,11 @@ Y.~Zhang, Y.~Du, H.~Zhao.
 M.~Chen, J.~Tworek, H.~Jun, Q.~Yuan, et~al.
 \newblock Evaluating large language models trained on code.
 \newblock \emph{arXiv preprint arXiv:2107.03374}, 2021.
+
+\bibitem{Lightman2023PRM}
+H.~Lightman, V.~Kosaraju, Y.~Burda, H.~Edwards, B.~Baker, T.~Lee, J.~Leike, J.~Schulman, I.~Sutskever, K.~Cobbe.
+\newblock Let's verify step by step.
+\newblock In \emph{ICLR}, 2024. arXiv:2305.20050.
 
 \end{thebibliography}
 
