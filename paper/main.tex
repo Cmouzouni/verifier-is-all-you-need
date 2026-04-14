@@ -98,7 +98,7 @@ The architecture does not matter.
 The verifier is all you need.
 
 This finding emerges from a systematic empirical campaign ($\sim\!7{,}000$ LLM-agent episodes, $\sim\!\$40$ in API cost) spanning five benchmarks.
-We first identify the \emph{verifiability boundary}: a sharp divide between tasks where an LLM aggregator can verify candidate outputs by re-reading them ($+14$ to $+29$pp over majority vote on math tasks) and tasks where verification requires re-deriving the problem ($-3$ to $-23$pp on ARC-AGI visual grids).
+We first identify the \emph{verifiability boundary}: a sharp divide between tasks where an LLM aggregator can verify candidate outputs by re-reading them ($+14$ to $+29$pp over majority vote on math tasks) and tasks where verification requires re-deriving the problem ($-3$ to $-13$pp vs.\ the single-model baseline on ARC-AGI, and $13$--$23$pp \emph{below} majority vote on the same proposal pool).
 The boundary is mechanistic, not statistical: the same LLM-synthesis primitive that lifts Phase~A from $70.8\%$ to $89.6\%$ ($+18.8$pp) is \emph{dominated} by majority vote on ARC by $13$--$23$pp.
 
 Replacing the LLM aggregator with a symbolic verifier (sandboxed Python execution) dissolves the boundary.
@@ -230,7 +230,7 @@ The synthesis mechanism saturates at the per-agent recognition ceiling (no impro
 \paragraph{Scope and the deployment criterion.}
 The findings yield a four-step deployment criterion:
 \textbf{(a)} If the task output is \textbf{verifiable by re-reading} (numeric answers, formulas) \emph{and} the base model is below its recognition ceiling, deploy an LLM-synthesis collective (${\sim}18\times$ cost-efficiency win on Phase~A).
-\textbf{(b)} If the output is \textbf{verifiable by execution} (code, visual transformations with training pairs, math with symbolic checkers), deploy the symbolic-verifier architecture: proposers generate executable programs, sandboxed execution filters candidates, majority vote selects (up to $278\times$ cost-efficiency win on AIME).
+\textbf{(b)} If the output is \textbf{verifiable by execution} (code, visual transformations with training pairs, math with symbolic checkers), deploy the symbolic-verifier architecture: proposers generate executable programs, sandboxed execution filters candidates, majority vote selects ($2.2\times$ cost-efficiency win over same-task o4-mini on AIME).
 \textbf{(c)} If the output \textbf{requires re-derivation to verify} and no symbolic verifier is available, use parallel proposers with simple majority vote; \emph{do not} use an LLM synthesizer.
 \textbf{(d)} If the single-model baseline is already at the recognition ceiling, use the single model directly.
 Section~\ref{sec:discussion} formalizes this decision tree.
@@ -902,7 +902,7 @@ For AIME, the final answer is the majority vote among the integer answers return
 \end{enumerate}
 
 This is the AlphaZero template applied to LLM reasoning: the proposer is the policy, the symbolic verifier is the value head, and the $K$-sample pool with selection is the search.
-The entire pipeline runs on a single API key at \$$0.005$--$0.028$/task.
+The entire pipeline runs on a single API key at \$$0.003$--$0.029$/task.
 No fine-tuning, no process reward model, no test-time training.
 
 \subsection{ARC-AGI-1 (canonical public eval)}\label{sec:act2-arc}
@@ -1269,18 +1269,10 @@ Per-cell findings should be interpreted as suggestive rather than as significanc
 
 \subsection{Future work}\label{sec:future}
 
-\paragraph{External verifiers for non-verifiable tasks.}
-The most direct extension of the verifiability-boundary finding is to test whether replacing the LLM synthesizer with an \emph{external programmatic verifier} restores the synthesis effect on ARC.
-ARC tasks come with several training input--output pairs; a candidate transformation rule can be checked exactly by executing it on the training inputs and comparing to the training outputs.
-This is a non-LLM verifier whose recognition accuracy is exact rather than approximate.
-The architecture: $N$ proposers each generate (rule, output\_grid) pairs; survivors are filtered by training-pair match; the surviving outputs go to majority vote.
-We predict this architecture will substantially outperform the $33.3\%$ majority-vote ceiling we report; the natural target is the $40$--$43\%$ oracle best-of-$N$ ceiling.
-
-\paragraph{Code synthesis for ARC.}
-A more ambitious extension is to have proposers write Python code that transforms input to output, executed against training pairs for verification.
-This is the approach used by recent ARC work that has reached $30$--$40\%$ on the public leaderboard.
-The architectural primitive is the same as in this paper, but the proposer's output is a verifier-friendly object (executable code) rather than a raw grid, and the synthesis stage is replaced by code execution.
-Combining this with the cheap-collective approach---many cheap models writing candidate code, an exact verifier, simple consensus on surviving solutions---could push past the oracle ceiling we observe with raw-grid proposals.
+\paragraph{Learned verifiers for non-verifiable tasks.}
+Our Act~II results show that symbolic verification (code execution, unit tests, sympy) dissolves the verifiability boundary.
+The natural next question is whether \emph{learned} verifiers---process reward models (PRMs) trained on ground-truth trajectories \cite{Lightman2023PRM}---can play the same role on tasks without natural symbolic verification.
+If PRM-based selection outperforms majority vote in the proposer--verifier--vote architecture, the approach generalizes beyond the ``verifiable tasks'' envelope; if not, the boundary is fundamental rather than architectural.
 
 \paragraph{Replication of the verifiability boundary on more domains.}
 We have characterized the boundary on three task domains: Phase~A multi-approach math (verifiable, synth helps), GSM8K word problems (verifiable, synth helps), and ARC-AGI visual grids (non-verifiable, synth hurts).
