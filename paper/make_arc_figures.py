@@ -93,8 +93,8 @@ def fig_arc_ranking():
     ax.set_xticks(x)
     ax.set_xticklabels(labels, rotation=15, ha="right", fontsize=7)
     ax.set_ylabel("ARC-30 correctness (Wilson 95% CI)")
-    ax.set_ylim(0, 0.55)
-    ax.set_title("ARC architecture ranking — qwen-22b throughout", pad=8)
+    ax.set_ylim(0, 0.60)
+    ax.set_title("ARC architecture ranking — qwen-22b throughout", pad=12)
     ax.grid(True, axis="y", alpha=0.3)
 
     # Annotate values
