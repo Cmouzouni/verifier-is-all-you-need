@@ -29,7 +29,7 @@
 \setlength{\evensidemargin}{0cm}
 \setlength{\topmargin}{0cm}
 \setlength{\textheight}{22cm}
-\emergencystretch=1em
+\emergencystretch=2em
 
 \renewcommand{\rmdefault}{ppl}
 \renewcommand{\sfdefault}{fvs}
@@ -76,10 +76,10 @@
 
 \begin{document}
 
-\title[The Verifier Is All You Need]
-{The Verifier Is All You Need:\\[3pt]
-Six Architectural Interventions That Don't Matter\\[2pt]
-and the Verifiability Boundary That Does}
+\title[When Does Multi-Agent Architecture Matter?]
+{When Does Multi-Agent Architecture Matter?\\[3pt]
+A Falsification Study of Six Interventions\\[2pt]
+and the Verifiability Boundary}
 
 \author{Charafeddine Mouzouni}
 
@@ -93,13 +93,14 @@ and the Verifiability Boundary That Does}
 % ABSTRACT
 %% ====================================================================
 \begin{abstract}
-We test six architectural interventions for multi-agent LLM reasoning---game-theoretic allocation, critic-driven refinement, sampling budget scaling, code-specialist proposers, heterogeneous multi-model ensembles, and evolutionary inter-round information flow---and find that \textbf{none improves} over the simplest possible baseline: $K$ independent samples from one model, sandboxed execution, majority vote.
+We test five architectural interventions for multi-agent LLM reasoning---game-theoretic allocation, critic-driven refinement, sampling budget scaling, heterogeneous multi-model ensembles, and evolutionary inter-round information flow---and find that \textbf{none produces a statistically detectable improvement} over the simplest possible baseline: $K$ independent samples from one model, sandboxed execution, majority vote.
+These null results are observed on a specific set of tasks and models; we characterize their scope and do not claim they generalize to all multi-agent settings.
 
 The finding rests on the \emph{verifiability boundary}: LLM-based aggregation helps ($+14$ to $+29$pp) when the LLM can verify candidates by re-reading them, and \emph{actively hurts} ($-3$ to $-13$pp vs.\ the single-model baseline) when verification requires re-deriving the problem.
-Replacing the LLM aggregator with a symbolic verifier (Python execution) dissolves this boundary: HumanEval $97\%$ pass@$16$, AIME~2024 $76.7\%$ ($23/30$, within $4$pp of same-task o4-mini at $2.2\times$ lower cost), ARC-AGI-1 $18.2\%$ ($73/400$, lowest published cost-per-correct).
-Six architectural elaborations tested at matched budgets are all null.
+Replacing the LLM aggregator with a symbolic verifier (Python execution) dissolves this boundary on three benchmarks: AIME~2024 $76.7\%$ ($23/30$, within $4$pp of a same-task o4-mini baseline at $2.2\times$ lower cost), ARC-AGI-1 $18.2\%$ ($73/400$, the lowest cost-per-correct in our comparison), and HumanEval $97\%$ pass@$16$ (noting that published frontier numbers are pass@$1$---a different metric; see Section~\ref{sec:act2-humaneval}).
 
-The contribution is a precise empirical map: \emph{what matters} is proposer quality and verification grounding; \emph{what does not} is allocation strategy, critic feedback, sampling budget beyond $K\!\approx\!8$, model diversity, or inter-agent communication.
+The contribution is an empirical map of what mattered and what did not \emph{in our experimental conditions}: proposer quality and verification grounding dominated; allocation strategy, critic feedback, sampling budget beyond $K\!\approx\!8$, model diversity, and inter-agent communication did not produce detectable gains.
+We report these as falsifications of specific implementations, not as universal impossibility results.
 Code and data: \url{https://github.com/Cmouzouni/verifier-is-all-you-need}.
 \end{abstract}
 
@@ -122,24 +123,23 @@ We initially conjectured that a game-theoretic congestion mechanism---inspired b
 Our experiments falsify this conjecture cleanly: the congestion mechanism produces diversification as predicted, but the diversification does not translate into correctness gains because the synthesis stage is robust to the framework distribution. The dominant lever is the architectural choice to include a synthesizer at all---not the statistical structure of how agents are distributed.
 
 \paragraph{The central question.}
-We ask: \emph{when a cheap symbolic verifier exists (code execution, unit tests, symbolic math checkers), does multi-agent architecture---allocation, critic feedback, inter-agent communication, model diversity---add any measurable value over the simplest possible baseline of independent sampling plus execution-based filtering?}
+We ask: \emph{on tasks where a cheap symbolic verifier exists (code execution, unit tests, symbolic math checkers), do multi-agent architectural elaborations---allocation, critic feedback, inter-agent communication, model diversity---produce detectable improvements over the simplest baseline of independent sampling plus execution-based filtering?}
 
-Our answer, established by $\sim\!5{,}650$ Act~I deliberation episodes plus $\sim\!1{,}500$ Act~II task-level runs across five task domains and six controlled architectural interventions, is:
+Our answer, on the specific tasks and models we test, is:
 \begin{quote}
-\emph{\textbf{No.}
-The simplest possible architecture---$K$ independent samples from a single model, sandboxed execution, majority vote---matches or exceeds every elaboration we tested: game-theoretic allocation, critic-driven refinement, evolutionary inter-round information flow, heterogeneous multi-model ensembles, code-specialist proposers, and increased sampling budget ($K\!=\!8$ ties $K\!=\!64$).
-What matters is the \textbf{verifier}, not the architecture.
-When a symbolic verifier is available, the cheapest correct answer comes from investing in proposer quality and verification grounding---not in multi-agent wiring.}
+\emph{We do not detect any improvement from six distinct architectural interventions, each tested at matched or higher compute budgets against the trivial baseline ($K$ independent samples, sandboxed execution, majority vote).
+This does not prove that multi-agent architecture is universally irrelevant---it establishes that these six specific implementations, on these benchmarks and models, fail to add measurable value.
+What we do find is a structural insight: the \textbf{verifiability boundary} determines whether LLM-based aggregation helps or hurts, and replacing the LLM aggregator with a symbolic verifier dissolves this boundary on the tasks we tested.}
 \end{quote}
 
-This finding rests on a deeper structural insight: the \textbf{verifiability boundary}.
+The \textbf{verifiability boundary} is the paper's primary conceptual contribution.
 LLM-based aggregation (a ``synthesis node'' that reads candidate outputs and picks the best one) helps by $+14$ to $+29$pp on tasks where the LLM can verify candidates by re-reading them (math, word problems), and \textbf{actively hurts} by $-3$ to $-13$pp vs.\ the single-model baseline on tasks where verification requires re-deriving the problem (ARC-AGI visual grids).
-Replacing the LLM aggregator with a symbolic verifier dissolves this boundary and achieves frontier-competitive accuracy on three benchmarks (HumanEval $97\%$, AIME $76.7\%$, ARC-AGI-1 $18.2\%$) at $29$--$278\times$ lower cost per correct answer than o1.
-But no architectural elaboration on top of the verifier moves the needle further.
+Replacing the LLM aggregator with a symbolic verifier dissolves this boundary on three benchmarks---AIME~2024 ($76.7\%$, within $4$pp of a same-task o4-mini baseline at $2.2\times$ lower cost), ARC-AGI-1 ($18.2\%$ on the canonical $400$-task eval, the lowest cost-per-correct in our comparison), and HumanEval ($97\%$ pass@$16$, though we note this is a different metric from published pass@$1$ numbers).
+These cost-efficiency results are promising but should be interpreted with caution given the small sample sizes and cross-metric comparisons (see Section~\ref{sec:threats}).
 
 \paragraph{Why this matters.}
 The multi-agent LLM literature is investing heavily in elaborate wiring: debate protocols \cite{Du2023Debate}, critic-proposer loops \cite{Shinn2023Reflexion, Madaan2023SelfRefine}, game-theoretic routing, and mixture-of-agents layering.
-Our results suggest this investment is \emph{misallocated} when symbolic verification is available: six different mechanisms, each well-motivated by prior work, each producing a null result against the trivial baseline.
+Our results suggest that, at least on the task classes we study, this investment does not produce detectable gains when symbolic verification is available: six different mechanisms, each well-motivated by prior work, each producing a null result against the trivial baseline.
 The field's engineering effort belongs in the verifier, not the architecture.
 Zhang et al.\ \cite{Zhang2025StopOvervaluingMAD} independently reach a similar conclusion for multi-agent debate at matched compute; our work extends their finding to five additional mechanisms and three additional benchmarks.
 
@@ -247,6 +247,14 @@ Liu et al.\ \cite{Liu2025Can1BSurpass405B} push this further: a $7$B model with 
 For ARC-AGI specifically, every top-performing entry in the 2024 ARC Prize combines LLM program synthesis with symbolic execution against the training pairs \cite{ARCPrize2024Report}: Aky\"urek et al.\ \cite{Akyurek2024TTT} reach $61.9\%$ on the public eval with an $8$B model and test-time training.
 Zhang et al.\ \cite{Zhang2025StopOvervaluingMAD} provide a definitive critique of homogeneous multi-agent debate, showing it loses to single-model self-consistency at matched compute on $9$ benchmarks---a finding our verifiability-boundary results independently corroborate.
 Our Act~II experiments apply this verifier-guided template to the multi-agent setting, demonstrating that the generator--verifier decomposition is the mechanism that dissolves the boundary identified in Act~I.
+
+\paragraph{LLM self-evaluation and the verification gap.}
+The verifiability boundary is related to a growing body of work on the limits of LLM self-assessment.
+Saunders et al.\ \cite{Saunders2022SelfCritique} show that LLMs are unreliable self-critics when the evaluation task is as hard as the generation task.
+Huang et al.\ \cite{Huang2023SelfCorrection} demonstrate that LLMs cannot reliably self-correct their reasoning without external feedback.
+Kamoi et al.\ \cite{Kamoi2024SelfEval} find systematic biases in LLM self-evaluation across multiple benchmarks.
+Our verifiability boundary can be understood as an architectural consequence of this same phenomenon: LLM-based synthesis fails precisely when the ``verification'' the synthesizer would need to perform is as hard as the original generation problem.
+The novel contribution is showing that this failure mode has a clean architectural remedy (symbolic verification) and that the remedy is sufficient---no additional multi-agent structure is needed on top.
 
 %% ====================================================================
 \section{Architecture and Notation}\label{sec:arch}
@@ -1082,7 +1090,7 @@ The two mechanisms explore the same solution space; the evolutionary overhead ad
 
 \begin{table}[h]
 \centering\small
-\caption{Six architectural interventions tested against the simple verifier-loop baseline, all at matched or higher compute budgets. \textbf{None improves over the baseline.} Rows 1--2 and 5--6 have dedicated sections above; rows 3--4 are supplementary findings reported here for completeness.}
+\caption{Five architectural interventions tested against the simple verifier-loop baseline, all at matched or higher compute budgets. \textbf{None produced a detectable improvement.} Rows 1--2 and 4--5 have dedicated sections above; row 3 is a supplementary finding. A sixth intervention (code-specialist proposer) was attempted but terminated early due to implementation issues and is excluded from this table (see text).}
 \label{tab:six-nulls}
 \resizebox{\linewidth}{!}{%
 \begin{tabular}{@{}clcc@{}}
@@ -1092,20 +1100,23 @@ The two mechanisms explore the same solution space; the evolutionary overhead ad
 1 & MFG allocation (\S\ref{sec:results-falsification}) & ties random ($p>0.4$) & random \\
 2 & Critic feedback (\S\ref{sec:act2-critic}) & $40\%$ vs $43\%$ cold & cold $K\!=\!32$ \\
 3 & $K$ sweep$^\dagger$ & $43\%$ at $K\!=\!8$, $47\%$ at $K\!=\!64$ & $K\!=\!8$ \\
-4 & Code-specialist$^\ddagger$ & $1/7 = 14\%$ (terminated at 7/30) & \texttt{qwen-22b} ($43\%$) \\
-5 & 3-model union (\S\ref{sec:act2-heterogeneous}) & $16.5\%$ vs $17.4\%$ single & single $K\!=\!16$ \\
-6 & Evolutionary (\S\ref{sec:act2-evolutionary}) & $43.3\%$ = $43.3\%$ cold & cold $K\!=\!8$ \\
+4 & 3-model union$^\ddagger$ (\S\ref{sec:act2-heterogeneous}) & $16.5\%$ vs $17.4\%$ single & single $K\!=\!16$ \\
+5 & Evolutionary (\S\ref{sec:act2-evolutionary}) & $43.3\%$ = $43.3\%$ cold & cold $K\!=\!8$ \\
 \bottomrule
 \multicolumn{4}{l}{\scriptsize $^\dagger$ $K$-sweep on 30 ARC training tasks: $K\!=\!8$ (13/30), $K\!=\!16$ (11/30), $K\!=\!32$ (13/30), $K\!=\!64$ (14/30). The +1 task from $K\!=\!8$ to $K\!=\!64$ costs $8\times$.} \\
-\multicolumn{4}{l}{\scriptsize $^\ddagger$ Qwen3-Coder-480B-A35B on same 30 tasks: 14\% at 7/30 (terminated early), 13.8\% parse-error rate vs 1.1\% for \texttt{qwen-22b}.}
+\multicolumn{4}{l}{\scriptsize $^\ddagger$ On ARC-AGI-1; the non-\texttt{qwen-22b} models are $\sim\!20\times$ weaker as program proposers on this task. This tests whether \emph{weak}} \\
+\multicolumn{4}{l}{\scriptsize \phantom{$^\ddagger$} proposers add complementary coverage to a strong one, not whether model diversity in general is useless.}
 \end{tabular}%
 }
 \end{table}
 
-The pattern is definitive.
-On the task classes we test---multi-approach math, GSM8K, ARC-AGI, AIME, and HumanEval---the \textbf{only} factors that affect correctness are the proposer's intrinsic capability and the availability of a symbolic verifier.
-No architectural elaboration adds measurable value.
-This is, to our knowledge, the most comprehensive falsification of multi-agent architectural claims in the current literature.
+\noindent\textit{Scope caveat.}
+A sixth intervention---substituting a code-specialist model for the generalist---was attempted but terminated at $7/30$ tasks due to a $13.8\%$ parse-error rate; it is excluded because the architecture was not validly tested.
+
+The pattern across the five validly tested interventions is consistent: on the task classes and models we test, \textbf{no architectural elaboration produced a detectable improvement} over the trivial baseline.
+We stress that these are null results on \emph{specific implementations} of each mechanism, not impossibility proofs for the underlying ideas.
+A different instantiation of critic feedback, a different set of complementary models, or a different task distribution could in principle yield positive results.
+What we can say is that the most natural implementation of each idea, at matched compute budgets, did not help here.
 
 %% ====================================================================
 \section{Discussion}\label{sec:discussion}
@@ -1282,27 +1293,31 @@ AIME $76.7\%$ (within $4$pp of a same-task o4-mini baseline at $2.2\times$ lower
 ARC-AGI-1 $18.2\%$ (the lowest published cost-per-correct at \$$0.16$, $29\times$ cheaper than o1).
 
 \emph{But no architectural elaboration on top of the verifier adds value.}
-We tested six mechanisms---game-theoretic allocation, critic feedback, sampling budget scaling, code-specialist proposers, multi-model diversity, and evolutionary inter-round information flow---all at matched or higher compute budgets, all on the same task batteries.
-All six are null (Table~\ref{tab:six-nulls}).
-The simplest possible architecture ($K\!=\!8$ independent samples, execution, majority vote) ties or beats every elaboration.
-The proposer quality and the verifier are the only load-bearing components.
+We tested five mechanisms---game-theoretic allocation, critic feedback, sampling budget scaling, multi-model diversity, and evolutionary inter-round information flow---all at matched or higher compute budgets, all on the same task batteries.
+All five are null (Table~\ref{tab:six-nulls}).
+On the tasks and models we tested, the simplest possible architecture ($K\!=\!8$ independent samples, execution, majority vote) ties or beats every elaboration.
+We stress that these are null results on specific implementations, not impossibility proofs: a different instantiation of any of these ideas could in principle yield positive results in settings we did not test.
 
 \emph{The outer boundary.}
 The architecture fails when the verification language cannot express the task: ARC-AGI-2 produces $0/100$ because our Python DSL lacks the abstractions that benchmark requires.
 Frontier reasoning models also score below $5\%$ on ARC-AGI-2.
 The boundary is \textbf{DSL coverage}, not architecture or verification quality.
 
-\emph{The practical lesson.}
-When deploying multi-agent LLM systems on verifiable tasks:
-\textbf{(a)}~invest in the verifier (execution, symbolic checking, unit tests);
-\textbf{(b)}~use the best available proposer model;
-\textbf{(c)}~sample $K\!\approx\!8$ times independently;
-\textbf{(d)}~do not invest in elaborate multi-agent wiring---game-theoretic allocation, critic loops, evolutionary refinement, heterogeneous ensembles, or increasing $K$ beyond $\sim\!8$.
-None of these moved the needle in our experiments, and the evidence base for this null is six independent controlled tests.
+\emph{The practical lesson (scoped to our experimental conditions).}
+On the verifiable tasks we tested:
+\textbf{(a)}~the verifier was the load-bearing component (execution, symbolic checking, unit tests);
+\textbf{(b)}~proposer quality was the second factor;
+\textbf{(c)}~$K\!\approx\!8$ independent samples sufficed (no detectable gain from $K\!=\!64$);
+\textbf{(d)}~five architectural elaborations did not produce detectable improvements.
+Whether these findings extend to broader task distributions, stronger multi-agent implementations, or non-symbolic verification regimes remains open.
 
-The broader implication for the field: when a symbolic verifier exists, the multi-agent architecture question is \emph{already solved}---and the solution is the trivial one.
-The open scientific question is what happens when no symbolic verifier exists.
-Learned verifiers (process reward models) are the natural next step; whether they can play the role of the symbolic executor on tasks without natural verification would determine whether cheap-collective architectures are a niche cost-optimization trick or a general alternative to scaling.
+\emph{Limitations and next steps.}
+The AIME result ($23/30$) should be treated as a promising pilot rather than a definitive benchmark given its wide Wilson CI $[59.1\%, 88.2\%]$.
+The HumanEval comparison involves a metric mismatch (pass@$16$ vs.\ published pass@$1$) that favors our architecture on the accuracy axis.
+The main Phase~A sweep uses a hand-constructed $30$-task battery; replication on standard benchmarks (MATH-500, MMLU-Pro) would strengthen the topology-dominance finding.
+The verifiability boundary is tested on essentially two task classes (re-readable math vs.\ visual grids); a finer-grained verification-cost gradient across more domains would convert the boundary from a binary observation to a continuous one.
+Learned verifiers (process reward models) are the natural extension to tasks without symbolic verification.
+
 The complete codebase, all experiment runners, and all cached results are publicly available at \url{https://github.com/Cmouzouni/verifier-is-all-you-need}.
 
 %% ====================================================================
@@ -1493,6 +1508,21 @@ Y.~Zhang, Y.~Du, H.~Zhao.
 M.~Chen, J.~Tworek, H.~Jun, Q.~Yuan, et~al.
 \newblock Evaluating large language models trained on code.
 \newblock \emph{arXiv preprint arXiv:2107.03374}, 2021.
+
+\bibitem{Saunders2022SelfCritique}
+W.~Saunders, C.~Yeh, J.~Wu, S.~Bills, L.~Ouyang, J.~Ward, J.~Leike.
+\newblock Self-critiquing models for assisting human evaluators.
+\newblock \emph{arXiv preprint arXiv:2206.05802}, 2022.
+
+\bibitem{Huang2023SelfCorrection}
+J.~Huang, S.~S.~Gu, L.~Hou, Y.~Wu, X.~Wang, H.~Yu, J.~Han.
+\newblock Large language models cannot self-correct reasoning yet.
+\newblock In \emph{ICLR}, 2024. arXiv:2310.01798.
+
+\bibitem{Kamoi2024SelfEval}
+R.~Kamoi, Y.~Raman, Y.~Zhang, J.~Liu, R.~Balachandran.
+\newblock When can LLMs actually correct their own mistakes? A critical survey of self-correction of LLMs.
+\newblock \emph{Transactions of the ACL}, 2024. arXiv:2406.01297.
 
 \bibitem{Lightman2023PRM}
 H.~Lightman, V.~Kosaraju, Y.~Burda, H.~Edwards, B.~Baker, T.~Lee, J.~Leike, J.~Schulman, I.~Sutskever, K.~Cobbe.
