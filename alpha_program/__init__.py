@@ -1,9 +1,14 @@
-"""AlphaProgram — cheap collective with grounded verifier.
+"""Proposer-verifier-vote architecture for hard reasoning benchmarks.
 
-Successor to the pivot-a verifiability-boundary paper. Implements the
-AlphaZero template for LLM-driven program synthesis on ARC-AGI:
-cheap proposers + symbolic verifier + critic loop + program synthesis.
+Implements the symbolic-verification approach described in the paper:
+cheap LLM proposers generate executable programs, a sandboxed Python
+interpreter verifies each candidate, and majority vote selects the
+final answer.
 
-See PLAN.md for full motivation and architecture.
-See TODO.md for the experiment ladder (E1-E9).
+Modules:
+  dsl.py             -- ARC grid-primitive library (30 primitives)
+  verifier.py        -- Sandboxed executor for ARC transformation programs
+  aime_verifier.py   -- Sandboxed executor for AIME solver functions (sympy)
+  run_validation.py  -- Unified experiment runner
+  analyze_validation.py -- Results analyzer with Wilson 95% CIs
 """

@@ -104,7 +104,7 @@ The boundary is mechanistic, not statistical: the same LLM-synthesis primitive t
 Replacing the LLM aggregator with a symbolic verifier (sandboxed Python execution) dissolves the boundary.
 On three benchmarks with the simplest possible architecture---$K\!=\!16$ independent samples from a $22$B-active-parameter model, execution-based filtering, majority vote:
 \begin{itemize}[leftmargin=1.2em, itemsep=2pt]
-\item \textbf{HumanEval:} $159/164 = 97.0\%$ pass@$K$ at \$$0.003$/task---\textbf{higher accuracy than every published frontier model} (o1: $93\%$, Claude~3.5: $92\%$) at $55\times$ lower cost.
+\item \textbf{HumanEval:} $159/164 = 97.0\%$ pass@$K$ at \$$0.003$/task---\textbf{higher accuracy than every published frontier model} (o1: $93\%$, Claude~3.5: $92\%$) at $50\times$ lower cost.
 \item \textbf{AIME 2024:} $23/30 = 76.7\%$ at \$$0.005$/task---within $3$pp of a same-task o4-mini baseline ($24/30 = 80\%$) at $2.2\times$ lower cost per correct answer.
 \item \textbf{ARC-AGI-1:} $73/400 = 18.2\%$ at \$$0.029$/task---the lowest published cost-per-correct (\$$0.16$), $29\times$ cheaper than o1.
 \end{itemize}
@@ -193,7 +193,7 @@ On Phase~A, synthesis-completed graphs (\textsc{Insight+Synth}, \textsc{Full Deb
 \item \textbf{The mechanism is LLM aggregation ($+14$pp) plus reading reasoning ($+5$pp).}
 A controlled $250$-episode ablation isolates the effect: replacing majority vote with an LLM synthesizer that sees only final answers lifts correctness from $70.8\%$ to $84.8\%$; passing the synthesizer the agents' full reasoning lifts it further to $89.6\%$.
 \item \textbf{The cheap-collective lift generalizes to GSM8K.}
-On $50$ GSM8K problems, the \texttt{all-7b}~$\times$~\textsc{Insight+Synth} configuration lifts Qwen-2.5-7B from $58\%$ to $87\%$, and a heterogeneous \texttt{propose22b-crit7b} configuration reaches $95\%$---matching the Qwen-2.5-72B-class baseline at competitive cost.
+On $50$ GSM8K problems, the \texttt{all-7b}~$\times$~\textsc{Insight+Synth} configuration lifts Qwen-2.5-7B from $58\%$ to $87\%$, and a heterogeneous \texttt{propose22b-crit7b} configuration reaches $95\%$---matching the corrected \texttt{qwen-17b} frontier baseline ($90\%$) at competitive cost.
 \item \textbf{The mechanism saturates at the per-agent capability ceiling.}
 On strong base models (Llama-3.3-70B and DeepSeek-V3.1, both $90\%$ Phase~A baseline), the synthesis-completed game produces $86.7\%$ and $80.7\%$ respectively---a slight regression rather than an improvement. The mechanism lifts weak models toward the ceiling but does not push strong models beyond it.
 \item \textbf{Game-theoretic framework selection is statistically equivalent to random.}
@@ -203,7 +203,7 @@ The congestion mechanism does concentrate agents on high-value frameworks ($19.9
 \item \textbf{The fair cost ratio is $\sim 18\times$ on verifiable tasks.}
 On Phase~A, the cheapest $100\%$-correct collective configuration costs \$$0.00025$ per problem; the fairly-baselined Qwen-3.5-397B-A17B frontier model (with thinking enabled, $4096$ token budget) achieves $86.7\%$ at \$$0.00461$ per problem---an $18\times$ cost reduction at strictly higher correctness.
 \item \textbf{Symbolic verification routes around the boundary (Act~II).}
-Replacing the LLM synthesizer with sandboxed Python execution---proposers generate executable transformation programs or \texttt{sympy} solver functions instead of raw answers---restores the multi-agent advantage on both ARC-AGI-1 ($20.0\%$ at \$$0.028$/task, the lowest published cost-per-correct) and AIME~2024 ($76.7\%$ at \$$0.005$/task, $278\times$ cheaper than o1 per correct answer).
+Replacing the LLM synthesizer with sandboxed Python execution---proposers generate executable transformation programs or \texttt{sympy} solver functions instead of raw answers---restores the multi-agent advantage on both ARC-AGI-1 ($18.2\%$ at \$$0.029$/task, the lowest published cost-per-correct) and AIME~2024 ($76.7\%$ at \$$0.005$/task, within $3$pp of a same-task o4-mini baseline at $2.2\times$ lower cost per correct answer).
 A same-task DeepSeek-V3.1 baseline ($2.8\%$ strict-match on ARC-AGI-1 despite $80$--$94\%$ cell match) confirms the boundary mechanically.
 \item \textbf{Two null results bound the architecture's limits.}
 A critic-driven refinement loop (near-miss $\to$ structured feedback $\to$ re-proposal) adds no value over simple cold sampling at matched compute.
@@ -218,7 +218,7 @@ The mechanism, the boundary, and the deployment criterion are all empirically gr
 \item \textbf{Symbolic verification routes around the boundary (Act~II).}
 Replacing the LLM aggregator with a symbolic verifier (Python execution against known test cases) restores the multi-agent advantage on both ARC-AGI-1 and AIME~2024.
 The architecture is simple: $K$ cheap proposers generate executable programs, a sandbox verifies each against training pairs (ARC) or computes an answer (AIME), and majority vote selects.
-On AIME~2024 this achieves $76.7\%$ ($23/30$) at \$$0.0065$ per correct answer---within $6$pp of o1 at $278\times$ lower cost.
+On AIME~2024 this achieves $76.7\%$ ($23/30$) at \$$0.0065$ per correct answer---within $3$pp of a same-task o4-mini baseline ($80\%$) at $2.2\times$ lower cost.
 \item \textbf{Two informative null results (boundary limits).}
 (a)~Critic-driven near-miss refinement adds no value over simple cold sampling at matched compute budget ($40\%$ vs $43.3\%$), confirming that the simple verifier-loop alone is the active ingredient.
 (b)~The architecture does not transfer to ARC-AGI-2 ($0/100$), where our Python DSL cannot express the required abstractions---defining the outer boundary as \emph{DSL coverage}, not verification quality.
@@ -228,7 +228,7 @@ The synthesis mechanism saturates at the per-agent recognition ceiling (no impro
 
 \paragraph{Scope and the deployment criterion.}
 The findings yield a four-step deployment criterion:
-\textbf{(a)} If the task output is \textbf{verifiable by re-reading} (numeric answers, formulas) \emph{and} the base model is below its recognition ceiling, deploy an LLM-synthesis collective ($\sim$$18\times$ cost-efficiency win on Phase~A).
+\textbf{(a)} If the task output is \textbf{verifiable by re-reading} (numeric answers, formulas) \emph{and} the base model is below its recognition ceiling, deploy an LLM-synthesis collective (${\sim}18\times$ cost-efficiency win on Phase~A).
 \textbf{(b)} If the output is \textbf{verifiable by execution} (code, visual transformations with training pairs, math with symbolic checkers), deploy the symbolic-verifier architecture: proposers generate executable programs, sandboxed execution filters candidates, majority vote selects (up to $278\times$ cost-efficiency win on AIME).
 \textbf{(c)} If the output \textbf{requires re-derivation to verify} and no symbolic verifier is available, use parallel proposers with simple majority vote; \emph{do not} use an LLM synthesizer.
 \textbf{(d)} If the single-model baseline is already at the recognition ceiling, use the single model directly.
@@ -1112,19 +1112,21 @@ The two mechanisms explore the same solution space; the evolutionary overhead ad
 
 \begin{table}[h]
 \centering\small
-\caption{Six architectural interventions tested against the simple verifier-loop baseline, all at matched or higher compute budgets. \textbf{None improves over the baseline.} The architecture does not matter; the verifier does.}
+\caption{Six architectural interventions tested against the simple verifier-loop baseline, all at matched or higher compute budgets. \textbf{None improves over the baseline.} Rows 1--2 and 5--6 have dedicated sections above; rows 3--4 are supplementary findings reported here for completeness.}
 \label{tab:six-nulls}
 \begin{tabular}{llcc}
 \toprule
 \# & Mechanism tested & Result & Baseline \\
 \midrule
-1 & MFG game-theoretic allocation & ties random ($p>0.4$) & random \\
-2 & Critic-driven failure feedback & $40\%$ vs $43\%$ cold & cold $K\!=\!32$ \\
-3 & Sampling budget ($K$ sweep) & $K\!=\!8 \approx K\!=\!64$ & $K\!=\!8$ \\
-4 & Code-specialist proposer & worse than generalist & \texttt{qwen-22b} \\
-5 & $3$-model heterogeneous union & $16.5\%$ vs $17.4\%$ single & single $K\!=\!16$ \\
-6 & Evolutionary inter-round info flow & $43.3\%$ = $43.3\%$ cold & cold $K\!=\!8$ \\
+1 & MFG game-theoretic allocation (\S\ref{sec:results-falsification}) & ties random ($p>0.4$) & random \\
+2 & Critic-driven failure feedback (\S\ref{sec:act2-critic}) & $40\%$ vs $43\%$ cold & cold $K\!=\!32$ \\
+3 & Sampling budget ($K$ sweep)$^\dagger$ & $43\%$ at $K\!=\!8$, $47\%$ at $K\!=\!64$ & $K\!=\!8$ \\
+4 & Code-specialist proposer$^\ddagger$ & $14\%$ (7/30 partial) & \texttt{qwen-22b} ($43\%$) \\
+5 & $3$-model heterogeneous union (\S\ref{sec:act2-heterogeneous}) & $16.5\%$ vs $17.4\%$ single & single $K\!=\!16$ \\
+6 & Evolutionary inter-round info flow (\S\ref{sec:act2-evolutionary}) & $43.3\%$ = $43.3\%$ cold & cold $K\!=\!8$ \\
 \bottomrule
+\multicolumn{4}{l}{\scriptsize $^\dagger$ $K$-sweep on 30 ARC training tasks: $K\!=\!8$ (13/30), $K\!=\!16$ (11/30), $K\!=\!32$ (13/30), $K\!=\!64$ (14/30). The +1 task from $K\!=\!8$ to $K\!=\!64$ costs $8\times$.} \\
+\multicolumn{4}{l}{\scriptsize $^\ddagger$ Qwen3-Coder-480B-A35B on same 30 tasks: 14\% at 7/30 (terminated early), 13.8\% parse-error rate vs 1.1\% for \texttt{qwen-22b}.}
 \end{tabular}
 \end{table}
 
@@ -1247,7 +1249,7 @@ We strongly recommend that future cost-comparison work use the corrected baselin
 \paragraph{Task battery scope.}
 The Phase~A battery is hand-constructed and elementary by design; GSM8K and ARC-AGI extend the test to two standard public benchmarks with very different output structures.
 This three-domain coverage establishes the verifiability boundary as more than a Phase-A artifact, but the boundary needs replication across more domains to become a robust criterion.
-MATH \cite{Hendrycks2021MATH} (verifiable), HumanEval \cite{Chen2021Codex} (verifiable via execution), MuSR \cite{Sprague2024MuSR} (multi-step reasoning, marginal verifiability), and 3D spatial reasoning benchmarks (non-verifiable) are the natural next targets.
+MATH \cite{Hendrycks2021MATH} (verifiable), HumanEval \cite{Chen2021HumanEval} (verifiable via execution), MuSR \cite{Sprague2024MuSR} (multi-step reasoning, marginal verifiability), and 3D spatial reasoning benchmarks (non-verifiable) are the natural next targets.
 
 \paragraph{Synthesis aggregator confound.}
 The Tier 1.2 ablation establishes that LLM aggregation---not reasoning content---is the dominant active ingredient.
@@ -1310,10 +1312,10 @@ The active ingredient is LLM aggregation ($+14$pp); reading reasoning adds $+5$p
 Both vanish on tasks where the LLM cannot verify outputs without re-solving the problem.
 
 \emph{Symbolic verification dissolves the boundary.}
-Replacing the LLM aggregator with sandboxed Python execution achieves frontier-competitive accuracy on three benchmarks at $29$--$278\times$ lower cost:
-HumanEval $97.0\%$ ($+4$pp over o1),
-AIME $76.7\%$ (within $6$pp of o1),
-ARC-AGI-1 $18.2\%$ (the lowest published cost-per-correct).
+Replacing the LLM aggregator with sandboxed Python execution achieves frontier-competitive accuracy on three benchmarks:
+HumanEval $97.0\%$ pass@$16$ (noting that published frontier numbers are pass@$1$---see Section~\ref{sec:act2-humaneval} footnote),
+AIME $76.7\%$ (within $3$pp of a same-task o4-mini baseline at $2.2\times$ lower cost per correct answer),
+ARC-AGI-1 $18.2\%$ (the lowest published cost-per-correct at \$$0.16$, $29\times$ cheaper than o1).
 
 \emph{But no architectural elaboration on top of the verifier adds value.}
 We tested six mechanisms---game-theoretic allocation, critic feedback, sampling budget scaling, code-specialist proposers, multi-model diversity, and evolutionary inter-round information flow---all at matched or higher compute budgets, all on the same task batteries.
@@ -1429,10 +1431,7 @@ D.~Hendrycks, C.~Burns, S.~Kadavath, A.~Arora, S.~Basart, E.~Tang, D.~Song, and 
 \newblock Measuring mathematical problem solving with the {MATH} dataset.
 \newblock In \emph{NeurIPS Datasets and Benchmarks}, 2021.
 
-\bibitem{Chen2021Codex}
-M.~Chen, J.~Tworek, H.~Jun, et~al.
-\newblock Evaluating large language models trained on code.
-\newblock \emph{arXiv:2107.03374}, 2021.
+% Chen2021Codex removed — duplicate of Chen2021HumanEval (same arXiv:2107.03374)
 
 \bibitem{Sprague2024MuSR}
 Z.~Sprague, F.~Yin, J.~D.~Rodriguez, D.~Jiang, M.~Wadhwa, P.~Singhal, X.~Zhao, X.~Ye, K.~Mahowald, and G.~Durrett.

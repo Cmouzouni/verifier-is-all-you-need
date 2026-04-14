@@ -75,7 +75,7 @@ def _extract_json(text: str) -> str:
 class LLMClient:
     """Client for a specific model tier."""
 
-    def __init__(self, model_key: str = "qwen-3b", seed: int = 42):
+    def __init__(self, model_key: str = "qwen-22b", seed: int = 42):
         self.model_key = model_key
         self.model_id = MODELS[model_key]
         self.seed = seed
