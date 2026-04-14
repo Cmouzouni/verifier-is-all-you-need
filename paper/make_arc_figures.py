@@ -86,9 +86,10 @@ def fig_arc_ranking():
     bars_obj = ax.bar(x, rates, yerr=[err_low, err_high], capsize=3,
                        color=colors, edgecolor="black", linewidth=0.5)
 
-    ax.axhline(34/150, color="#969696", linestyle=":", linewidth=1.0, alpha=0.7)
-    ax.text(len(bars) - 0.5, 34/150 + 0.005, "single-model baseline (22.7%, n=150)",
-            ha="right", va="bottom", fontsize=7, color="#555555")
+    ax.axhline(34/150, color="#333333", linestyle="--", linewidth=1.2, alpha=0.9, zorder=8)
+    ax.text(0.5, 34/150 + 0.012, "single-model baseline (22.7%, n=150)",
+            ha="left", va="bottom", fontsize=7, fontweight="bold", color="#333333",
+            bbox=dict(boxstyle="round,pad=0.15", facecolor="white", edgecolor="gray", alpha=0.85))
 
     ax.set_xticks(x)
     ax.set_xticklabels(labels, rotation=15, ha="right", fontsize=7)
