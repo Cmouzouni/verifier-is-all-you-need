@@ -151,7 +151,7 @@ def fig_synth_reversal():
         delta = (syn - mv) * 100
         sign = "+" if delta >= 0 else ""
         color = "#2ca02c" if delta > 0 else "#d62728"
-        ax.text(i, max(mv, syn) + 0.04, f"Δ = {sign}{delta:.1f}pp",
+        ax.text(i, max(mv, syn) + 0.08, f"Δ = {sign}{delta:.1f}pp",
                 ha="center", va="bottom", fontsize=9, fontweight="bold", color=color)
         # bar values
         ax.text(b1.get_x() + b1.get_width() / 2, mv + 0.005, f"{mv:.0%}",
