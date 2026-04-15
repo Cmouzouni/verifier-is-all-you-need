@@ -1,0 +1,4733 @@
+{
+  "experiment": "e8_aime",
+  "year": 2025,
+  "model": "qwen-22b",
+  "n_planned": 30,
+  "n_completed": 30,
+  "k_samples": 16,
+  "temperature": 0.9,
+  "max_tokens": 4096,
+  "elapsed_s": 8091.347752094269,
+  "summary": {
+    "majority_vote_correct": 17,
+    "majority_vote_rate": 0.5666666666666667,
+    "first_valid_correct": 16,
+    "first_valid_rate": 0.5333333333333333,
+    "oracle_correct": 19,
+    "oracle_rate": 0.6333333333333333,
+    "total_cost_usd": 0.366289,
+    "cost_per_task": 0.012209633333333332
+  },
+  "per_task": [
+    {
+      "task_id": "aime2025_000",
+      "ground_truth": 70,
+      "n_samples": 16,
+      "n_run_ok": 13,
+      "majority_answer": 70,
+      "majority_correct": true,
+      "first_valid_answer": 70,
+      "first_valid_correct": true,
+      "any_correct": true,
+      "samples": [
+        {
+          "i": 0,
+          "run_ok": true,
+          "answer": 70,
+          "error": null,
+          "cost_usd": 0.00014619999999999998,
+          "tokens_in": 254,
+          "tokens_out": 159
+        },
+        {
+          "i": 1,
+          "run_ok": true,
+          "answer": 70,
+          "error": null,
+          "cost_usd": 0.0001312,
+          "tokens_in": 254,
+          "tokens_out": 134
+        },
+        {
+          "i": 2,
+          "run_ok": false,
+          "answer": null,
+          "error": "no solve() function found",
+          "cost_usd": 0.0025106,
+          "tokens_in": 265,
+          "tokens_out": 4096
+        },
+        {
+          "i": 3,
+          "run_ok": false,
+          "answer": null,
+          "error": "no solve() function found",
+          "cost_usd": 0.0025106,
+          "tokens_in": 265,
+          "tokens_out": 4096
+        },
+        {
+          "i": 4,
+          "run_ok": true,
+          "answer": 70,
+          "error": null,
+          "cost_usd": 0.0001408,
+          "tokens_in": 254,
+          "tokens_out": 150
+        },
+        {
+          "i": 5,
+          "run_ok": false,
+          "answer": null,
+          "error": "no solve() function found",
+          "cost_usd": 0.0025106,
+          "tokens_in": 265,
+          "tokens_out": 4096
+        },
+        {
+          "i": 6,
+          "run_ok": true,
+          "answer": 70,
+          "error": null,
+          "cost_usd": 0.0001438,
+          "tokens_in": 254,
+          "tokens_out": 155
+        },
+        {
+          "i": 7,
+          "run_ok": true,
+          "answer": 70,
+          "error": null,
+          "cost_usd": 0.00013780000000000002,
+          "tokens_in": 254,
+          "tokens_out": 145
+        },
+        {
+          "i": 8,
+          "run_ok": true,
+          "answer": 70,
+          "error": null,
+          "cost_usd": 0.0001402,
+          "tokens_in": 254,
+          "tokens_out": 149
+        },
+        {
+          "i": 9,
+          "run_ok": true,
+          "answer": 70,
+          "error": null,
+          "cost_usd": 0.00016,
+          "tokens_in": 254,
+          "tokens_out": 182
+        },
+        {
+          "i": 10,
+          "run_ok": true,
+          "answer": 70,
+          "error": null,
+          "cost_usd": 0.0001582,
+          "tokens_in": 254,
+          "tokens_out": 179
+        },
+        {
+          "i": 11,
+          "run_ok": true,
+          "answer": 70,
+          "error": null,
+          "cost_usd": 0.000157,
+          "tokens_in": 254,
+          "tokens_out": 177
+        },
+        {
+          "i": 12,
+          "run_ok": true,
+          "answer": 70,
+          "error": null,
+          "cost_usd": 0.0001306,
+          "tokens_in": 254,
+          "tokens_out": 133
+        },
+        {
+          "i": 13,
+          "run_ok": true,
+          "answer": 70,
+          "error": null,
+          "cost_usd": 0.0016718,
+          "tokens_in": 265,
+          "tokens_out": 2698
+        },
+        {
+          "i": 14,
+          "run_ok": true,
+          "answer": 70,
+          "error": null,
+          "cost_usd": 0.00013780000000000002,
+          "tokens_in": 254,
+          "tokens_out": 145
+        },
+        {
+          "i": 15,
+          "run_ok": true,
+          "answer": 70,
+          "error": null,
+          "cost_usd": 0.0007654,
+          "tokens_in": 254,
+          "tokens_out": 1191
+        }
+      ]
+    },
+    {
+      "task_id": 1,
+      "ground_truth": 588,
+      "n_samples": 16,
+      "n_run_ok": 0,
+      "majority_answer": null,
+      "majority_correct": false,
+      "first_valid_answer": null,
+      "first_valid_correct": false,
+      "any_correct": false,
+      "samples": [
+        {
+          "i": 0,
+          "run_ok": false,
+          "answer": null,
+          "error": "API: APIConnectionError: Connection error.",
+          "cost_usd": 0.0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        {
+          "i": 1,
+          "run_ok": false,
+          "answer": null,
+          "error": "API: APIConnectionError: Connection error.",
+          "cost_usd": 0.0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        {
+          "i": 2,
+          "run_ok": false,
+          "answer": null,
+          "error": "API: APIConnectionError: Connection error.",
+          "cost_usd": 0.0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        {
+          "i": 3,
+          "run_ok": false,
+          "answer": null,
+          "error": "API: APIConnectionError: Connection error.",
+          "cost_usd": 0.0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        {
+          "i": 4,
+          "run_ok": false,
+          "answer": null,
+          "error": "API: APIConnectionError: Connection error.",
+          "cost_usd": 0.0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        {
+          "i": 5,
+          "run_ok": false,
+          "answer": null,
+          "error": "API: APIConnectionError: Connection error.",
+          "cost_usd": 0.0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        {
+          "i": 6,
+          "run_ok": false,
+          "answer": null,
+          "error": "API: APIConnectionError: Connection error.",
+          "cost_usd": 0.0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        {
+          "i": 7,
+          "run_ok": false,
+          "answer": null,
+          "error": "API: APIConnectionError: Connection error.",
+          "cost_usd": 0.0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        {
+          "i": 8,
+          "run_ok": false,
+          "answer": null,
+          "error": "no solve() function found",
+          "cost_usd": 0.0025326,
+          "tokens_in": 375,
+          "tokens_out": 4096
+        },
+        {
+          "i": 9,
+          "run_ok": false,
+          "answer": null,
+          "error": "API: APIConnectionError: Connection error.",
+          "cost_usd": 0.0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        {
+          "i": 10,
+          "run_ok": false,
+          "answer": null,
+          "error": "API: APIConnectionError: Connection error.",
+          "cost_usd": 0.0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        {
+          "i": 11,
+          "run_ok": false,
+          "answer": null,
+          "error": "API: APIConnectionError: Connection error.",
+          "cost_usd": 0.0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        {
+          "i": 12,
+          "run_ok": false,
+          "answer": null,
+          "error": "API: APIConnectionError: Connection error.",
+          "cost_usd": 0.0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        {
+          "i": 13,
+          "run_ok": false,
+          "answer": null,
+          "error": "API: APIConnectionError: Connection error.",
+          "cost_usd": 0.0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        {
+          "i": 14,
+          "run_ok": false,
+          "answer": null,
+          "error": "no solve() function found",
+          "cost_usd": 0.0025326,
+          "tokens_in": 375,
+          "tokens_out": 4096
+        },
+        {
+          "i": 15,
+          "run_ok": false,
+          "answer": null,
+          "error": "API: APIConnectionError: Connection error.",
+          "cost_usd": 0.0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        }
+      ]
+    },
+    {
+      "task_id": 2,
+      "ground_truth": 16,
+      "n_samples": 16,
+      "n_run_ok": 15,
+      "majority_answer": 16,
+      "majority_correct": true,
+      "first_valid_answer": 16,
+      "first_valid_correct": true,
+      "any_correct": true,
+      "samples": [
+        {
+          "i": 0,
+          "run_ok": true,
+          "answer": 16,
+          "error": null,
+          "cost_usd": 0.0002208,
+          "tokens_in": 333,
+          "tokens_out": 257
+        },
+        {
+          "i": 1,
+          "run_ok": true,
+          "answer": 16,
+          "error": null,
+          "cost_usd": 0.0002046,
+          "tokens_in": 333,
+          "tokens_out": 230
+        },
+        {
+          "i": 2,
+          "run_ok": true,
+          "answer": 16,
+          "error": null,
+          "cost_usd": 0.000201,
+          "tokens_in": 333,
+          "tokens_out": 224
+        },
+        {
+          "i": 3,
+          "run_ok": false,
+          "answer": null,
+          "error": "no solve() function found",
+          "cost_usd": 0.0025264000000000003,
+          "tokens_in": 344,
+          "tokens_out": 4096
+        },
+        {
+          "i": 4,
+          "run_ok": true,
+          "answer": 16,
+          "error": null,
+          "cost_usd": 0.000234,
+          "tokens_in": 333,
+          "tokens_out": 279
+        },
+        {
+          "i": 5,
+          "run_ok": true,
+          "answer": 16,
+          "error": null,
+          "cost_usd": 0.0002268,
+          "tokens_in": 333,
+          "tokens_out": 267
+        },
+        {
+          "i": 6,
+          "run_ok": true,
+          "answer": 16,
+          "error": null,
+          "cost_usd": 0.00024,
+          "tokens_in": 333,
+          "tokens_out": 289
+        },
+        {
+          "i": 7,
+          "run_ok": true,
+          "answer": 16,
+          "error": null,
+          "cost_usd": 0.0002292,
+          "tokens_in": 333,
+          "tokens_out": 271
+        },
+        {
+          "i": 8,
+          "run_ok": true,
+          "answer": 16,
+          "error": null,
+          "cost_usd": 0.0017433999999999998,
+          "tokens_in": 344,
+          "tokens_out": 2791
+        },
+        {
+          "i": 9,
+          "run_ok": true,
+          "answer": 16,
+          "error": null,
+          "cost_usd": 0.00022380000000000002,
+          "tokens_in": 333,
+          "tokens_out": 262
+        },
+        {
+          "i": 10,
+          "run_ok": true,
+          "answer": 16,
+          "error": null,
+          "cost_usd": 0.00017460000000000002,
+          "tokens_in": 333,
+          "tokens_out": 180
+        },
+        {
+          "i": 11,
+          "run_ok": true,
+          "answer": 16,
+          "error": null,
+          "cost_usd": 0.00023339999999999998,
+          "tokens_in": 333,
+          "tokens_out": 278
+        },
+        {
+          "i": 12,
+          "run_ok": true,
+          "answer": 16,
+          "error": null,
+          "cost_usd": 0.00021239999999999999,
+          "tokens_in": 333,
+          "tokens_out": 243
+        },
+        {
+          "i": 13,
+          "run_ok": true,
+          "answer": 16,
+          "error": null,
+          "cost_usd": 0.00024,
+          "tokens_in": 333,
+          "tokens_out": 289
+        },
+        {
+          "i": 14,
+          "run_ok": true,
+          "answer": 16,
+          "error": null,
+          "cost_usd": 0.000252,
+          "tokens_in": 333,
+          "tokens_out": 309
+        },
+        {
+          "i": 15,
+          "run_ok": true,
+          "answer": 16,
+          "error": null,
+          "cost_usd": 0.00022860000000000003,
+          "tokens_in": 333,
+          "tokens_out": 270
+        }
+      ]
+    },
+    {
+      "task_id": 3,
+      "ground_truth": 117,
+      "n_samples": 16,
+      "n_run_ok": 16,
+      "majority_answer": 117,
+      "majority_correct": true,
+      "first_valid_answer": 117,
+      "first_valid_correct": true,
+      "any_correct": true,
+      "samples": [
+        {
+          "i": 0,
+          "run_ok": true,
+          "answer": 117,
+          "error": null,
+          "cost_usd": 9.96e-05,
+          "tokens_in": 279,
+          "tokens_out": 73
+        },
+        {
+          "i": 1,
+          "run_ok": true,
+          "answer": 117,
+          "error": null,
+          "cost_usd": 0.000114,
+          "tokens_in": 279,
+          "tokens_out": 97
+        },
+        {
+          "i": 2,
+          "run_ok": true,
+          "answer": 117,
+          "error": null,
+          "cost_usd": 9.96e-05,
+          "tokens_in": 279,
+          "tokens_out": 73
+        },
+        {
+          "i": 3,
+          "run_ok": true,
+          "answer": 117,
+          "error": null,
+          "cost_usd": 0.0006821999999999999,
+          "tokens_in": 279,
+          "tokens_out": 1044
+        },
+        {
+          "i": 4,
+          "run_ok": true,
+          "answer": 117,
+          "error": null,
+          "cost_usd": 9.96e-05,
+          "tokens_in": 279,
+          "tokens_out": 73
+        },
+        {
+          "i": 5,
+          "run_ok": true,
+          "answer": 117,
+          "error": null,
+          "cost_usd": 0.00039180000000000004,
+          "tokens_in": 279,
+          "tokens_out": 560
+        },
+        {
+          "i": 6,
+          "run_ok": true,
+          "answer": 118,
+          "error": null,
+          "cost_usd": 0.000249,
+          "tokens_in": 279,
+          "tokens_out": 322
+        },
+        {
+          "i": 7,
+          "run_ok": true,
+          "answer": 118,
+          "error": null,
+          "cost_usd": 0.0003804,
+          "tokens_in": 279,
+          "tokens_out": 541
+        },
+        {
+          "i": 8,
+          "run_ok": true,
+          "answer": 117,
+          "error": null,
+          "cost_usd": 0.0018758,
+          "tokens_in": 289,
+          "tokens_out": 3030
+        },
+        {
+          "i": 9,
+          "run_ok": true,
+          "answer": 117,
+          "error": null,
+          "cost_usd": 0.00041160000000000003,
+          "tokens_in": 279,
+          "tokens_out": 593
+        },
+        {
+          "i": 10,
+          "run_ok": true,
+          "answer": 117,
+          "error": null,
+          "cost_usd": 9.96e-05,
+          "tokens_in": 279,
+          "tokens_out": 73
+        },
+        {
+          "i": 11,
+          "run_ok": true,
+          "answer": 117,
+          "error": null,
+          "cost_usd": 0.000378,
+          "tokens_in": 279,
+          "tokens_out": 537
+        },
+        {
+          "i": 12,
+          "run_ok": true,
+          "answer": 117,
+          "error": null,
+          "cost_usd": 0.0001266,
+          "tokens_in": 279,
+          "tokens_out": 118
+        },
+        {
+          "i": 13,
+          "run_ok": true,
+          "answer": 117,
+          "error": null,
+          "cost_usd": 0.000114,
+          "tokens_in": 279,
+          "tokens_out": 97
+        },
+        {
+          "i": 14,
+          "run_ok": true,
+          "answer": 117,
+          "error": null,
+          "cost_usd": 9.96e-05,
+          "tokens_in": 279,
+          "tokens_out": 73
+        },
+        {
+          "i": 15,
+          "run_ok": true,
+          "answer": 117,
+          "error": null,
+          "cost_usd": 0.0005742,
+          "tokens_in": 279,
+          "tokens_out": 864
+        }
+      ]
+    },
+    {
+      "task_id": 4,
+      "ground_truth": 279,
+      "n_samples": 16,
+      "n_run_ok": 14,
+      "majority_answer": 279,
+      "majority_correct": true,
+      "first_valid_answer": 279,
+      "first_valid_correct": true,
+      "any_correct": true,
+      "samples": [
+        {
+          "i": 0,
+          "run_ok": true,
+          "answer": 279,
+          "error": null,
+          "cost_usd": 0.00019960000000000003,
+          "tokens_in": 296,
+          "tokens_out": 234
+        },
+        {
+          "i": 1,
+          "run_ok": true,
+          "answer": 279,
+          "error": null,
+          "cost_usd": 0.000208,
+          "tokens_in": 296,
+          "tokens_out": 248
+        },
+        {
+          "i": 2,
+          "run_ok": true,
+          "answer": 279,
+          "error": null,
+          "cost_usd": 0.00021760000000000003,
+          "tokens_in": 296,
+          "tokens_out": 264
+        },
+        {
+          "i": 3,
+          "run_ok": true,
+          "answer": 279,
+          "error": null,
+          "cost_usd": 0.00022180000000000002,
+          "tokens_in": 296,
+          "tokens_out": 271
+        },
+        {
+          "i": 4,
+          "run_ok": true,
+          "answer": 279,
+          "error": null,
+          "cost_usd": 0.00023319999999999998,
+          "tokens_in": 296,
+          "tokens_out": 290
+        },
+        {
+          "i": 5,
+          "run_ok": false,
+          "answer": null,
+          "error": "no solve() function found",
+          "cost_usd": 0.002519,
+          "tokens_in": 307,
+          "tokens_out": 4096
+        },
+        {
+          "i": 6,
+          "run_ok": true,
+          "answer": 279,
+          "error": null,
+          "cost_usd": 0.00022360000000000001,
+          "tokens_in": 296,
+          "tokens_out": 274
+        },
+        {
+          "i": 7,
+          "run_ok": true,
+          "answer": 279,
+          "error": null,
+          "cost_usd": 0.000217,
+          "tokens_in": 296,
+          "tokens_out": 263
+        },
+        {
+          "i": 8,
+          "run_ok": true,
+          "answer": 279,
+          "error": null,
+          "cost_usd": 0.00021580000000000001,
+          "tokens_in": 296,
+          "tokens_out": 261
+        },
+        {
+          "i": 9,
+          "run_ok": true,
+          "answer": 279,
+          "error": null,
+          "cost_usd": 0.00023260000000000002,
+          "tokens_in": 296,
+          "tokens_out": 289
+        },
+        {
+          "i": 10,
+          "run_ok": true,
+          "answer": 279,
+          "error": null,
+          "cost_usd": 0.00022180000000000002,
+          "tokens_in": 296,
+          "tokens_out": 271
+        },
+        {
+          "i": 11,
+          "run_ok": true,
+          "answer": 279,
+          "error": null,
+          "cost_usd": 0.00023439999999999998,
+          "tokens_in": 296,
+          "tokens_out": 292
+        },
+        {
+          "i": 12,
+          "run_ok": true,
+          "answer": 279,
+          "error": null,
+          "cost_usd": 0.00022539999999999998,
+          "tokens_in": 296,
+          "tokens_out": 277
+        },
+        {
+          "i": 13,
+          "run_ok": true,
+          "answer": 279,
+          "error": null,
+          "cost_usd": 0.0002452,
+          "tokens_in": 296,
+          "tokens_out": 310
+        },
+        {
+          "i": 14,
+          "run_ok": true,
+          "answer": 279,
+          "error": null,
+          "cost_usd": 0.00021760000000000003,
+          "tokens_in": 296,
+          "tokens_out": 264
+        },
+        {
+          "i": 15,
+          "run_ok": false,
+          "answer": null,
+          "error": "no solve() function found",
+          "cost_usd": 0.002519,
+          "tokens_in": 307,
+          "tokens_out": 4096
+        }
+      ]
+    },
+    {
+      "task_id": 5,
+      "ground_truth": 504,
+      "n_samples": 16,
+      "n_run_ok": 13,
+      "majority_answer": 504,
+      "majority_correct": true,
+      "first_valid_answer": 504,
+      "first_valid_correct": true,
+      "any_correct": true,
+      "samples": [
+        {
+          "i": 0,
+          "run_ok": true,
+          "answer": 504,
+          "error": null,
+          "cost_usd": 0.0004952,
+          "tokens_in": 307,
+          "tokens_out": 723
+        },
+        {
+          "i": 1,
+          "run_ok": true,
+          "answer": 504,
+          "error": null,
+          "cost_usd": 0.000479,
+          "tokens_in": 307,
+          "tokens_out": 696
+        },
+        {
+          "i": 2,
+          "run_ok": true,
+          "answer": 504,
+          "error": null,
+          "cost_usd": 0.0009278,
+          "tokens_in": 307,
+          "tokens_out": 1444
+        },
+        {
+          "i": 3,
+          "run_ok": false,
+          "answer": null,
+          "error": "no solve() function found",
+          "cost_usd": 0.0025212,
+          "tokens_in": 318,
+          "tokens_out": 4096
+        },
+        {
+          "i": 4,
+          "run_ok": false,
+          "answer": null,
+          "error": "no solve() function found",
+          "cost_usd": 0.0025212,
+          "tokens_in": 318,
+          "tokens_out": 4096
+        },
+        {
+          "i": 5,
+          "run_ok": true,
+          "answer": 504,
+          "error": null,
+          "cost_usd": 0.0005407999999999999,
+          "tokens_in": 307,
+          "tokens_out": 799
+        },
+        {
+          "i": 6,
+          "run_ok": true,
+          "answer": 504,
+          "error": null,
+          "cost_usd": 0.000542,
+          "tokens_in": 307,
+          "tokens_out": 801
+        },
+        {
+          "i": 7,
+          "run_ok": true,
+          "answer": 504,
+          "error": null,
+          "cost_usd": 0.0005143999999999999,
+          "tokens_in": 307,
+          "tokens_out": 755
+        },
+        {
+          "i": 8,
+          "run_ok": true,
+          "answer": 504,
+          "error": null,
+          "cost_usd": 0.0008803999999999999,
+          "tokens_in": 307,
+          "tokens_out": 1365
+        },
+        {
+          "i": 9,
+          "run_ok": true,
+          "answer": 504,
+          "error": null,
+          "cost_usd": 0.0005947999999999999,
+          "tokens_in": 307,
+          "tokens_out": 889
+        },
+        {
+          "i": 10,
+          "run_ok": true,
+          "answer": 504,
+          "error": null,
+          "cost_usd": 0.0005612,
+          "tokens_in": 307,
+          "tokens_out": 833
+        },
+        {
+          "i": 11,
+          "run_ok": false,
+          "answer": null,
+          "error": "no solve() function found",
+          "cost_usd": 0.0025212,
+          "tokens_in": 318,
+          "tokens_out": 4096
+        },
+        {
+          "i": 12,
+          "run_ok": true,
+          "answer": 504,
+          "error": null,
+          "cost_usd": 0.0006362,
+          "tokens_in": 307,
+          "tokens_out": 958
+        },
+        {
+          "i": 13,
+          "run_ok": true,
+          "answer": 504,
+          "error": null,
+          "cost_usd": 0.0010375999999999999,
+          "tokens_in": 307,
+          "tokens_out": 1627
+        },
+        {
+          "i": 14,
+          "run_ok": true,
+          "answer": 504,
+          "error": null,
+          "cost_usd": 0.000752,
+          "tokens_in": 307,
+          "tokens_out": 1151
+        },
+        {
+          "i": 15,
+          "run_ok": true,
+          "answer": 504,
+          "error": null,
+          "cost_usd": 0.0010544,
+          "tokens_in": 307,
+          "tokens_out": 1655
+        }
+      ]
+    },
+    {
+      "task_id": 6,
+      "ground_truth": 821,
+      "n_samples": 16,
+      "n_run_ok": 3,
+      "majority_answer": 12,
+      "majority_correct": false,
+      "first_valid_answer": 12,
+      "first_valid_correct": false,
+      "any_correct": true,
+      "samples": [
+        {
+          "i": 0,
+          "run_ok": true,
+          "answer": 12,
+          "error": null,
+          "cost_usd": 0.0009268,
+          "tokens_in": 353,
+          "tokens_out": 1427
+        },
+        {
+          "i": 1,
+          "run_ok": true,
+          "answer": 821,
+          "error": null,
+          "cost_usd": 0.0013291999999999998,
+          "tokens_in": 343,
+          "tokens_out": 2101
+        },
+        {
+          "i": 2,
+          "run_ok": false,
+          "answer": null,
+          "error": "no solve() function found",
+          "cost_usd": 0.0025282,
+          "tokens_in": 353,
+          "tokens_out": 4096
+        },
+        {
+          "i": 3,
+          "run_ok": false,
+          "answer": null,
+          "error": "API: APIConnectionError: Connection error.",
+          "cost_usd": 0.0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        {
+          "i": 4,
+          "run_ok": false,
+          "answer": null,
+          "error": "API: APIConnectionError: Connection error.",
+          "cost_usd": 0.0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        {
+          "i": 5,
+          "run_ok": false,
+          "answer": null,
+          "error": "no solve() function found",
+          "cost_usd": 0.0025282,
+          "tokens_in": 353,
+          "tokens_out": 4096
+        },
+        {
+          "i": 6,
+          "run_ok": false,
+          "answer": null,
+          "error": "no solve() function found",
+          "cost_usd": 0.0025282,
+          "tokens_in": 353,
+          "tokens_out": 4096
+        },
+        {
+          "i": 7,
+          "run_ok": false,
+          "answer": null,
+          "error": "no solve() function found",
+          "cost_usd": 0.0025282,
+          "tokens_in": 353,
+          "tokens_out": 4096
+        },
+        {
+          "i": 8,
+          "run_ok": false,
+          "answer": null,
+          "error": "API: APIConnectionError: Connection error.",
+          "cost_usd": 0.0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        {
+          "i": 9,
+          "run_ok": false,
+          "answer": null,
+          "error": "no solve() function found",
+          "cost_usd": 0.0025282,
+          "tokens_in": 353,
+          "tokens_out": 4096
+        },
+        {
+          "i": 10,
+          "run_ok": false,
+          "answer": null,
+          "error": "API: APIConnectionError: Connection error.",
+          "cost_usd": 0.0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        {
+          "i": 11,
+          "run_ok": false,
+          "answer": null,
+          "error": "API: APIConnectionError: Connection error.",
+          "cost_usd": 0.0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        {
+          "i": 12,
+          "run_ok": true,
+          "answer": 16,
+          "error": null,
+          "cost_usd": 0.0011108,
+          "tokens_in": 343,
+          "tokens_out": 1737
+        },
+        {
+          "i": 13,
+          "run_ok": false,
+          "answer": null,
+          "error": "API: APIConnectionError: Connection error.",
+          "cost_usd": 0.0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        {
+          "i": 14,
+          "run_ok": false,
+          "answer": null,
+          "error": "API: APIConnectionError: Connection error.",
+          "cost_usd": 0.0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        {
+          "i": 15,
+          "run_ok": false,
+          "answer": null,
+          "error": "API: APIConnectionError: Connection error.",
+          "cost_usd": 0.0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        }
+      ]
+    },
+    {
+      "task_id": 7,
+      "ground_truth": 77,
+      "n_samples": 16,
+      "n_run_ok": 16,
+      "majority_answer": 77,
+      "majority_correct": true,
+      "first_valid_answer": 77,
+      "first_valid_correct": true,
+      "any_correct": true,
+      "samples": [
+        {
+          "i": 0,
+          "run_ok": true,
+          "answer": 77,
+          "error": null,
+          "cost_usd": 0.0003392,
+          "tokens_in": 319,
+          "tokens_out": 459
+        },
+        {
+          "i": 1,
+          "run_ok": true,
+          "answer": 77,
+          "error": null,
+          "cost_usd": 0.0004016,
+          "tokens_in": 319,
+          "tokens_out": 563
+        },
+        {
+          "i": 2,
+          "run_ok": true,
+          "answer": 77,
+          "error": null,
+          "cost_usd": 0.0004874,
+          "tokens_in": 319,
+          "tokens_out": 706
+        },
+        {
+          "i": 3,
+          "run_ok": true,
+          "answer": 77,
+          "error": null,
+          "cost_usd": 0.0004058,
+          "tokens_in": 319,
+          "tokens_out": 570
+        },
+        {
+          "i": 4,
+          "run_ok": true,
+          "answer": 77,
+          "error": null,
+          "cost_usd": 0.0005401999999999999,
+          "tokens_in": 319,
+          "tokens_out": 794
+        },
+        {
+          "i": 5,
+          "run_ok": true,
+          "answer": 77,
+          "error": null,
+          "cost_usd": 0.0006601999999999999,
+          "tokens_in": 319,
+          "tokens_out": 994
+        },
+        {
+          "i": 6,
+          "run_ok": true,
+          "answer": 81,
+          "error": null,
+          "cost_usd": 0.0005792,
+          "tokens_in": 319,
+          "tokens_out": 859
+        },
+        {
+          "i": 7,
+          "run_ok": true,
+          "answer": 77,
+          "error": null,
+          "cost_usd": 0.0007399999999999999,
+          "tokens_in": 319,
+          "tokens_out": 1127
+        },
+        {
+          "i": 8,
+          "run_ok": true,
+          "answer": 77,
+          "error": null,
+          "cost_usd": 0.0003614,
+          "tokens_in": 319,
+          "tokens_out": 496
+        },
+        {
+          "i": 9,
+          "run_ok": true,
+          "answer": 289,
+          "error": null,
+          "cost_usd": 0.0005072,
+          "tokens_in": 319,
+          "tokens_out": 739
+        },
+        {
+          "i": 10,
+          "run_ok": true,
+          "answer": 77,
+          "error": null,
+          "cost_usd": 0.0008575999999999999,
+          "tokens_in": 319,
+          "tokens_out": 1323
+        },
+        {
+          "i": 11,
+          "run_ok": true,
+          "answer": 1,
+          "error": null,
+          "cost_usd": 0.0004892,
+          "tokens_in": 319,
+          "tokens_out": 709
+        },
+        {
+          "i": 12,
+          "run_ok": true,
+          "answer": 289,
+          "error": null,
+          "cost_usd": 0.000488,
+          "tokens_in": 319,
+          "tokens_out": 707
+        },
+        {
+          "i": 13,
+          "run_ok": true,
+          "answer": 77,
+          "error": null,
+          "cost_usd": 0.000551,
+          "tokens_in": 319,
+          "tokens_out": 812
+        },
+        {
+          "i": 14,
+          "run_ok": true,
+          "answer": 77,
+          "error": null,
+          "cost_usd": 0.0003926,
+          "tokens_in": 319,
+          "tokens_out": 548
+        },
+        {
+          "i": 15,
+          "run_ok": true,
+          "answer": 289,
+          "error": null,
+          "cost_usd": 0.0004868,
+          "tokens_in": 319,
+          "tokens_out": 705
+        }
+      ]
+    },
+    {
+      "task_id": 8,
+      "ground_truth": 62,
+      "n_samples": 16,
+      "n_run_ok": 0,
+      "majority_answer": null,
+      "majority_correct": false,
+      "first_valid_answer": null,
+      "first_valid_correct": false,
+      "any_correct": false,
+      "samples": [
+        {
+          "i": 0,
+          "run_ok": false,
+          "answer": null,
+          "error": "API: APIConnectionError: Connection error.",
+          "cost_usd": 0.0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        {
+          "i": 1,
+          "run_ok": false,
+          "answer": null,
+          "error": "no solve() function found",
+          "cost_usd": 0.002524,
+          "tokens_in": 332,
+          "tokens_out": 4096
+        },
+        {
+          "i": 2,
+          "run_ok": false,
+          "answer": null,
+          "error": "API: APIConnectionError: Connection error.",
+          "cost_usd": 0.0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        {
+          "i": 3,
+          "run_ok": false,
+          "answer": null,
+          "error": "API: APIConnectionError: Connection error.",
+          "cost_usd": 0.0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        {
+          "i": 4,
+          "run_ok": false,
+          "answer": null,
+          "error": "API: APIConnectionError: Connection error.",
+          "cost_usd": 0.0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        {
+          "i": 5,
+          "run_ok": false,
+          "answer": null,
+          "error": "API: APIConnectionError: Connection error.",
+          "cost_usd": 0.0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        {
+          "i": 6,
+          "run_ok": false,
+          "answer": null,
+          "error": "API: APIConnectionError: Connection error.",
+          "cost_usd": 0.0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        {
+          "i": 7,
+          "run_ok": false,
+          "answer": null,
+          "error": "API: APIConnectionError: Connection error.",
+          "cost_usd": 0.0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        {
+          "i": 8,
+          "run_ok": false,
+          "answer": null,
+          "error": "API: InternalServerError: Error code: 500 - {'id': 'ofDDtbp-3pDw3Z-9ec96355fcf1e19a', 'error': {'message': 'Internal ser",
+          "cost_usd": 0.0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        {
+          "i": 9,
+          "run_ok": false,
+          "answer": null,
+          "error": "API: InternalServerError: Error code: 500 - {'id': 'ofDE4wC-3pDw3Z-9ec9642f3b1de18b', 'error': {'message': 'Internal ser",
+          "cost_usd": 0.0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        {
+          "i": 10,
+          "run_ok": false,
+          "answer": null,
+          "error": "API: InternalServerError: Error code: 500 - {'id': 'ofDECCT-3pDw3Z-9ec964c7ea6ee185', 'error': {'message': 'Internal ser",
+          "cost_usd": 0.0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        {
+          "i": 11,
+          "run_ok": false,
+          "answer": null,
+          "error": "API: InternalServerError: Error code: 500 - {'id': 'ofDEVfr-3pDw3Z-9ec966374abfae33', 'error': {'message': 'Internal ser",
+          "cost_usd": 0.0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        {
+          "i": 12,
+          "run_ok": false,
+          "answer": null,
+          "error": "API: InternalServerError: Error code: 500 - {'id': 'ofDDtkm-3pDw3Z-9ec963592a844f23', 'error': {'message': 'Internal ser",
+          "cost_usd": 0.0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        {
+          "i": 13,
+          "run_ok": false,
+          "answer": null,
+          "error": "API: InternalServerError: Error code: 500 - {'id': 'ofDDuQa-3pDw3Z-9ec96366e839e19a', 'error': {'message': 'Internal ser",
+          "cost_usd": 0.0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        {
+          "i": 14,
+          "run_ok": false,
+          "answer": null,
+          "error": "API: InternalServerError: Error code: 500 - {'id': 'ofDEHgi-3pDw3Z-9ec9653b4ee0d881', 'error': {'message': 'Internal ser",
+          "cost_usd": 0.0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        {
+          "i": 15,
+          "run_ok": false,
+          "answer": null,
+          "error": "API: InternalServerError: Error code: 500 - {'id': 'ofDE1ST-3pDw3Z-9ec963e5ae47e1f0', 'error': {'message': 'Internal ser",
+          "cost_usd": 0.0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        }
+      ]
+    },
+    {
+      "task_id": 9,
+      "ground_truth": 81,
+      "n_samples": 16,
+      "n_run_ok": 7,
+      "majority_answer": 81,
+      "majority_correct": true,
+      "first_valid_answer": 81,
+      "first_valid_correct": true,
+      "any_correct": true,
+      "samples": [
+        {
+          "i": 0,
+          "run_ok": true,
+          "answer": 81,
+          "error": null,
+          "cost_usd": 0.0005925999999999999,
+          "tokens_in": 464,
+          "tokens_out": 833
+        },
+        {
+          "i": 1,
+          "run_ok": false,
+          "answer": null,
+          "error": "API: APIConnectionError: Connection error.",
+          "cost_usd": 0.0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        {
+          "i": 2,
+          "run_ok": true,
+          "answer": 81,
+          "error": null,
+          "cost_usd": 0.0009706,
+          "tokens_in": 464,
+          "tokens_out": 1463
+        },
+        {
+          "i": 3,
+          "run_ok": true,
+          "answer": 83,
+          "error": null,
+          "cost_usd": 0.0009142,
+          "tokens_in": 464,
+          "tokens_out": 1369
+        },
+        {
+          "i": 4,
+          "run_ok": false,
+          "answer": null,
+          "error": "no solve() function found",
+          "cost_usd": 0.0025524000000000002,
+          "tokens_in": 474,
+          "tokens_out": 4096
+        },
+        {
+          "i": 5,
+          "run_ok": true,
+          "answer": 81,
+          "error": null,
+          "cost_usd": 0.0006148,
+          "tokens_in": 464,
+          "tokens_out": 870
+        },
+        {
+          "i": 6,
+          "run_ok": false,
+          "answer": null,
+          "error": "no solve() function found",
+          "cost_usd": 0.0025524000000000002,
+          "tokens_in": 474,
+          "tokens_out": 4096
+        },
+        {
+          "i": 7,
+          "run_ok": false,
+          "answer": null,
+          "error": "no solve() function found",
+          "cost_usd": 0.0025524000000000002,
+          "tokens_in": 474,
+          "tokens_out": 4096
+        },
+        {
+          "i": 8,
+          "run_ok": false,
+          "answer": null,
+          "error": "no solve() function found",
+          "cost_usd": 0.0025524000000000002,
+          "tokens_in": 474,
+          "tokens_out": 4096
+        },
+        {
+          "i": 9,
+          "run_ok": false,
+          "answer": null,
+          "error": "no solve() function found",
+          "cost_usd": 0.0025524000000000002,
+          "tokens_in": 474,
+          "tokens_out": 4096
+        },
+        {
+          "i": 10,
+          "run_ok": false,
+          "answer": null,
+          "error": "SyntaxError: 'return' outside function (<aime_proposer>, line 179)",
+          "cost_usd": 0.0016925999999999998,
+          "tokens_in": 474,
+          "tokens_out": 2663
+        },
+        {
+          "i": 11,
+          "run_ok": false,
+          "answer": null,
+          "error": "no solve() function found",
+          "cost_usd": 0.0025524000000000002,
+          "tokens_in": 474,
+          "tokens_out": 4096
+        },
+        {
+          "i": 12,
+          "run_ok": true,
+          "answer": 92,
+          "error": null,
+          "cost_usd": 0.0018654,
+          "tokens_in": 474,
+          "tokens_out": 2951
+        },
+        {
+          "i": 13,
+          "run_ok": true,
+          "answer": 81,
+          "error": null,
+          "cost_usd": 0.0005956,
+          "tokens_in": 464,
+          "tokens_out": 838
+        },
+        {
+          "i": 14,
+          "run_ok": false,
+          "answer": null,
+          "error": "no solve() function found",
+          "cost_usd": 0.0025524000000000002,
+          "tokens_in": 474,
+          "tokens_out": 4096
+        },
+        {
+          "i": 15,
+          "run_ok": true,
+          "answer": 91,
+          "error": null,
+          "cost_usd": 0.0003976,
+          "tokens_in": 464,
+          "tokens_out": 508
+        }
+      ]
+    },
+    {
+      "task_id": 10,
+      "ground_truth": 259,
+      "n_samples": 16,
+      "n_run_ok": 0,
+      "majority_answer": null,
+      "majority_correct": false,
+      "first_valid_answer": null,
+      "first_valid_correct": false,
+      "any_correct": false,
+      "samples": [
+        {
+          "i": 0,
+          "run_ok": false,
+          "answer": null,
+          "error": "API: APIConnectionError: Connection error.",
+          "cost_usd": 0.0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        {
+          "i": 1,
+          "run_ok": false,
+          "answer": null,
+          "error": "API: APIConnectionError: Connection error.",
+          "cost_usd": 0.0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        {
+          "i": 2,
+          "run_ok": false,
+          "answer": null,
+          "error": "API: APIConnectionError: Connection error.",
+          "cost_usd": 0.0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        {
+          "i": 3,
+          "run_ok": false,
+          "answer": null,
+          "error": "API: APIConnectionError: Connection error.",
+          "cost_usd": 0.0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        {
+          "i": 4,
+          "run_ok": false,
+          "answer": null,
+          "error": "API: APIConnectionError: Connection error.",
+          "cost_usd": 0.0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        {
+          "i": 5,
+          "run_ok": false,
+          "answer": null,
+          "error": "API: APIConnectionError: Connection error.",
+          "cost_usd": 0.0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        {
+          "i": 6,
+          "run_ok": false,
+          "answer": null,
+          "error": "API: APIConnectionError: Connection error.",
+          "cost_usd": 0.0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        {
+          "i": 7,
+          "run_ok": false,
+          "answer": null,
+          "error": "no solve() function found",
+          "cost_usd": 0.0025437999999999997,
+          "tokens_in": 431,
+          "tokens_out": 4096
+        },
+        {
+          "i": 8,
+          "run_ok": false,
+          "answer": null,
+          "error": "API: APIConnectionError: Connection error.",
+          "cost_usd": 0.0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        {
+          "i": 9,
+          "run_ok": false,
+          "answer": null,
+          "error": "API: APIConnectionError: Connection error.",
+          "cost_usd": 0.0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        {
+          "i": 10,
+          "run_ok": false,
+          "answer": null,
+          "error": "no solve() function found",
+          "cost_usd": 0.0025437999999999997,
+          "tokens_in": 431,
+          "tokens_out": 4096
+        },
+        {
+          "i": 11,
+          "run_ok": false,
+          "answer": null,
+          "error": "API: APIConnectionError: Connection error.",
+          "cost_usd": 0.0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        {
+          "i": 12,
+          "run_ok": false,
+          "answer": null,
+          "error": "API: APIConnectionError: Connection error.",
+          "cost_usd": 0.0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        {
+          "i": 13,
+          "run_ok": false,
+          "answer": null,
+          "error": "no solve() function found",
+          "cost_usd": 0.0025437999999999997,
+          "tokens_in": 431,
+          "tokens_out": 4096
+        },
+        {
+          "i": 14,
+          "run_ok": false,
+          "answer": null,
+          "error": "no solve() function found",
+          "cost_usd": 0.0025437999999999997,
+          "tokens_in": 431,
+          "tokens_out": 4096
+        },
+        {
+          "i": 15,
+          "run_ok": false,
+          "answer": null,
+          "error": "no solve() function found",
+          "cost_usd": 0.0025437999999999997,
+          "tokens_in": 431,
+          "tokens_out": 4096
+        }
+      ]
+    },
+    {
+      "task_id": 11,
+      "ground_truth": 510,
+      "n_samples": 16,
+      "n_run_ok": 0,
+      "majority_answer": null,
+      "majority_correct": false,
+      "first_valid_answer": null,
+      "first_valid_correct": false,
+      "any_correct": false,
+      "samples": [
+        {
+          "i": 0,
+          "run_ok": false,
+          "answer": null,
+          "error": "no solve() function found",
+          "cost_usd": 0.0025254,
+          "tokens_in": 339,
+          "tokens_out": 4096
+        },
+        {
+          "i": 1,
+          "run_ok": false,
+          "answer": null,
+          "error": "no solve() function found",
+          "cost_usd": 0.0025254,
+          "tokens_in": 339,
+          "tokens_out": 4096
+        },
+        {
+          "i": 2,
+          "run_ok": false,
+          "answer": null,
+          "error": "no solve() function found",
+          "cost_usd": 0.0025254,
+          "tokens_in": 339,
+          "tokens_out": 4096
+        },
+        {
+          "i": 3,
+          "run_ok": false,
+          "answer": null,
+          "error": "API: APIConnectionError: Connection error.",
+          "cost_usd": 0.0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        {
+          "i": 4,
+          "run_ok": false,
+          "answer": null,
+          "error": "no solve() function found",
+          "cost_usd": 0.0025254,
+          "tokens_in": 339,
+          "tokens_out": 4096
+        },
+        {
+          "i": 5,
+          "run_ok": false,
+          "answer": null,
+          "error": "API: APIConnectionError: Connection error.",
+          "cost_usd": 0.0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        {
+          "i": 6,
+          "run_ok": false,
+          "answer": null,
+          "error": "no solve() function found",
+          "cost_usd": 0.0025254,
+          "tokens_in": 339,
+          "tokens_out": 4096
+        },
+        {
+          "i": 7,
+          "run_ok": false,
+          "answer": null,
+          "error": "API: APIConnectionError: Connection error.",
+          "cost_usd": 0.0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        {
+          "i": 8,
+          "run_ok": false,
+          "answer": null,
+          "error": "API: APIConnectionError: Connection error.",
+          "cost_usd": 0.0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        {
+          "i": 9,
+          "run_ok": false,
+          "answer": null,
+          "error": "API: APIConnectionError: Connection error.",
+          "cost_usd": 0.0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        {
+          "i": 10,
+          "run_ok": false,
+          "answer": null,
+          "error": "no solve() function found",
+          "cost_usd": 0.0025254,
+          "tokens_in": 339,
+          "tokens_out": 4096
+        },
+        {
+          "i": 11,
+          "run_ok": false,
+          "answer": null,
+          "error": "no solve() function found",
+          "cost_usd": 0.0025254,
+          "tokens_in": 339,
+          "tokens_out": 4096
+        },
+        {
+          "i": 12,
+          "run_ok": false,
+          "answer": null,
+          "error": "API: APIConnectionError: Connection error.",
+          "cost_usd": 0.0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        {
+          "i": 13,
+          "run_ok": false,
+          "answer": null,
+          "error": "API: InternalServerError: Error code: 500 - {'id': 'ofDKn6B-3pDw3Z-9ec97f61acffad9d', 'error': {'message': 'Internal ser",
+          "cost_usd": 0.0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        {
+          "i": 14,
+          "run_ok": false,
+          "answer": null,
+          "error": "API: InternalServerError: Error code: 500 - {'id': 'ofDKXWe-3pDw3Z-9ec97e2f3e3fe1b5', 'error': {'message': 'Internal ser",
+          "cost_usd": 0.0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        {
+          "i": 15,
+          "run_ok": false,
+          "answer": null,
+          "error": "API: APIConnectionError: Connection error.",
+          "cost_usd": 0.0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        }
+      ]
+    },
+    {
+      "task_id": 12,
+      "ground_truth": 204,
+      "n_samples": 16,
+      "n_run_ok": 0,
+      "majority_answer": null,
+      "majority_correct": false,
+      "first_valid_answer": null,
+      "first_valid_correct": false,
+      "any_correct": false,
+      "samples": [
+        {
+          "i": 0,
+          "run_ok": false,
+          "answer": null,
+          "error": "API: InternalServerError: Error code: 500 - {'id': 'ofDK9mD-3pDw3Z-9ec97c65ee400cd2', 'error': {'message': 'Internal ser",
+          "cost_usd": 0.0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        {
+          "i": 1,
+          "run_ok": false,
+          "answer": null,
+          "error": "API: InternalServerError: Error code: 500 - {'id': 'ofDKkZC-3pDw3Z-9ec97f416cf0ad9d', 'error': {'message': 'Internal ser",
+          "cost_usd": 0.0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        {
+          "i": 2,
+          "run_ok": false,
+          "answer": null,
+          "error": "API: APIConnectionError: Connection error.",
+          "cost_usd": 0.0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        {
+          "i": 3,
+          "run_ok": false,
+          "answer": null,
+          "error": "API: InternalServerError: Error code: 500 - {'id': 'ofDKvfE-3pDw3Z-9ec98015ebb2da75', 'error': {'message': 'Internal ser",
+          "cost_usd": 0.0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        {
+          "i": 4,
+          "run_ok": false,
+          "answer": null,
+          "error": "API: InternalServerError: Error code: 500 - {'id': 'ofDKxbN-3pDw3Z-9ec9803e7c5cac32', 'error': {'message': 'Internal ser",
+          "cost_usd": 0.0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        {
+          "i": 5,
+          "run_ok": false,
+          "answer": null,
+          "error": "API: InternalServerError: Error code: 503 - {'id': 'ofDKoGZ-2j9zxn-9ec97f7a5e05ad9d', 'error': {'message': 'Service unav",
+          "cost_usd": 0.0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        {
+          "i": 6,
+          "run_ok": false,
+          "answer": null,
+          "error": "API: InternalServerError: Error code: 500 - {'id': 'ofDKUNA-3pDw3Z-9ec97ded0dd1e19c', 'error': {'message': 'Internal ser",
+          "cost_usd": 0.0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        {
+          "i": 7,
+          "run_ok": false,
+          "answer": null,
+          "error": "API: APIConnectionError: Connection error.",
+          "cost_usd": 0.0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        {
+          "i": 8,
+          "run_ok": false,
+          "answer": null,
+          "error": "API: InternalServerError: Error code: 503 - {'id': 'ofDLRfY-3pDw3Z-9ec98277caf8e1b2', 'error': {'message': 'Service unav",
+          "cost_usd": 0.0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        {
+          "i": 9,
+          "run_ok": false,
+          "answer": null,
+          "error": "API: InternalServerError: Error code: 503 - {'id': 'ofDLSWj-3pDw3Z-9ec982898cbdadb5', 'error': {'message': 'Service unav",
+          "cost_usd": 0.0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        {
+          "i": 10,
+          "run_ok": false,
+          "answer": null,
+          "error": "API: InternalServerError: Error code: 500 - {'id': 'ofDKrPn-3pDw3Z-9ec97fbc3850e23c', 'error': {'message': 'Internal ser",
+          "cost_usd": 0.0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        {
+          "i": 11,
+          "run_ok": false,
+          "answer": null,
+          "error": "API: InternalServerError: Error code: 500 - {'id': 'ofDKe62-3pDw3Z-9ec97eb93a8d2b24', 'error': {'message': 'Internal ser",
+          "cost_usd": 0.0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        {
+          "i": 12,
+          "run_ok": false,
+          "answer": null,
+          "error": "API: APIConnectionError: Connection error.",
+          "cost_usd": 0.0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        {
+          "i": 13,
+          "run_ok": false,
+          "answer": null,
+          "error": "API: APIConnectionError: Connection error.",
+          "cost_usd": 0.0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        {
+          "i": 14,
+          "run_ok": false,
+          "answer": null,
+          "error": "API: APIConnectionError: Connection error.",
+          "cost_usd": 0.0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        {
+          "i": 15,
+          "run_ok": false,
+          "answer": null,
+          "error": "API: APIConnectionError: Connection error.",
+          "cost_usd": 0.0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        }
+      ]
+    },
+    {
+      "task_id": 13,
+      "ground_truth": 60,
+      "n_samples": 16,
+      "n_run_ok": 0,
+      "majority_answer": null,
+      "majority_correct": false,
+      "first_valid_answer": null,
+      "first_valid_correct": false,
+      "any_correct": false,
+      "samples": [
+        {
+          "i": 0,
+          "run_ok": false,
+          "answer": null,
+          "error": "no solve() function found",
+          "cost_usd": 0.0025296,
+          "tokens_in": 360,
+          "tokens_out": 4096
+        },
+        {
+          "i": 1,
+          "run_ok": false,
+          "answer": null,
+          "error": "API: APIConnectionError: Connection error.",
+          "cost_usd": 0.0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        {
+          "i": 2,
+          "run_ok": false,
+          "answer": null,
+          "error": "API: APIConnectionError: Connection error.",
+          "cost_usd": 0.0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        {
+          "i": 3,
+          "run_ok": false,
+          "answer": null,
+          "error": "no solve() function found",
+          "cost_usd": 0.0025296,
+          "tokens_in": 360,
+          "tokens_out": 4096
+        },
+        {
+          "i": 4,
+          "run_ok": false,
+          "answer": null,
+          "error": "API: APIConnectionError: Connection error.",
+          "cost_usd": 0.0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        {
+          "i": 5,
+          "run_ok": false,
+          "answer": null,
+          "error": "API: APIConnectionError: Connection error.",
+          "cost_usd": 0.0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        {
+          "i": 6,
+          "run_ok": false,
+          "answer": null,
+          "error": "API: APIConnectionError: Connection error.",
+          "cost_usd": 0.0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        {
+          "i": 7,
+          "run_ok": false,
+          "answer": null,
+          "error": "API: APIConnectionError: Connection error.",
+          "cost_usd": 0.0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        {
+          "i": 8,
+          "run_ok": false,
+          "answer": null,
+          "error": "API: InternalServerError: Error code: 500 - {'id': 'ofDNhvE-3pDw3Z-9ec98d545931e244', 'error': {'message': 'Internal ser",
+          "cost_usd": 0.0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        {
+          "i": 9,
+          "run_ok": false,
+          "answer": null,
+          "error": "API: APIConnectionError: Connection error.",
+          "cost_usd": 0.0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        {
+          "i": 10,
+          "run_ok": false,
+          "answer": null,
+          "error": "no solve() function found",
+          "cost_usd": 0.0025296,
+          "tokens_in": 360,
+          "tokens_out": 4096
+        },
+        {
+          "i": 11,
+          "run_ok": false,
+          "answer": null,
+          "error": "no solve() function found",
+          "cost_usd": 0.0025296,
+          "tokens_in": 360,
+          "tokens_out": 4096
+        },
+        {
+          "i": 12,
+          "run_ok": false,
+          "answer": null,
+          "error": "no solve() function found",
+          "cost_usd": 0.0025296,
+          "tokens_in": 360,
+          "tokens_out": 4096
+        },
+        {
+          "i": 13,
+          "run_ok": false,
+          "answer": null,
+          "error": "API: APIConnectionError: Connection error.",
+          "cost_usd": 0.0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        {
+          "i": 14,
+          "run_ok": false,
+          "answer": null,
+          "error": "no solve() function found",
+          "cost_usd": 0.0025296,
+          "tokens_in": 360,
+          "tokens_out": 4096
+        },
+        {
+          "i": 15,
+          "run_ok": false,
+          "answer": null,
+          "error": "API: APIConnectionError: Connection error.",
+          "cost_usd": 0.0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        }
+      ]
+    },
+    {
+      "task_id": 14,
+      "ground_truth": 735,
+      "n_samples": 16,
+      "n_run_ok": 14,
+      "majority_answer": 735,
+      "majority_correct": true,
+      "first_valid_answer": 735,
+      "first_valid_correct": true,
+      "any_correct": true,
+      "samples": [
+        {
+          "i": 0,
+          "run_ok": true,
+          "answer": 735,
+          "error": null,
+          "cost_usd": 0.0002564,
+          "tokens_in": 292,
+          "tokens_out": 330
+        },
+        {
+          "i": 1,
+          "run_ok": true,
+          "answer": 735,
+          "error": null,
+          "cost_usd": 0.00032120000000000006,
+          "tokens_in": 292,
+          "tokens_out": 438
+        },
+        {
+          "i": 2,
+          "run_ok": true,
+          "answer": 735,
+          "error": null,
+          "cost_usd": 0.0003356,
+          "tokens_in": 292,
+          "tokens_out": 462
+        },
+        {
+          "i": 3,
+          "run_ok": true,
+          "answer": 735,
+          "error": null,
+          "cost_usd": 0.00023480000000000002,
+          "tokens_in": 292,
+          "tokens_out": 294
+        },
+        {
+          "i": 4,
+          "run_ok": false,
+          "answer": null,
+          "error": "no solve() function found",
+          "cost_usd": 0.002518,
+          "tokens_in": 302,
+          "tokens_out": 4096
+        },
+        {
+          "i": 5,
+          "run_ok": true,
+          "answer": 735,
+          "error": null,
+          "cost_usd": 0.00032720000000000004,
+          "tokens_in": 292,
+          "tokens_out": 448
+        },
+        {
+          "i": 6,
+          "run_ok": true,
+          "answer": 735,
+          "error": null,
+          "cost_usd": 0.0002768,
+          "tokens_in": 292,
+          "tokens_out": 364
+        },
+        {
+          "i": 7,
+          "run_ok": true,
+          "answer": 735,
+          "error": null,
+          "cost_usd": 0.0002702,
+          "tokens_in": 292,
+          "tokens_out": 353
+        },
+        {
+          "i": 8,
+          "run_ok": true,
+          "answer": 735,
+          "error": null,
+          "cost_usd": 0.00034579999999999995,
+          "tokens_in": 292,
+          "tokens_out": 479
+        },
+        {
+          "i": 9,
+          "run_ok": false,
+          "answer": null,
+          "error": "no solve() function found",
+          "cost_usd": 0.002518,
+          "tokens_in": 302,
+          "tokens_out": 4096
+        },
+        {
+          "i": 10,
+          "run_ok": true,
+          "answer": 735,
+          "error": null,
+          "cost_usd": 0.00021380000000000002,
+          "tokens_in": 292,
+          "tokens_out": 259
+        },
+        {
+          "i": 11,
+          "run_ok": true,
+          "answer": 735,
+          "error": null,
+          "cost_usd": 0.00024380000000000002,
+          "tokens_in": 292,
+          "tokens_out": 309
+        },
+        {
+          "i": 12,
+          "run_ok": true,
+          "answer": 735,
+          "error": null,
+          "cost_usd": 0.0002984,
+          "tokens_in": 292,
+          "tokens_out": 400
+        },
+        {
+          "i": 13,
+          "run_ok": true,
+          "answer": 735,
+          "error": null,
+          "cost_usd": 0.00040520000000000004,
+          "tokens_in": 292,
+          "tokens_out": 578
+        },
+        {
+          "i": 14,
+          "run_ok": true,
+          "answer": 735,
+          "error": null,
+          "cost_usd": 0.0002492,
+          "tokens_in": 292,
+          "tokens_out": 318
+        },
+        {
+          "i": 15,
+          "run_ok": true,
+          "answer": 735,
+          "error": null,
+          "cost_usd": 0.00025519999999999997,
+          "tokens_in": 292,
+          "tokens_out": 328
+        }
+      ]
+    },
+    {
+      "task_id": 15,
+      "ground_truth": 468,
+      "n_samples": 16,
+      "n_run_ok": 8,
+      "majority_answer": 468,
+      "majority_correct": true,
+      "first_valid_answer": 468,
+      "first_valid_correct": true,
+      "any_correct": true,
+      "samples": [
+        {
+          "i": 0,
+          "run_ok": false,
+          "answer": null,
+          "error": "SyntaxError: cannot assign to expression (<aime_proposer>, line 67)",
+          "cost_usd": 0.0007036,
+          "tokens_in": 323,
+          "tokens_out": 1065
+        },
+        {
+          "i": 1,
+          "run_ok": true,
+          "answer": 468,
+          "error": null,
+          "cost_usd": 0.0008133999999999999,
+          "tokens_in": 323,
+          "tokens_out": 1248
+        },
+        {
+          "i": 2,
+          "run_ok": false,
+          "answer": null,
+          "error": "no solve() function found",
+          "cost_usd": 0.0025242,
+          "tokens_in": 333,
+          "tokens_out": 4096
+        },
+        {
+          "i": 3,
+          "run_ok": true,
+          "answer": 468,
+          "error": null,
+          "cost_usd": 0.0006514,
+          "tokens_in": 323,
+          "tokens_out": 978
+        },
+        {
+          "i": 4,
+          "run_ok": true,
+          "answer": 468,
+          "error": null,
+          "cost_usd": 0.0007107999999999999,
+          "tokens_in": 323,
+          "tokens_out": 1077
+        },
+        {
+          "i": 5,
+          "run_ok": false,
+          "answer": null,
+          "error": "SyntaxError: cannot assign to expression (<aime_proposer>, line 74)",
+          "cost_usd": 0.0007587999999999999,
+          "tokens_in": 323,
+          "tokens_out": 1157
+        },
+        {
+          "i": 6,
+          "run_ok": true,
+          "answer": 468,
+          "error": null,
+          "cost_usd": 0.0005937999999999999,
+          "tokens_in": 323,
+          "tokens_out": 882
+        },
+        {
+          "i": 7,
+          "run_ok": true,
+          "answer": 468,
+          "error": null,
+          "cost_usd": 0.0007113999999999999,
+          "tokens_in": 323,
+          "tokens_out": 1078
+        },
+        {
+          "i": 8,
+          "run_ok": false,
+          "answer": null,
+          "error": "SyntaxError: cannot assign to expression (<aime_proposer>, line 64)",
+          "cost_usd": 0.0006802,
+          "tokens_in": 323,
+          "tokens_out": 1026
+        },
+        {
+          "i": 9,
+          "run_ok": false,
+          "answer": null,
+          "error": "SyntaxError: cannot assign to expression (<aime_proposer>, line 74)",
+          "cost_usd": 0.0007702000000000001,
+          "tokens_in": 323,
+          "tokens_out": 1176
+        },
+        {
+          "i": 10,
+          "run_ok": true,
+          "answer": 468,
+          "error": null,
+          "cost_usd": 0.0006688,
+          "tokens_in": 323,
+          "tokens_out": 1007
+        },
+        {
+          "i": 11,
+          "run_ok": false,
+          "answer": null,
+          "error": "SyntaxError: cannot assign to expression (<aime_proposer>, line 68)",
+          "cost_usd": 0.000709,
+          "tokens_in": 323,
+          "tokens_out": 1074
+        },
+        {
+          "i": 12,
+          "run_ok": false,
+          "answer": null,
+          "error": "SyntaxError: cannot assign to expression (<aime_proposer>, line 64)",
+          "cost_usd": 0.000754,
+          "tokens_in": 323,
+          "tokens_out": 1149
+        },
+        {
+          "i": 13,
+          "run_ok": true,
+          "answer": 468,
+          "error": null,
+          "cost_usd": 0.0006796,
+          "tokens_in": 323,
+          "tokens_out": 1025
+        },
+        {
+          "i": 14,
+          "run_ok": true,
+          "answer": 468,
+          "error": null,
+          "cost_usd": 0.0006628,
+          "tokens_in": 323,
+          "tokens_out": 997
+        },
+        {
+          "i": 15,
+          "run_ok": false,
+          "answer": null,
+          "error": "SyntaxError: cannot assign to expression (<aime_proposer>, line 98)",
+          "cost_usd": 0.0012016,
+          "tokens_in": 323,
+          "tokens_out": 1895
+        }
+      ]
+    },
+    {
+      "task_id": 16,
+      "ground_truth": 49,
+      "n_samples": 16,
+      "n_run_ok": 15,
+      "majority_answer": 49,
+      "majority_correct": true,
+      "first_valid_answer": 49,
+      "first_valid_correct": true,
+      "any_correct": true,
+      "samples": [
+        {
+          "i": 0,
+          "run_ok": true,
+          "answer": 49,
+          "error": null,
+          "cost_usd": 0.000434,
+          "tokens_in": 256,
+          "tokens_out": 638
+        },
+        {
+          "i": 1,
+          "run_ok": true,
+          "answer": 49,
+          "error": null,
+          "cost_usd": 0.00035,
+          "tokens_in": 256,
+          "tokens_out": 498
+        },
+        {
+          "i": 2,
+          "run_ok": true,
+          "answer": 49,
+          "error": null,
+          "cost_usd": 0.00040579999999999994,
+          "tokens_in": 256,
+          "tokens_out": 591
+        },
+        {
+          "i": 3,
+          "run_ok": true,
+          "answer": 49,
+          "error": null,
+          "cost_usd": 0.0004712,
+          "tokens_in": 256,
+          "tokens_out": 700
+        },
+        {
+          "i": 4,
+          "run_ok": true,
+          "answer": 49,
+          "error": null,
+          "cost_usd": 0.00033079999999999996,
+          "tokens_in": 256,
+          "tokens_out": 466
+        },
+        {
+          "i": 5,
+          "run_ok": true,
+          "answer": 49,
+          "error": null,
+          "cost_usd": 0.0005468,
+          "tokens_in": 256,
+          "tokens_out": 826
+        },
+        {
+          "i": 6,
+          "run_ok": true,
+          "answer": 49,
+          "error": null,
+          "cost_usd": 0.0003524,
+          "tokens_in": 256,
+          "tokens_out": 502
+        },
+        {
+          "i": 7,
+          "run_ok": true,
+          "answer": 49,
+          "error": null,
+          "cost_usd": 0.000338,
+          "tokens_in": 256,
+          "tokens_out": 478
+        },
+        {
+          "i": 8,
+          "run_ok": true,
+          "answer": 49,
+          "error": null,
+          "cost_usd": 0.00036439999999999997,
+          "tokens_in": 256,
+          "tokens_out": 522
+        },
+        {
+          "i": 9,
+          "run_ok": true,
+          "answer": 49,
+          "error": null,
+          "cost_usd": 0.0003722,
+          "tokens_in": 256,
+          "tokens_out": 535
+        },
+        {
+          "i": 10,
+          "run_ok": false,
+          "answer": null,
+          "error": "no solve() function found",
+          "cost_usd": 0.002511,
+          "tokens_in": 267,
+          "tokens_out": 4096
+        },
+        {
+          "i": 11,
+          "run_ok": true,
+          "answer": 49,
+          "error": null,
+          "cost_usd": 0.000395,
+          "tokens_in": 256,
+          "tokens_out": 573
+        },
+        {
+          "i": 12,
+          "run_ok": true,
+          "answer": 49,
+          "error": null,
+          "cost_usd": 0.00040639999999999996,
+          "tokens_in": 256,
+          "tokens_out": 592
+        },
+        {
+          "i": 13,
+          "run_ok": true,
+          "answer": 49,
+          "error": null,
+          "cost_usd": 0.000971,
+          "tokens_in": 256,
+          "tokens_out": 1533
+        },
+        {
+          "i": 14,
+          "run_ok": true,
+          "answer": 49,
+          "error": null,
+          "cost_usd": 0.00043819999999999997,
+          "tokens_in": 256,
+          "tokens_out": 645
+        },
+        {
+          "i": 15,
+          "run_ok": true,
+          "answer": 49,
+          "error": null,
+          "cost_usd": 0.00038,
+          "tokens_in": 256,
+          "tokens_out": 548
+        }
+      ]
+    },
+    {
+      "task_id": 17,
+      "ground_truth": 82,
+      "n_samples": 16,
+      "n_run_ok": 15,
+      "majority_answer": 82,
+      "majority_correct": true,
+      "first_valid_answer": 82,
+      "first_valid_correct": true,
+      "any_correct": true,
+      "samples": [
+        {
+          "i": 0,
+          "run_ok": true,
+          "answer": 82,
+          "error": null,
+          "cost_usd": 0.0010413999999999998,
+          "tokens_in": 491,
+          "tokens_out": 1572
+        },
+        {
+          "i": 1,
+          "run_ok": true,
+          "answer": 82,
+          "error": null,
+          "cost_usd": 0.0007108,
+          "tokens_in": 491,
+          "tokens_out": 1021
+        },
+        {
+          "i": 2,
+          "run_ok": true,
+          "answer": 82,
+          "error": null,
+          "cost_usd": 0.0012058,
+          "tokens_in": 491,
+          "tokens_out": 1846
+        },
+        {
+          "i": 3,
+          "run_ok": true,
+          "answer": 82,
+          "error": null,
+          "cost_usd": 0.000574,
+          "tokens_in": 491,
+          "tokens_out": 793
+        },
+        {
+          "i": 4,
+          "run_ok": true,
+          "answer": 82,
+          "error": null,
+          "cost_usd": 0.000694,
+          "tokens_in": 491,
+          "tokens_out": 993
+        },
+        {
+          "i": 5,
+          "run_ok": true,
+          "answer": 82,
+          "error": null,
+          "cost_usd": 0.0005272,
+          "tokens_in": 491,
+          "tokens_out": 715
+        },
+        {
+          "i": 6,
+          "run_ok": true,
+          "answer": 82,
+          "error": null,
+          "cost_usd": 0.00082,
+          "tokens_in": 491,
+          "tokens_out": 1203
+        },
+        {
+          "i": 7,
+          "run_ok": true,
+          "answer": 82,
+          "error": null,
+          "cost_usd": 0.0006604,
+          "tokens_in": 491,
+          "tokens_out": 937
+        },
+        {
+          "i": 8,
+          "run_ok": true,
+          "answer": 78,
+          "error": null,
+          "cost_usd": 0.0007582,
+          "tokens_in": 491,
+          "tokens_out": 1100
+        },
+        {
+          "i": 9,
+          "run_ok": true,
+          "answer": 82,
+          "error": null,
+          "cost_usd": 0.0009832,
+          "tokens_in": 491,
+          "tokens_out": 1475
+        },
+        {
+          "i": 10,
+          "run_ok": true,
+          "answer": 82,
+          "error": null,
+          "cost_usd": 0.000667,
+          "tokens_in": 491,
+          "tokens_out": 948
+        },
+        {
+          "i": 11,
+          "run_ok": true,
+          "answer": 82,
+          "error": null,
+          "cost_usd": 0.0005734,
+          "tokens_in": 491,
+          "tokens_out": 792
+        },
+        {
+          "i": 12,
+          "run_ok": true,
+          "answer": 82,
+          "error": null,
+          "cost_usd": 0.0005662,
+          "tokens_in": 491,
+          "tokens_out": 780
+        },
+        {
+          "i": 13,
+          "run_ok": true,
+          "answer": 82,
+          "error": null,
+          "cost_usd": 0.0006466,
+          "tokens_in": 491,
+          "tokens_out": 914
+        },
+        {
+          "i": 14,
+          "run_ok": false,
+          "answer": null,
+          "error": "IndexError: list index out of range",
+          "cost_usd": 0.000418,
+          "tokens_in": 491,
+          "tokens_out": 533
+        },
+        {
+          "i": 15,
+          "run_ok": true,
+          "answer": 82,
+          "error": null,
+          "cost_usd": 0.0010102,
+          "tokens_in": 491,
+          "tokens_out": 1520
+        }
+      ]
+    },
+    {
+      "task_id": 18,
+      "ground_truth": 106,
+      "n_samples": 16,
+      "n_run_ok": 15,
+      "majority_answer": 106,
+      "majority_correct": true,
+      "first_valid_answer": 106,
+      "first_valid_correct": true,
+      "any_correct": true,
+      "samples": [
+        {
+          "i": 0,
+          "run_ok": true,
+          "answer": 106,
+          "error": null,
+          "cost_usd": 0.0011748,
+          "tokens_in": 423,
+          "tokens_out": 1817
+        },
+        {
+          "i": 1,
+          "run_ok": true,
+          "answer": 106,
+          "error": null,
+          "cost_usd": 0.0008634,
+          "tokens_in": 423,
+          "tokens_out": 1298
+        },
+        {
+          "i": 2,
+          "run_ok": true,
+          "answer": 106,
+          "error": null,
+          "cost_usd": 0.0009197999999999999,
+          "tokens_in": 423,
+          "tokens_out": 1392
+        },
+        {
+          "i": 3,
+          "run_ok": true,
+          "answer": 106,
+          "error": null,
+          "cost_usd": 0.0011969999999999997,
+          "tokens_in": 423,
+          "tokens_out": 1854
+        },
+        {
+          "i": 4,
+          "run_ok": true,
+          "answer": 106,
+          "error": null,
+          "cost_usd": 0.0013608,
+          "tokens_in": 423,
+          "tokens_out": 2127
+        },
+        {
+          "i": 5,
+          "run_ok": true,
+          "answer": 106,
+          "error": null,
+          "cost_usd": 0.0010781999999999999,
+          "tokens_in": 423,
+          "tokens_out": 1656
+        },
+        {
+          "i": 6,
+          "run_ok": false,
+          "answer": null,
+          "error": "SyntaxError: 'return' outside function (<aime_proposer>, line 96)",
+          "cost_usd": 0.0009504,
+          "tokens_in": 423,
+          "tokens_out": 1443
+        },
+        {
+          "i": 7,
+          "run_ok": true,
+          "answer": 106,
+          "error": null,
+          "cost_usd": 0.0012545999999999998,
+          "tokens_in": 423,
+          "tokens_out": 1950
+        },
+        {
+          "i": 8,
+          "run_ok": true,
+          "answer": 106,
+          "error": null,
+          "cost_usd": 0.000999,
+          "tokens_in": 423,
+          "tokens_out": 1524
+        },
+        {
+          "i": 9,
+          "run_ok": true,
+          "answer": 106,
+          "error": null,
+          "cost_usd": 0.00081,
+          "tokens_in": 423,
+          "tokens_out": 1209
+        },
+        {
+          "i": 10,
+          "run_ok": true,
+          "answer": 106,
+          "error": null,
+          "cost_usd": 0.0006917999999999999,
+          "tokens_in": 423,
+          "tokens_out": 1012
+        },
+        {
+          "i": 11,
+          "run_ok": true,
+          "answer": 106,
+          "error": null,
+          "cost_usd": 0.0010535999999999998,
+          "tokens_in": 423,
+          "tokens_out": 1615
+        },
+        {
+          "i": 12,
+          "run_ok": true,
+          "answer": 199,
+          "error": null,
+          "cost_usd": 0.0011928,
+          "tokens_in": 423,
+          "tokens_out": 1847
+        },
+        {
+          "i": 13,
+          "run_ok": true,
+          "answer": 106,
+          "error": null,
+          "cost_usd": 0.0010554,
+          "tokens_in": 423,
+          "tokens_out": 1618
+        },
+        {
+          "i": 14,
+          "run_ok": true,
+          "answer": 106,
+          "error": null,
+          "cost_usd": 0.0010643999999999999,
+          "tokens_in": 423,
+          "tokens_out": 1633
+        },
+        {
+          "i": 15,
+          "run_ok": true,
+          "answer": 106,
+          "error": null,
+          "cost_usd": 0.0011243999999999998,
+          "tokens_in": 423,
+          "tokens_out": 1733
+        }
+      ]
+    },
+    {
+      "task_id": 19,
+      "ground_truth": 336,
+      "n_samples": 16,
+      "n_run_ok": 0,
+      "majority_answer": null,
+      "majority_correct": false,
+      "first_valid_answer": null,
+      "first_valid_correct": false,
+      "any_correct": false,
+      "samples": [
+        {
+          "i": 0,
+          "run_ok": false,
+          "answer": null,
+          "error": "API: APIConnectionError: Connection error.",
+          "cost_usd": 0.0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        {
+          "i": 1,
+          "run_ok": false,
+          "answer": null,
+          "error": "no solve() function found",
+          "cost_usd": 0.002631,
+          "tokens_in": 867,
+          "tokens_out": 4096
+        },
+        {
+          "i": 2,
+          "run_ok": false,
+          "answer": null,
+          "error": "API: APIConnectionError: Connection error.",
+          "cost_usd": 0.0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        {
+          "i": 3,
+          "run_ok": false,
+          "answer": null,
+          "error": "NameError: name '__name__' is not defined",
+          "cost_usd": 0.0007637999999999999,
+          "tokens_in": 867,
+          "tokens_out": 984
+        },
+        {
+          "i": 4,
+          "run_ok": false,
+          "answer": null,
+          "error": "NameError: name '__name__' is not defined",
+          "cost_usd": 0.0023316,
+          "tokens_in": 867,
+          "tokens_out": 3597
+        },
+        {
+          "i": 5,
+          "run_ok": false,
+          "answer": null,
+          "error": "API: APIConnectionError: Connection error.",
+          "cost_usd": 0.0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        {
+          "i": 6,
+          "run_ok": false,
+          "answer": null,
+          "error": "API: APIConnectionError: Connection error.",
+          "cost_usd": 0.0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        {
+          "i": 7,
+          "run_ok": false,
+          "answer": null,
+          "error": "API: APIConnectionError: Connection error.",
+          "cost_usd": 0.0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        {
+          "i": 8,
+          "run_ok": false,
+          "answer": null,
+          "error": "API: APIConnectionError: Connection error.",
+          "cost_usd": 0.0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        {
+          "i": 9,
+          "run_ok": false,
+          "answer": null,
+          "error": "no solve() function found",
+          "cost_usd": 0.002631,
+          "tokens_in": 867,
+          "tokens_out": 4096
+        },
+        {
+          "i": 10,
+          "run_ok": false,
+          "answer": null,
+          "error": "API: APIConnectionError: Connection error.",
+          "cost_usd": 0.0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        {
+          "i": 11,
+          "run_ok": false,
+          "answer": null,
+          "error": "no solve() function found",
+          "cost_usd": 0.002631,
+          "tokens_in": 867,
+          "tokens_out": 4096
+        },
+        {
+          "i": 12,
+          "run_ok": false,
+          "answer": null,
+          "error": "no solve() function found",
+          "cost_usd": 0.002631,
+          "tokens_in": 867,
+          "tokens_out": 4096
+        },
+        {
+          "i": 13,
+          "run_ok": false,
+          "answer": null,
+          "error": "no solve() function found",
+          "cost_usd": 0.002631,
+          "tokens_in": 867,
+          "tokens_out": 4096
+        },
+        {
+          "i": 14,
+          "run_ok": false,
+          "answer": null,
+          "error": "API: APIConnectionError: Connection error.",
+          "cost_usd": 0.0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        {
+          "i": 15,
+          "run_ok": false,
+          "answer": null,
+          "error": "API: APIConnectionError: Connection error.",
+          "cost_usd": 0.0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        }
+      ]
+    },
+    {
+      "task_id": 20,
+      "ground_truth": 293,
+      "n_samples": 16,
+      "n_run_ok": 8,
+      "majority_answer": 293,
+      "majority_correct": true,
+      "first_valid_answer": 293,
+      "first_valid_correct": true,
+      "any_correct": true,
+      "samples": [
+        {
+          "i": 0,
+          "run_ok": false,
+          "answer": null,
+          "error": "API: APIConnectionError: Connection error.",
+          "cost_usd": 0.0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        {
+          "i": 1,
+          "run_ok": true,
+          "answer": 293,
+          "error": null,
+          "cost_usd": 0.0014588,
+          "tokens_in": 991,
+          "tokens_out": 2101
+        },
+        {
+          "i": 2,
+          "run_ok": false,
+          "answer": null,
+          "error": "API: APIConnectionError: Connection error.",
+          "cost_usd": 0.0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        {
+          "i": 3,
+          "run_ok": true,
+          "answer": 293,
+          "error": null,
+          "cost_usd": 0.0010082000000000001,
+          "tokens_in": 991,
+          "tokens_out": 1350
+        },
+        {
+          "i": 4,
+          "run_ok": true,
+          "answer": 293,
+          "error": null,
+          "cost_usd": 0.001298,
+          "tokens_in": 991,
+          "tokens_out": 1833
+        },
+        {
+          "i": 5,
+          "run_ok": false,
+          "answer": null,
+          "error": "API: APIConnectionError: Connection error.",
+          "cost_usd": 0.0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        {
+          "i": 6,
+          "run_ok": false,
+          "answer": null,
+          "error": "API: APIConnectionError: Connection error.",
+          "cost_usd": 0.0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        {
+          "i": 7,
+          "run_ok": false,
+          "answer": null,
+          "error": "SyntaxError: invalid decimal literal (<aime_proposer>, line 77)",
+          "cost_usd": 0.0014528,
+          "tokens_in": 991,
+          "tokens_out": 2091
+        },
+        {
+          "i": 8,
+          "run_ok": false,
+          "answer": null,
+          "error": "NameError: name 'b' is not defined",
+          "cost_usd": 0.0014888,
+          "tokens_in": 991,
+          "tokens_out": 2151
+        },
+        {
+          "i": 9,
+          "run_ok": true,
+          "answer": 293,
+          "error": null,
+          "cost_usd": 0.0011635999999999999,
+          "tokens_in": 991,
+          "tokens_out": 1609
+        },
+        {
+          "i": 10,
+          "run_ok": true,
+          "answer": 293,
+          "error": null,
+          "cost_usd": 0.001535,
+          "tokens_in": 991,
+          "tokens_out": 2228
+        },
+        {
+          "i": 11,
+          "run_ok": true,
+          "answer": 293,
+          "error": null,
+          "cost_usd": 0.0015722,
+          "tokens_in": 991,
+          "tokens_out": 2290
+        },
+        {
+          "i": 12,
+          "run_ok": true,
+          "answer": 293,
+          "error": null,
+          "cost_usd": 0.0012632000000000001,
+          "tokens_in": 991,
+          "tokens_out": 1775
+        },
+        {
+          "i": 13,
+          "run_ok": false,
+          "answer": null,
+          "error": "API: APIConnectionError: Connection error.",
+          "cost_usd": 0.0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        {
+          "i": 14,
+          "run_ok": false,
+          "answer": null,
+          "error": "API: APIConnectionError: Connection error.",
+          "cost_usd": 0.0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        {
+          "i": 15,
+          "run_ok": true,
+          "answer": 293,
+          "error": null,
+          "cost_usd": 0.0019165999999999999,
+          "tokens_in": 991,
+          "tokens_out": 2864
+        }
+      ]
+    },
+    {
+      "task_id": 21,
+      "ground_truth": 237,
+      "n_samples": 16,
+      "n_run_ok": 11,
+      "majority_answer": 237,
+      "majority_correct": true,
+      "first_valid_answer": 237,
+      "first_valid_correct": true,
+      "any_correct": true,
+      "samples": [
+        {
+          "i": 0,
+          "run_ok": true,
+          "answer": 237,
+          "error": null,
+          "cost_usd": 0.0003796,
+          "tokens_in": 314,
+          "tokens_out": 528
+        },
+        {
+          "i": 1,
+          "run_ok": true,
+          "answer": 237,
+          "error": null,
+          "cost_usd": 0.00026680000000000003,
+          "tokens_in": 314,
+          "tokens_out": 340
+        },
+        {
+          "i": 2,
+          "run_ok": true,
+          "answer": 237,
+          "error": null,
+          "cost_usd": 0.0003082,
+          "tokens_in": 314,
+          "tokens_out": 409
+        },
+        {
+          "i": 3,
+          "run_ok": true,
+          "answer": 237,
+          "error": null,
+          "cost_usd": 0.0003052,
+          "tokens_in": 314,
+          "tokens_out": 404
+        },
+        {
+          "i": 4,
+          "run_ok": false,
+          "answer": null,
+          "error": "solve returned 60671, out of AIME range [0, 999]",
+          "cost_usd": 0.0006615999999999999,
+          "tokens_in": 314,
+          "tokens_out": 998
+        },
+        {
+          "i": 5,
+          "run_ok": true,
+          "answer": 237,
+          "error": null,
+          "cost_usd": 0.0008127999999999999,
+          "tokens_in": 314,
+          "tokens_out": 1250
+        },
+        {
+          "i": 6,
+          "run_ok": true,
+          "answer": 237,
+          "error": null,
+          "cost_usd": 0.0002914,
+          "tokens_in": 314,
+          "tokens_out": 381
+        },
+        {
+          "i": 7,
+          "run_ok": false,
+          "answer": null,
+          "error": "solve returned 60671, out of AIME range [0, 999]",
+          "cost_usd": 0.00032139999999999995,
+          "tokens_in": 314,
+          "tokens_out": 431
+        },
+        {
+          "i": 8,
+          "run_ok": true,
+          "answer": 237,
+          "error": null,
+          "cost_usd": 0.0007371999999999999,
+          "tokens_in": 314,
+          "tokens_out": 1124
+        },
+        {
+          "i": 9,
+          "run_ok": true,
+          "answer": 237,
+          "error": null,
+          "cost_usd": 0.0003184,
+          "tokens_in": 314,
+          "tokens_out": 426
+        },
+        {
+          "i": 10,
+          "run_ok": false,
+          "answer": null,
+          "error": "solve returned 60670, out of AIME range [0, 999]",
+          "cost_usd": 0.0008361999999999999,
+          "tokens_in": 314,
+          "tokens_out": 1289
+        },
+        {
+          "i": 11,
+          "run_ok": true,
+          "answer": 237,
+          "error": null,
+          "cost_usd": 0.0011205999999999998,
+          "tokens_in": 314,
+          "tokens_out": 1763
+        },
+        {
+          "i": 12,
+          "run_ok": true,
+          "answer": 237,
+          "error": null,
+          "cost_usd": 0.0010263999999999998,
+          "tokens_in": 314,
+          "tokens_out": 1606
+        },
+        {
+          "i": 13,
+          "run_ok": false,
+          "answer": null,
+          "error": "solve returned 60671, out of AIME range [0, 999]",
+          "cost_usd": 0.0007557999999999999,
+          "tokens_in": 314,
+          "tokens_out": 1155
+        },
+        {
+          "i": 14,
+          "run_ok": true,
+          "answer": 237,
+          "error": null,
+          "cost_usd": 0.0008565999999999999,
+          "tokens_in": 314,
+          "tokens_out": 1323
+        },
+        {
+          "i": 15,
+          "run_ok": false,
+          "answer": null,
+          "error": "solve returned 60671, out of AIME range [0, 999]",
+          "cost_usd": 0.0006772,
+          "tokens_in": 314,
+          "tokens_out": 1024
+        }
+      ]
+    },
+    {
+      "task_id": 22,
+      "ground_truth": 610,
+      "n_samples": 16,
+      "n_run_ok": 16,
+      "majority_answer": 610,
+      "majority_correct": true,
+      "first_valid_answer": 610,
+      "first_valid_correct": true,
+      "any_correct": true,
+      "samples": [
+        {
+          "i": 0,
+          "run_ok": true,
+          "answer": 610,
+          "error": null,
+          "cost_usd": 0.0003286,
+          "tokens_in": 515,
+          "tokens_out": 376
+        },
+        {
+          "i": 1,
+          "run_ok": true,
+          "answer": 610,
+          "error": null,
+          "cost_usd": 0.0003112,
+          "tokens_in": 515,
+          "tokens_out": 347
+        },
+        {
+          "i": 2,
+          "run_ok": true,
+          "answer": 610,
+          "error": null,
+          "cost_usd": 0.0004546,
+          "tokens_in": 515,
+          "tokens_out": 586
+        },
+        {
+          "i": 3,
+          "run_ok": true,
+          "answer": 610,
+          "error": null,
+          "cost_usd": 0.0002836,
+          "tokens_in": 515,
+          "tokens_out": 301
+        },
+        {
+          "i": 4,
+          "run_ok": true,
+          "answer": 610,
+          "error": null,
+          "cost_usd": 0.00029979999999999997,
+          "tokens_in": 515,
+          "tokens_out": 328
+        },
+        {
+          "i": 5,
+          "run_ok": true,
+          "answer": 610,
+          "error": null,
+          "cost_usd": 0.00028479999999999993,
+          "tokens_in": 515,
+          "tokens_out": 303
+        },
+        {
+          "i": 6,
+          "run_ok": true,
+          "answer": 610,
+          "error": null,
+          "cost_usd": 0.000253,
+          "tokens_in": 515,
+          "tokens_out": 250
+        },
+        {
+          "i": 7,
+          "run_ok": true,
+          "answer": 610,
+          "error": null,
+          "cost_usd": 0.0003502,
+          "tokens_in": 515,
+          "tokens_out": 412
+        },
+        {
+          "i": 8,
+          "run_ok": true,
+          "answer": 610,
+          "error": null,
+          "cost_usd": 0.000268,
+          "tokens_in": 515,
+          "tokens_out": 275
+        },
+        {
+          "i": 9,
+          "run_ok": true,
+          "answer": 610,
+          "error": null,
+          "cost_usd": 0.0003142,
+          "tokens_in": 515,
+          "tokens_out": 352
+        },
+        {
+          "i": 10,
+          "run_ok": true,
+          "answer": 610,
+          "error": null,
+          "cost_usd": 0.00028479999999999993,
+          "tokens_in": 515,
+          "tokens_out": 303
+        },
+        {
+          "i": 11,
+          "run_ok": true,
+          "answer": 610,
+          "error": null,
+          "cost_usd": 0.0002518,
+          "tokens_in": 515,
+          "tokens_out": 248
+        },
+        {
+          "i": 12,
+          "run_ok": true,
+          "answer": 610,
+          "error": null,
+          "cost_usd": 0.00029079999999999997,
+          "tokens_in": 515,
+          "tokens_out": 313
+        },
+        {
+          "i": 13,
+          "run_ok": true,
+          "answer": 610,
+          "error": null,
+          "cost_usd": 0.000283,
+          "tokens_in": 515,
+          "tokens_out": 300
+        },
+        {
+          "i": 14,
+          "run_ok": true,
+          "answer": 610,
+          "error": null,
+          "cost_usd": 0.000292,
+          "tokens_in": 515,
+          "tokens_out": 315
+        },
+        {
+          "i": 15,
+          "run_ok": true,
+          "answer": 610,
+          "error": null,
+          "cost_usd": 0.0002764,
+          "tokens_in": 515,
+          "tokens_out": 289
+        }
+      ]
+    },
+    {
+      "task_id": 23,
+      "ground_truth": 149,
+      "n_samples": 16,
+      "n_run_ok": 15,
+      "majority_answer": 150,
+      "majority_correct": false,
+      "first_valid_answer": 150,
+      "first_valid_correct": false,
+      "any_correct": true,
+      "samples": [
+        {
+          "i": 0,
+          "run_ok": true,
+          "answer": 150,
+          "error": null,
+          "cost_usd": 0.001045,
+          "tokens_in": 314,
+          "tokens_out": 1637
+        },
+        {
+          "i": 1,
+          "run_ok": true,
+          "answer": 150,
+          "error": null,
+          "cost_usd": 0.0008056,
+          "tokens_in": 314,
+          "tokens_out": 1238
+        },
+        {
+          "i": 2,
+          "run_ok": false,
+          "answer": null,
+          "error": "ImportError: import of 'scipy.optimize' is not allowed in this sandbox",
+          "cost_usd": 0.0006759999999999998,
+          "tokens_in": 314,
+          "tokens_out": 1022
+        },
+        {
+          "i": 3,
+          "run_ok": true,
+          "answer": 150,
+          "error": null,
+          "cost_usd": 0.0009706,
+          "tokens_in": 314,
+          "tokens_out": 1513
+        },
+        {
+          "i": 4,
+          "run_ok": true,
+          "answer": 150,
+          "error": null,
+          "cost_usd": 0.0007252,
+          "tokens_in": 314,
+          "tokens_out": 1104
+        },
+        {
+          "i": 5,
+          "run_ok": true,
+          "answer": 150,
+          "error": null,
+          "cost_usd": 0.0008583999999999999,
+          "tokens_in": 314,
+          "tokens_out": 1326
+        },
+        {
+          "i": 6,
+          "run_ok": true,
+          "answer": 150,
+          "error": null,
+          "cost_usd": 0.0006663999999999999,
+          "tokens_in": 314,
+          "tokens_out": 1006
+        },
+        {
+          "i": 7,
+          "run_ok": true,
+          "answer": 149,
+          "error": null,
+          "cost_usd": 0.0010126,
+          "tokens_in": 314,
+          "tokens_out": 1583
+        },
+        {
+          "i": 8,
+          "run_ok": true,
+          "answer": 150,
+          "error": null,
+          "cost_usd": 0.0009814,
+          "tokens_in": 314,
+          "tokens_out": 1531
+        },
+        {
+          "i": 9,
+          "run_ok": true,
+          "answer": 150,
+          "error": null,
+          "cost_usd": 0.0009681999999999999,
+          "tokens_in": 314,
+          "tokens_out": 1509
+        },
+        {
+          "i": 10,
+          "run_ok": true,
+          "answer": 150,
+          "error": null,
+          "cost_usd": 0.0006418,
+          "tokens_in": 314,
+          "tokens_out": 965
+        },
+        {
+          "i": 11,
+          "run_ok": true,
+          "answer": 150,
+          "error": null,
+          "cost_usd": 0.0005799999999999999,
+          "tokens_in": 314,
+          "tokens_out": 862
+        },
+        {
+          "i": 12,
+          "run_ok": true,
+          "answer": 150,
+          "error": null,
+          "cost_usd": 0.0006982,
+          "tokens_in": 314,
+          "tokens_out": 1059
+        },
+        {
+          "i": 13,
+          "run_ok": true,
+          "answer": 150,
+          "error": null,
+          "cost_usd": 0.0007389999999999999,
+          "tokens_in": 314,
+          "tokens_out": 1127
+        },
+        {
+          "i": 14,
+          "run_ok": true,
+          "answer": 150,
+          "error": null,
+          "cost_usd": 0.0008391999999999999,
+          "tokens_in": 314,
+          "tokens_out": 1294
+        },
+        {
+          "i": 15,
+          "run_ok": true,
+          "answer": 150,
+          "error": null,
+          "cost_usd": 0.0006519999999999999,
+          "tokens_in": 314,
+          "tokens_out": 982
+        }
+      ]
+    },
+    {
+      "task_id": 24,
+      "ground_truth": 907,
+      "n_samples": 16,
+      "n_run_ok": 16,
+      "majority_answer": 907,
+      "majority_correct": true,
+      "first_valid_answer": 765,
+      "first_valid_correct": false,
+      "any_correct": true,
+      "samples": [
+        {
+          "i": 0,
+          "run_ok": true,
+          "answer": 765,
+          "error": null,
+          "cost_usd": 0.0005878,
+          "tokens_in": 290,
+          "tokens_out": 883
+        },
+        {
+          "i": 1,
+          "run_ok": true,
+          "answer": 907,
+          "error": null,
+          "cost_usd": 0.0008853999999999999,
+          "tokens_in": 290,
+          "tokens_out": 1379
+        },
+        {
+          "i": 2,
+          "run_ok": true,
+          "answer": 907,
+          "error": null,
+          "cost_usd": 0.0006921999999999999,
+          "tokens_in": 290,
+          "tokens_out": 1057
+        },
+        {
+          "i": 3,
+          "run_ok": true,
+          "answer": 907,
+          "error": null,
+          "cost_usd": 0.0006706,
+          "tokens_in": 290,
+          "tokens_out": 1021
+        },
+        {
+          "i": 4,
+          "run_ok": true,
+          "answer": 907,
+          "error": null,
+          "cost_usd": 0.0006724,
+          "tokens_in": 290,
+          "tokens_out": 1024
+        },
+        {
+          "i": 5,
+          "run_ok": true,
+          "answer": 907,
+          "error": null,
+          "cost_usd": 0.0016186,
+          "tokens_in": 290,
+          "tokens_out": 2601
+        },
+        {
+          "i": 6,
+          "run_ok": true,
+          "answer": 907,
+          "error": null,
+          "cost_usd": 0.000472,
+          "tokens_in": 290,
+          "tokens_out": 690
+        },
+        {
+          "i": 7,
+          "run_ok": true,
+          "answer": 907,
+          "error": null,
+          "cost_usd": 0.0008091999999999999,
+          "tokens_in": 290,
+          "tokens_out": 1252
+        },
+        {
+          "i": 8,
+          "run_ok": true,
+          "answer": 907,
+          "error": null,
+          "cost_usd": 0.001234,
+          "tokens_in": 290,
+          "tokens_out": 1960
+        },
+        {
+          "i": 9,
+          "run_ok": true,
+          "answer": 907,
+          "error": null,
+          "cost_usd": 0.001051,
+          "tokens_in": 290,
+          "tokens_out": 1655
+        },
+        {
+          "i": 10,
+          "run_ok": true,
+          "answer": 907,
+          "error": null,
+          "cost_usd": 0.0007581999999999999,
+          "tokens_in": 290,
+          "tokens_out": 1167
+        },
+        {
+          "i": 11,
+          "run_ok": true,
+          "answer": 907,
+          "error": null,
+          "cost_usd": 0.0004042,
+          "tokens_in": 290,
+          "tokens_out": 577
+        },
+        {
+          "i": 12,
+          "run_ok": true,
+          "answer": 907,
+          "error": null,
+          "cost_usd": 0.0007612,
+          "tokens_in": 290,
+          "tokens_out": 1172
+        },
+        {
+          "i": 13,
+          "run_ok": true,
+          "answer": 907,
+          "error": null,
+          "cost_usd": 0.0006303999999999999,
+          "tokens_in": 290,
+          "tokens_out": 954
+        },
+        {
+          "i": 14,
+          "run_ok": true,
+          "answer": 907,
+          "error": null,
+          "cost_usd": 0.0004594,
+          "tokens_in": 290,
+          "tokens_out": 669
+        },
+        {
+          "i": 15,
+          "run_ok": true,
+          "answer": 907,
+          "error": null,
+          "cost_usd": 0.0007816,
+          "tokens_in": 290,
+          "tokens_out": 1206
+        }
+      ]
+    },
+    {
+      "task_id": 25,
+      "ground_truth": 113,
+      "n_samples": 16,
+      "n_run_ok": 0,
+      "majority_answer": null,
+      "majority_correct": false,
+      "first_valid_answer": null,
+      "first_valid_correct": false,
+      "any_correct": false,
+      "samples": [
+        {
+          "i": 0,
+          "run_ok": false,
+          "answer": null,
+          "error": "IndentationError: expected an indented block after function definition on line 1 (<aime_proposer>, line 218)",
+          "cost_usd": 0.0025134000000000003,
+          "tokens_in": 279,
+          "tokens_out": 4096
+        },
+        {
+          "i": 1,
+          "run_ok": false,
+          "answer": null,
+          "error": "NameError: name 'math' is not defined",
+          "cost_usd": 0.0025134000000000003,
+          "tokens_in": 279,
+          "tokens_out": 4096
+        },
+        {
+          "i": 2,
+          "run_ok": false,
+          "answer": null,
+          "error": "NameError: name 'math' is not defined",
+          "cost_usd": 0.0017595999999999998,
+          "tokens_in": 290,
+          "tokens_out": 2836
+        },
+        {
+          "i": 3,
+          "run_ok": false,
+          "answer": null,
+          "error": "API: APIConnectionError: Connection error.",
+          "cost_usd": 0.0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        {
+          "i": 4,
+          "run_ok": false,
+          "answer": null,
+          "error": "API: APIConnectionError: Connection error.",
+          "cost_usd": 0.0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        {
+          "i": 5,
+          "run_ok": false,
+          "answer": null,
+          "error": "API: APIConnectionError: Connection error.",
+          "cost_usd": 0.0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        {
+          "i": 6,
+          "run_ok": false,
+          "answer": null,
+          "error": "API: APIConnectionError: Connection error.",
+          "cost_usd": 0.0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        {
+          "i": 7,
+          "run_ok": false,
+          "answer": null,
+          "error": "solve returned 4208, out of AIME range [0, 999]",
+          "cost_usd": 0.0010938,
+          "tokens_in": 279,
+          "tokens_out": 1730
+        },
+        {
+          "i": 8,
+          "run_ok": false,
+          "answer": null,
+          "error": "API: APIConnectionError: Connection error.",
+          "cost_usd": 0.0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        {
+          "i": 9,
+          "run_ok": false,
+          "answer": null,
+          "error": "API: APIConnectionError: Connection error.",
+          "cost_usd": 0.0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        {
+          "i": 10,
+          "run_ok": false,
+          "answer": null,
+          "error": "API: InternalServerError: Error code: 500 - {'error': {'message': 'Internal Server Error'}}",
+          "cost_usd": 0.0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        {
+          "i": 11,
+          "run_ok": false,
+          "answer": null,
+          "error": "API: APIConnectionError: Connection error.",
+          "cost_usd": 0.0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        {
+          "i": 12,
+          "run_ok": false,
+          "answer": null,
+          "error": "API: APIConnectionError: Connection error.",
+          "cost_usd": 0.0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        {
+          "i": 13,
+          "run_ok": false,
+          "answer": null,
+          "error": "API: APIConnectionError: Connection error.",
+          "cost_usd": 0.0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        {
+          "i": 14,
+          "run_ok": false,
+          "answer": null,
+          "error": "no solve() function found",
+          "cost_usd": 0.0025155999999999998,
+          "tokens_in": 290,
+          "tokens_out": 4096
+        },
+        {
+          "i": 15,
+          "run_ok": false,
+          "answer": null,
+          "error": "API: APIConnectionError: Connection error.",
+          "cost_usd": 0.0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        }
+      ]
+    },
+    {
+      "task_id": 26,
+      "ground_truth": 19,
+      "n_samples": 16,
+      "n_run_ok": 0,
+      "majority_answer": null,
+      "majority_correct": false,
+      "first_valid_answer": null,
+      "first_valid_correct": false,
+      "any_correct": false,
+      "samples": [
+        {
+          "i": 0,
+          "run_ok": false,
+          "answer": null,
+          "error": "no solve() function found",
+          "cost_usd": 0.002557,
+          "tokens_in": 497,
+          "tokens_out": 4096
+        },
+        {
+          "i": 1,
+          "run_ok": false,
+          "answer": null,
+          "error": "API: APIConnectionError: Connection error.",
+          "cost_usd": 0.0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        {
+          "i": 2,
+          "run_ok": false,
+          "answer": null,
+          "error": "no solve() function found",
+          "cost_usd": 0.002557,
+          "tokens_in": 497,
+          "tokens_out": 4096
+        },
+        {
+          "i": 3,
+          "run_ok": false,
+          "answer": null,
+          "error": "no solve() function found",
+          "cost_usd": 0.002557,
+          "tokens_in": 497,
+          "tokens_out": 4096
+        },
+        {
+          "i": 4,
+          "run_ok": false,
+          "answer": null,
+          "error": "API: APIConnectionError: Connection error.",
+          "cost_usd": 0.0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        {
+          "i": 5,
+          "run_ok": false,
+          "answer": null,
+          "error": "no solve() function found",
+          "cost_usd": 0.002557,
+          "tokens_in": 497,
+          "tokens_out": 4096
+        },
+        {
+          "i": 6,
+          "run_ok": false,
+          "answer": null,
+          "error": "API: APIConnectionError: Connection error.",
+          "cost_usd": 0.0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        {
+          "i": 7,
+          "run_ok": false,
+          "answer": null,
+          "error": "API: APIConnectionError: Connection error.",
+          "cost_usd": 0.0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        {
+          "i": 8,
+          "run_ok": false,
+          "answer": null,
+          "error": "no solve() function found",
+          "cost_usd": 0.002557,
+          "tokens_in": 497,
+          "tokens_out": 4096
+        },
+        {
+          "i": 9,
+          "run_ok": false,
+          "answer": null,
+          "error": "no solve() function found",
+          "cost_usd": 0.002557,
+          "tokens_in": 497,
+          "tokens_out": 4096
+        },
+        {
+          "i": 10,
+          "run_ok": false,
+          "answer": null,
+          "error": "API: APIConnectionError: Connection error.",
+          "cost_usd": 0.0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        {
+          "i": 11,
+          "run_ok": false,
+          "answer": null,
+          "error": "API: APIConnectionError: Connection error.",
+          "cost_usd": 0.0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        {
+          "i": 12,
+          "run_ok": false,
+          "answer": null,
+          "error": "no solve() function found",
+          "cost_usd": 0.002557,
+          "tokens_in": 497,
+          "tokens_out": 4096
+        },
+        {
+          "i": 13,
+          "run_ok": false,
+          "answer": null,
+          "error": "API: APIConnectionError: Connection error.",
+          "cost_usd": 0.0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        {
+          "i": 14,
+          "run_ok": false,
+          "answer": null,
+          "error": "API: APIConnectionError: Connection error.",
+          "cost_usd": 0.0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        {
+          "i": 15,
+          "run_ok": false,
+          "answer": null,
+          "error": "API: APIConnectionError: Connection error.",
+          "cost_usd": 0.0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        }
+      ]
+    },
+    {
+      "task_id": 27,
+      "ground_truth": 248,
+      "n_samples": 16,
+      "n_run_ok": 0,
+      "majority_answer": null,
+      "majority_correct": false,
+      "first_valid_answer": null,
+      "first_valid_correct": false,
+      "any_correct": false,
+      "samples": [
+        {
+          "i": 0,
+          "run_ok": false,
+          "answer": null,
+          "error": "timeout after 10.0s",
+          "cost_usd": 0.0001554,
+          "tokens_in": 363,
+          "tokens_out": 138
+        },
+        {
+          "i": 1,
+          "run_ok": false,
+          "answer": null,
+          "error": "timeout after 10.0s",
+          "cost_usd": 0.00020219999999999998,
+          "tokens_in": 363,
+          "tokens_out": 216
+        },
+        {
+          "i": 2,
+          "run_ok": false,
+          "answer": null,
+          "error": "timeout after 10.0s",
+          "cost_usd": 0.0001854,
+          "tokens_in": 363,
+          "tokens_out": 188
+        },
+        {
+          "i": 3,
+          "run_ok": false,
+          "answer": null,
+          "error": "timeout after 10.0s",
+          "cost_usd": 0.00020939999999999997,
+          "tokens_in": 363,
+          "tokens_out": 228
+        },
+        {
+          "i": 4,
+          "run_ok": false,
+          "answer": null,
+          "error": "SyntaxError: 'return' outside function (<aime_proposer>, line 70)",
+          "cost_usd": 0.000474,
+          "tokens_in": 363,
+          "tokens_out": 669
+        },
+        {
+          "i": 5,
+          "run_ok": false,
+          "answer": null,
+          "error": "SyntaxError: 'return' outside function (<aime_proposer>, line 227)",
+          "cost_usd": 0.0013451999999999997,
+          "tokens_in": 363,
+          "tokens_out": 2121
+        },
+        {
+          "i": 6,
+          "run_ok": false,
+          "answer": null,
+          "error": "timeout after 10.0s",
+          "cost_usd": 0.000171,
+          "tokens_in": 363,
+          "tokens_out": 164
+        },
+        {
+          "i": 7,
+          "run_ok": false,
+          "answer": null,
+          "error": "timeout after 10.0s",
+          "cost_usd": 0.00019380000000000002,
+          "tokens_in": 363,
+          "tokens_out": 202
+        },
+        {
+          "i": 8,
+          "run_ok": false,
+          "answer": null,
+          "error": "timeout after 10.0s",
+          "cost_usd": 0.00018960000000000003,
+          "tokens_in": 363,
+          "tokens_out": 195
+        },
+        {
+          "i": 9,
+          "run_ok": false,
+          "answer": null,
+          "error": "timeout after 10.0s",
+          "cost_usd": 0.00017760000000000003,
+          "tokens_in": 363,
+          "tokens_out": 175
+        },
+        {
+          "i": 10,
+          "run_ok": false,
+          "answer": null,
+          "error": "timeout after 10.0s",
+          "cost_usd": 0.000621,
+          "tokens_in": 363,
+          "tokens_out": 914
+        },
+        {
+          "i": 11,
+          "run_ok": false,
+          "answer": null,
+          "error": "timeout after 10.0s",
+          "cost_usd": 0.0001554,
+          "tokens_in": 363,
+          "tokens_out": 138
+        },
+        {
+          "i": 12,
+          "run_ok": false,
+          "answer": null,
+          "error": "no solve() function found",
+          "cost_usd": 0.0025321999999999996,
+          "tokens_in": 373,
+          "tokens_out": 4096
+        },
+        {
+          "i": 13,
+          "run_ok": false,
+          "answer": null,
+          "error": "timeout after 10.0s",
+          "cost_usd": 0.0001944,
+          "tokens_in": 363,
+          "tokens_out": 203
+        },
+        {
+          "i": 14,
+          "run_ok": false,
+          "answer": null,
+          "error": "timeout after 10.0s",
+          "cost_usd": 0.00018480000000000002,
+          "tokens_in": 363,
+          "tokens_out": 187
+        },
+        {
+          "i": 15,
+          "run_ok": false,
+          "answer": null,
+          "error": "timeout after 10.0s",
+          "cost_usd": 0.0001782,
+          "tokens_in": 363,
+          "tokens_out": 176
+        }
+      ]
+    },
+    {
+      "task_id": 28,
+      "ground_truth": 104,
+      "n_samples": 16,
+      "n_run_ok": 5,
+      "majority_answer": 104,
+      "majority_correct": true,
+      "first_valid_answer": 104,
+      "first_valid_correct": true,
+      "any_correct": true,
+      "samples": [
+        {
+          "i": 0,
+          "run_ok": false,
+          "answer": null,
+          "error": "no solve() function found",
+          "cost_usd": 0.0025227999999999995,
+          "tokens_in": 326,
+          "tokens_out": 4096
+        },
+        {
+          "i": 1,
+          "run_ok": false,
+          "answer": null,
+          "error": "no solve() function found",
+          "cost_usd": 0.0025227999999999995,
+          "tokens_in": 326,
+          "tokens_out": 4096
+        },
+        {
+          "i": 2,
+          "run_ok": true,
+          "answer": 104,
+          "error": null,
+          "cost_usd": 0.0009866,
+          "tokens_in": 316,
+          "tokens_out": 1539
+        },
+        {
+          "i": 3,
+          "run_ok": false,
+          "answer": null,
+          "error": "no solve() function found",
+          "cost_usd": 0.0025227999999999995,
+          "tokens_in": 326,
+          "tokens_out": 4096
+        },
+        {
+          "i": 4,
+          "run_ok": true,
+          "answer": 104,
+          "error": null,
+          "cost_usd": 0.000893,
+          "tokens_in": 316,
+          "tokens_out": 1383
+        },
+        {
+          "i": 5,
+          "run_ok": false,
+          "answer": null,
+          "error": "no solve() function found",
+          "cost_usd": 0.0025227999999999995,
+          "tokens_in": 326,
+          "tokens_out": 4096
+        },
+        {
+          "i": 6,
+          "run_ok": false,
+          "answer": null,
+          "error": "API: APIConnectionError: Connection error.",
+          "cost_usd": 0.0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        {
+          "i": 7,
+          "run_ok": true,
+          "answer": 104,
+          "error": null,
+          "cost_usd": 0.000836,
+          "tokens_in": 316,
+          "tokens_out": 1288
+        },
+        {
+          "i": 8,
+          "run_ok": false,
+          "answer": null,
+          "error": "TypeError: 'tuple' object is not an iterator",
+          "cost_usd": 0.0008024,
+          "tokens_in": 316,
+          "tokens_out": 1232
+        },
+        {
+          "i": 9,
+          "run_ok": true,
+          "answer": 104,
+          "error": null,
+          "cost_usd": 0.0008252,
+          "tokens_in": 316,
+          "tokens_out": 1270
+        },
+        {
+          "i": 10,
+          "run_ok": false,
+          "answer": null,
+          "error": "NameError: name '__name__' is not defined",
+          "cost_usd": 0.0022186,
+          "tokens_in": 326,
+          "tokens_out": 3589
+        },
+        {
+          "i": 11,
+          "run_ok": false,
+          "answer": null,
+          "error": "no solve() function found",
+          "cost_usd": 0.0025227999999999995,
+          "tokens_in": 326,
+          "tokens_out": 4096
+        },
+        {
+          "i": 12,
+          "run_ok": false,
+          "answer": null,
+          "error": "no solve() function found",
+          "cost_usd": 0.0025227999999999995,
+          "tokens_in": 326,
+          "tokens_out": 4096
+        },
+        {
+          "i": 13,
+          "run_ok": true,
+          "answer": 104,
+          "error": null,
+          "cost_usd": 0.0008432,
+          "tokens_in": 316,
+          "tokens_out": 1300
+        },
+        {
+          "i": 14,
+          "run_ok": false,
+          "answer": null,
+          "error": "no solve() function found",
+          "cost_usd": 0.0025227999999999995,
+          "tokens_in": 326,
+          "tokens_out": 4096
+        },
+        {
+          "i": 15,
+          "run_ok": false,
+          "answer": null,
+          "error": "no solve() function found",
+          "cost_usd": 0.0025227999999999995,
+          "tokens_in": 326,
+          "tokens_out": 4096
+        }
+      ]
+    },
+    {
+      "task_id": 29,
+      "ground_truth": 240,
+      "n_samples": 16,
+      "n_run_ok": 0,
+      "majority_answer": null,
+      "majority_correct": false,
+      "first_valid_answer": null,
+      "first_valid_correct": false,
+      "any_correct": false,
+      "samples": [
+        {
+          "i": 0,
+          "run_ok": false,
+          "answer": null,
+          "error": "API: APIConnectionError: Connection error.",
+          "cost_usd": 0.0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        {
+          "i": 1,
+          "run_ok": false,
+          "answer": null,
+          "error": "no solve() function found",
+          "cost_usd": 0.0025204,
+          "tokens_in": 314,
+          "tokens_out": 4096
+        },
+        {
+          "i": 2,
+          "run_ok": false,
+          "answer": null,
+          "error": "no solve() function found",
+          "cost_usd": 0.0025204,
+          "tokens_in": 314,
+          "tokens_out": 4096
+        },
+        {
+          "i": 3,
+          "run_ok": false,
+          "answer": null,
+          "error": "API: APIConnectionError: Connection error.",
+          "cost_usd": 0.0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        {
+          "i": 4,
+          "run_ok": false,
+          "answer": null,
+          "error": "no solve() function found",
+          "cost_usd": 0.0025204,
+          "tokens_in": 314,
+          "tokens_out": 4096
+        },
+        {
+          "i": 5,
+          "run_ok": false,
+          "answer": null,
+          "error": "API: APIConnectionError: Connection error.",
+          "cost_usd": 0.0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        {
+          "i": 6,
+          "run_ok": false,
+          "answer": null,
+          "error": "API: APIConnectionError: Connection error.",
+          "cost_usd": 0.0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        {
+          "i": 7,
+          "run_ok": false,
+          "answer": null,
+          "error": "API: APIConnectionError: Connection error.",
+          "cost_usd": 0.0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        {
+          "i": 8,
+          "run_ok": false,
+          "answer": null,
+          "error": "no solve() function found",
+          "cost_usd": 0.0025204,
+          "tokens_in": 314,
+          "tokens_out": 4096
+        },
+        {
+          "i": 9,
+          "run_ok": false,
+          "answer": null,
+          "error": "no solve() function found",
+          "cost_usd": 0.0025204,
+          "tokens_in": 314,
+          "tokens_out": 4096
+        },
+        {
+          "i": 10,
+          "run_ok": false,
+          "answer": null,
+          "error": "no solve() function found",
+          "cost_usd": 0.0025204,
+          "tokens_in": 314,
+          "tokens_out": 4096
+        },
+        {
+          "i": 11,
+          "run_ok": false,
+          "answer": null,
+          "error": "no solve() function found",
+          "cost_usd": 0.0025204,
+          "tokens_in": 314,
+          "tokens_out": 4096
+        },
+        {
+          "i": 12,
+          "run_ok": false,
+          "answer": null,
+          "error": "no solve() function found",
+          "cost_usd": 0.0025204,
+          "tokens_in": 314,
+          "tokens_out": 4096
+        },
+        {
+          "i": 13,
+          "run_ok": false,
+          "answer": null,
+          "error": "API: APIConnectionError: Connection error.",
+          "cost_usd": 0.0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        {
+          "i": 14,
+          "run_ok": false,
+          "answer": null,
+          "error": "API: APIConnectionError: Connection error.",
+          "cost_usd": 0.0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        },
+        {
+          "i": 15,
+          "run_ok": false,
+          "answer": null,
+          "error": "API: APIConnectionError: Connection error.",
+          "cost_usd": 0.0,
+          "tokens_in": 0,
+          "tokens_out": 0
+        }
+      ]
+    }
+  ]
+}

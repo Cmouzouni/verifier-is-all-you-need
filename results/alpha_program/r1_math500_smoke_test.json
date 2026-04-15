@@ -1,0 +1,107 @@
+{
+  "experiment": "r1_math500_topology",
+  "model": "qwen-22b",
+  "k": 2,
+  "n": 3,
+  "temperature": 0.9,
+  "seed": 42,
+  "elapsed_s": 748.6977171897888,
+  "total_cost_usd": 0.0063766,
+  "n_api_calls": 9,
+  "summary": {
+    "pass_at_1_avg": 0.6666666666666666,
+    "pass_at_k_any": 0.6666666666666666,
+    "majority_vote_rate": 0.6666666666666666,
+    "majority_vote_ci": [
+      0.2076549551264879,
+      0.9385096847238394
+    ],
+    "synth_rate": 1.0,
+    "synth_ci": [
+      0.43849391955098227,
+      1.0
+    ],
+    "delta_synth_minus_mv": 0.33333333333333337
+  },
+  "per_problem": [
+    {
+      "idx": 0,
+      "unique_id": "test/number_theory/737.json",
+      "subject": "Number Theory",
+      "level": 5,
+      "gold_answer": "284",
+      "extracted_answers": [
+        "284",
+        "284"
+      ],
+      "norm_answers": [
+        "284",
+        "284"
+      ],
+      "vote_counts": {
+        "284": 2
+      },
+      "majority_answer": "284",
+      "majority_correct": true,
+      "synth_answer": "284",
+      "synth_correct": true,
+      "per_proposal_correct": [
+        true,
+        true
+      ]
+    },
+    {
+      "idx": 1,
+      "unique_id": "test/intermediate_algebra/1168.json",
+      "subject": "Intermediate Algebra",
+      "level": 2,
+      "gold_answer": "16",
+      "extracted_answers": [
+        "16",
+        "16"
+      ],
+      "norm_answers": [
+        "16",
+        "16"
+      ],
+      "vote_counts": {
+        "16": 2
+      },
+      "majority_answer": "16",
+      "majority_correct": true,
+      "synth_answer": "16",
+      "synth_correct": true,
+      "per_proposal_correct": [
+        true,
+        true
+      ]
+    },
+    {
+      "idx": 2,
+      "unique_id": "test/intermediate_algebra/117.json",
+      "subject": "Intermediate Algebra",
+      "level": 5,
+      "gold_answer": "15",
+      "extracted_answers": [
+        "5p + q + 23 = 0",
+        "From (5): $ a = \\frac{5c + d + 19}{"
+      ],
+      "norm_answers": [
+        "5p + q + 23 = 0",
+        "From (5): $ a = \\frac{5c + d + 19}{"
+      ],
+      "vote_counts": {
+        "5p + q + 23 = 0": 1,
+        "From (5): $ a = \\frac{5c + d + 19}{": 1
+      },
+      "majority_answer": "5p + q + 23 = 0",
+      "majority_correct": false,
+      "synth_answer": "15",
+      "synth_correct": true,
+      "per_proposal_correct": [
+        false,
+        false
+      ]
+    }
+  ]
+}

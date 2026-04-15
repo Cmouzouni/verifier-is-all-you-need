@@ -1,0 +1,312 @@
+{
+  "experiment": "aime_same_task_baseline",
+  "model": "gpt-5.4-mini",
+  "n": 30,
+  "n_correct": 12,
+  "rate": 0.4,
+  "total_cost_usd": 0.0888063,
+  "cost_per_task": 0.00296021,
+  "elapsed_s": 35.47346091270447,
+  "per_task": [
+    {
+      "task_id": "2024-I-3",
+      "ground_truth": 809,
+      "model_answer": 674,
+      "correct": false,
+      "cost_usd": 0.0018425000000000002,
+      "tokens_in": 135,
+      "tokens_out": 385,
+      "error": null
+    },
+    {
+      "task_id": "2024-II-4",
+      "ground_truth": 33,
+      "model_answer": 35,
+      "correct": false,
+      "cost_usd": 0.0025542000000000004,
+      "tokens_in": 186,
+      "tokens_out": 534,
+      "error": null
+    },
+    {
+      "task_id": "2024-I-8",
+      "ground_truth": 197,
+      "model_answer": 2024,
+      "correct": false,
+      "cost_usd": 0.0024145,
+      "tokens_in": 131,
+      "tokens_out": 516,
+      "error": null
+    },
+    {
+      "task_id": "2024-I-4",
+      "ground_truth": 116,
+      "model_answer": 116,
+      "correct": true,
+      "cost_usd": 0.0021758000000000003,
+      "tokens_in": 162,
+      "tokens_out": 454,
+      "error": null
+    },
+    {
+      "task_id": "2024-II-11",
+      "ground_truth": 601,
+      "model_answer": 1,
+      "correct": false,
+      "cost_usd": 0.0033275000000000006,
+      "tokens_in": 105,
+      "tokens_out": 730,
+      "error": null
+    },
+    {
+      "task_id": "2024-I-12",
+      "ground_truth": 385,
+      "model_answer": 24,
+      "correct": false,
+      "cost_usd": 0.0036476000000000004,
+      "tokens_in": 120,
+      "tokens_out": 799,
+      "error": null
+    },
+    {
+      "task_id": "2024-II-6",
+      "ground_truth": 55,
+      "model_answer": 55,
+      "correct": true,
+      "cost_usd": 0.001397,
+      "tokens_in": 98,
+      "tokens_out": 293,
+      "error": null
+    },
+    {
+      "task_id": "2024-II-12",
+      "ground_truth": 23,
+      "model_answer": 23,
+      "correct": true,
+      "cost_usd": 0.0033506000000000005,
+      "tokens_in": 218,
+      "tokens_out": 707,
+      "error": null
+    },
+    {
+      "task_id": "2024-I-2",
+      "ground_truth": 25,
+      "model_answer": 25,
+      "correct": true,
+      "cost_usd": 0.0012628,
+      "tokens_in": 88,
+      "tokens_out": 265,
+      "error": null
+    },
+    {
+      "task_id": "2024-I-11",
+      "ground_truth": 371,
+      "model_answer": 311,
+      "correct": false,
+      "cost_usd": 0.0035233,
+      "tokens_in": 115,
+      "tokens_out": 772,
+      "error": null
+    },
+    {
+      "task_id": "2024-II-15",
+      "ground_truth": 315,
+      "model_answer": 15,
+      "correct": false,
+      "cost_usd": 0.0008569000000000001,
+      "tokens_in": 91,
+      "tokens_out": 172,
+      "error": null
+    },
+    {
+      "task_id": "2024-I-6",
+      "ground_truth": 294,
+      "model_answer": 294,
+      "correct": true,
+      "cost_usd": 0.0019228000000000001,
+      "tokens_in": 92,
+      "tokens_out": 414,
+      "error": null
+    },
+    {
+      "task_id": "2024-I-1",
+      "ground_truth": 204,
+      "model_answer": 204,
+      "correct": true,
+      "cost_usd": 0.0026818000000000002,
+      "tokens_in": 170,
+      "tokens_out": 567,
+      "error": null
+    },
+    {
+      "task_id": "2024-I-15",
+      "ground_truth": 721,
+      "model_answer": 721,
+      "correct": true,
+      "cost_usd": 0.0024541000000000003,
+      "tokens_in": 135,
+      "tokens_out": 524,
+      "error": null
+    },
+    {
+      "task_id": "2024-I-7",
+      "ground_truth": 540,
+      "model_answer": 360,
+      "correct": false,
+      "cost_usd": 0.004451700000000001,
+      "tokens_in": 83,
+      "tokens_out": 991,
+      "error": null
+    },
+    {
+      "task_id": "2024-I-13",
+      "ground_truth": 110,
+      "model_answer": 155,
+      "correct": false,
+      "cost_usd": 0.002827,
+      "tokens_in": 102,
+      "tokens_out": 617,
+      "error": null
+    },
+    {
+      "task_id": "2024-II-7",
+      "ground_truth": 699,
+      "model_answer": 597,
+      "correct": false,
+      "cost_usd": 0.005095200000000001,
+      "tokens_in": 108,
+      "tokens_out": 1131,
+      "error": null
+    },
+    {
+      "task_id": "2024-II-10",
+      "ground_truth": 468,
+      "model_answer": 240,
+      "correct": false,
+      "cost_usd": 0.0025872,
+      "tokens_in": 92,
+      "tokens_out": 565,
+      "error": null
+    },
+    {
+      "task_id": "2024-II-5",
+      "ground_truth": 80,
+      "model_answer": 80,
+      "correct": true,
+      "cost_usd": 0.0026125,
+      "tokens_in": 95,
+      "tokens_out": 570,
+      "error": null
+    },
+    {
+      "task_id": "2024-II-3",
+      "ground_truth": 45,
+      "model_answer": 1000,
+      "correct": false,
+      "cost_usd": 0.0062535,
+      "tokens_in": 169,
+      "tokens_out": 1379,
+      "error": null
+    },
+    {
+      "task_id": "2024-II-9",
+      "ground_truth": 902,
+      "model_answer": 24,
+      "correct": false,
+      "cost_usd": 0.0034364,
+      "tokens_in": 136,
+      "tokens_out": 747,
+      "error": null
+    },
+    {
+      "task_id": "2024-I-9",
+      "ground_truth": 480,
+      "model_answer": 80,
+      "correct": false,
+      "cost_usd": 0.0030569000000000004,
+      "tokens_in": 119,
+      "tokens_out": 665,
+      "error": null
+    },
+    {
+      "task_id": "2024-II-1",
+      "ground_truth": 73,
+      "model_answer": 73,
+      "correct": true,
+      "cost_usd": 0.0018799,
+      "tokens_in": 137,
+      "tokens_out": 393,
+      "error": null
+    },
+    {
+      "task_id": "2024-II-14",
+      "ground_truth": 211,
+      "model_answer": 211,
+      "correct": true,
+      "cost_usd": 0.0051359000000000005,
+      "tokens_in": 161,
+      "tokens_out": 1127,
+      "error": null
+    },
+    {
+      "task_id": "2024-II-8",
+      "ground_truth": 127,
+      "model_answer": 127,
+      "correct": true,
+      "cost_usd": 0.0025366000000000004,
+      "tokens_in": 198,
+      "tokens_out": 527,
+      "error": null
+    },
+    {
+      "task_id": "2024-II-13",
+      "ground_truth": 321,
+      "model_answer": 321,
+      "correct": true,
+      "cost_usd": 0.0024497000000000004,
+      "tokens_in": 95,
+      "tokens_out": 533,
+      "error": null
+    },
+    {
+      "task_id": "2024-I-14",
+      "ground_truth": 104,
+      "model_answer": 44,
+      "correct": false,
+      "cost_usd": 0.003487,
+      "tokens_in": 182,
+      "tokens_out": 747,
+      "error": null
+    },
+    {
+      "task_id": "2024-I-5",
+      "ground_truth": 104,
+      "model_answer": 2,
+      "correct": false,
+      "cost_usd": 0.0031471000000000003,
+      "tokens_in": 109,
+      "tokens_out": 688,
+      "error": null
+    },
+    {
+      "task_id": "2024-I-10",
+      "ground_truth": 113,
+      "model_answer": 13,
+      "correct": false,
+      "cost_usd": 0.0064383,
+      "tokens_in": 377,
+      "tokens_out": 1369,
+      "error": null
+    },
+    {
+      "task_id": "2024-II-2",
+      "ground_truth": 236,
+      "model_answer": null,
+      "correct": false,
+      "cost_usd": 0,
+      "tokens_in": 0,
+      "tokens_out": 0,
+      "error": "BadRequestError: Error code: 400 - {'error': {'message': 'Invalid prompt: your prompt was flagged as potentially violating our usage policy. Please try again with a different prompt: https://platform.openai.com/docs/g"
+    }
+  ]
+}
