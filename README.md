@@ -11,7 +11,7 @@ OPIT — Open Institute of Technology, and Cohorte AI, Paris, France.
 
 We test six architectural interventions for multi-agent LLM reasoning — game-theoretic allocation, critic-driven refinement, increased sampling budget, code-specialist proposers, heterogeneous multi-model ensembles, and evolutionary inter-round information flow — and find that **none of them improves over the simplest possible baseline**: sample K programs independently from a single model, execute each in a sandbox, return the first that passes verification. The architecture does not matter. The verifier is all you need.
 
-This finding emerges from a systematic empirical campaign (~7,000 LLM-agent episodes, ~$40 in API cost) spanning five benchmarks:
+This finding emerges from a systematic empirical campaign (~7,000 LLM-agent episodes) spanning five benchmarks:
 
 | Benchmark | Result | vs Frontier | Same-task baseline |
 |---|---|---|---|
@@ -101,17 +101,17 @@ echo "OPENAI_API_KEY=your_key_here" >> .env  # only needed for o4-mini baseline
 
 ### Running the key experiments
 
-**E8 — AIME 2024 (the crown jewel, ~$0.15, ~2 hours):**
+**E8 — AIME 2024 (~2 hours):**
 ```bash
 python -m alpha_program.exp_e8_aime --year 2024 --k 16 --output my_aime_run.json
 ```
 
-**E9 — HumanEval (97% pass@16, ~$0.50, ~20 minutes):**
+**E9 — HumanEval (97% pass@16, ~20 minutes):**
 ```bash
 python -m alpha_program.exp_e9_humaneval --k 16 --output my_humaneval_run.json
 ```
 
-**ARC-AGI-1 full eval (18.2%, ~$12, ~24 hours on Together AI):**
+**ARC-AGI-1 full eval (18.2%, ~24 hours on Together AI):**
 ```bash
 python -m alpha_program.run_validation \
     --model qwen-22b --dataset arc1 --split evaluation \
@@ -119,13 +119,13 @@ python -m alpha_program.run_validation \
     --output my_arc_eval.json
 ```
 
-**Same-task o4-mini AIME baseline (~$0.35, ~5 minutes):**
+**Same-task o4-mini AIME baseline (~5 minutes):**
 ```bash
 python -m alpha_program.exp_aime_o1mini_baseline \
     --model o4-mini --output my_o4mini_baseline.json
 ```
 
-**Six-null falsification battery (~$5 total):**
+**Six-null falsification battery:**
 ```bash
 # E3: critic loop
 python -m alpha_program.exp_e3_critic_loop --n 30 --output my_e3.json
@@ -174,4 +174,4 @@ MIT License. See [LICENSE](LICENSE).
 
 ## Acknowledgments
 
-Total experimental cost: ~$41 in API fees (Together AI + OpenAI). The complete dataset of ~7,000 LLM-agent episodes is included in this repository.
+The complete dataset of ~7,000 LLM-agent episodes is included in this repository.
