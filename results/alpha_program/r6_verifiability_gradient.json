@@ -1,0 +1,4066 @@
+{
+  "experiment": "r6_verifiability_gradient",
+  "benchmarks": {
+    "MMLU-Pro (cheap verification)": {
+      "label": "MMLU-Pro (cheap verification)",
+      "n": 200,
+      "majority_vote": 144,
+      "mv_rate": 0.72,
+      "mv_ci": [
+        0.6540756858222899,
+        0.7776320715736488
+      ],
+      "synthesizer": 141,
+      "synth_rate": 0.705,
+      "synth_ci": [
+        0.6384115802925058,
+        0.7638615572809827
+      ],
+      "any_correct": 157,
+      "any_rate": 0.785,
+      "delta": -3,
+      "delta_pp": -1.5,
+      "cost": 0.5592848,
+      "elapsed_s": 1668.3449840545654
+    },
+    "ARC-Challenge (hard verification)": {
+      "label": "ARC-Challenge (hard verification)",
+      "n": 200,
+      "majority_vote": 192,
+      "mv_rate": 0.96,
+      "mv_ci": [
+        0.9230670617058012,
+        0.9795946128493436
+      ],
+      "synthesizer": 189,
+      "synth_rate": 0.945,
+      "synth_ci": [
+        0.9042120755340645,
+        0.9690149791986299
+      ],
+      "any_correct": 193,
+      "any_rate": 0.965,
+      "delta": -3,
+      "delta_pp": -1.5,
+      "cost": 0.2027286,
+      "elapsed_s": 671.3947651386261
+    },
+    "MATH-500 (medium verification)": {
+      "label": "MATH-500 (medium verification)",
+      "n": 500,
+      "majority_vote": 349,
+      "mv_rate": 0.698,
+      "synthesizer": 355,
+      "synth_rate": 0.71,
+      "delta": 6,
+      "delta_pp": 1.200000000000001
+    }
+  },
+  "per_task": {
+    "MMLU-Pro (cheap verification)": [
+      {
+        "task_id": "mmlu_11309",
+        "ground_truth": "B",
+        "mv_answer": "B",
+        "mv_correct": true,
+        "synth_answer": "B",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0010252
+      },
+      {
+        "task_id": "mmlu_595",
+        "ground_truth": "D",
+        "mv_answer": "D",
+        "mv_correct": true,
+        "synth_answer": "D",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0013683999999999999
+      },
+      {
+        "task_id": "mmlu_483",
+        "ground_truth": "D",
+        "mv_answer": "D",
+        "mv_correct": true,
+        "synth_answer": "D",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0017146
+      },
+      {
+        "task_id": "mmlu_10685",
+        "ground_truth": "I",
+        "mv_answer": "A",
+        "mv_correct": false,
+        "synth_answer": "I",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0015033999999999998
+      },
+      {
+        "task_id": "mmlu_9124",
+        "ground_truth": "J",
+        "mv_answer": "I",
+        "mv_correct": false,
+        "synth_answer": "I",
+        "synth_correct": false,
+        "any_correct": false,
+        "cost": 0.0017158
+      },
+      {
+        "task_id": "mmlu_2387",
+        "ground_truth": "A",
+        "mv_answer": "G",
+        "mv_correct": false,
+        "synth_answer": "G",
+        "synth_correct": false,
+        "any_correct": false,
+        "cost": 0.0018494
+      },
+      {
+        "task_id": "mmlu_8466",
+        "ground_truth": "C",
+        "mv_answer": "C",
+        "mv_correct": true,
+        "synth_answer": "C",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0008828
+      },
+      {
+        "task_id": "mmlu_4638",
+        "ground_truth": "I",
+        "mv_answer": "I",
+        "mv_correct": true,
+        "synth_answer": "I",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0025412
+      },
+      {
+        "task_id": "mmlu_7082",
+        "ground_truth": "J",
+        "mv_answer": "J",
+        "mv_correct": true,
+        "synth_answer": "A",
+        "synth_correct": false,
+        "any_correct": true,
+        "cost": 0.0023882
+      },
+      {
+        "task_id": "mmlu_1774",
+        "ground_truth": "B",
+        "mv_answer": "B",
+        "mv_correct": true,
+        "synth_answer": "B",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0025934
+      },
+      {
+        "task_id": "mmlu_1627",
+        "ground_truth": "A",
+        "mv_answer": "A",
+        "mv_correct": true,
+        "synth_answer": "E",
+        "synth_correct": false,
+        "any_correct": true,
+        "cost": 0.0023504
+      },
+      {
+        "task_id": "mmlu_508",
+        "ground_truth": "A",
+        "mv_answer": "A",
+        "mv_correct": true,
+        "synth_answer": "A",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.000657
+      },
+      {
+        "task_id": "mmlu_3780",
+        "ground_truth": "B",
+        "mv_answer": "B",
+        "mv_correct": true,
+        "synth_answer": "B",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0024824
+      },
+      {
+        "task_id": "mmlu_3934",
+        "ground_truth": "A",
+        "mv_answer": "A",
+        "mv_correct": true,
+        "synth_answer": "A",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.001415
+      },
+      {
+        "task_id": "mmlu_1920",
+        "ground_truth": "D",
+        "mv_answer": "I",
+        "mv_correct": false,
+        "synth_answer": "I",
+        "synth_correct": false,
+        "any_correct": true,
+        "cost": 0.0031428
+      },
+      {
+        "task_id": "mmlu_9384",
+        "ground_truth": "H",
+        "mv_answer": "B",
+        "mv_correct": false,
+        "synth_answer": "B",
+        "synth_correct": false,
+        "any_correct": false,
+        "cost": 0.0015402
+      },
+      {
+        "task_id": "mmlu_4138",
+        "ground_truth": "I",
+        "mv_answer": "I",
+        "mv_correct": true,
+        "synth_answer": "I",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0035038
+      },
+      {
+        "task_id": "mmlu_1515",
+        "ground_truth": "I",
+        "mv_answer": "J",
+        "mv_correct": false,
+        "synth_answer": "J",
+        "synth_correct": false,
+        "any_correct": false,
+        "cost": 0.0042702
+      },
+      {
+        "task_id": "mmlu_9117",
+        "ground_truth": "F",
+        "mv_answer": "F",
+        "mv_correct": true,
+        "synth_answer": "F",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.001725
+      },
+      {
+        "task_id": "mmlu_7042",
+        "ground_truth": "H",
+        "mv_answer": "H",
+        "mv_correct": true,
+        "synth_answer": "H",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0018258
+      },
+      {
+        "task_id": "mmlu_7542",
+        "ground_truth": "A",
+        "mv_answer": "I",
+        "mv_correct": false,
+        "synth_answer": "I",
+        "synth_correct": false,
+        "any_correct": false,
+        "cost": 0.0026152
+      },
+      {
+        "task_id": "mmlu_3378",
+        "ground_truth": "A",
+        "mv_answer": "D",
+        "mv_correct": false,
+        "synth_answer": "D",
+        "synth_correct": false,
+        "any_correct": false,
+        "cost": 0.0028117999999999997
+      },
+      {
+        "task_id": "mmlu_10057",
+        "ground_truth": "E",
+        "mv_answer": "E",
+        "mv_correct": true,
+        "synth_answer": "I",
+        "synth_correct": false,
+        "any_correct": true,
+        "cost": 0.0030825999999999996
+      },
+      {
+        "task_id": "mmlu_9865",
+        "ground_truth": "A",
+        "mv_answer": "A",
+        "mv_correct": true,
+        "synth_answer": null,
+        "synth_correct": false,
+        "any_correct": true,
+        "cost": 0.0052049999999999996
+      },
+      {
+        "task_id": "mmlu_2727",
+        "ground_truth": "D",
+        "mv_answer": "D",
+        "mv_correct": true,
+        "synth_answer": "D",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0012531999999999999
+      },
+      {
+        "task_id": "mmlu_4689",
+        "ground_truth": "H",
+        "mv_answer": "A",
+        "mv_correct": false,
+        "synth_answer": "A",
+        "synth_correct": false,
+        "any_correct": false,
+        "cost": 0.0022689999999999997
+      },
+      {
+        "task_id": "mmlu_3734",
+        "ground_truth": "I",
+        "mv_answer": "A",
+        "mv_correct": false,
+        "synth_answer": "I",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0031834000000000003
+      },
+      {
+        "task_id": "mmlu_9845",
+        "ground_truth": "G",
+        "mv_answer": "G",
+        "mv_correct": true,
+        "synth_answer": "G",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0026252
+      },
+      {
+        "task_id": "mmlu_7094",
+        "ground_truth": "I",
+        "mv_answer": "I",
+        "mv_correct": true,
+        "synth_answer": "I",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0017089999999999998
+      },
+      {
+        "task_id": "mmlu_563",
+        "ground_truth": "D",
+        "mv_answer": "D",
+        "mv_correct": true,
+        "synth_answer": "D",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.005767799999999999
+      },
+      {
+        "task_id": "mmlu_5729",
+        "ground_truth": "E",
+        "mv_answer": "E",
+        "mv_correct": true,
+        "synth_answer": "E",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0009184
+      },
+      {
+        "task_id": "mmlu_2655",
+        "ground_truth": "A",
+        "mv_answer": "A",
+        "mv_correct": true,
+        "synth_answer": "A",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0014152
+      },
+      {
+        "task_id": "mmlu_6388",
+        "ground_truth": "A",
+        "mv_answer": "A",
+        "mv_correct": true,
+        "synth_answer": "A",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0011518
+      },
+      {
+        "task_id": "mmlu_3705",
+        "ground_truth": "J",
+        "mv_answer": "A",
+        "mv_correct": false,
+        "synth_answer": null,
+        "synth_correct": false,
+        "any_correct": false,
+        "cost": 0.0057486
+      },
+      {
+        "task_id": "mmlu_5665",
+        "ground_truth": "A",
+        "mv_answer": "A",
+        "mv_correct": true,
+        "synth_answer": "A",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0019038000000000002
+      },
+      {
+        "task_id": "mmlu_3648",
+        "ground_truth": "F",
+        "mv_answer": "F",
+        "mv_correct": true,
+        "synth_answer": "F",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0022426
+      },
+      {
+        "task_id": "mmlu_788",
+        "ground_truth": "J",
+        "mv_answer": "J",
+        "mv_correct": true,
+        "synth_answer": "J",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0009674000000000001
+      },
+      {
+        "task_id": "mmlu_5791",
+        "ground_truth": "A",
+        "mv_answer": "A",
+        "mv_correct": true,
+        "synth_answer": "A",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0017875999999999999
+      },
+      {
+        "task_id": "mmlu_4684",
+        "ground_truth": "F",
+        "mv_answer": "D",
+        "mv_correct": false,
+        "synth_answer": "D",
+        "synth_correct": false,
+        "any_correct": false,
+        "cost": 0.0030667999999999997
+      },
+      {
+        "task_id": "mmlu_7710",
+        "ground_truth": "F",
+        "mv_answer": "F",
+        "mv_correct": true,
+        "synth_answer": "F",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0005986
+      },
+      {
+        "task_id": "mmlu_1611",
+        "ground_truth": "C",
+        "mv_answer": "C",
+        "mv_correct": true,
+        "synth_answer": "C",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0025842
+      },
+      {
+        "task_id": "mmlu_11956",
+        "ground_truth": "D",
+        "mv_answer": null,
+        "mv_correct": false,
+        "synth_answer": null,
+        "synth_correct": false,
+        "any_correct": false,
+        "cost": 0.006475
+      },
+      {
+        "task_id": "mmlu_6041",
+        "ground_truth": "B",
+        "mv_answer": "B",
+        "mv_correct": true,
+        "synth_answer": "B",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0035675999999999998
+      },
+      {
+        "task_id": "mmlu_1376",
+        "ground_truth": "I",
+        "mv_answer": "I",
+        "mv_correct": true,
+        "synth_answer": "I",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0012188
+      },
+      {
+        "task_id": "mmlu_10087",
+        "ground_truth": "J",
+        "mv_answer": "J",
+        "mv_correct": true,
+        "synth_answer": "J",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.002604
+      },
+      {
+        "task_id": "mmlu_11714",
+        "ground_truth": "J",
+        "mv_answer": null,
+        "mv_correct": false,
+        "synth_answer": null,
+        "synth_correct": false,
+        "any_correct": false,
+        "cost": 0.0067729999999999995
+      },
+      {
+        "task_id": "mmlu_6364",
+        "ground_truth": "A",
+        "mv_answer": "A",
+        "mv_correct": true,
+        "synth_answer": "A",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.001647
+      },
+      {
+        "task_id": "mmlu_1677",
+        "ground_truth": "J",
+        "mv_answer": "J",
+        "mv_correct": true,
+        "synth_answer": "J",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0034506
+      },
+      {
+        "task_id": "mmlu_10860",
+        "ground_truth": "C",
+        "mv_answer": null,
+        "mv_correct": false,
+        "synth_answer": null,
+        "synth_correct": false,
+        "any_correct": false,
+        "cost": 0.0067296
+      },
+      {
+        "task_id": "mmlu_10335",
+        "ground_truth": "H",
+        "mv_answer": "H",
+        "mv_correct": true,
+        "synth_answer": "H",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.000945
+      },
+      {
+        "task_id": "mmlu_6086",
+        "ground_truth": "A",
+        "mv_answer": "A",
+        "mv_correct": true,
+        "synth_answer": "A",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0009530000000000001
+      },
+      {
+        "task_id": "mmlu_11662",
+        "ground_truth": "B",
+        "mv_answer": "A",
+        "mv_correct": false,
+        "synth_answer": "B",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.005819400000000001
+      },
+      {
+        "task_id": "mmlu_10504",
+        "ground_truth": "F",
+        "mv_answer": "F",
+        "mv_correct": true,
+        "synth_answer": "F",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0015814000000000002
+      },
+      {
+        "task_id": "mmlu_9233",
+        "ground_truth": "H",
+        "mv_answer": "A",
+        "mv_correct": false,
+        "synth_answer": "H",
+        "synth_correct": true,
+        "any_correct": false,
+        "cost": 0.0023194
+      },
+      {
+        "task_id": "mmlu_11051",
+        "ground_truth": "B",
+        "mv_answer": "A",
+        "mv_correct": false,
+        "synth_answer": "A",
+        "synth_correct": false,
+        "any_correct": false,
+        "cost": 0.0007892
+      },
+      {
+        "task_id": "mmlu_4464",
+        "ground_truth": "D",
+        "mv_answer": "D",
+        "mv_correct": true,
+        "synth_answer": "D",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0036194
+      },
+      {
+        "task_id": "mmlu_177",
+        "ground_truth": "D",
+        "mv_answer": null,
+        "mv_correct": false,
+        "synth_answer": null,
+        "synth_correct": false,
+        "any_correct": false,
+        "cost": 0.006404000000000001
+      },
+      {
+        "task_id": "mmlu_3271",
+        "ground_truth": "H",
+        "mv_answer": "H",
+        "mv_correct": true,
+        "synth_answer": "H",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.001903
+      },
+      {
+        "task_id": "mmlu_8974",
+        "ground_truth": "C",
+        "mv_answer": "A",
+        "mv_correct": false,
+        "synth_answer": "C",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0038144
+      },
+      {
+        "task_id": "mmlu_4942",
+        "ground_truth": "F",
+        "mv_answer": "F",
+        "mv_correct": true,
+        "synth_answer": "F",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0036301999999999997
+      },
+      {
+        "task_id": "mmlu_11767",
+        "ground_truth": "G",
+        "mv_answer": "G",
+        "mv_correct": true,
+        "synth_answer": "G",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.002558
+      },
+      {
+        "task_id": "mmlu_827",
+        "ground_truth": "E",
+        "mv_answer": "B",
+        "mv_correct": false,
+        "synth_answer": "B",
+        "synth_correct": false,
+        "any_correct": true,
+        "cost": 0.0018752
+      },
+      {
+        "task_id": "mmlu_1769",
+        "ground_truth": "H",
+        "mv_answer": "H",
+        "mv_correct": true,
+        "synth_answer": "H",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.006367200000000001
+      },
+      {
+        "task_id": "mmlu_6391",
+        "ground_truth": "C",
+        "mv_answer": "B",
+        "mv_correct": false,
+        "synth_answer": "B",
+        "synth_correct": false,
+        "any_correct": false,
+        "cost": 0.0012102
+      },
+      {
+        "task_id": "mmlu_7611",
+        "ground_truth": "E",
+        "mv_answer": "E",
+        "mv_correct": true,
+        "synth_answer": "E",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0014908
+      },
+      {
+        "task_id": "mmlu_2145",
+        "ground_truth": "C",
+        "mv_answer": "C",
+        "mv_correct": true,
+        "synth_answer": "C",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.003990199999999999
+      },
+      {
+        "task_id": "mmlu_4880",
+        "ground_truth": "G",
+        "mv_answer": "G",
+        "mv_correct": true,
+        "synth_answer": "G",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0024428
+      },
+      {
+        "task_id": "mmlu_1222",
+        "ground_truth": "H",
+        "mv_answer": "F",
+        "mv_correct": false,
+        "synth_answer": "F",
+        "synth_correct": false,
+        "any_correct": false,
+        "cost": 0.0029432
+      },
+      {
+        "task_id": "mmlu_4686",
+        "ground_truth": "J",
+        "mv_answer": "J",
+        "mv_correct": true,
+        "synth_answer": "J",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0021086
+      },
+      {
+        "task_id": "mmlu_6227",
+        "ground_truth": "F",
+        "mv_answer": "F",
+        "mv_correct": true,
+        "synth_answer": "F",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0010584
+      },
+      {
+        "task_id": "mmlu_3856",
+        "ground_truth": "G",
+        "mv_answer": "G",
+        "mv_correct": true,
+        "synth_answer": "G",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0023604
+      },
+      {
+        "task_id": "mmlu_5979",
+        "ground_truth": "J",
+        "mv_answer": "J",
+        "mv_correct": true,
+        "synth_answer": "J",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0014275999999999998
+      },
+      {
+        "task_id": "mmlu_2780",
+        "ground_truth": "F",
+        "mv_answer": "F",
+        "mv_correct": true,
+        "synth_answer": "F",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0019008
+      },
+      {
+        "task_id": "mmlu_6138",
+        "ground_truth": "D",
+        "mv_answer": "D",
+        "mv_correct": true,
+        "synth_answer": "D",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0017255999999999999
+      },
+      {
+        "task_id": "mmlu_4506",
+        "ground_truth": "C",
+        "mv_answer": "C",
+        "mv_correct": true,
+        "synth_answer": "C",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0014413999999999998
+      },
+      {
+        "task_id": "mmlu_1394",
+        "ground_truth": "B",
+        "mv_answer": "B",
+        "mv_correct": true,
+        "synth_answer": "B",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0033862
+      },
+      {
+        "task_id": "mmlu_12180",
+        "ground_truth": "H",
+        "mv_answer": null,
+        "mv_correct": false,
+        "synth_answer": null,
+        "synth_correct": false,
+        "any_correct": false,
+        "cost": 0.0067098
+      },
+      {
+        "task_id": "mmlu_11201",
+        "ground_truth": "E",
+        "mv_answer": "E",
+        "mv_correct": true,
+        "synth_answer": "J",
+        "synth_correct": false,
+        "any_correct": true,
+        "cost": 0.001795
+      },
+      {
+        "task_id": "mmlu_10830",
+        "ground_truth": "G",
+        "mv_answer": "G",
+        "mv_correct": true,
+        "synth_answer": "G",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0014972
+      },
+      {
+        "task_id": "mmlu_3553",
+        "ground_truth": "G",
+        "mv_answer": "G",
+        "mv_correct": true,
+        "synth_answer": "G",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0020926
+      },
+      {
+        "task_id": "mmlu_1749",
+        "ground_truth": "B",
+        "mv_answer": "E",
+        "mv_correct": false,
+        "synth_answer": "E",
+        "synth_correct": false,
+        "any_correct": false,
+        "cost": 0.0037166
+      },
+      {
+        "task_id": "mmlu_9649",
+        "ground_truth": "A",
+        "mv_answer": "A",
+        "mv_correct": true,
+        "synth_answer": "A",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.005037
+      },
+      {
+        "task_id": "mmlu_2921",
+        "ground_truth": "D",
+        "mv_answer": "D",
+        "mv_correct": true,
+        "synth_answer": "D",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.001183
+      },
+      {
+        "task_id": "mmlu_6380",
+        "ground_truth": "D",
+        "mv_answer": "D",
+        "mv_correct": true,
+        "synth_answer": "D",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0008087999999999999
+      },
+      {
+        "task_id": "mmlu_8940",
+        "ground_truth": "A",
+        "mv_answer": "A",
+        "mv_correct": true,
+        "synth_answer": "A",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0016554
+      },
+      {
+        "task_id": "mmlu_10695",
+        "ground_truth": "G",
+        "mv_answer": "G",
+        "mv_correct": true,
+        "synth_answer": "G",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0009534
+      },
+      {
+        "task_id": "mmlu_1253",
+        "ground_truth": "F",
+        "mv_answer": "F",
+        "mv_correct": true,
+        "synth_answer": "F",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0028682
+      },
+      {
+        "task_id": "mmlu_2793",
+        "ground_truth": "D",
+        "mv_answer": "D",
+        "mv_correct": true,
+        "synth_answer": "D",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0019149999999999998
+      },
+      {
+        "task_id": "mmlu_9314",
+        "ground_truth": "B",
+        "mv_answer": "B",
+        "mv_correct": true,
+        "synth_answer": "B",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0009906
+      },
+      {
+        "task_id": "mmlu_11722",
+        "ground_truth": "F",
+        "mv_answer": "F",
+        "mv_correct": true,
+        "synth_answer": "F",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0035914
+      },
+      {
+        "task_id": "mmlu_11498",
+        "ground_truth": "A",
+        "mv_answer": "A",
+        "mv_correct": true,
+        "synth_answer": "E",
+        "synth_correct": false,
+        "any_correct": true,
+        "cost": 0.0017496
+      },
+      {
+        "task_id": "mmlu_10623",
+        "ground_truth": "G",
+        "mv_answer": "G",
+        "mv_correct": true,
+        "synth_answer": "G",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0046002
+      },
+      {
+        "task_id": "mmlu_10611",
+        "ground_truth": "B",
+        "mv_answer": "A",
+        "mv_correct": false,
+        "synth_answer": "A",
+        "synth_correct": false,
+        "any_correct": true,
+        "cost": 0.0026117999999999996
+      },
+      {
+        "task_id": "mmlu_5457",
+        "ground_truth": "B",
+        "mv_answer": "B",
+        "mv_correct": true,
+        "synth_answer": "B",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.000887
+      },
+      {
+        "task_id": "mmlu_3875",
+        "ground_truth": "B",
+        "mv_answer": "B",
+        "mv_correct": true,
+        "synth_answer": "A",
+        "synth_correct": false,
+        "any_correct": true,
+        "cost": 0.0012009999999999998
+      },
+      {
+        "task_id": "mmlu_6738",
+        "ground_truth": "E",
+        "mv_answer": "E",
+        "mv_correct": true,
+        "synth_answer": "E",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0012096
+      },
+      {
+        "task_id": "mmlu_3721",
+        "ground_truth": "B",
+        "mv_answer": "B",
+        "mv_correct": true,
+        "synth_answer": "B",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0020442
+      },
+      {
+        "task_id": "mmlu_4136",
+        "ground_truth": "J",
+        "mv_answer": "D",
+        "mv_correct": false,
+        "synth_answer": "J",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.003979
+      },
+      {
+        "task_id": "mmlu_3937",
+        "ground_truth": "A",
+        "mv_answer": null,
+        "mv_correct": false,
+        "synth_answer": null,
+        "synth_correct": false,
+        "any_correct": false,
+        "cost": 0.0065428
+      },
+      {
+        "task_id": "mmlu_9481",
+        "ground_truth": "A",
+        "mv_answer": "A",
+        "mv_correct": true,
+        "synth_answer": "A",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.001196
+      },
+      {
+        "task_id": "mmlu_600",
+        "ground_truth": "F",
+        "mv_answer": "F",
+        "mv_correct": true,
+        "synth_answer": "F",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0028532
+      },
+      {
+        "task_id": "mmlu_1166",
+        "ground_truth": "I",
+        "mv_answer": "E",
+        "mv_correct": false,
+        "synth_answer": "E",
+        "synth_correct": false,
+        "any_correct": false,
+        "cost": 0.0021476
+      },
+      {
+        "task_id": "mmlu_3577",
+        "ground_truth": "F",
+        "mv_answer": "F",
+        "mv_correct": true,
+        "synth_answer": "F",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0020388000000000003
+      },
+      {
+        "task_id": "mmlu_5297",
+        "ground_truth": "F",
+        "mv_answer": "H",
+        "mv_correct": false,
+        "synth_answer": "H",
+        "synth_correct": false,
+        "any_correct": false,
+        "cost": 0.0014656
+      },
+      {
+        "task_id": "mmlu_3604",
+        "ground_truth": "C",
+        "mv_answer": "C",
+        "mv_correct": true,
+        "synth_answer": "C",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0015494
+      },
+      {
+        "task_id": "mmlu_10951",
+        "ground_truth": "A",
+        "mv_answer": "A",
+        "mv_correct": true,
+        "synth_answer": "A",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0013778
+      },
+      {
+        "task_id": "mmlu_12171",
+        "ground_truth": "B",
+        "mv_answer": null,
+        "mv_correct": false,
+        "synth_answer": null,
+        "synth_correct": false,
+        "any_correct": false,
+        "cost": 0.006690399999999999
+      },
+      {
+        "task_id": "mmlu_5310",
+        "ground_truth": "I",
+        "mv_answer": "I",
+        "mv_correct": true,
+        "synth_answer": "I",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.004070799999999999
+      },
+      {
+        "task_id": "mmlu_11987",
+        "ground_truth": "F",
+        "mv_answer": "F",
+        "mv_correct": true,
+        "synth_answer": "F",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0023802
+      },
+      {
+        "task_id": "mmlu_11422",
+        "ground_truth": "F",
+        "mv_answer": null,
+        "mv_correct": false,
+        "synth_answer": null,
+        "synth_correct": false,
+        "any_correct": false,
+        "cost": 0.006679
+      },
+      {
+        "task_id": "mmlu_8366",
+        "ground_truth": "D",
+        "mv_answer": "D",
+        "mv_correct": true,
+        "synth_answer": "D",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0016577999999999999
+      },
+      {
+        "task_id": "mmlu_7756",
+        "ground_truth": "H",
+        "mv_answer": "D",
+        "mv_correct": false,
+        "synth_answer": "D",
+        "synth_correct": false,
+        "any_correct": false,
+        "cost": 0.005473
+      },
+      {
+        "task_id": "mmlu_10179",
+        "ground_truth": "B",
+        "mv_answer": null,
+        "mv_correct": false,
+        "synth_answer": null,
+        "synth_correct": false,
+        "any_correct": false,
+        "cost": 0.006404399999999999
+      },
+      {
+        "task_id": "mmlu_6647",
+        "ground_truth": "B",
+        "mv_answer": "B",
+        "mv_correct": true,
+        "synth_answer": "B",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0022796
+      },
+      {
+        "task_id": "mmlu_9386",
+        "ground_truth": "F",
+        "mv_answer": "F",
+        "mv_correct": true,
+        "synth_answer": "F",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0010138
+      },
+      {
+        "task_id": "mmlu_10742",
+        "ground_truth": "E",
+        "mv_answer": "E",
+        "mv_correct": true,
+        "synth_answer": "E",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0019674
+      },
+      {
+        "task_id": "mmlu_4554",
+        "ground_truth": "H",
+        "mv_answer": null,
+        "mv_correct": false,
+        "synth_answer": null,
+        "synth_correct": false,
+        "any_correct": false,
+        "cost": 0.0066062000000000004
+      },
+      {
+        "task_id": "mmlu_4166",
+        "ground_truth": "C",
+        "mv_answer": "C",
+        "mv_correct": true,
+        "synth_answer": "C",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0016035999999999997
+      },
+      {
+        "task_id": "mmlu_2388",
+        "ground_truth": "G",
+        "mv_answer": "G",
+        "mv_correct": true,
+        "synth_answer": "G",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0017894
+      },
+      {
+        "task_id": "mmlu_2443",
+        "ground_truth": "H",
+        "mv_answer": "H",
+        "mv_correct": true,
+        "synth_answer": "H",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0019208
+      },
+      {
+        "task_id": "mmlu_6091",
+        "ground_truth": "F",
+        "mv_answer": "F",
+        "mv_correct": true,
+        "synth_answer": "F",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0008317999999999999
+      },
+      {
+        "task_id": "mmlu_7700",
+        "ground_truth": "A",
+        "mv_answer": "A",
+        "mv_correct": true,
+        "synth_answer": "A",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0022098
+      },
+      {
+        "task_id": "mmlu_4434",
+        "ground_truth": "J",
+        "mv_answer": "J",
+        "mv_correct": true,
+        "synth_answer": "J",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0018004
+      },
+      {
+        "task_id": "mmlu_994",
+        "ground_truth": "H",
+        "mv_answer": "C",
+        "mv_correct": false,
+        "synth_answer": null,
+        "synth_correct": false,
+        "any_correct": false,
+        "cost": 0.0069245999999999995
+      },
+      {
+        "task_id": "mmlu_6709",
+        "ground_truth": "I",
+        "mv_answer": "I",
+        "mv_correct": true,
+        "synth_answer": "I",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0021956
+      },
+      {
+        "task_id": "mmlu_3716",
+        "ground_truth": "H",
+        "mv_answer": "H",
+        "mv_correct": true,
+        "synth_answer": "H",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0018770000000000002
+      },
+      {
+        "task_id": "mmlu_11439",
+        "ground_truth": "J",
+        "mv_answer": null,
+        "mv_correct": false,
+        "synth_answer": null,
+        "synth_correct": false,
+        "any_correct": false,
+        "cost": 0.006576
+      },
+      {
+        "task_id": "mmlu_2367",
+        "ground_truth": "I",
+        "mv_answer": "I",
+        "mv_correct": true,
+        "synth_answer": "F",
+        "synth_correct": false,
+        "any_correct": true,
+        "cost": 0.0016342
+      },
+      {
+        "task_id": "mmlu_8271",
+        "ground_truth": "F",
+        "mv_answer": "F",
+        "mv_correct": true,
+        "synth_answer": "A",
+        "synth_correct": false,
+        "any_correct": true,
+        "cost": 0.0019686
+      },
+      {
+        "task_id": "mmlu_2608",
+        "ground_truth": "F",
+        "mv_answer": "F",
+        "mv_correct": true,
+        "synth_answer": "F",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0016747999999999997
+      },
+      {
+        "task_id": "mmlu_9750",
+        "ground_truth": "I",
+        "mv_answer": "I",
+        "mv_correct": true,
+        "synth_answer": "I",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0036926
+      },
+      {
+        "task_id": "mmlu_1580",
+        "ground_truth": "A",
+        "mv_answer": "D",
+        "mv_correct": false,
+        "synth_answer": "D",
+        "synth_correct": false,
+        "any_correct": true,
+        "cost": 0.0033786000000000003
+      },
+      {
+        "task_id": "mmlu_4518",
+        "ground_truth": "I",
+        "mv_answer": null,
+        "mv_correct": false,
+        "synth_answer": null,
+        "synth_correct": false,
+        "any_correct": false,
+        "cost": 0.006498599999999999
+      },
+      {
+        "task_id": "mmlu_10485",
+        "ground_truth": "I",
+        "mv_answer": "I",
+        "mv_correct": true,
+        "synth_answer": "I",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0017556
+      },
+      {
+        "task_id": "mmlu_6468",
+        "ground_truth": "H",
+        "mv_answer": "H",
+        "mv_correct": true,
+        "synth_answer": "H",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0010986
+      },
+      {
+        "task_id": "mmlu_1121",
+        "ground_truth": "E",
+        "mv_answer": "F",
+        "mv_correct": false,
+        "synth_answer": "F",
+        "synth_correct": false,
+        "any_correct": false,
+        "cost": 0.0012232
+      },
+      {
+        "task_id": "mmlu_2733",
+        "ground_truth": "B",
+        "mv_answer": "B",
+        "mv_correct": true,
+        "synth_answer": "B",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0016940000000000002
+      },
+      {
+        "task_id": "mmlu_1892",
+        "ground_truth": "A",
+        "mv_answer": "A",
+        "mv_correct": true,
+        "synth_answer": "A",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0028117999999999997
+      },
+      {
+        "task_id": "mmlu_848",
+        "ground_truth": "H",
+        "mv_answer": "H",
+        "mv_correct": true,
+        "synth_answer": "A",
+        "synth_correct": false,
+        "any_correct": true,
+        "cost": 0.0029379999999999996
+      },
+      {
+        "task_id": "mmlu_7190",
+        "ground_truth": "B",
+        "mv_answer": "B",
+        "mv_correct": true,
+        "synth_answer": "B",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.004961599999999999
+      },
+      {
+        "task_id": "mmlu_7086",
+        "ground_truth": "F",
+        "mv_answer": "H",
+        "mv_correct": false,
+        "synth_answer": "H",
+        "synth_correct": false,
+        "any_correct": false,
+        "cost": 0.0020836
+      },
+      {
+        "task_id": "mmlu_6416",
+        "ground_truth": "J",
+        "mv_answer": "E",
+        "mv_correct": false,
+        "synth_answer": "J",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0011764
+      },
+      {
+        "task_id": "mmlu_9019",
+        "ground_truth": "B",
+        "mv_answer": "A",
+        "mv_correct": false,
+        "synth_answer": "B",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.005748
+      },
+      {
+        "task_id": "mmlu_9253",
+        "ground_truth": "J",
+        "mv_answer": "J",
+        "mv_correct": true,
+        "synth_answer": "J",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0013369999999999999
+      },
+      {
+        "task_id": "mmlu_4246",
+        "ground_truth": "A",
+        "mv_answer": "A",
+        "mv_correct": true,
+        "synth_answer": "A",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0015052
+      },
+      {
+        "task_id": "mmlu_260",
+        "ground_truth": "E",
+        "mv_answer": "E",
+        "mv_correct": true,
+        "synth_answer": "E",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0014836
+      },
+      {
+        "task_id": "mmlu_8986",
+        "ground_truth": "I",
+        "mv_answer": "I",
+        "mv_correct": true,
+        "synth_answer": "I",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0009584
+      },
+      {
+        "task_id": "mmlu_9767",
+        "ground_truth": "A",
+        "mv_answer": null,
+        "mv_correct": false,
+        "synth_answer": "A",
+        "synth_correct": true,
+        "any_correct": false,
+        "cost": 0.0064736
+      },
+      {
+        "task_id": "mmlu_7851",
+        "ground_truth": "D",
+        "mv_answer": "D",
+        "mv_correct": true,
+        "synth_answer": "D",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0023431999999999997
+      },
+      {
+        "task_id": "mmlu_4470",
+        "ground_truth": "J",
+        "mv_answer": null,
+        "mv_correct": false,
+        "synth_answer": null,
+        "synth_correct": false,
+        "any_correct": false,
+        "cost": 0.0066126
+      },
+      {
+        "task_id": "mmlu_1972",
+        "ground_truth": "G",
+        "mv_answer": "G",
+        "mv_correct": true,
+        "synth_answer": "G",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0025438
+      },
+      {
+        "task_id": "mmlu_5728",
+        "ground_truth": "D",
+        "mv_answer": "D",
+        "mv_correct": true,
+        "synth_answer": "D",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0010144
+      },
+      {
+        "task_id": "mmlu_4503",
+        "ground_truth": "I",
+        "mv_answer": "I",
+        "mv_correct": true,
+        "synth_answer": "I",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0019982
+      },
+      {
+        "task_id": "mmlu_7297",
+        "ground_truth": "I",
+        "mv_answer": "I",
+        "mv_correct": true,
+        "synth_answer": "I",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.001048
+      },
+      {
+        "task_id": "mmlu_4947",
+        "ground_truth": "J",
+        "mv_answer": "J",
+        "mv_correct": true,
+        "synth_answer": "J",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0016626000000000002
+      },
+      {
+        "task_id": "mmlu_11367",
+        "ground_truth": "G",
+        "mv_answer": "G",
+        "mv_correct": true,
+        "synth_answer": "G",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0028145999999999996
+      },
+      {
+        "task_id": "mmlu_9957",
+        "ground_truth": "C",
+        "mv_answer": "C",
+        "mv_correct": true,
+        "synth_answer": "C",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.00325
+      },
+      {
+        "task_id": "mmlu_8535",
+        "ground_truth": "J",
+        "mv_answer": null,
+        "mv_correct": false,
+        "synth_answer": null,
+        "synth_correct": false,
+        "any_correct": false,
+        "cost": 0.0064608
+      },
+      {
+        "task_id": "mmlu_8857",
+        "ground_truth": "I",
+        "mv_answer": "A",
+        "mv_correct": false,
+        "synth_answer": "I",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0032119999999999996
+      },
+      {
+        "task_id": "mmlu_10711",
+        "ground_truth": "E",
+        "mv_answer": "E",
+        "mv_correct": true,
+        "synth_answer": "E",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0023331999999999997
+      },
+      {
+        "task_id": "mmlu_2701",
+        "ground_truth": "H",
+        "mv_answer": "H",
+        "mv_correct": true,
+        "synth_answer": "H",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0017385999999999999
+      },
+      {
+        "task_id": "mmlu_11371",
+        "ground_truth": "I",
+        "mv_answer": null,
+        "mv_correct": false,
+        "synth_answer": null,
+        "synth_correct": false,
+        "any_correct": false,
+        "cost": 0.0064876
+      },
+      {
+        "task_id": "mmlu_8388",
+        "ground_truth": "B",
+        "mv_answer": "A",
+        "mv_correct": false,
+        "synth_answer": "B",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0011568
+      },
+      {
+        "task_id": "mmlu_3045",
+        "ground_truth": "A",
+        "mv_answer": "A",
+        "mv_correct": true,
+        "synth_answer": "A",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0009276
+      },
+      {
+        "task_id": "mmlu_11392",
+        "ground_truth": "J",
+        "mv_answer": "J",
+        "mv_correct": true,
+        "synth_answer": null,
+        "synth_correct": false,
+        "any_correct": true,
+        "cost": 0.004508399999999999
+      },
+      {
+        "task_id": "mmlu_123",
+        "ground_truth": "A",
+        "mv_answer": "A",
+        "mv_correct": true,
+        "synth_answer": "A",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0022324
+      },
+      {
+        "task_id": "mmlu_12033",
+        "ground_truth": "H",
+        "mv_answer": "H",
+        "mv_correct": true,
+        "synth_answer": "H",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0051144
+      },
+      {
+        "task_id": "mmlu_1923",
+        "ground_truth": "C",
+        "mv_answer": "C",
+        "mv_correct": true,
+        "synth_answer": "C",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0043278
+      },
+      {
+        "task_id": "mmlu_10449",
+        "ground_truth": "D",
+        "mv_answer": "D",
+        "mv_correct": true,
+        "synth_answer": "D",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0025992
+      },
+      {
+        "task_id": "mmlu_3379",
+        "ground_truth": "E",
+        "mv_answer": "E",
+        "mv_correct": true,
+        "synth_answer": "E",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0011128
+      },
+      {
+        "task_id": "mmlu_9965",
+        "ground_truth": "J",
+        "mv_answer": null,
+        "mv_correct": false,
+        "synth_answer": null,
+        "synth_correct": false,
+        "any_correct": false,
+        "cost": 0.0065512
+      },
+      {
+        "task_id": "mmlu_10176",
+        "ground_truth": "D",
+        "mv_answer": "D",
+        "mv_correct": true,
+        "synth_answer": "D",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0017675999999999998
+      },
+      {
+        "task_id": "mmlu_10677",
+        "ground_truth": "G",
+        "mv_answer": "G",
+        "mv_correct": true,
+        "synth_answer": "G",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0016128000000000002
+      },
+      {
+        "task_id": "mmlu_6289",
+        "ground_truth": "C",
+        "mv_answer": "C",
+        "mv_correct": true,
+        "synth_answer": "C",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0016381999999999998
+      },
+      {
+        "task_id": "mmlu_1838",
+        "ground_truth": "G",
+        "mv_answer": "J",
+        "mv_correct": false,
+        "synth_answer": "B",
+        "synth_correct": false,
+        "any_correct": false,
+        "cost": 0.0035556
+      },
+      {
+        "task_id": "mmlu_5029",
+        "ground_truth": "C",
+        "mv_answer": "C",
+        "mv_correct": true,
+        "synth_answer": "C",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0023768
+      },
+      {
+        "task_id": "mmlu_2758",
+        "ground_truth": "I",
+        "mv_answer": "I",
+        "mv_correct": true,
+        "synth_answer": "A",
+        "synth_correct": false,
+        "any_correct": true,
+        "cost": 0.0019992
+      },
+      {
+        "task_id": "mmlu_79",
+        "ground_truth": "F",
+        "mv_answer": "F",
+        "mv_correct": true,
+        "synth_answer": "F",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0013294
+      },
+      {
+        "task_id": "mmlu_5454",
+        "ground_truth": "F",
+        "mv_answer": "F",
+        "mv_correct": true,
+        "synth_answer": "F",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0010363999999999998
+      },
+      {
+        "task_id": "mmlu_12055",
+        "ground_truth": "D",
+        "mv_answer": "D",
+        "mv_correct": true,
+        "synth_answer": "A",
+        "synth_correct": false,
+        "any_correct": true,
+        "cost": 0.0058572
+      },
+      {
+        "task_id": "mmlu_8877",
+        "ground_truth": "D",
+        "mv_answer": "D",
+        "mv_correct": true,
+        "synth_answer": "D",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0015398
+      },
+      {
+        "task_id": "mmlu_7616",
+        "ground_truth": "H",
+        "mv_answer": "H",
+        "mv_correct": true,
+        "synth_answer": null,
+        "synth_correct": false,
+        "any_correct": true,
+        "cost": 0.0059502
+      },
+      {
+        "task_id": "mmlu_9026",
+        "ground_truth": "J",
+        "mv_answer": "J",
+        "mv_correct": true,
+        "synth_answer": "J",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0025252
+      },
+      {
+        "task_id": "mmlu_5180",
+        "ground_truth": "H",
+        "mv_answer": "H",
+        "mv_correct": true,
+        "synth_answer": "H",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0014814
+      },
+      {
+        "task_id": "mmlu_1928",
+        "ground_truth": "E",
+        "mv_answer": "C",
+        "mv_correct": false,
+        "synth_answer": "E",
+        "synth_correct": true,
+        "any_correct": false,
+        "cost": 0.0017916
+      },
+      {
+        "task_id": "mmlu_4048",
+        "ground_truth": "D",
+        "mv_answer": "D",
+        "mv_correct": true,
+        "synth_answer": "D",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0015413999999999998
+      },
+      {
+        "task_id": "mmlu_6108",
+        "ground_truth": "A",
+        "mv_answer": "G",
+        "mv_correct": false,
+        "synth_answer": "G",
+        "synth_correct": false,
+        "any_correct": false,
+        "cost": 0.0021528
+      },
+      {
+        "task_id": "mmlu_8146",
+        "ground_truth": "D",
+        "mv_answer": "D",
+        "mv_correct": true,
+        "synth_answer": "D",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0008615999999999999
+      },
+      {
+        "task_id": "mmlu_1375",
+        "ground_truth": "G",
+        "mv_answer": "G",
+        "mv_correct": true,
+        "synth_answer": "G",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0013078
+      },
+      {
+        "task_id": "mmlu_4071",
+        "ground_truth": "I",
+        "mv_answer": "I",
+        "mv_correct": true,
+        "synth_answer": "I",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.00207
+      },
+      {
+        "task_id": "mmlu_1494",
+        "ground_truth": "A",
+        "mv_answer": "A",
+        "mv_correct": true,
+        "synth_answer": "A",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.001454
+      },
+      {
+        "task_id": "mmlu_8504",
+        "ground_truth": "J",
+        "mv_answer": "J",
+        "mv_correct": true,
+        "synth_answer": null,
+        "synth_correct": false,
+        "any_correct": true,
+        "cost": 0.0056282
+      },
+      {
+        "task_id": "mmlu_1029",
+        "ground_truth": "G",
+        "mv_answer": "G",
+        "mv_correct": true,
+        "synth_answer": "G",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0032852
+      },
+      {
+        "task_id": "mmlu_392",
+        "ground_truth": "A",
+        "mv_answer": "A",
+        "mv_correct": true,
+        "synth_answer": "A",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0036677999999999997
+      },
+      {
+        "task_id": "mmlu_12016",
+        "ground_truth": "F",
+        "mv_answer": null,
+        "mv_correct": false,
+        "synth_answer": null,
+        "synth_correct": false,
+        "any_correct": false,
+        "cost": 0.0066216
+      },
+      {
+        "task_id": "mmlu_4445",
+        "ground_truth": "B",
+        "mv_answer": "B",
+        "mv_correct": true,
+        "synth_answer": "B",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0064085999999999995
+      },
+      {
+        "task_id": "mmlu_10007",
+        "ground_truth": "A",
+        "mv_answer": "A",
+        "mv_correct": true,
+        "synth_answer": "A",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0036549999999999994
+      },
+      {
+        "task_id": "mmlu_12216",
+        "ground_truth": "E",
+        "mv_answer": "E",
+        "mv_correct": true,
+        "synth_answer": "A",
+        "synth_correct": false,
+        "any_correct": true,
+        "cost": 0.0039444
+      },
+      {
+        "task_id": "mmlu_8190",
+        "ground_truth": "G",
+        "mv_answer": null,
+        "mv_correct": false,
+        "synth_answer": null,
+        "synth_correct": false,
+        "any_correct": false,
+        "cost": 0.0064744
+      },
+      {
+        "task_id": "mmlu_9484",
+        "ground_truth": "I",
+        "mv_answer": null,
+        "mv_correct": false,
+        "synth_answer": "I",
+        "synth_correct": true,
+        "any_correct": false,
+        "cost": 0.0064524000000000005
+      }
+    ],
+    "ARC-Challenge (hard verification)": [
+      {
+        "task_id": "arc_Mercury_SC_416529",
+        "ground_truth": "B",
+        "mv_answer": "B",
+        "mv_correct": true,
+        "synth_answer": "B",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0006784
+      },
+      {
+        "task_id": "arc_Mercury_SC_400134",
+        "ground_truth": "D",
+        "mv_answer": "D",
+        "mv_correct": true,
+        "synth_answer": "D",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0008288
+      },
+      {
+        "task_id": "arc_MCAS_2003_5_33",
+        "ground_truth": "C",
+        "mv_answer": "C",
+        "mv_correct": true,
+        "synth_answer": "C",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0008272
+      },
+      {
+        "task_id": "arc_AKDE&ED_2008_8_48",
+        "ground_truth": "A",
+        "mv_answer": "A",
+        "mv_correct": true,
+        "synth_answer": "A",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0007982
+      },
+      {
+        "task_id": "arc_Mercury_SC_400162",
+        "ground_truth": "D",
+        "mv_answer": "D",
+        "mv_correct": true,
+        "synth_answer": "D",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0008179999999999999
+      },
+      {
+        "task_id": "arc_Mercury_7043820",
+        "ground_truth": "B",
+        "mv_answer": "B",
+        "mv_correct": true,
+        "synth_answer": "B",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0007854
+      },
+      {
+        "task_id": "arc_Mercury_7210455",
+        "ground_truth": "C",
+        "mv_answer": "C",
+        "mv_correct": true,
+        "synth_answer": "C",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0009256000000000001
+      },
+      {
+        "task_id": "arc_Mercury_7056823",
+        "ground_truth": "B",
+        "mv_answer": "B",
+        "mv_correct": true,
+        "synth_answer": "B",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.00107
+      },
+      {
+        "task_id": "arc_Mercury_407517",
+        "ground_truth": "C",
+        "mv_answer": "C",
+        "mv_correct": true,
+        "synth_answer": "C",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0009147999999999999
+      },
+      {
+        "task_id": "arc_Mercury_7219678",
+        "ground_truth": "A",
+        "mv_answer": "A",
+        "mv_correct": true,
+        "synth_answer": "A",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.001085
+      },
+      {
+        "task_id": "arc_Mercury_406777",
+        "ground_truth": "A",
+        "mv_answer": "A",
+        "mv_correct": true,
+        "synth_answer": "A",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0009194
+      },
+      {
+        "task_id": "arc_NAEP_2000_8_S11+10",
+        "ground_truth": "A",
+        "mv_answer": "A",
+        "mv_correct": true,
+        "synth_answer": "A",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0009964
+      },
+      {
+        "task_id": "arc_Mercury_402501",
+        "ground_truth": "B",
+        "mv_answer": "B",
+        "mv_correct": true,
+        "synth_answer": "B",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0010006
+      },
+      {
+        "task_id": "arc_Mercury_SC_413549",
+        "ground_truth": "B",
+        "mv_answer": "B",
+        "mv_correct": true,
+        "synth_answer": "B",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0009642
+      },
+      {
+        "task_id": "arc_TIMSS_2007_8_pg109",
+        "ground_truth": "C",
+        "mv_answer": "C",
+        "mv_correct": true,
+        "synth_answer": "C",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0009602
+      },
+      {
+        "task_id": "arc_Mercury_SC_LBS10662",
+        "ground_truth": "C",
+        "mv_answer": "C",
+        "mv_correct": true,
+        "synth_answer": "C",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0006878
+      },
+      {
+        "task_id": "arc_Mercury_7068583",
+        "ground_truth": "B",
+        "mv_answer": "B",
+        "mv_correct": true,
+        "synth_answer": "B",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0007278
+      },
+      {
+        "task_id": "arc_Mercury_7235638",
+        "ground_truth": "C",
+        "mv_answer": "B",
+        "mv_correct": false,
+        "synth_answer": "B",
+        "synth_correct": false,
+        "any_correct": false,
+        "cost": 0.0009232
+      },
+      {
+        "task_id": "arc_Mercury_175053",
+        "ground_truth": "D",
+        "mv_answer": "D",
+        "mv_correct": true,
+        "synth_answer": "D",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0009042
+      },
+      {
+        "task_id": "arc_Mercury_SC_405710",
+        "ground_truth": "D",
+        "mv_answer": "D",
+        "mv_correct": true,
+        "synth_answer": "D",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0006676000000000001
+      },
+      {
+        "task_id": "arc_Mercury_SC_407400",
+        "ground_truth": "C",
+        "mv_answer": "C",
+        "mv_correct": true,
+        "synth_answer": "C",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0010896
+      },
+      {
+        "task_id": "arc_Mercury_7236740",
+        "ground_truth": "B",
+        "mv_answer": "B",
+        "mv_correct": true,
+        "synth_answer": "B",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0009562000000000001
+      },
+      {
+        "task_id": "arc_Mercury_SC_400052",
+        "ground_truth": "B",
+        "mv_answer": "B",
+        "mv_correct": true,
+        "synth_answer": "B",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0009503999999999999
+      },
+      {
+        "task_id": "arc_Mercury_7139650",
+        "ground_truth": "C",
+        "mv_answer": "B",
+        "mv_correct": false,
+        "synth_answer": "B",
+        "synth_correct": false,
+        "any_correct": false,
+        "cost": 0.000926
+      },
+      {
+        "task_id": "arc_Mercury_SC_400985",
+        "ground_truth": "C",
+        "mv_answer": "C",
+        "mv_correct": true,
+        "synth_answer": "C",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0008518
+      },
+      {
+        "task_id": "arc_ACTAAP_2014_7_5",
+        "ground_truth": "D",
+        "mv_answer": "D",
+        "mv_correct": true,
+        "synth_answer": "D",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0008782
+      },
+      {
+        "task_id": "arc_VASoL_2009_3_23",
+        "ground_truth": "D",
+        "mv_answer": "D",
+        "mv_correct": true,
+        "synth_answer": "D",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0009614
+      },
+      {
+        "task_id": "arc_Mercury_SC_402985",
+        "ground_truth": "B",
+        "mv_answer": "B",
+        "mv_correct": true,
+        "synth_answer": "B",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.000735
+      },
+      {
+        "task_id": "arc_Mercury_SC_412374",
+        "ground_truth": "C",
+        "mv_answer": "D",
+        "mv_correct": false,
+        "synth_answer": "C",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0011266
+      },
+      {
+        "task_id": "arc_Mercury_7263183",
+        "ground_truth": "B",
+        "mv_answer": "B",
+        "mv_correct": true,
+        "synth_answer": "B",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.000714
+      },
+      {
+        "task_id": "arc_Mercury_7057103",
+        "ground_truth": "C",
+        "mv_answer": "C",
+        "mv_correct": true,
+        "synth_answer": "C",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0009618000000000001
+      },
+      {
+        "task_id": "arc_CSZ_2005_5_CSZ10021",
+        "ground_truth": "B",
+        "mv_answer": "B",
+        "mv_correct": true,
+        "synth_answer": "B",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.000958
+      },
+      {
+        "task_id": "arc_MCAS_2006_9_43",
+        "ground_truth": "C",
+        "mv_answer": "C",
+        "mv_correct": true,
+        "synth_answer": "C",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0008886
+      },
+      {
+        "task_id": "arc_AKDE&ED_2008_4_35",
+        "ground_truth": "D",
+        "mv_answer": "D",
+        "mv_correct": true,
+        "synth_answer": "D",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0008828
+      },
+      {
+        "task_id": "arc_Mercury_7082758",
+        "ground_truth": "B",
+        "mv_answer": "B",
+        "mv_correct": true,
+        "synth_answer": "B",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0008444
+      },
+      {
+        "task_id": "arc_Mercury_SC_415073",
+        "ground_truth": "A",
+        "mv_answer": "A",
+        "mv_correct": true,
+        "synth_answer": "A",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0007538
+      },
+      {
+        "task_id": "arc_TIMSS_2003_8_pg87",
+        "ground_truth": "B",
+        "mv_answer": "B",
+        "mv_correct": true,
+        "synth_answer": "B",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0016371999999999997
+      },
+      {
+        "task_id": "arc_Mercury_7041423",
+        "ground_truth": "A",
+        "mv_answer": "A",
+        "mv_correct": true,
+        "synth_answer": "A",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0009277999999999999
+      },
+      {
+        "task_id": "arc_MCAS_2006_8_24",
+        "ground_truth": "A",
+        "mv_answer": "A",
+        "mv_correct": true,
+        "synth_answer": "A",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0017066000000000002
+      },
+      {
+        "task_id": "arc_Mercury_SC_408367",
+        "ground_truth": "B",
+        "mv_answer": "B",
+        "mv_correct": true,
+        "synth_answer": "B",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0008003999999999999
+      },
+      {
+        "task_id": "arc_Mercury_7212888",
+        "ground_truth": "A",
+        "mv_answer": "A",
+        "mv_correct": true,
+        "synth_answer": "A",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0009767999999999999
+      },
+      {
+        "task_id": "arc_TIMSS_2003_4_pg7",
+        "ground_truth": "D",
+        "mv_answer": "D",
+        "mv_correct": true,
+        "synth_answer": "D",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0008648000000000001
+      },
+      {
+        "task_id": "arc_Mercury_412673",
+        "ground_truth": "B",
+        "mv_answer": "B",
+        "mv_correct": true,
+        "synth_answer": "B",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.000643
+      },
+      {
+        "task_id": "arc_Mercury_184730",
+        "ground_truth": "B",
+        "mv_answer": "B",
+        "mv_correct": true,
+        "synth_answer": "B",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0010142
+      },
+      {
+        "task_id": "arc_Mercury_7172708",
+        "ground_truth": "B",
+        "mv_answer": "D",
+        "mv_correct": false,
+        "synth_answer": "D",
+        "synth_correct": false,
+        "any_correct": false,
+        "cost": 0.0008443999999999999
+      },
+      {
+        "task_id": "arc_Mercury_7212818",
+        "ground_truth": "B",
+        "mv_answer": "B",
+        "mv_correct": true,
+        "synth_answer": "B",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0009438
+      },
+      {
+        "task_id": "arc_Mercury_SC_402616",
+        "ground_truth": "D",
+        "mv_answer": "D",
+        "mv_correct": true,
+        "synth_answer": "D",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0007531999999999999
+      },
+      {
+        "task_id": "arc_VASoL_2007_5_21",
+        "ground_truth": "C",
+        "mv_answer": "C",
+        "mv_correct": true,
+        "synth_answer": "C",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0007597999999999999
+      },
+      {
+        "task_id": "arc_Mercury_7271758",
+        "ground_truth": "B",
+        "mv_answer": "B",
+        "mv_correct": true,
+        "synth_answer": "B",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0009494
+      },
+      {
+        "task_id": "arc_AKDE&ED_2012_8_6",
+        "ground_truth": "A",
+        "mv_answer": "A",
+        "mv_correct": true,
+        "synth_answer": "A",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.001034
+      },
+      {
+        "task_id": "arc_MEA_2010_8_15",
+        "ground_truth": "A",
+        "mv_answer": "A",
+        "mv_correct": true,
+        "synth_answer": "A",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0006834
+      },
+      {
+        "task_id": "arc_Mercury_402539",
+        "ground_truth": "B",
+        "mv_answer": "B",
+        "mv_correct": true,
+        "synth_answer": "B",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0010444
+      },
+      {
+        "task_id": "arc_Mercury_7267523",
+        "ground_truth": "B",
+        "mv_answer": "B",
+        "mv_correct": true,
+        "synth_answer": "B",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0007634
+      },
+      {
+        "task_id": "arc_MCAS_2014_8_20",
+        "ground_truth": "A",
+        "mv_answer": "A",
+        "mv_correct": true,
+        "synth_answer": "A",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0010456
+      },
+      {
+        "task_id": "arc_NYSEDREGENTS_2008_8_32",
+        "ground_truth": "1",
+        "mv_answer": null,
+        "mv_correct": false,
+        "synth_answer": "A",
+        "synth_correct": false,
+        "any_correct": false,
+        "cost": 0.0007954
+      },
+      {
+        "task_id": "arc_Mercury_SC_407247",
+        "ground_truth": "C",
+        "mv_answer": "C",
+        "mv_correct": true,
+        "synth_answer": "C",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0010184
+      },
+      {
+        "task_id": "arc_Mercury_SC_408366",
+        "ground_truth": "B",
+        "mv_answer": "B",
+        "mv_correct": true,
+        "synth_answer": "B",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0009754
+      },
+      {
+        "task_id": "arc_Mercury_401763",
+        "ground_truth": "B",
+        "mv_answer": "B",
+        "mv_correct": true,
+        "synth_answer": "B",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.001222
+      },
+      {
+        "task_id": "arc_Mercury_412463",
+        "ground_truth": "D",
+        "mv_answer": "D",
+        "mv_correct": true,
+        "synth_answer": "D",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0007241999999999999
+      },
+      {
+        "task_id": "arc_Mercury_191625",
+        "ground_truth": "D",
+        "mv_answer": "D",
+        "mv_correct": true,
+        "synth_answer": "D",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0009549999999999999
+      },
+      {
+        "task_id": "arc_LEAP__7_10351",
+        "ground_truth": "C",
+        "mv_answer": "C",
+        "mv_correct": true,
+        "synth_answer": "C",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0008770000000000001
+      },
+      {
+        "task_id": "arc_Mercury_417465",
+        "ground_truth": "C",
+        "mv_answer": "C",
+        "mv_correct": true,
+        "synth_answer": "C",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.000838
+      },
+      {
+        "task_id": "arc_NCEOGA_2013_8_26",
+        "ground_truth": "D",
+        "mv_answer": "D",
+        "mv_correct": true,
+        "synth_answer": "D",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0009582
+      },
+      {
+        "task_id": "arc_Mercury_7223493",
+        "ground_truth": "A",
+        "mv_answer": "A",
+        "mv_correct": true,
+        "synth_answer": "A",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.001111
+      },
+      {
+        "task_id": "arc_MCAS_2005_8_7",
+        "ground_truth": "C",
+        "mv_answer": "C",
+        "mv_correct": true,
+        "synth_answer": "C",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0008802
+      },
+      {
+        "task_id": "arc_Mercury_7064575",
+        "ground_truth": "B",
+        "mv_answer": "B",
+        "mv_correct": true,
+        "synth_answer": "B",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0007666000000000001
+      },
+      {
+        "task_id": "arc_Mercury_7268118",
+        "ground_truth": "C",
+        "mv_answer": "C",
+        "mv_correct": true,
+        "synth_answer": "C",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0009436
+      },
+      {
+        "task_id": "arc_Mercury_SC_409241",
+        "ground_truth": "C",
+        "mv_answer": "C",
+        "mv_correct": true,
+        "synth_answer": "C",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.001106
+      },
+      {
+        "task_id": "arc_Mercury_416646",
+        "ground_truth": "B",
+        "mv_answer": "B",
+        "mv_correct": true,
+        "synth_answer": "B",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0008958
+      },
+      {
+        "task_id": "arc_Mercury_SC_406836",
+        "ground_truth": "C",
+        "mv_answer": "C",
+        "mv_correct": true,
+        "synth_answer": "C",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0009471999999999999
+      },
+      {
+        "task_id": "arc_Mercury_407125",
+        "ground_truth": "C",
+        "mv_answer": "C",
+        "mv_correct": true,
+        "synth_answer": "C",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0008468
+      },
+      {
+        "task_id": "arc_NYSEDREGENTS_2008_8_30",
+        "ground_truth": "2",
+        "mv_answer": "B",
+        "mv_correct": false,
+        "synth_answer": "B",
+        "synth_correct": false,
+        "any_correct": false,
+        "cost": 0.0010532
+      },
+      {
+        "task_id": "arc_Mercury_411224",
+        "ground_truth": "B",
+        "mv_answer": "B",
+        "mv_correct": true,
+        "synth_answer": "B",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0008357999999999999
+      },
+      {
+        "task_id": "arc_Mercury_7210210",
+        "ground_truth": "C",
+        "mv_answer": "C",
+        "mv_correct": true,
+        "synth_answer": "C",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0008882
+      },
+      {
+        "task_id": "arc_Mercury_7159303",
+        "ground_truth": "A",
+        "mv_answer": "A",
+        "mv_correct": true,
+        "synth_answer": "A",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0009832
+      },
+      {
+        "task_id": "arc_MCAS_2005_9_21",
+        "ground_truth": "B",
+        "mv_answer": "B",
+        "mv_correct": true,
+        "synth_answer": "B",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0008766
+      },
+      {
+        "task_id": "arc_MEAP_2005_8_13",
+        "ground_truth": "D",
+        "mv_answer": "D",
+        "mv_correct": true,
+        "synth_answer": "D",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0010576
+      },
+      {
+        "task_id": "arc_NYSEDREGENTS_2008_4_26",
+        "ground_truth": "C",
+        "mv_answer": "C",
+        "mv_correct": true,
+        "synth_answer": "C",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0006797999999999999
+      },
+      {
+        "task_id": "arc_Mercury_SC_401656",
+        "ground_truth": "A",
+        "mv_answer": "A",
+        "mv_correct": true,
+        "synth_answer": "A",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0014438
+      },
+      {
+        "task_id": "arc_Mercury_416671",
+        "ground_truth": "D",
+        "mv_answer": "D",
+        "mv_correct": true,
+        "synth_answer": "D",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0009973999999999998
+      },
+      {
+        "task_id": "arc_Mercury_SC_401360",
+        "ground_truth": "A",
+        "mv_answer": "A",
+        "mv_correct": true,
+        "synth_answer": "A",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0009984
+      },
+      {
+        "task_id": "arc_MCAS_2009_8_12",
+        "ground_truth": "A",
+        "mv_answer": "A",
+        "mv_correct": true,
+        "synth_answer": "A",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0008298
+      },
+      {
+        "task_id": "arc_Mercury_7017710",
+        "ground_truth": "C",
+        "mv_answer": "C",
+        "mv_correct": true,
+        "synth_answer": "C",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0011149999999999999
+      },
+      {
+        "task_id": "arc_Mercury_SC_407613",
+        "ground_truth": "C",
+        "mv_answer": "C",
+        "mv_correct": true,
+        "synth_answer": "A",
+        "synth_correct": false,
+        "any_correct": true,
+        "cost": 0.0025551999999999997
+      },
+      {
+        "task_id": "arc_Mercury_7130655",
+        "ground_truth": "D",
+        "mv_answer": "D",
+        "mv_correct": true,
+        "synth_answer": "D",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0009282
+      },
+      {
+        "task_id": "arc_Mercury_7017938",
+        "ground_truth": "B",
+        "mv_answer": "B",
+        "mv_correct": true,
+        "synth_answer": "B",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0010762
+      },
+      {
+        "task_id": "arc_Mercury_7069020",
+        "ground_truth": "A",
+        "mv_answer": "A",
+        "mv_correct": true,
+        "synth_answer": "A",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0008393999999999999
+      },
+      {
+        "task_id": "arc_Mercury_188528",
+        "ground_truth": "D",
+        "mv_answer": "D",
+        "mv_correct": true,
+        "synth_answer": "D",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0008617999999999999
+      },
+      {
+        "task_id": "arc_Mercury_402364",
+        "ground_truth": "D",
+        "mv_answer": "D",
+        "mv_correct": true,
+        "synth_answer": "D",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.001299
+      },
+      {
+        "task_id": "arc_NYSEDREGENTS_2015_4_29",
+        "ground_truth": "A",
+        "mv_answer": "A",
+        "mv_correct": true,
+        "synth_answer": "A",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.000827
+      },
+      {
+        "task_id": "arc_MCAS_2012_5_23614",
+        "ground_truth": "C",
+        "mv_answer": "C",
+        "mv_correct": true,
+        "synth_answer": "C",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0009676
+      },
+      {
+        "task_id": "arc_NCEOGA_2013_5_20",
+        "ground_truth": "B",
+        "mv_answer": "B",
+        "mv_correct": true,
+        "synth_answer": "B",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0007830000000000001
+      },
+      {
+        "task_id": "arc_Mercury_188335",
+        "ground_truth": "B",
+        "mv_answer": "B",
+        "mv_correct": true,
+        "synth_answer": "B",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0010498
+      },
+      {
+        "task_id": "arc_Mercury_409647",
+        "ground_truth": "D",
+        "mv_answer": "D",
+        "mv_correct": true,
+        "synth_answer": "D",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0013357999999999998
+      },
+      {
+        "task_id": "arc_Mercury_7211680",
+        "ground_truth": "C",
+        "mv_answer": "C",
+        "mv_correct": true,
+        "synth_answer": "C",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0012282
+      },
+      {
+        "task_id": "arc_Mercury_404638",
+        "ground_truth": "D",
+        "mv_answer": "D",
+        "mv_correct": true,
+        "synth_answer": "D",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.001002
+      },
+      {
+        "task_id": "arc_Mercury_403907",
+        "ground_truth": "C",
+        "mv_answer": "C",
+        "mv_correct": true,
+        "synth_answer": "C",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0009002000000000001
+      },
+      {
+        "task_id": "arc_NYSEDREGENTS_2008_8_27",
+        "ground_truth": "3",
+        "mv_answer": "C",
+        "mv_correct": false,
+        "synth_answer": "C",
+        "synth_correct": false,
+        "any_correct": false,
+        "cost": 0.0010734
+      },
+      {
+        "task_id": "arc_Mercury_SC_408251",
+        "ground_truth": "A",
+        "mv_answer": "A",
+        "mv_correct": true,
+        "synth_answer": "A",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.000812
+      },
+      {
+        "task_id": "arc_Mercury_401684",
+        "ground_truth": "B",
+        "mv_answer": "B",
+        "mv_correct": true,
+        "synth_answer": "B",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.000812
+      },
+      {
+        "task_id": "arc_Mercury_7111178",
+        "ground_truth": "C",
+        "mv_answer": "C",
+        "mv_correct": true,
+        "synth_answer": "C",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0012353999999999998
+      },
+      {
+        "task_id": "arc_Mercury_405804",
+        "ground_truth": "D",
+        "mv_answer": "D",
+        "mv_correct": true,
+        "synth_answer": "D",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0006044
+      },
+      {
+        "task_id": "arc_Mercury_SC_401265",
+        "ground_truth": "D",
+        "mv_answer": "D",
+        "mv_correct": true,
+        "synth_answer": "D",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0007356
+      },
+      {
+        "task_id": "arc_Mercury_7270358",
+        "ground_truth": "D",
+        "mv_answer": "D",
+        "mv_correct": true,
+        "synth_answer": "D",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0011604
+      },
+      {
+        "task_id": "arc_Mercury_7213413",
+        "ground_truth": "D",
+        "mv_answer": "D",
+        "mv_correct": true,
+        "synth_answer": "D",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.000964
+      },
+      {
+        "task_id": "arc_MCAS_2002_8_11",
+        "ground_truth": "C",
+        "mv_answer": "C",
+        "mv_correct": true,
+        "synth_answer": "C",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0010372
+      },
+      {
+        "task_id": "arc_Mercury_SC_415473",
+        "ground_truth": "C",
+        "mv_answer": "C",
+        "mv_correct": true,
+        "synth_answer": "C",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0008377999999999999
+      },
+      {
+        "task_id": "arc_Mercury_405464",
+        "ground_truth": "A",
+        "mv_answer": "A",
+        "mv_correct": true,
+        "synth_answer": "A",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0009097999999999999
+      },
+      {
+        "task_id": "arc_Mercury_7098473",
+        "ground_truth": "B",
+        "mv_answer": "B",
+        "mv_correct": true,
+        "synth_answer": "B",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0008824000000000001
+      },
+      {
+        "task_id": "arc_MDSA_2013_8_32",
+        "ground_truth": "D",
+        "mv_answer": "D",
+        "mv_correct": true,
+        "synth_answer": "D",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0008849999999999999
+      },
+      {
+        "task_id": "arc_Mercury_400084",
+        "ground_truth": "D",
+        "mv_answer": "D",
+        "mv_correct": true,
+        "synth_answer": null,
+        "synth_correct": false,
+        "any_correct": true,
+        "cost": 0.006151199999999999
+      },
+      {
+        "task_id": "arc_Mercury_SC_415476",
+        "ground_truth": "B",
+        "mv_answer": "B",
+        "mv_correct": true,
+        "synth_answer": "B",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0008334
+      },
+      {
+        "task_id": "arc_Mercury_7210508",
+        "ground_truth": "C",
+        "mv_answer": "C",
+        "mv_correct": true,
+        "synth_answer": "C",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0008144000000000001
+      },
+      {
+        "task_id": "arc_MCAS_2014_5_7",
+        "ground_truth": "C",
+        "mv_answer": "C",
+        "mv_correct": true,
+        "synth_answer": "C",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0012163999999999999
+      },
+      {
+        "task_id": "arc_Mercury_7107328",
+        "ground_truth": "B",
+        "mv_answer": "B",
+        "mv_correct": true,
+        "synth_answer": "B",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0008078
+      },
+      {
+        "task_id": "arc_Mercury_7133945",
+        "ground_truth": "B",
+        "mv_answer": "B",
+        "mv_correct": true,
+        "synth_answer": "B",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0010498
+      },
+      {
+        "task_id": "arc_Mercury_SC_415407",
+        "ground_truth": "A",
+        "mv_answer": "A",
+        "mv_correct": true,
+        "synth_answer": "A",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.001009
+      },
+      {
+        "task_id": "arc_Mercury_7263638",
+        "ground_truth": "B",
+        "mv_answer": "B",
+        "mv_correct": true,
+        "synth_answer": "B",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.001049
+      },
+      {
+        "task_id": "arc_Mercury_177748",
+        "ground_truth": "D",
+        "mv_answer": "B",
+        "mv_correct": false,
+        "synth_answer": "B",
+        "synth_correct": false,
+        "any_correct": false,
+        "cost": 0.0009072
+      },
+      {
+        "task_id": "arc_Mercury_7221620",
+        "ground_truth": "A",
+        "mv_answer": "A",
+        "mv_correct": true,
+        "synth_answer": "A",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0009134
+      },
+      {
+        "task_id": "arc_MSA_2012_5_2",
+        "ground_truth": "A",
+        "mv_answer": "A",
+        "mv_correct": true,
+        "synth_answer": "A",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0007966
+      },
+      {
+        "task_id": "arc_MCAS_2005_8_12",
+        "ground_truth": "C",
+        "mv_answer": "C",
+        "mv_correct": true,
+        "synth_answer": "C",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.000933
+      },
+      {
+        "task_id": "arc_Mercury_7159023",
+        "ground_truth": "C",
+        "mv_answer": "C",
+        "mv_correct": true,
+        "synth_answer": "C",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0011798
+      },
+      {
+        "task_id": "arc_Mercury_SC_409171",
+        "ground_truth": "B",
+        "mv_answer": "B",
+        "mv_correct": true,
+        "synth_answer": "B",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0007294000000000001
+      },
+      {
+        "task_id": "arc_Mercury_7172270",
+        "ground_truth": "A",
+        "mv_answer": "A",
+        "mv_correct": true,
+        "synth_answer": "A",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0009328000000000001
+      },
+      {
+        "task_id": "arc_MCAS_2005_5_34",
+        "ground_truth": "B",
+        "mv_answer": "B",
+        "mv_correct": true,
+        "synth_answer": "B",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0008048
+      },
+      {
+        "task_id": "arc_Mercury_7187373",
+        "ground_truth": "D",
+        "mv_answer": "D",
+        "mv_correct": true,
+        "synth_answer": "D",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0008142000000000001
+      },
+      {
+        "task_id": "arc_Mercury_7082443",
+        "ground_truth": "B",
+        "mv_answer": "B",
+        "mv_correct": true,
+        "synth_answer": "B",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0007944
+      },
+      {
+        "task_id": "arc_Mercury_415086",
+        "ground_truth": "D",
+        "mv_answer": "D",
+        "mv_correct": true,
+        "synth_answer": "D",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0007731999999999999
+      },
+      {
+        "task_id": "arc_MCAS_2004_9_15-v1",
+        "ground_truth": "B",
+        "mv_answer": "B",
+        "mv_correct": true,
+        "synth_answer": "B",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0008954
+      },
+      {
+        "task_id": "arc_Mercury_7136063",
+        "ground_truth": "B",
+        "mv_answer": "B",
+        "mv_correct": true,
+        "synth_answer": "B",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0008972
+      },
+      {
+        "task_id": "arc_LEAP_2007_4_10280",
+        "ground_truth": "A",
+        "mv_answer": "A",
+        "mv_correct": true,
+        "synth_answer": "A",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0007172000000000001
+      },
+      {
+        "task_id": "arc_Mercury_405947",
+        "ground_truth": "C",
+        "mv_answer": "C",
+        "mv_correct": true,
+        "synth_answer": "C",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0008566
+      },
+      {
+        "task_id": "arc_Mercury_7218015",
+        "ground_truth": "D",
+        "mv_answer": "D",
+        "mv_correct": true,
+        "synth_answer": "D",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.000808
+      },
+      {
+        "task_id": "arc_LEAP_2002_4_10247",
+        "ground_truth": "B",
+        "mv_answer": "B",
+        "mv_correct": true,
+        "synth_answer": "B",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0009394
+      },
+      {
+        "task_id": "arc_Mercury_180828",
+        "ground_truth": "C",
+        "mv_answer": "C",
+        "mv_correct": true,
+        "synth_answer": "C",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0007740000000000001
+      },
+      {
+        "task_id": "arc_Mercury_7129640",
+        "ground_truth": "B",
+        "mv_answer": "B",
+        "mv_correct": true,
+        "synth_answer": "B",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0009768
+      },
+      {
+        "task_id": "arc_TIMSS_2007_4_pg19",
+        "ground_truth": "A",
+        "mv_answer": "A",
+        "mv_correct": true,
+        "synth_answer": "A",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0008939999999999999
+      },
+      {
+        "task_id": "arc_Mercury_7164623",
+        "ground_truth": "C",
+        "mv_answer": "C",
+        "mv_correct": true,
+        "synth_answer": "C",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0007338
+      },
+      {
+        "task_id": "arc_NYSEDREGENTS_2008_4_11",
+        "ground_truth": "C",
+        "mv_answer": "C",
+        "mv_correct": true,
+        "synth_answer": "C",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0006862
+      },
+      {
+        "task_id": "arc_AIMS_2009_8_14",
+        "ground_truth": "A",
+        "mv_answer": "A",
+        "mv_correct": true,
+        "synth_answer": "A",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0014876
+      },
+      {
+        "task_id": "arc_CSZ30169",
+        "ground_truth": "A",
+        "mv_answer": "A",
+        "mv_correct": true,
+        "synth_answer": "A",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0010016
+      },
+      {
+        "task_id": "arc_Mercury_417150",
+        "ground_truth": "B",
+        "mv_answer": "B",
+        "mv_correct": true,
+        "synth_answer": "B",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0010534
+      },
+      {
+        "task_id": "arc_Mercury_7283430",
+        "ground_truth": "B",
+        "mv_answer": "B",
+        "mv_correct": true,
+        "synth_answer": "B",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0007712
+      },
+      {
+        "task_id": "arc_Mercury_7033845",
+        "ground_truth": "B",
+        "mv_answer": "B",
+        "mv_correct": true,
+        "synth_answer": "B",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0008706
+      },
+      {
+        "task_id": "arc_Mercury_7154315",
+        "ground_truth": "A",
+        "mv_answer": "A",
+        "mv_correct": true,
+        "synth_answer": "A",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.001076
+      },
+      {
+        "task_id": "arc_Mercury_SC_402171",
+        "ground_truth": "D",
+        "mv_answer": "D",
+        "mv_correct": true,
+        "synth_answer": "D",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0009748000000000001
+      },
+      {
+        "task_id": "arc_MCAS_2000_8_22",
+        "ground_truth": "D",
+        "mv_answer": "D",
+        "mv_correct": true,
+        "synth_answer": "D",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0010118
+      },
+      {
+        "task_id": "arc_MEAP_2005_5_15",
+        "ground_truth": "B",
+        "mv_answer": "B",
+        "mv_correct": true,
+        "synth_answer": "B",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0010398
+      },
+      {
+        "task_id": "arc_Mercury_400500",
+        "ground_truth": "C",
+        "mv_answer": "C",
+        "mv_correct": true,
+        "synth_answer": "C",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.00091
+      },
+      {
+        "task_id": "arc_NYSEDREGENTS_2012_4_9",
+        "ground_truth": "A",
+        "mv_answer": "A",
+        "mv_correct": true,
+        "synth_answer": "A",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0008826000000000001
+      },
+      {
+        "task_id": "arc_MCAS_2005_9_17",
+        "ground_truth": "C",
+        "mv_answer": "C",
+        "mv_correct": true,
+        "synth_answer": "C",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0012134
+      },
+      {
+        "task_id": "arc_Mercury_7068635",
+        "ground_truth": "C",
+        "mv_answer": "C",
+        "mv_correct": true,
+        "synth_answer": "C",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0007904
+      },
+      {
+        "task_id": "arc_MDSA_2009_4_34",
+        "ground_truth": "B",
+        "mv_answer": "B",
+        "mv_correct": true,
+        "synth_answer": "B",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.001403
+      },
+      {
+        "task_id": "arc_Mercury_7013965",
+        "ground_truth": "A",
+        "mv_answer": "A",
+        "mv_correct": true,
+        "synth_answer": "A",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0007052
+      },
+      {
+        "task_id": "arc_LEAP__7_10339",
+        "ground_truth": "A",
+        "mv_answer": "A",
+        "mv_correct": true,
+        "synth_answer": "A",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0011788
+      },
+      {
+        "task_id": "arc_TIMSS_1995_8_J1",
+        "ground_truth": "C",
+        "mv_answer": "C",
+        "mv_correct": true,
+        "synth_answer": "C",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0009092
+      },
+      {
+        "task_id": "arc_Mercury_7174213",
+        "ground_truth": "D",
+        "mv_answer": "D",
+        "mv_correct": true,
+        "synth_answer": "D",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0011234
+      },
+      {
+        "task_id": "arc_Mercury_7132405",
+        "ground_truth": "D",
+        "mv_answer": "D",
+        "mv_correct": true,
+        "synth_answer": "D",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0009616
+      },
+      {
+        "task_id": "arc_Mercury_7212993",
+        "ground_truth": "C",
+        "mv_answer": "C",
+        "mv_correct": true,
+        "synth_answer": "C",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0009418
+      },
+      {
+        "task_id": "arc_Mercury_7201740",
+        "ground_truth": "A",
+        "mv_answer": "A",
+        "mv_correct": true,
+        "synth_answer": "A",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0010738
+      },
+      {
+        "task_id": "arc_Mercury_SC_408321",
+        "ground_truth": "A",
+        "mv_answer": "A",
+        "mv_correct": true,
+        "synth_answer": "A",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0009496
+      },
+      {
+        "task_id": "arc_Mercury_SC_402276",
+        "ground_truth": "D",
+        "mv_answer": "D",
+        "mv_correct": true,
+        "synth_answer": "D",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0007271999999999999
+      },
+      {
+        "task_id": "arc_Mercury_7223370",
+        "ground_truth": "D",
+        "mv_answer": "D",
+        "mv_correct": true,
+        "synth_answer": "D",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0007880000000000001
+      },
+      {
+        "task_id": "arc_TIMSS_1995_8_J6",
+        "ground_truth": "B",
+        "mv_answer": "B",
+        "mv_correct": true,
+        "synth_answer": "B",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0009682
+      },
+      {
+        "task_id": "arc_Mercury_7138460",
+        "ground_truth": "C",
+        "mv_answer": "C",
+        "mv_correct": true,
+        "synth_answer": "C",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0008263999999999999
+      },
+      {
+        "task_id": "arc_Mercury_416645",
+        "ground_truth": "D",
+        "mv_answer": "D",
+        "mv_correct": true,
+        "synth_answer": "D",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0009738
+      },
+      {
+        "task_id": "arc_Mercury_416376",
+        "ground_truth": "D",
+        "mv_answer": "D",
+        "mv_correct": true,
+        "synth_answer": "D",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0009974
+      },
+      {
+        "task_id": "arc_Mercury_402341",
+        "ground_truth": "D",
+        "mv_answer": "D",
+        "mv_correct": true,
+        "synth_answer": "D",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0059228
+      },
+      {
+        "task_id": "arc_LEAP_2009_8_10430",
+        "ground_truth": "A",
+        "mv_answer": "A",
+        "mv_correct": true,
+        "synth_answer": "A",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0008491999999999999
+      },
+      {
+        "task_id": "arc_Mercury_417118",
+        "ground_truth": "C",
+        "mv_answer": "C",
+        "mv_correct": true,
+        "synth_answer": "C",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0011091999999999999
+      },
+      {
+        "task_id": "arc_Mercury_7015995",
+        "ground_truth": "B",
+        "mv_answer": "B",
+        "mv_correct": true,
+        "synth_answer": "B",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0008252000000000001
+      },
+      {
+        "task_id": "arc_Mercury_402502",
+        "ground_truth": "D",
+        "mv_answer": "D",
+        "mv_correct": true,
+        "synth_answer": "D",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0008044
+      },
+      {
+        "task_id": "arc_Mercury_SC_401661",
+        "ground_truth": "D",
+        "mv_answer": "D",
+        "mv_correct": true,
+        "synth_answer": "D",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.000902
+      },
+      {
+        "task_id": "arc_Mercury_7102323",
+        "ground_truth": "D",
+        "mv_answer": "D",
+        "mv_correct": true,
+        "synth_answer": "D",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.000883
+      },
+      {
+        "task_id": "arc_Mercury_187198",
+        "ground_truth": "C",
+        "mv_answer": "C",
+        "mv_correct": true,
+        "synth_answer": "C",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0011502
+      },
+      {
+        "task_id": "arc_NCEOGA_2013_8_43",
+        "ground_truth": "A",
+        "mv_answer": "A",
+        "mv_correct": true,
+        "synth_answer": "A",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0009814
+      },
+      {
+        "task_id": "arc_Mercury_SC_402256",
+        "ground_truth": "C",
+        "mv_answer": "C",
+        "mv_correct": true,
+        "synth_answer": "C",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0009126
+      },
+      {
+        "task_id": "arc_Mercury_7222460",
+        "ground_truth": "A",
+        "mv_answer": "A",
+        "mv_correct": true,
+        "synth_answer": "A",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0012330000000000002
+      },
+      {
+        "task_id": "arc_Mercury_7249708",
+        "ground_truth": "B",
+        "mv_answer": "B",
+        "mv_correct": true,
+        "synth_answer": "B",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.000813
+      },
+      {
+        "task_id": "arc_Mercury_7075040",
+        "ground_truth": "C",
+        "mv_answer": "C",
+        "mv_correct": true,
+        "synth_answer": "C",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0008722
+      },
+      {
+        "task_id": "arc_Mercury_SC_LBS10932",
+        "ground_truth": "B",
+        "mv_answer": "B",
+        "mv_correct": true,
+        "synth_answer": "B",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0009602
+      },
+      {
+        "task_id": "arc_Mercury_7005005",
+        "ground_truth": "C",
+        "mv_answer": "C",
+        "mv_correct": true,
+        "synth_answer": "C",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0010148
+      },
+      {
+        "task_id": "arc_LEAP_2007_8_10417",
+        "ground_truth": "A",
+        "mv_answer": "A",
+        "mv_correct": true,
+        "synth_answer": "A",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0011572
+      },
+      {
+        "task_id": "arc_Mercury_7034808",
+        "ground_truth": "A",
+        "mv_answer": "A",
+        "mv_correct": true,
+        "synth_answer": "A",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0007806
+      },
+      {
+        "task_id": "arc_Mercury_7058135",
+        "ground_truth": "B",
+        "mv_answer": "B",
+        "mv_correct": true,
+        "synth_answer": "B",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0012144
+      },
+      {
+        "task_id": "arc_Mercury_SC_406725",
+        "ground_truth": "A",
+        "mv_answer": "A",
+        "mv_correct": true,
+        "synth_answer": "A",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.000875
+      },
+      {
+        "task_id": "arc_Mercury_7214498",
+        "ground_truth": "C",
+        "mv_answer": "C",
+        "mv_correct": true,
+        "synth_answer": "C",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0006250000000000001
+      },
+      {
+        "task_id": "arc_MCAS_2004_9_5",
+        "ground_truth": "C",
+        "mv_answer": "C",
+        "mv_correct": true,
+        "synth_answer": "A",
+        "synth_correct": false,
+        "any_correct": true,
+        "cost": 0.0008794
+      },
+      {
+        "task_id": "arc_Mercury_7081305",
+        "ground_truth": "D",
+        "mv_answer": "D",
+        "mv_correct": true,
+        "synth_answer": "D",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0009641999999999999
+      },
+      {
+        "task_id": "arc_Mercury_SC_402612",
+        "ground_truth": "D",
+        "mv_answer": "D",
+        "mv_correct": true,
+        "synth_answer": "D",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0007523999999999999
+      },
+      {
+        "task_id": "arc_Mercury_401912",
+        "ground_truth": "A",
+        "mv_answer": "A",
+        "mv_correct": true,
+        "synth_answer": "A",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0010076
+      },
+      {
+        "task_id": "arc_Mercury_405685",
+        "ground_truth": "D",
+        "mv_answer": "D",
+        "mv_correct": true,
+        "synth_answer": "D",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0010862
+      },
+      {
+        "task_id": "arc_Mercury_SC_401147",
+        "ground_truth": "C",
+        "mv_answer": "C",
+        "mv_correct": true,
+        "synth_answer": "C",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0008269999999999998
+      },
+      {
+        "task_id": "arc_Mercury_409085",
+        "ground_truth": "A",
+        "mv_answer": "A",
+        "mv_correct": true,
+        "synth_answer": "A",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0008933999999999999
+      },
+      {
+        "task_id": "arc_Mercury_7029803",
+        "ground_truth": "B",
+        "mv_answer": "B",
+        "mv_correct": true,
+        "synth_answer": "B",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0009946
+      },
+      {
+        "task_id": "arc_Mercury_7158935",
+        "ground_truth": "C",
+        "mv_answer": "C",
+        "mv_correct": true,
+        "synth_answer": "C",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.0011852
+      },
+      {
+        "task_id": "arc_Mercury_SC_400708",
+        "ground_truth": "C",
+        "mv_answer": "C",
+        "mv_correct": true,
+        "synth_answer": "C",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.000771
+      },
+      {
+        "task_id": "arc_Mercury_7198468",
+        "ground_truth": "A",
+        "mv_answer": "A",
+        "mv_correct": true,
+        "synth_answer": null,
+        "synth_correct": false,
+        "any_correct": true,
+        "cost": 0.0046952
+      },
+      {
+        "task_id": "arc_TAKS_2009_5_25",
+        "ground_truth": "C",
+        "mv_answer": "C",
+        "mv_correct": true,
+        "synth_answer": "C",
+        "synth_correct": true,
+        "any_correct": true,
+        "cost": 0.000912
+      }
+    ],
+    "MATH-500 (medium verification)": []
+  }
+}
