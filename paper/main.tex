@@ -778,7 +778,7 @@ Base model & Single baseline & Game (Insight+Synth, $\g\!=\!1$) & $\Delta$ \\
 \end{tabular}
 \end{table}
 
-The pattern is unambiguous: \textbf{the magnitude of the game's lift is monotonic in the gap between the single-model baseline and the achievable ceiling}.
+The pattern is consistent: \textbf{the magnitude of the game's lift is monotonic in the gap between the single-model baseline and the achievable ceiling}.
 \texttt{qwen-7b} at $73\%$ baseline gets a $+27$pp lift to $100\%$.
 \texttt{qwen-22b} at $87\%$ baseline gets a $+7$pp lift.
 \texttt{llama-70b} at $90\%$ baseline gets a $-3$pp regression.
@@ -1059,23 +1059,16 @@ To address the metric mismatch with published pass@$1$ numbers, we ran gpt-5.4-m
 
 \begin{table}[h]
 \centering\small
-\caption{HumanEval-164 with \textbf{same-metric comparison}. Both rows use pass@$16$ with execution filtering on the same $164$ problems. Published pass@$1$ numbers shown for reference only.}
+\caption{HumanEval-164: \textbf{same-metric, same-task comparison}. Both rows use pass@$16$ with execution filtering on the identical $164$ problems. This is the only fair comparison; published pass@$1$ numbers use a different metric and are omitted.}
 \label{tab:humaneval-cost}
-\resizebox{\linewidth}{!}{%
-\begin{tabular}{lcccccr}
+\begin{tabular}{@{}lccccr@{}}
 \toprule
 Architecture & $n$ & Metric & Rate & \$/task & \$/correct \\
 \midrule
 \textbf{This work (qwen-22b)} & $164$ & pass@$16$ (exec) & $\mathbf{97.0\%}$ {\scriptsize[93.1, 98.7]} & \$$0.003$ & \$$0.003$ \\
-\textbf{gpt-5.4-mini (same-metric)} & $\mathbf{164}$ & \textbf{pass@$16$ (exec)} & $96.3\%$ {\scriptsize[92.2, 98.3]} & \$$0.013$ & \$$0.013$ \\
-\midrule
-\multicolumn{6}{l}{\emph{Published pass@$1$ numbers (different metric --- shown for context only)}} \\
-GPT-4o & $164$ & pass@$1$ & $\sim\!91\%$ & \$$0.005$ & --- \\
-Claude~3.5 Sonnet & $164$ & pass@$1$ & $\sim\!92\%$ & \$$0.010$ & --- \\
-o1 & $164$ & pass@$1$ & $\sim\!93\%$ & \$$0.150$ & --- \\
+\textbf{gpt-5.4-mini (same-metric)} & $164$ & pass@$16$ (exec) & $96.3\%$ {\scriptsize[92.2, 98.3]} & \$$0.013$ & \$$0.013$ \\
 \bottomrule
-\end{tabular}%
-}
+\end{tabular}
 \end{table}
 
 Under identical conditions ($K\!=\!16$, execution filtering, same $164$ problems), our architecture \textbf{ties} gpt-5.4-mini in accuracy ($97.0\%$ vs $96.3\%$, $1$ task difference, CIs overlap) at $\mathbf{4.3\times}$ \textbf{lower cost} (\$$0.003$ vs \$$0.013$ per task).
@@ -1099,7 +1092,7 @@ $K\!=\!16$ cold + $16$ critic refinements & $12/30 = 40.0\%$ & $[24.6\%, 57.7\%]
 \end{center}
 
 The critic recovered exactly $1$ task across both refinement rounds ($\sim\!9\%$ critic success rate over $\sim\!88$ critic calls).
-The null result is decisive: \textbf{the simple verifier loop alone is the active ingredient}; more elaborate multi-stage refinement does not help at this scale.
+The null result is clear: \textbf{the simple verifier loop alone is the active ingredient} in our experiments; more elaborate multi-stage refinement does not help at this scale.
 This parallels the Section~\ref{sec:results} falsification of MFG framework selection: in both cases, the simplest mechanism is sufficient and more elaborate alternatives add no measurable value.
 
 \subsection{Null result 2: ARC-AGI-2 breaks the architecture}\label{sec:act2-arc2}
@@ -1310,6 +1303,18 @@ We have not tested this, and it is the most natural follow-up ablation.
 \paragraph{Capability-ceiling generalization.}
 Our family-replication result shows that two strong base models (Llama-70B and DeepSeek-V3.1) at $90\%$ Phase~A baseline do not benefit from the game.
 This is consistent with the capability-ceiling story but does not establish it as a universal property; testing more model families and more task batteries would strengthen the claim.
+
+\paragraph{DSL as domain engineering.}
+The symbolic-verification architecture requires a task-specific representation language: a $30$-primitive Python grid library for ARC-AGI, a \texttt{sympy}-enabled sandbox for AIME, and a unit-test execution environment for HumanEval.
+This is non-trivial domain engineering---the ``no fine-tuning, no PRM'' framing slightly understates the supervision involved.
+The ARC-AGI-2 null result ($0/100$) exposes this limit directly: when the DSL cannot express the required abstractions, the architecture fails completely.
+Practitioners should weigh DSL design effort as part of the deployment cost.
+
+\paragraph{Prompt sensitivity.}
+All experiments use a single prompt template per task type.
+We have not systematically varied prompts; it is possible that prompt design interacts with the synthesis-vs-majority-vote comparison, particularly for the synthesizer call (which reads $K$ candidate outputs in a concatenated format).
+Model version drift is also a concern: all Together~AI experiments were conducted over a two-week window (April 2026) against serverless endpoints whose underlying weights could in principle change.
+We release exact model identifiers and all prompts in the code repository.
 
 \paragraph{Statistical power.}
 The main-sweep per-condition CIs are wide ($\pm 8$--$15$pp at $n = 15$).
