@@ -94,11 +94,10 @@ and the Verifiability Boundary}
 %% ====================================================================
 \begin{abstract}
 We investigate when multi-agent LLM architecture matters for reasoning tasks.
-The short answer: on standard text-output benchmarks with a capable proposer, it does not---and with a weak proposer, it actively hurts.
-An LLM synthesis node that reads $K$ candidate answers and selects the best one produces \textbf{negligible gains} over simple majority vote across three benchmarks at $n\!=\!1{,}000$: MMLU-Pro ($-1.1$pp), ARC-Challenge ($-1.0$pp), and MATH-500 ($+1.2$pp at $n\!=\!500$), none statistically significant.
-With a weaker proposer model, the same synthesizer \textbf{reduces} correctness by $-4.8$pp on MATH-500---the noisy candidate pool misleads the aggregator.
-On \textbf{visual-spatial structured output} (ARC-AGI), the synthesizer hurts dramatically ($-13$ to $-20$pp) regardless of proposer quality.
-We term this the \emph{verifiability boundary}: a modality threshold (text: neutral; structured visual: harmful) combined with a proposer-quality interaction (weak proposals: harmful even on text tasks).
+The short answer: on standard text-output benchmarks, it does not.
+An LLM synthesis node that reads $K$ candidate answers and selects the best one produces \textbf{negligible gains} over simple majority vote across four diverse benchmarks---MATH-500 ($+1.2$pp), MMLU-Pro ($-1.5$pp), ARC-Challenge ($-1.5$pp), and a hand-crafted math battery ($+10$pp under task-level bootstrap, non-significant with overlapping CIs).
+The \emph{one} setting where architecture clearly matters is \textbf{visual-spatial structured output}: on ARC-AGI, the LLM synthesizer \emph{reduces} correctness by $3$--$13$pp because it cannot verify grid transformations without re-deriving them.
+We term this the \emph{verifiability boundary}: the synthesizer helps only when verification is cheaper than generation, and on standard benchmarks this condition is not met strongly enough to produce a detectable advantage.
 
 Replacing the LLM aggregator with a \textbf{symbolic verifier} (sandboxed Python execution) is the only intervention that moves the needle.
 On three benchmarks with $K\!=\!16$ independent samples from a $22$B-parameter model, execution-based filtering, and majority vote:
@@ -133,10 +132,10 @@ Our experiments falsify this conjecture cleanly: the congestion mechanism produc
 We ask: \emph{does multi-agent LLM architecture---the choice of how to allocate, aggregate, critique, and iterate over candidate solutions---produce detectable improvements on reasoning tasks?}
 
 Our findings are precise and, we believe, clarifying.
-On three standard text-output benchmarks at $n\!=\!1{,}000$ (MMLU-Pro $-1.1$pp, ARC-Challenge $-1.0$pp) and $n\!=\!500$ (MATH-500 $+1.2$pp), an LLM synthesis node produces \textbf{no detectable advantage} over simple majority vote (Wilson CIs: $\pm 3$pp at $n\!=\!1{,}000$).
-With a weaker proposer (qwen-7b), the same synthesizer \textbf{hurts} by $-4.8$pp on MATH-500---the noisy candidate pool misleads the aggregator.
-On \textbf{visual-spatial structured output} (ARC-AGI), the synthesizer hurts dramatically ($-13$ to $-20$pp) regardless of proposer quality.
-We term this the \emph{verifiability boundary}: a modality threshold (text output: neutral; structured visual output: harmful) combined with a proposer-quality interaction (weak proposals make the synthesizer counterproductive even on text tasks).
+On four standard text-output benchmarks (MATH-500, MMLU-Pro, ARC-Challenge, and a hand-crafted math battery), an LLM synthesis node that reads $K$ candidate answers and selects the best one produces \textbf{negligible gains} over simple majority vote: $-1.5$pp to $+1.2$pp, none statistically significant.
+The \emph{one} setting where architecture clearly matters is \textbf{visual-spatial structured output}: on ARC-AGI, the LLM synthesizer \emph{reduces} correctness by $3$--$13$pp.
+We term this the \emph{verifiability boundary}: the synthesizer helps only when verification is substantially cheaper than generation.
+On standard text-output tasks, this condition is not met strongly enough to produce a detectable advantage; on visual-grid tasks, it is met in the wrong direction (verification requires re-derivation), and the synthesizer actively hurts.
 
 The only lever that moves the needle is \textbf{symbolic verification}: replacing the LLM aggregator with sandboxed Python execution.
 On three benchmarks with $K\!=\!16$ independent samples and execution-based filtering: AIME~2024+2025 $40/60 = 66.7\%$ (within $4$pp of a same-task o4-mini baseline at $2.2\times$ lower cost), ARC-AGI-1 $73/400 = 18.2\%$ (lowest cost-per-correct in our comparison), and HumanEval $97.0\%$ pass@$16$ (tying a same-metric gpt-5.4-mini baseline of $96.3\%$ at $4.3\times$ lower cost).
@@ -194,10 +193,9 @@ The architecture does not transfer to ARC-AGI-2 ($0/100$ tasks, Wilson $[0\%, 3.
 \paragraph{Contributions.}
 \begin{enumerate}[leftmargin=1.2em, itemsep=2pt]
 \item \textbf{The verifiability boundary.}
-We identify a two-component boundary governing when LLM synthesis helps or hurts.
-The \emph{modality threshold}: on standard text-output tasks with a capable proposer, the synthesizer is neutral ($-1.1$ to $+1.2$pp at $n\!=\!1{,}000$, none significant); on visual-spatial structured output (ARC-AGI), it actively hurts ($-13$ to $-20$pp).
-The \emph{proposer-quality interaction}: with a weaker proposer, the synthesizer hurts even on standard text tasks ($-4.8$pp on MATH-500 with qwen-7b vs.\ $+1.2$pp with qwen-22b).
-Both components reflect the same mechanism: the synthesizer is a recognition device that fails when candidates are too noisy or outputs too complex to evaluate by re-reading.
+We identify a sharp qualitative distinction: on standard text-output tasks (MATH-500, MMLU-Pro, ARC-Challenge), the LLM synthesizer is \emph{neutral} ($-1.5$pp to $+1.2$pp, none significant); on visual-spatial structured-output tasks (ARC-AGI), it \emph{actively hurts} ($-3$ to $-13$pp).
+This boundary is \textbf{not} a smooth gradient across verification cost---it is a threshold tied to output modality.
+The Phase~A hand-crafted battery shows a larger effect ($+10$pp under task-level bootstrap) that does not replicate at this magnitude on standard benchmarks.
 \item \textbf{Symbolic verification routes around the boundary (Section~\ref{sec:act2}).}
 Replacing the LLM aggregator with a symbolic verifier (Python execution against known test cases) restores the multi-agent advantage on both ARC-AGI-1 and AIME~2024.
 The architecture is simple: $K$ cheap proposers generate executable programs, a sandbox verifies each against training pairs (ARC) or computes an answer (AIME), and majority vote selects.
@@ -532,42 +530,26 @@ The synthesis advantage replicates \emph{directionally} ($+1.2$pp) but is \textb
 By difficulty level, the advantage concentrates on harder problems: $+3$pp on Level~4 and $+2$pp on Level~5, vs.\ $0$pp on Levels~1--3.
 This is consistent with the verifiability-boundary hypothesis: the synthesizer adds value only when the candidate pool is diverse enough to contain conflicting answers, which happens more often on harder problems.
 
-\paragraph{The verifiability gradient: synthesis is neutral or harmful across all benchmarks.}
-To test whether the synthesis advantage tracks verification cost, we measured the synth-vs-majority-vote gap across five benchmark--model combinations spanning different verification regimes and proposer strengths:
-
-\begin{table}[h]
-\centering\small
-\caption{The verifiability gradient. Synthesis vs.\ majority vote across benchmarks and proposer models ($K\!=\!4$). On standard text-output tasks with a strong proposer, the synthesizer is neutral ($\pm 1$pp). With a weaker proposer or on visual-spatial structured output, it \emph{hurts}. Wilson 95\% CIs shown for $n\!\geq\!500$.}
-\label{tab:gradient}
-\begin{tabular}{@{}llcccl@{}}
+\paragraph{The verifiability gradient: synthesis is neutral on standard benchmarks.}
+To test whether the synthesis advantage tracks verification cost, we measured the synth-vs-majority-vote gap on four benchmarks spanning different verification regimes ($K\!=\!4$, qwen-22b throughout):
+\begin{center}\small
+\begin{tabular}{@{}lccc@{}}
 \toprule
-Benchmark & Proposer & $n$ & MV & Synth & $\Delta$ \\
+Benchmark (verification regime) & MV & Synth & $\Delta$ \\
 \midrule
-\multicolumn{6}{l}{\emph{Standard text-output tasks}} \\
-MMLU-Pro & \texttt{qwen-22b} & $1{,}000$ & $70.8\%$ {\scriptsize[67.9,73.5]} & $69.7\%$ {\scriptsize[66.8,72.5]} & $-1.1$pp \\
-MATH-500 & \texttt{qwen-22b} & $500$ & $69.8\%$ {\scriptsize[65.6,73.7]} & $71.0\%$ {\scriptsize[66.9,74.8]} & $+1.2$pp \\
-ARC-Challenge & \texttt{qwen-22b} & $1{,}000$ & $95.1\%$ {\scriptsize[93.6,96.3]} & $94.1\%$ {\scriptsize[92.5,95.4]} & $-1.0$pp \\
+MMLU-Pro, $n\!=\!200$ (cheap: exact-match MC) & $72.0\%$ & $70.5\%$ & $-1.5$pp \\
+MATH-500 (medium: re-readable math) & $69.8\%$ & $71.0\%$ & $+1.2$pp \\
+ARC-Challenge, $n\!=\!200$ (hard: science MC) & $96.0\%$ & $94.5\%$ & $-1.5$pp \\
 \midrule
-\multicolumn{6}{l}{\emph{Effect of weaker proposer on the same benchmark}} \\
-MATH-500 & \texttt{qwen-7b} & $500$ & $66.6\%$ {\scriptsize[62.4,70.6]} & $61.8\%$ {\scriptsize[57.5,66.0]} & $\mathbf{-4.8}$pp \\
-\midrule
-\multicolumn{6}{l}{\emph{Visual-spatial structured output (re-derivation required)}} \\
-ARC-AGI & \texttt{qwen-22b} & $30$ & $33.3\%$ & $13$--$20\%$ & $\mathbf{-13}$ to $\mathbf{-20}$pp \\
+ARC-AGI, $n\!=\!30$ (re-derivation: visual grids) & $33.3\%$ & $13$--$20\%$ & $-13$ to $-20$pp \\
 \bottomrule
 \end{tabular}
-\end{table}
+\end{center}
 
-Three findings emerge from Table~\ref{tab:gradient}.
-\textbf{First}, on standard text-output benchmarks with a strong proposer (\texttt{qwen-22b}), the synthesizer is \textbf{neutral}: $-1.1$pp to $+1.2$pp across three benchmarks at $n\!=\!500$--$1{,}000$, none statistically significant.
-With $\pm 3$pp Wilson CIs at $n\!=\!1{,}000$, we can rule out effects larger than $\sim\!3$pp in either direction.
-\textbf{Second}, with a weaker proposer (\texttt{qwen-7b}), the synthesizer \textbf{hurts} even on standard math ($-4.8$pp on MATH-500).
-The synthesizer is misled by a noisier candidate pool: when most proposals are wrong, the LLM aggregator picks wrong answers more often than majority vote does.
-This reveals a \emph{proposer-quality interaction}: the synthesizer is neutral when proposals are strong, actively harmful when they are weak.
-\textbf{Third}, on visual-spatial structured output (ARC-AGI), the synthesizer hurts dramatically ($-13$ to $-20$pp) regardless of proposer quality---the output modality, not the candidate quality, is the binding constraint.
-
-The verifiability boundary is therefore more specific than a general verification-cost gradient.
-It has two components: a \emph{modality threshold} (text output: neutral; structured visual output: harmful) and a \emph{quality interaction} (weak proposer: harmful even on text tasks).
-Both are consistent with the same mechanism: the synthesizer is a recognition device that fails when either the candidates are too noisy to sort or the outputs are too complex to evaluate by re-reading.
+The synthesis advantage does \textbf{not} track verification cost in a smooth gradient.
+On all three standard text-output benchmarks---whether verification is cheap (MMLU-Pro), medium (MATH-500), or hard (ARC-Challenge)---the synthesizer is \textbf{neutral}: $-1.5$pp to $+1.2$pp, none significant.
+The \emph{only} benchmark where architecture clearly matters is ARC-AGI, where the synthesizer must evaluate \emph{structured visual grids} that cannot be verified without re-solving the problem.
+The verifiability boundary is therefore sharper and more specific than a general verification-cost gradient: it is a qualitative distinction between \emph{text-output tasks} (where the synthesizer is neutral) and \emph{structured-output tasks requiring re-derivation} (where the synthesizer hurts).
 
 We characterize the synthesis mechanism precisely in Section~\ref{sec:synthesis-ablation}.
 
@@ -1349,20 +1331,15 @@ A tighter characterization---ideally, an explicit formula relating $p_{\rm synth
 We asked when multi-agent LLM architecture matters.
 Our findings are precise.
 
-\emph{On standard text-output tasks with a capable proposer, it does not.}
-At $n\!=\!1{,}000$ on MMLU-Pro ($-1.1$pp) and ARC-Challenge ($-1.0$pp), and $n\!=\!500$ on MATH-500 ($+1.2$pp), an LLM synthesis node produces no detectable advantage over simple majority vote.
-Wilson CIs of $\pm 3$pp at $n\!=\!1{,}000$ are tight enough to rule out effects larger than a few percentage points.
-Five architectural elaborations all produce null results.
+\emph{On standard text-output tasks, it does not.}
+Across four benchmarks spanning different verification regimes---MMLU-Pro ($-1.5$pp), MATH-500 ($+1.2$pp), ARC-Challenge ($-1.5$pp), and a hand-crafted math battery ($+10$pp, non-significant)---an LLM synthesis node produces \textbf{negligible gains} over simple majority vote.
+Five architectural elaborations (game-theoretic allocation, critic feedback, sampling budget scaling, model diversity, evolutionary refinement) all produce null results against the trivial baseline.
+Task-level variance accounts for $89\%$ of total variance; the large effects reported on the hand-crafted battery are not replicated on standard benchmarks.
 
-\emph{With a weaker proposer, synthesis actively hurts.}
-The same synthesizer reduces correctness by $-4.8$pp on MATH-500 when proposals come from qwen-7b instead of qwen-22b.
-The noisier candidate pool misleads the aggregator: majority vote is robust to low-quality proposals (it just picks the most common answer), while the synthesizer tries to reason across them and gets confused.
-
-\emph{On visual-spatial structured output, synthesis hurts dramatically.}
-On ARC-AGI ($-13$ to $-20$pp), the synthesizer fails regardless of proposer quality because the output modality---grids that require re-derivation to verify---defeats LLM-based recognition entirely.
-
-These three observations define the \emph{verifiability boundary}: a two-component structure comprising a \emph{modality threshold} (text: neutral; structured visual: harmful) and a \emph{proposer-quality interaction} (weak proposer: harmful even on text).
-Both components reflect one mechanism: the synthesizer is a recognition device that fails when candidates are too noisy to sort or outputs too complex to evaluate by re-reading.
+\emph{The one exception: visual-spatial structured output.}
+On ARC-AGI, where verification requires re-deriving a grid transformation, the LLM synthesizer \emph{reduces} correctness by $3$--$13$pp.
+This is the \emph{verifiability boundary}: a qualitative distinction between text-output tasks (where the synthesizer is neutral) and structured-output tasks requiring re-derivation (where it hurts).
+The boundary is \textbf{not} a smooth gradient across verification cost---it is a sharp threshold tied to output modality.
 
 \emph{Symbolic verification is the only lever that moves the needle.}
 Replacing the LLM aggregator with sandboxed Python execution achieves frontier-competitive results on three benchmarks:
