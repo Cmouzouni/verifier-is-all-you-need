@@ -160,7 +160,7 @@ The \emph{main sweep} is a fully crossed factorial of $5$ population composition
 The \emph{Tier-1 ablations} are four targeted follow-ups: (1)~hard-benchmark replication on $50$ GSM8K problems; (2)~a synthesis ablation that decomposes the synthesis effect into LLM aggregation and reading-reasoning components; (3)~a model-family replication on Llama-3.3-70B and DeepSeek-V3.1; and (4)~a frontier-fairness re-run with thinking enabled.
 The \emph{Tier-2 falsification ablations} are two targeted experiments that test whether game-theoretic framework selection adds value: (5)~MFG vs random vs round-robin in the $N\!=\!4, K\!=\!8$ regime ($n\!=\!300$ per condition, $900$ total episodes); and (6)~the same comparison in the $N\!=\!32, K\!=\!8$ regime ($n\!=\!150$ per condition, $450$ total episodes).
 The \emph{Tier-3 verifiability-boundary experiment} is the seventh ablation: (7)~six architectures on $30$ ARC-AGI puzzles, comparing single-model baselines, oracle best-of-$N$, simple majority vote, and synthesis-completed games---chosen to test whether the synthesis effect transfers to a domain where outputs are structured visual objects rather than numeric or textual answers.
-Together: approximately $5{,}650$ episodes and model invocations, $\sim\$18$ in API cost, the full Qwen family plus Llama and DeepSeek for the boundary tests.
+Together: approximately $5{,}650$ episodes and model invocations across the full Qwen family plus Llama and DeepSeek for the boundary tests.
 
 \paragraph{Findings preview.}
 The experiments yield a single coherent picture (full results in Section~\ref{sec:results}):
@@ -454,11 +454,11 @@ We report Wilson 95\% confidence intervals \cite{Wilson1927} for all proportion 
 \subsection{Summary of the empirical campaign}\label{sec:summary}
 
 The main sweep produced $2{,}690$ episodes spanning $180$ unique conditions ($5$ model configs $\times$ $6$ topologies $\times$ $6$ values of $\g$, $12$--$15$ episodes per condition, mean $14.9$).
-Total compute: $10{,}781$ API calls, $7.58$M tokens, \$$12.20$ in API cost, $235$ minutes wall time on a parallelized executor.
-The Tier-1 experiments produced an additional $1{,}340$ episodes ($650$ on GSM8K including baselines, $250$ on the synthesis ablation, $360$ on family replication including baselines, $80$ on the frontier re-run) at \$$1.62$ in additional API cost.
-The Tier-2 falsification experiments contributed $1{,}350$ episodes ($900$ in the $N\!=\!4$ regime and $450$ in the $N\!=\!32$ regime) at \$$1.16$ in additional API cost.
-The Tier-3 verifiability-boundary experiment on ARC contributed approximately $1{,}350$ further model invocations: $\sim\!180$ multi-agent deliberation episodes across the six tested architectures, $720$ oracle and majority-vote samples (best-of-$8$, best-of-$16$, and consensus on the same proposal pool), and $450$ baseline re-measurement samples ($30$ tasks $\times$ $5$ samples $\times$ $3$ models) at \$$3.30$ in additional API cost.
-The combined dataset comprises approximately $5{,}650$ deliberation episodes and model invocations, totaling \$$18.28$ in API cost, and is publicly available at \url{https://github.com/Cmouzouni/verifier-is-all-you-need}.
+Total compute: $10{,}781$ API calls, $7.58$M tokens, $235$ minutes wall time on a parallelized executor.
+The Tier-1 experiments produced an additional $1{,}340$ episodes ($650$ on GSM8K including baselines, $250$ on the synthesis ablation, $360$ on family replication including baselines, $80$ on the frontier re-run).
+The Tier-2 falsification experiments contributed $1{,}350$ episodes ($900$ in the $N\!=\!4$ regime and $450$ in the $N\!=\!32$ regime).
+The Tier-3 verifiability-boundary experiment on ARC contributed approximately $1{,}350$ further model invocations across six architectures.
+The combined dataset comprises approximately $5{,}650$ deliberation episodes and model invocations and is publicly available at \url{https://github.com/Cmouzouni/verifier-is-all-you-need}.
 
 \subsection{Baselines}\label{sec:results-baselines}
 

@@ -155,7 +155,7 @@ The proposers run in parallel and their outputs flow either to a majority-vote a
 The framework selection mechanism is implemented architecturally at the routing decision boundary---not via prompt instructions---in line with prior findings that LLM agents respond to environmental consequences but not to declarative incentives.
 
 \paragraph{Experimental design.}
-The empirical campaign totals $\sim\!5{,}650$ episodes and model invocations at \$$18$ in API cost, organized as: a main sweep ($5$ compositions $\times$ $6$ topologies $\times$ $6$ values of $\g$, $2{,}690$ episodes on a $30$-task battery); four Tier-1 ablations (GSM8K replication, synthesis decomposition, model-family replication, frontier re-baselining); two Tier-2 falsification experiments (MFG vs.\ random vs.\ round-robin, $1{,}350$ episodes); one Tier-3 experiment on ARC-AGI; and the verifiability-gradient experiment on MMLU-Pro, ARC-Challenge, and MATH-500 at $n\!=\!500$--$1{,}000$.
+The empirical campaign totals $\sim\!5{,}650$ episodes and model invocations, organized as: a main sweep ($5$ compositions $\times$ $6$ topologies $\times$ $6$ values of $\g$, $2{,}690$ episodes on a $30$-task battery); four Tier-1 ablations (GSM8K replication, synthesis decomposition, model-family replication, frontier re-baselining); two Tier-2 falsification experiments (MFG vs.\ random vs.\ round-robin, $1{,}350$ episodes); one Tier-3 experiment on ARC-AGI; and the verifiability-gradient experiment on MMLU-Pro, ARC-Challenge, and MATH-500 at $n\!=\!500$--$1{,}000$.
 Full experimental details are in Appendix~\ref{app:methods}.
 
 \paragraph{Contributions.}
@@ -250,7 +250,7 @@ The main sweep is $5$ population compositions $\times$ $6$ topologies $\times$ $
 Four Tier-1 ablations test boundary conditions: hard-benchmark replication (GSM8K), synthesis decomposition, model-family replication, and frontier-fairness re-run.
 Two Tier-2 experiments test MFG vs.\ random vs.\ round-robin framework selection ($1{,}350$ episodes).
 One Tier-3 experiment tests the synthesis effect on ARC-AGI ($\sim\!1{,}350$ model invocations).
-The combined dataset comprises $\sim\!5{,}650$ episodes at \$$18$ total API cost.
+The combined dataset comprises $\sim\!5{,}650$ episodes.
 The verifiability-gradient experiment (Table~\ref{tab:gradient}) adds $n\!=\!1{,}000$ episodes each on MMLU-Pro and ARC-Challenge, plus $n\!=\!500$ on MATH-500 with both strong and weak proposers.
 
 %% ====================================================================
@@ -742,11 +742,11 @@ This appendix provides the full results that are summarized in Section~\ref{sec:
 \subsection{Summary of the empirical campaign}\label{app:summary}
 
 The main sweep produced $2{,}690$ episodes spanning $180$ unique conditions ($5$ model configs $\times$ $6$ topologies $\times$ $6$ values of $\g$, $12$--$15$ episodes per condition, mean $14.9$).
-Total compute: $10{,}781$ API calls, $7.58$M tokens, \$$12.20$ in API cost, $235$ minutes wall time on a parallelized executor.
-The Tier-1 experiments produced an additional $1{,}340$ episodes ($650$ on GSM8K including baselines, $250$ on the synthesis ablation, $360$ on family replication including baselines, $80$ on the frontier re-run) at \$$1.62$ in additional API cost.
-The Tier-2 falsification experiments contributed $1{,}350$ episodes ($900$ in the $N\!=\!4$ regime and $450$ in the $N\!=\!32$ regime) at \$$1.16$ in additional API cost.
-The Tier-3 verifiability-boundary experiment on ARC contributed approximately $1{,}350$ further model invocations: $\sim\!180$ multi-agent deliberation episodes across the six tested architectures, $720$ oracle and majority-vote samples (best-of-$8$, best-of-$16$, and consensus on the same proposal pool), and $450$ baseline re-measurement samples ($30$ tasks $\times$ $5$ samples $\times$ $3$ models) at \$$3.30$ in additional API cost.
-The combined dataset comprises approximately $5{,}650$ deliberation episodes and model invocations, totaling \$$18.28$ in API cost, and is publicly available at \url{https://github.com/Cmouzouni/verifier-is-all-you-need}.
+Total compute: $10{,}781$ API calls, $7.58$M tokens, $235$ minutes wall time on a parallelized executor.
+The Tier-1 experiments produced an additional $1{,}340$ episodes ($650$ on GSM8K, $250$ on synthesis ablation, $360$ on family replication, $80$ on frontier re-run).
+The Tier-2 falsification experiments contributed $1{,}350$ episodes ($900$ in the $N\!=\!4$ regime and $450$ in the $N\!=\!32$ regime).
+The Tier-3 verifiability-boundary experiment on ARC contributed approximately $1{,}350$ further model invocations across six architectures.
+The combined dataset comprises approximately $5{,}650$ deliberation episodes and is publicly available at \url{https://github.com/Cmouzouni/verifier-is-all-you-need}.
 
 \subsection{Baselines}\label{app:results-baselines}
 
