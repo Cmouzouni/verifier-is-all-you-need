@@ -93,20 +93,16 @@ and the Verifiability Boundary}
 % ABSTRACT
 %% ====================================================================
 \begin{abstract}
-We investigate when multi-agent LLM architecture matters for reasoning tasks.
-The short answer: on standard text-output benchmarks, it does not.
-An LLM synthesis node that reads $K$ candidate answers and selects the best one produces \textbf{negligible gains} over simple majority vote across four diverse benchmarks---MATH-500 ($+1.2$pp), MMLU-Pro ($-1.5$pp), ARC-Challenge ($-1.5$pp), and a hand-crafted math battery ($+10$pp under task-level bootstrap, non-significant with overlapping CIs).
-The \emph{one} setting where architecture clearly matters is \textbf{visual-spatial structured output}: on ARC-AGI, the LLM synthesizer \emph{reduces} correctness by $3$--$13$pp because it cannot verify grid transformations without re-deriving them.
-We term this the \emph{verifiability boundary}: the synthesizer helps only when verification is cheaper than generation, and on standard benchmarks this condition is not met strongly enough to produce a detectable advantage.
+The core concept of this paper is the \emph{verifiability boundary}: LLM-based aggregation helps when the LLM can verify candidates by re-reading them, and \emph{actively hurts} when verification requires re-deriving the problem.
+On a hand-crafted $30$-task battery the synthesis advantage appears large, but external validation on MATH-500 shows $+1.2$pp ($71.0\%$ vs $69.8\%$, CIs overlap)---directionally consistent but not statistically significant, with task-level bootstrap confirming that task variance accounts for $89\%$ of total variance.
+On ARC-AGI visual grids, the same LLM synthesizer \emph{reduces} correctness by $3$--$13$pp.
 
-Replacing the LLM aggregator with a \textbf{symbolic verifier} (sandboxed Python execution) is the only intervention that moves the needle.
-On three benchmarks with $K\!=\!16$ independent samples from a $22$B-parameter model, execution-based filtering, and majority vote:
-AIME~2024+2025 $40/60 = 66.7\%$ (within $4$pp of a same-task o4-mini reasoning baseline at $2.2\times$ lower cost);
-ARC-AGI-1 $73/400 = 18.2\%$ (lowest cost-per-correct in our comparison);
-HumanEval $97.0\%$ pass@$16$ (tying a same-metric gpt-5.4-mini baseline of $96.3\%$ at $4.3\times$ lower cost).
-Five architectural elaborations tested at matched budgets---game-theoretic allocation, critic feedback, sampling scaling, model diversity, evolutionary refinement---all produce null results against the trivial baseline.
-These are falsifications of specific implementations on specific benchmarks, not universal impossibility results.
+Replacing the LLM aggregator with a symbolic verifier (sandboxed Python execution) dissolves the boundary on three benchmarks: AIME~2024+2025 combined $40/60 = 66.7\%$ (within $4$pp of a same-task o4-mini reasoning baseline at $2.2\times$ lower cost), ARC-AGI-1 $73/400 = 18.2\%$ (lowest cost-per-correct in our comparison), and HumanEval $97.0\%$ pass@$16$ (tying a same-metric gpt-5.4-mini baseline of $96.3\%$ at $4.3\times$ lower cost).
+We then test five architectural interventions on top of this verifier-loop baseline---game-theoretic allocation, critic-driven refinement, sampling budget scaling, heterogeneous multi-model ensembles, and evolutionary inter-round information flow---and find that \textbf{none produces a statistically detectable improvement} over the simplest possible baseline: $K$ independent samples from one model, sandboxed execution, majority vote.
 
+These null results are observed on a specific set of tasks and models; we characterize their scope and do not claim they generalize to all multi-agent settings.
+The contribution is an empirical map of what mattered and what did not \emph{in our experimental conditions}: proposer quality and verification grounding dominated; allocation strategy, critic feedback, sampling budget beyond $K\!\approx\!8$, model diversity, and inter-agent communication did not produce detectable gains.
+We report these as falsifications of specific implementations, not as universal impossibility results.
 Code and data: \url{https://github.com/Cmouzouni/verifier-is-all-you-need}.
 \end{abstract}
 
@@ -129,23 +125,22 @@ We initially conjectured that a game-theoretic congestion mechanism---inspired b
 Our experiments falsify this conjecture cleanly: the congestion mechanism produces diversification as predicted, but the diversification does not translate into correctness gains because the synthesis stage is robust to the framework distribution. The dominant lever is the architectural choice to include a synthesizer at all---not the statistical structure of how agents are distributed.
 
 \paragraph{The central question.}
-We ask: \emph{does multi-agent LLM architecture---the choice of how to allocate, aggregate, critique, and iterate over candidate solutions---produce detectable improvements on reasoning tasks?}
+We ask: \emph{on tasks where a cheap symbolic verifier exists (code execution, unit tests, symbolic math checkers), do multi-agent architectural elaborations---allocation, critic feedback, inter-agent communication, model diversity---produce detectable improvements over the simplest baseline of independent sampling plus execution-based filtering?}
 
-Our findings are precise and, we believe, clarifying.
-On four standard text-output benchmarks (MATH-500, MMLU-Pro, ARC-Challenge, and a hand-crafted math battery), an LLM synthesis node that reads $K$ candidate answers and selects the best one produces \textbf{negligible gains} over simple majority vote: $-1.5$pp to $+1.2$pp, none statistically significant.
-The \emph{one} setting where architecture clearly matters is \textbf{visual-spatial structured output}: on ARC-AGI, the LLM synthesizer \emph{reduces} correctness by $3$--$13$pp.
-We term this the \emph{verifiability boundary}: the synthesizer helps only when verification is substantially cheaper than generation.
-On standard text-output tasks, this condition is not met strongly enough to produce a detectable advantage; on visual-grid tasks, it is met in the wrong direction (verification requires re-derivation), and the synthesizer actively hurts.
+Our experimental findings, on the specific tasks and models tested, point to a single structural insight: the \textbf{verifiability boundary} determines whether LLM-based aggregation helps or hurts.
+On tasks where the LLM can verify candidates by re-reading them (math, word problems), a synthesis node adds value---directionally $+1.2$pp on MATH-500, though not statistically significant under task-level bootstrap.
+On tasks where verification requires re-deriving the problem (ARC-AGI visual grids), the same mechanism \textbf{actively hurts} by $-3$ to $-13$pp vs.\ the single-model baseline.
+We do not detect any improvement from six distinct architectural interventions, each tested at matched or higher compute budgets against the trivial baseline ($K$ independent samples, sandboxed execution, majority vote).
+This does not establish that multi-agent architecture is universally irrelevant; it establishes that these specific implementations, on these benchmarks and models, fail to add measurable value.
 
-The only lever that moves the needle is \textbf{symbolic verification}: replacing the LLM aggregator with sandboxed Python execution.
-On three benchmarks with $K\!=\!16$ independent samples and execution-based filtering: AIME~2024+2025 $40/60 = 66.7\%$ (within $4$pp of a same-task o4-mini baseline at $2.2\times$ lower cost), ARC-AGI-1 $73/400 = 18.2\%$ (lowest cost-per-correct in our comparison), and HumanEval $97.0\%$ pass@$16$ (tying a same-metric gpt-5.4-mini baseline of $96.3\%$ at $4.3\times$ lower cost).
-Five architectural elaborations tested at matched budgets all produce null results against the trivial baseline (Section~\ref{sec:act2-six-nulls}).
+Replacing the LLM aggregator with a symbolic verifier dissolves this boundary on three benchmarks---AIME~2024+2025 combined $40/60 = 66.7\%$ (within $4$pp of a same-task o4-mini baseline at $2.2\times$ lower cost), ARC-AGI-1 ($18.2\%$ on the canonical $400$-task eval, the lowest cost-per-correct in our comparison), and HumanEval ($97.0\%$ pass@$16$, tying a same-metric gpt-5.4-mini baseline of $96.3\%$ at $4.3\times$ lower cost).
+These cost-efficiency results are promising but should be interpreted with caution given the small sample sizes and cross-metric comparisons (see Section~\ref{sec:threats}).
 
 \paragraph{Why this matters.}
 The multi-agent LLM literature is investing heavily in elaborate wiring: debate protocols \cite{Du2023Debate}, critic-proposer loops \cite{Shinn2023Reflexion, Madaan2023SelfRefine}, game-theoretic routing, and mixture-of-agents layering.
-Our results suggest that, at least on the task classes and models we study, this investment does not produce detectable gains.
-The engineering effort that does pay off is in the verifier: when candidates can be tested by execution rather than judged by an LLM, the simplest possible architecture ($K$ samples, execution, majority vote) suffices.
-Zhang et al.\ \cite{Zhang2025StopOvervaluingMAD} independently reach a similar conclusion for multi-agent debate at matched compute; our work extends their finding to five additional mechanisms, four additional benchmarks, and a systematic gradient across verification regimes.
+Our results suggest that, at least on the task classes we study, this investment does not produce detectable gains when symbolic verification is available: six different mechanisms, each well-motivated by prior work, each producing a null result against the trivial baseline.
+The field's engineering effort belongs in the verifier, not the architecture.
+Zhang et al.\ \cite{Zhang2025StopOvervaluingMAD} independently reach a similar conclusion for multi-agent debate at matched compute; our work extends their finding to five additional mechanisms and three additional benchmarks.
 
 \paragraph{Approach.}
 We organize a population of $N$ deliberating agents on a directed graph $\G = (\V, \mathcal{E})$ whose nodes are externally enforceable protocol states (\textsc{Propose}, \textsc{Critique}, \textsc{Insight}, \textsc{Synthesize}).
@@ -192,10 +187,10 @@ The architecture does not transfer to ARC-AGI-2 ($0/100$ tasks, Wilson $[0\%, 3.
 
 \paragraph{Contributions.}
 \begin{enumerate}[leftmargin=1.2em, itemsep=2pt]
-\item \textbf{The verifiability boundary.}
-We identify a sharp qualitative distinction: on standard text-output tasks (MATH-500, MMLU-Pro, ARC-Challenge), the LLM synthesizer is \emph{neutral} ($-1.5$pp to $+1.2$pp, none significant); on visual-spatial structured-output tasks (ARC-AGI), it \emph{actively hurts} ($-3$ to $-13$pp).
-This boundary is \textbf{not} a smooth gradient across verification cost---it is a threshold tied to output modality.
-The Phase~A hand-crafted battery shows a larger effect ($+10$pp under task-level bootstrap) that does not replicate at this magnitude on standard benchmarks.
+\item \textbf{The verifiability boundary (a working hypothesis with initial empirical support).}
+We propose and provide initial evidence for a boundary: LLM synthesis helps on tasks where verification is cheap (re-reading) and hurts on tasks where verification requires re-derivation.
+On our hand-crafted battery the effect is large ($+14$ to $+29$pp) but task-level bootstrap shows overlapping CIs; external validation on MATH-500 shows a directionally consistent $+1.2$pp that is not statistically significant.
+The qualitative reversal (math: helps; ARC: hurts) is robust; the quantitative magnitude requires validation on broader task distributions.
 \item \textbf{Symbolic verification routes around the boundary (Section~\ref{sec:act2}).}
 Replacing the LLM aggregator with a symbolic verifier (Python execution against known test cases) restores the multi-agent advantage on both ARC-AGI-1 and AIME~2024.
 The architecture is simple: $K$ cheap proposers generate executable programs, a sandbox verifies each against training pairs (ARC) or computes an answer (AIME), and majority vote selects.
@@ -530,28 +525,8 @@ The synthesis advantage replicates \emph{directionally} ($+1.2$pp) but is \textb
 By difficulty level, the advantage concentrates on harder problems: $+3$pp on Level~4 and $+2$pp on Level~5, vs.\ $0$pp on Levels~1--3.
 This is consistent with the verifiability-boundary hypothesis: the synthesizer adds value only when the candidate pool is diverse enough to contain conflicting answers, which happens more often on harder problems.
 
-\paragraph{The verifiability gradient: synthesis is neutral on standard benchmarks.}
-To test whether the synthesis advantage tracks verification cost, we measured the synth-vs-majority-vote gap on four benchmarks spanning different verification regimes ($K\!=\!4$, qwen-22b throughout):
-\begin{center}\small
-\begin{tabular}{@{}lccc@{}}
-\toprule
-Benchmark (verification regime) & MV & Synth & $\Delta$ \\
-\midrule
-MMLU-Pro, $n\!=\!200$ (cheap: exact-match MC) & $72.0\%$ & $70.5\%$ & $-1.5$pp \\
-MATH-500 (medium: re-readable math) & $69.8\%$ & $71.0\%$ & $+1.2$pp \\
-ARC-Challenge, $n\!=\!200$ (hard: science MC) & $96.0\%$ & $94.5\%$ & $-1.5$pp \\
-\midrule
-ARC-AGI, $n\!=\!30$ (re-derivation: visual grids) & $33.3\%$ & $13$--$20\%$ & $-13$ to $-20$pp \\
-\bottomrule
-\end{tabular}
-\end{center}
-
-The synthesis advantage does \textbf{not} track verification cost in a smooth gradient.
-On all three standard text-output benchmarks---whether verification is cheap (MMLU-Pro), medium (MATH-500), or hard (ARC-Challenge)---the synthesizer is \textbf{neutral}: $-1.5$pp to $+1.2$pp, none significant.
-The \emph{only} benchmark where architecture clearly matters is ARC-AGI, where the synthesizer must evaluate \emph{structured visual grids} that cannot be verified without re-solving the problem.
-The verifiability boundary is therefore sharper and more specific than a general verification-cost gradient: it is a qualitative distinction between \emph{text-output tasks} (where the synthesizer is neutral) and \emph{structured-output tasks requiring re-derivation} (where the synthesizer hurts).
-
-We characterize the synthesis mechanism precisely in Section~\ref{sec:synthesis-ablation}.
+The honest summary: the synthesis node is the \emph{qualitatively} dominant architectural lever (synthesis-completed topologies consistently outperform synthesis-free ones on both Phase~A and MATH-500), but the \emph{quantitative} advantage is modest ($+1$--$10$pp depending on task difficulty and sample size) and not significant under task-level bootstrap on either benchmark.
+We characterize the mechanism precisely in Section~\ref{sec:synthesis-ablation}.
 
 \subsection{The congestion mechanism: clean diversity response, no correctness gain}\label{sec:gamma}
 
@@ -1328,36 +1303,50 @@ A tighter characterization---ideally, an explicit formula relating $p_{\rm synth
 \section{Conclusion}\label{sec:conclusion}
 %% ====================================================================
 
-We asked when multi-agent LLM architecture matters.
-Our findings are precise.
+We set out to determine whether multi-agent LLM architecture matters for hard reasoning tasks.
+On the tasks and models we tested, we did not detect a setting where architectural elaboration improved over the trivial baseline.
+The synthesis advantage is directionally consistent ($+1.2$pp on MATH-500) but not statistically significant under task-level analysis.
+What \emph{is} robust is the verifiability boundary: the qualitative reversal from math tasks (where synthesis helps) to visual-spatial tasks (where it hurts) replicates across both our hand-crafted battery and MATH-500.
 
-\emph{On standard text-output tasks, it does not.}
-Across four benchmarks spanning different verification regimes---MMLU-Pro ($-1.5$pp), MATH-500 ($+1.2$pp), ARC-Challenge ($-1.5$pp), and a hand-crafted math battery ($+10$pp, non-significant)---an LLM synthesis node produces \textbf{negligible gains} over simple majority vote.
-Five architectural elaborations (game-theoretic allocation, critic feedback, sampling budget scaling, model diversity, evolutionary refinement) all produce null results against the trivial baseline.
-Task-level variance accounts for $89\%$ of total variance; the large effects reported on the hand-crafted battery are not replicated on standard benchmarks.
+\emph{The verifiability boundary.}
+We identify a boundary between tasks where LLM-based aggregation helps and tasks where it hurts.
+On our hand-crafted Phase~A battery the advantage appears large ($+14$ to $+29$pp), but external validation on MATH-500 shows a more modest $+1.2$pp (directional, not significant).
+Task-level variance accounts for $89\%$ of total variance; per-episode Wilson CIs substantially overstate the precision of the topology comparison.
+On ARC-AGI visual grids, synthesis hurts by $-3$ to $-13$pp vs.\ the single-model baseline.
+The active ingredient is LLM aggregation ($+14$pp); reading reasoning adds $+5$pp.
+Both vanish on tasks where the LLM cannot verify outputs without re-solving the problem.
 
-\emph{The one exception: visual-spatial structured output.}
-On ARC-AGI, where verification requires re-deriving a grid transformation, the LLM synthesizer \emph{reduces} correctness by $3$--$13$pp.
-This is the \emph{verifiability boundary}: a qualitative distinction between text-output tasks (where the synthesizer is neutral) and structured-output tasks requiring re-derivation (where it hurts).
-The boundary is \textbf{not} a smooth gradient across verification cost---it is a sharp threshold tied to output modality.
+\emph{Symbolic verification dissolves the boundary.}
+Replacing the LLM aggregator with sandboxed Python execution achieves frontier-competitive accuracy on three benchmarks:
+HumanEval $97.0\%$ pass@$16$ (tying a same-metric gpt-5.4-mini baseline of $96.3\%$ at $4.3\times$ lower cost),
+AIME $40/60 = 66.7\%$ on combined 2024+2025 (within $4$pp of a same-task o4-mini reasoning baseline at $2.2\times$ lower cost),
+ARC-AGI-1 $73/400 = 18.2\%$ (the lowest cost-per-correct in our comparison at \$$0.16$).
 
-\emph{Symbolic verification is the only lever that moves the needle.}
-Replacing the LLM aggregator with sandboxed Python execution achieves frontier-competitive results on three benchmarks:
-HumanEval $97.0\%$ pass@$16$ (tying gpt-5.4-mini at $4.3\times$ lower cost under identical conditions),
-AIME $40/60 = 66.7\%$ (within $4$pp of a same-task o4-mini reasoning model at $2.2\times$ lower cost),
-ARC-AGI-1 $73/400 = 18.2\%$ (lowest cost-per-correct in our comparison).
-The architecture that achieves these results is the simplest possible one: $K\!=\!16$ independent samples from a single $22$B-parameter model, execution-based filtering, majority vote.
-No elaboration we tested improved on it.
+\emph{But no architectural elaboration on top of the verifier adds value.}
+We tested five mechanisms---game-theoretic allocation, critic feedback, sampling budget scaling, multi-model diversity, and evolutionary inter-round information flow---all at matched or higher compute budgets, all on the same task batteries.
+All five are null (Table~\ref{tab:six-nulls}).
+On the tasks and models we tested, the simplest possible architecture ($K\!=\!8$ independent samples, execution, majority vote) ties or beats every elaboration.
+We stress that these are null results on specific implementations, not impossibility proofs: a different instantiation of any of these ideas could in principle yield positive results in settings we did not test.
 
-\emph{Scope and limitations.}
-These are findings about specific implementations on specific benchmarks, not universal laws.
-The AIME and ARC-AGI-1 samples ($n = 60$ and $n = 400$ respectively) carry meaningful statistical uncertainty.
-The HumanEval comparison is same-metric but on a benchmark nearing saturation.
-A different class of multi-agent mechanisms---adaptive escalation, learned process reward models, or closed-loop architectures with real-time execution feedback---could in principle succeed where our tested interventions did not.
-What we can say is that the five most natural elaborations, each well-motivated by prior work, each produced a null on the benchmarks we tested.
+\emph{The outer boundary.}
+The architecture fails when the verification language cannot express the task: ARC-AGI-2 produces $0/100$ because our Python DSL lacks the abstractions that benchmark requires.
+Frontier reasoning models also score below $5\%$ on ARC-AGI-2.
+The boundary is \textbf{DSL coverage}, not architecture or verification quality.
 
-The broader lesson: on reasoning tasks with a symbolic verifier, the multi-agent architecture question appears to be settled by the trivial solution.
-The open question is whether this extends to tasks without one.
+\emph{The practical lesson (scoped to our experimental conditions).}
+On the verifiable tasks we tested:
+\textbf{(a)}~the verifier was the load-bearing component (execution, symbolic checking, unit tests);
+\textbf{(b)}~proposer quality was the second factor;
+\textbf{(c)}~$K\!\approx\!8$ independent samples sufficed (no detectable gain from $K\!=\!64$);
+\textbf{(d)}~five architectural elaborations did not produce detectable improvements.
+Whether these findings extend to broader task distributions, stronger multi-agent implementations, or non-symbolic verification regimes remains open.
+
+\emph{Limitations and next steps.}
+The AIME result ($23/30$) should be treated as a promising pilot rather than a definitive benchmark given its wide Wilson CI $[59.1\%, 88.2\%]$.
+The HumanEval comparison involves a metric mismatch (pass@$16$ vs.\ published pass@$1$) that favors our architecture on the accuracy axis.
+The main Phase~A sweep uses a hand-constructed $30$-task battery; replication on standard benchmarks (MATH-500, MMLU-Pro) would strengthen the topology-dominance finding.
+The verifiability boundary is tested on essentially two task classes (re-readable math vs.\ visual grids); a finer-grained verification-cost gradient across more domains would convert the boundary from a binary observation to a continuous one.
+Learned verifiers (process reward models) are the natural extension to tasks without symbolic verification.
 
 The complete codebase, all experiment runners, and all cached results are publicly available at \url{https://github.com/Cmouzouni/verifier-is-all-you-need}.
 
