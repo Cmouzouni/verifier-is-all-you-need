@@ -686,10 +686,38 @@ Replacing majority voting with an LLM synthesizer that sees only the agents' fin
 Passing the synthesizer the full reasoning traces lifts correctness further to $89.6\%$---a $+4.8$pp additional gain at $\sim 60\%$ higher cost.
 Both jumps have non-overlapping Wilson $95\%$ confidence intervals.
 
-The interpretation is sharp.
-\textbf{LLM aggregation is the dominant active ingredient}: simply having an LLM-level synthesizer that can reason about which candidate is correct accounts for $\sim 75\%$ of the synthesis effect.
-\textbf{Reading reasoning provides a meaningful secondary boost}: the synthesizer benefits from seeing how each candidate was derived, but this is a refinement on top of the aggregation effect, not its main driver.
-For cost-sensitive deployments, an answers-only synthesizer captures most of the benefit at minimal extra cost; for accuracy-sensitive deployments, the full-reasoning synthesizer is worth the additional tokens.
+The interpretation on Phase~A is sharp: LLM aggregation is the dominant active ingredient ($+14$pp), with reading reasoning providing a secondary boost ($+5$pp).
+\textbf{However, this decomposition does not replicate on a standard benchmark with a weaker proposer.}
+
+\paragraph{External replication: the decomposition reverses on MATH-500.}
+We ran the same three-condition ablation on $500$ MATH problems with \texttt{qwen-7b} ($K\!=\!4$):
+
+\begin{center}\small
+\begin{tabular}{@{}lccc@{}}
+\toprule
+Aggregator & Phase~A (\texttt{qwen-22b}) & MATH-500 (\texttt{qwen-7b}) \\
+\midrule
+(A) Majority vote & $70.8\%$ & $64.4\%$ {\scriptsize[60.1, 68.5]} \\
+(B) LLM synth (answers only) & $84.8\%$ ($+14.0$pp) & $52.6\%$ {\scriptsize[48.2, 56.9]} ($\mathbf{-11.8}$pp) \\
+(C) LLM synth (full reasoning) & $89.6\%$ ($+18.8$pp) & $11.2\%$ {\scriptsize[8.7, 14.3]} ($\mathbf{-53.2}$pp) \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The reversal is dramatic.
+On Phase~A with a strong proposer (\texttt{qwen-22b}), the synthesizer lifts correctness by $+14$--$19$pp.
+On MATH-500 with a weaker proposer (\texttt{qwen-7b}), the synthesizer \textbf{destroys performance}: answers-only synthesis loses $-12$pp, and full-reasoning synthesis is \textbf{catastrophic} at $-53$pp ($11.2\%$ vs $64.4\%$ for majority vote).
+
+The mechanism is clear.
+When proposals are low-quality, their reasoning traces are \emph{confidently wrong}---they present plausible-looking derivations that reach incorrect answers.
+The synthesizer, reading these traces, follows the confident-but-wrong reasoning off a cliff.
+Majority vote is immune: it counts answers without reading reasons, so it cannot be misled by persuasive nonsense.
+\textbf{Reading bad reasoning is worse than reading bad answers, which is worse than ignoring both.}
+
+This finding has three implications.
+First, the Phase~A $+14$pp/$+5$pp decomposition is \emph{specific to strong proposers and a hand-crafted task battery}---it should not be cited as a general property of LLM synthesis.
+Second, practitioners deploying synthesis nodes should verify that their proposer model is strong enough before adding a synthesizer; on weak proposers, synthesis is counterproductive.
+Third, the proposer-quality interaction is a more fundamental architectural constraint than the verification-cost gradient: even on tasks where verification is cheap (math), the synthesizer fails when proposals are noisy.
 
 \subsection{Generalization to GSM8K}\label{sec:gsm8k}
 
